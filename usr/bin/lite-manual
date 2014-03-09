@@ -1,0 +1,8 @@
+#!/bin/bash
+# Linux Lite Manual
+# Developer - Jerry Bezencon
+# Contributors - Adam Grubbs, John 'ShaggyTwoDope' Jenkins
+# Creation Date - 10th March, 2014
+# Website - http://www.linuxliteos.com
+
+exo-open --launch WebBrowser /usr/share/doc/litemanual/index.html
