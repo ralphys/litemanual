@@ -34,7 +34,8 @@
 				<a href="#sound">Sound Configuration</a><br>
 				<a href="#printer"><a href="#printer">Printer Setup</a><br><!--<a href="#wirelessdev">Wireless Devices</a><br>-->
 				<a href="#keyboard">Keyboard Hotkeys and Multimedia Keys</a><br>
-				<a href="#booting">Booting issues</a><br><a href="#report">Create System Report tool</a><br>
+				<a href="#booting">Booting issues</a><br />
+				<a href="#installissues">Installation issues</a><br><a href="#report">Create System Report tool</a><br>
 				<a href="#seekhelp">Finding help online</a></p>
 
             	<!--<p><b><font size="5">Drivers</font></b></p>
@@ -65,12 +66,9 @@
 				the driver install.</b></p>
 				<p>The next step is to go to <b>Menu, System, Install Drivers</b>.</p>
 				<p>
-				<img border="0" src="img/hardware/install_drivers.png" height="414" width="403"></p>
-				<p>You will be asked to enter your password.</p>
-				<p><img border="0" src="img/hardware/ati3.png"></p>
+				<img border="0" src="img/hardware/install_drivers.jpg"></p>
 				<p>The program will then scan your computer for any drivers that 
-				you may need.</p>
-				<p><img border="0" src="img/hardware/nvidia5.png"></p>
+				you may need, this may take some time.</p>
 				<p>When it has finished scanning, you will see a dialog box 
 				similar to the one below.</p>
 				<p><img border="0" src="img/hardware/ati5.png"></p>
@@ -80,7 +78,7 @@
 				ATI/AMD proprietary FGLRX graphics driver (**experimental** 
 				beta)</b> Now click on <b>Activate</b>.<br />
 				<br> You will see this dialog as it downloads and installs:<br></p>
-				<p><img border="0" src="img/hardware/nvidia4.png"></p>
+				<p><strong>pic to go here</strong></p>
 
 				<p>When the driver has finished, click on <b>Close</b>.<br>
 				Now open up a terminal and type:<br>
@@ -133,46 +131,41 @@
 				the driver install.</b></p>
 				<p>The next step is to go to <b>Menu, System, Install Drivers</b>.</p>
 				<p>
-				<img border="0" src="img/hardware/install_drivers.png" height="414" width="403"></p>
-				<p>You will be asked to enter your password.</p>
-				<p><img border="0" src="img/hardware/ati3.png"></p>
+				<img border="0" src="img/hardware/install_drivers.jpg" height="463" width="382"></p>
 				<p>The program will then scan your computer for any drivers that 
-				you may need.</p>
-				<p><img border="0" src="img/hardware/nvidia5.png"></p>
+				you may need, this may take some time.</p>
+				<p><img src="img/hardware/nvidiascan.png" /></p>
 				<p>When it has finished scanning, you will see a dialogue box 
 				similar to the one below.</p>
 				<p><img border="0" src="img/hardware/nvidia2.png"></p>
-				<p>Generally you will want to run the current Nvidia Driver, to do so you will select:<br>
-				<b> NVIDIA accelerated graphics driver (version current) [Recommended] </b>(forth in the list 
-				in the above picture)<br>
-				<br>
-				If you plan to play Steam games in the future or have an extremely new Nvidia card, select:<br>
-				<b>
-				NVIDIA accelerated graphics driver (**experimental** beta) (version experimental-304)</b> (sixth in the list 
-				in the example) Now click on <b>Activate</b>.</p>
-				<p><img border="0" src="img/hardware/nvidia3.png"><br>
-				<br> You will see this dialog as it downloads and installs:<br></p>
+				<p>Generally you will want to select the current version, the 
+				tested driver. In the above example we selected the <strong>
+				NVIDIA binary driver (proprietary, tested).</strong></p>
+				<p><strong>NOTE:</strong> If you plan to play graphic intensive 
+				games or you have a lot of Steam games, you need to select the
+				<strong>proprietary, tested</strong> driver.<br>
+				</p>
+				<p>Now click on <b>Apply Changes</b>. You will be prompted for 
+				your password:</p>
+				<p><img src="img/hardware/nvidiapassword.png" /><br>
+				<br> You will see the following dialog as it downloads and installs:<br></p>
 				<p><img border="0" src="img/hardware/nvidia4.png"></p>
-				<p>When the driver has finished, click on <b>Close</b>.<br>
-				Now open up a terminal and type:<br>
-				<br>
-				<b>sudo nvidia-xconfig<br>
-				<br>
-				</b>Enter your password, when it has finished, restart your 
+				<p>When the driver has finished, restart your 
 				computer.</p>
-				<p><img border="0" src="img/hardware/nvidia9.png"></p>
 
 
 				<p>Now head over to <b>Menu, Settings, NVIDIA X Server Settings</b>.</p>
-				<p><img border="0" src="img/hardware/nvidia11.png"></p>
+				<p><img border="0" src="img/hardware/nvidia11.jpg"></p>
 
 
-				<p>Once you open Nvidia Settings you will be brought to a window similar to this one. It's best to allow the resolution to be set 
+				<p>Once you open <b>NVIDIA X Server Settings,</b> you will be brought to a window similar to this one. It's best to allow the resolution to be set 
 				to auto for most monitors, however you can adjust it manually using the drop down menu <b>Resolution</b>. </p>
-				<p><img border="0" src="img/hardware/nvidia8.png"></p>
-<p>Any changes you make will need to be saved by clicking on <b>Save to X Configuration File</b> (you will be prompted for your password to write the xconfig 
-file), Then click on <b>Quit</b> to exit the settings window. Any adjustments should be automatic. Remember to test settings with <b>apply</b> before saving settings and exiting.</p>
-				<p><img border="0" src="img/hardware/nvidia7.png"></p>
+				<p><img border="0" src="img/hardware/nvidia8.jpg"></p>
+<p><strong>Test your settings before saving.</strong> When you are happy with 
+your changes, click on <b>Save to X Configuration File</b> (you will be prompted for your password to write the xconfig 
+file), Then click on <b>Quit</b> to exit the settings window. Any adjustments 
+should be automatic.</p>
+				<p><img border="0" src="img/hardware/nvidia7.jpg"></p>
 
 
 
@@ -185,9 +178,10 @@ file), Then click on <b>Quit</b> to exit the settings window. Any adjustments sh
 				type:</p>
 				<table border="0" width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
-						<td><b>sudo add-apt-repository ppa:bumblebee/stable<br>
-						sudo apt-get update<br>
-						sudo apt-get install bumblebee bumblebee-nvidia linux-headers-generic</b></td>
+						<td><strong>sudo apt-get purge bumblebee*<br />
+						sudo apt-get purge libvdpau-va-gl1<br />
+						sudo apt-get install nvidia-319 nvidia-settings-319 
+						nvidia-prime</strong></td>
 					</tr>
 				</table>
 				<p><br>
@@ -203,66 +197,52 @@ file), Then click on <b>Quit</b> to exit the settings window. Any adjustments sh
 <br>
 <img border="0" src="img/hardware/icons.png"><br>
 <br>
-2.  Hovering over the icon will show you the volume currently set. If you left click it, 
-it will toggle mute and unmute for the <b>Master</b> volume. Volume can also be adjusted up and down my using your mouse scroll wheel whilst hovering over the icon. Scrolling up brings the master volume up, and down accordingly.
+2. You can drag the main slider to the left or right to control main volume. Now 
+click on <strong>Sound Settings</strong>.
 <br>
 <br>
-<img border="0" src="img/hardware/audio2.png"><br>
+<img border="0" src="img/hardware/audio2.jpg"><br>
 <br>
-3. Right clicking on the sound icon will bring you a menu with a few options, you can select 
-<b>Properties</b> to adjust a few options.<br>
-<br>
-<img border="0" src="img/hardware/audio3.png"><br>
-<br>
-4. You can select <b>Sound card, Mixer</b>, and what command the left click uses. 
-Generally you will not need to adjust any of the settings aside from selecting 
-<b>Sound card</b>.<br>
-<br>
-<img border="0" src="img/hardware/audio4.png"><br>
-</p>
-
-<p>
-5. If you&#39;re unable to hear any sound, or you just want to check and adjust settings, 
-you would need to open the audio settings with <b>PulseAudio Volume Control</b>.<br>
-<br>
-Navigate to the <b>Menu</b>, <b>Multimedia</b>, <b>PulseAudio Volume Control</b><br>
-<br>
-<img border="0" src="img/hardware/audio10.png"><br>
-<br>
-6. You will be brought to a window similar to this one. On the tabs you will see <b>Playback</b>, for adjusting the volume of programs currently playing or capable of playback. <b>Recording</b> for programs currently using recording devices, namely your microphone. <b>Output Devices</b> is for main configuration of sound levels across your system. <b>Configuration</b> 
+3. You will be brought to a window similar to this one. On the tabs you will see <b>Playback</b>, for adjusting the volume of programs currently playing or capable of playback. <b>Recording</b> for programs currently using recording devices, namely your microphone. <b>Output Devices</b> is for main configuration of sound levels across your system. <b>Configuration</b> 
 is used for selecting profiles and misc settings.<br>
 <br>
 <img border="0" src="img/hardware/audio11.png"><br>
 <br>
-7. In the window above you can adjust volume settings for output. Using the blue sliding bars. You can toggle mute with the speaker icon <img border="0" src="img/hardware/audio19.png"> It will change it's background color when active <img border="0" src="img/hardware/audio18.png">. You can lock channels using <img border="0" src="img/hardware/audio20.png"> 
+4. In the window above you can adjust volume settings for output. Using the blue sliding bars. You can toggle mute with the speaker icon <img border="0" src="img/hardware/audio19.png"> It will change it's background color when active <img border="0" src="img/hardware/audio18.png">. You can lock channels using <img border="0" src="img/hardware/audio20.png"> 
 so that when volume is raised or lowered it is done 
 equally. Or you can toggle and set the volume to be louder on one side. The <img border="0" src="img/hardware/audio21.png"> icon is used to specify the default device used by 
 PulseAudio. <br>
 <br>
-8. <b>Input Devices</b>, this includes microphones and other line-in devices, such as TV tuner cards with line in. Adjusting the levels and settings are the same method as described above in section 7.<br>
+5. <b>Input Devices</b>, this includes microphones and other line-in devices, such as TV tuner cards with line in. Adjusting the levels and settings are the same method as described above in section 
+4.<br>
 <br>
 <img border="0" src="img/hardware/audio12.png"><br>
 
 <br>
-9. <b>Configuration</b>, this lists known profiles for your sound card. In most cases there is no need to select anything here unless you intend to disable your sound completely, or have a unique profile setting, 
+6. <b>Configuration</b>, this lists known profiles for your sound card. In most cases there is no need to select anything here unless you intend to disable your sound completely, or have a unique profile setting, 
 such as surround sound, mono, or 
 stereo out.<br>
 <br>
 <img border="0" src="img/hardware/audio13.png"><br>
 
 <br>
-10. <b>Recording</b>, will list programs currently using an input method, be it line-in or a microphone. You can toggle access per program and 
-or adjust volume per program here. The method used is the same as mentioned in section 7.<br>
+7. <b>Recording</b>, will list programs currently using an input method, be it 
+line-in or a microphone. You can toggle access per program and or adjust volume 
+per program here. The method used is the same as mentioned in section 4.<br>
 <br>
 <img border="0" src="img/hardware/audio15.png"><br>
 <br>
-11. <b>Playback</b>, will list programs currently producing audio or able to. You can toggle access per program and 
-or adjust volume per program here. The method used is the same as mentioned in section 7.<br>
+8. <b>Playback</b>, will list programs currently producing audio, or able to. You can toggle access per program and 
+or adjust volume per program here. The method used is the same as mentioned in section 
+4.<br>
 <br>
 <img border="0" src="img/hardware/audio14.png"><br>
 <br>
-12. <b>Notes</b>: Being able to toggle on mute and unmute on multiple things can cause issues. And at times the device may be muted upon install. Show caution here as you may mute a certain program and forget about it entirely. If unmuting and adjusting settings for your sound card and related programs do not work at all, there may be a driver issue. Refer below for resources on how to remedy this. You can find help by using the <b><a href="#report">Create System Report tool</a></b> 
+9. <b>Notes</b>: Being able to toggle on mute and unmute on multiple things can cause issues. And at times the device may be muted upon install. Show caution here as you may mute a certain program and forget about it entirely. If unmuting and adjusting settings for your sound card and related programs do not work at all, there may be a driver issue. Refer below for resources on how to remedy this. You can find help by using the <b><a href="#report">Create System Report tool</a></b> 
 and using the directions to upload the generated report to the Forums.<br>
+
+
+</p>
 
 
 <p><b>Resources for Audio Drivers</b></p>
@@ -299,7 +279,7 @@ upper right of your screen)<br>
 3. You can further configure or manage printing jobs or printers by going to printing located in 
 <b>Menu, System, Printing</b>.<br>
 <br>
-<img border="0" src="img/hardware/printer3.png"><br> 
+<img border="0" src="img/hardware/printer3.jpg"><br> 
 <br>
 4. Once you open the <b>Printing</b> menu it will bring you to a simple dialog to select, view and manage options related to your printer.<br>
 <br>
@@ -410,14 +390,15 @@ You can find information for adding or modifying hotkeys (or shortcuts) on the
 				<p><b>Dual Boot Modification/Repair</b></p>
 				<p>You may be in a situation where you want to modify or repair 
 				your dual boot set up.</p>
-				<p>Boot-Repair is an excellent tool for the job. To install Boot-Repair, open a terminal and type:</p>
+				<p>Boot-Repair is an excellent tool for the job. To install Boot-Repair, open a terminal and type 
+				(one line at a time):</p>
 				<table border="0" width="800" id="table3" bgcolor="#FFFF55">
 					<tr>
 						<td><strong>sudo add-apt-repository 
-						ppa:yannubuntu/boot-repair &amp;&amp; sudo apt-get update<br />
-						<br />
-						then<br />
-						<br />
+						ppa:yannubuntu/boot-repair<br />
+						sudo sed 's/trusty/saucy/g' -i 
+						/etc/apt/sources.list.d/yannubuntu-boot-repair-trusty.list<br />
+						sudo apt-get update<br />
 						sudo apt-get install -y boot-repair &amp;&amp; (boot-repair &amp;)</strong></td>
 					</tr>
 				</table>
@@ -426,11 +407,11 @@ You can find information for adding or modifying hotkeys (or shortcuts) on the
 				scan your computer for your boot configuration and other 
 				operating systems.</p>
 				<p>
-				<img height="260" src="img/hardware/boot-rep1.png" width="403" /></p>
+				<img src="img/hardware/boot-rep1.jpg" /></p>
 				<p>Click <strong>Advanced options</strong> to see all the 
 				features.</p>
 				<p>
-				<img height="339" src="img/hardware/boot-rep2.png" width="556" /></p>
+				<img src="img/hardware/boot-rep2.jpg" /></p>
 				<p>Now use Boot-Repair to carry out the task you need doing. 
 				Boot-Repair is in <strong>Menu, System</strong>.<br />
 				More information can be found here -
@@ -441,7 +422,116 @@ You can find information for adding or modifying hotkeys (or shortcuts) on the
 				<hr>
 				<p>
 
-&nbsp;</p>
+				&nbsp;</p>
+				<p><a name="installissues"><font size="4"><b>Installation Issues</b></font></p>
+				<p><b><u>No Option to Install Alongside Windows?</u></b><br />
+				If this happens, it usually means that Windows is already using four partitions
+				on the hard drive, which is the limit for BIOS-based computers using traditional
+				MBR type partitions.  (Newer computers may that use UEFI firmware <i>may</i> use
+				GPT partitioned drives that do not have the 4 partition limit.  This discussion
+				does not get into that.)  You will need to either eliminate one of the current 
+				partitions, or add another hard drive to the computer for installing Linux Lite.</p>
+				<p>If you are unfamiliar with partitioning, it would be best to make a post on 
+				the 
+				<a href="https://www.linuxliteos.com/forums/" target="_blank">forums</a> for help before 
+				proceeding.  Generally speaking, in this situation there is may be a partition
+				set aside where the manufacture has put copies of drivers and other extras
+				that were part of the initial installation.  There may also be a recovery partition
+				that gets used for reinstalling Windows in the event that is needed.  If you
+				went through the process of creating a recovery USB or set of recovery DVD's, then
+				you can probably get rid of the recovery partition.  Same goes for the partition
+				set aside for manufacturer installed drivers and extras, if you made a copy of 
+				that.</p>
+				<p>Once one or both of those partitions has been deleted, you may also need to
+				shrink the main (largest) Windows partition (probably labeled as "C: drive").  
+				If you have the space, ideally you should try to allocate 50-100GB for Linux 
+				Lite.  (It will be fine with +/-15GB; but you won't have much room for expansion.)  
+				Before shrinking any partition, be sure to defragment the partition in Windows first.  
+				Then shrink the partition and leave the free space as it is -- un-partitioned.  
+				Do not create Linux partitions with Windows disk manager.  It is best done using 
+				Linux tools.</p>
+				<p>At that point, you can go ahead and run the installer again and it should now
+				offer the choice to install "Alongside Windows".  If it needs to it will create
+				an "extended" partition that will serve as a container for the "logical" partitions
+				needed for the installation.  (That is a way that is commonly used to get around 
+				the 4-partition maximum rule.  As long as only 3 partitions are "primary", an 
+				extended partition can be used to house multiple logical partitions within it -- thus 
+				giving you the ability to have more than four partitions.)</p>
+				<p><b><u>Does Your Newer Computer Use UEFI Firmware for Booting?</u></b><br />
+				If you have a newer model computer with UEFI firmware, it may  
+				allow for two modes of booting:  UEFI/EFI-mode or BIOS/CSM/Legacy-mode.  
+				There is a good chance that Windows is installed to the hard drive 
+				in UEFI-mode.  In that case it will also be using the newer GPT 
+				partitioning scheme on the hard drive.  (This applies mainly to 
+				Windows 8, but some versions of Windows 7 may be installed that way 
+				too.)</p>				
+				<p><u>You need to confirm for sure which way Windows is installed before 
+				attempting the Linux Lite installation.</u>  The first thing to check is 
+				whether or not you are using a 64-bit version of Windows.  You should 
+				be able to find that out by going to the "System" section from the 
+				"Control Panel".  If you find that it is a 32-bit version, then you 
+				<b>will</b> be able to install Linux Lite.  (Only 64-bit versions of 
+				Windows currently support UEFI booting.)</p>
+				<p>If you have a 64-bit version of Windows, it could be installed in 
+				either BIOS/Legacy-mode or in UEFI-mode; so you will need to investigate 
+				further.  Go to Windows disk management and take a look at the partitions 
+				on the hard drive.  If you see a small partition near the beginning of 
+				the drive, formatted as <b>FAT32</b>, labeled along the lines of 
+				"System" or "EFI System Partition", then you have a UEFI installation 
+				of Windows and <b>will not</b> be able to properly install Linux Lite. 
+				If you don't see that partition, then you should have an MBR-partitioned 
+				disk and you <b>can</b> install Linux Lite.  If you need help figuring 
+				that out, take a screenshot of your hard drive partitions and post that 
+				to the <a href="https://www.linuxliteos.com/forums/" target="_blank">forums</a> 
+				with your inquiry.</p>
+				<p>Currently, we do not support UEFI installations.  You have two 
+				choices if that is how Windows is currently installed.
+				<ol>
+				<li>Re-install Windows in BIOS/Legacy-mode first.  (Do not attempt 
+				this without seeking help on a Windows forum!)  Then install Linux 
+				Lite.</li>
+				<li>Look for another Linux distro that does have UEFI support.</li>
+				</ol>
+				<br />
+				<p><b><u><a name="install_multi-drive">Dual-Boot Install on Systems with More
+				Than One Hard Drive?</a></u></b><br />
+				When choosing to install Linux Lite alongside Windows on a computer
+				with more than one hard drive, the default action of the installer is
+				to install the Linux boot loader to the MBR of the first hard drive.  
+				Since Windows is likely installed to the first drive, its boot loader
+				will be replaced on the MBR with the Linux boot loader.  The Linux 
+				boot loader will see the Windows installation and add it to the boot
+				menu on start-up.  This is how most people do the installation.</p>
+				<p>However, some people prefer to keep the Windows boot loader in
+				tact on its own drive and install the Linux boot loader to its own
+				drive.  (There are various reasons for doing that, the most common
+				being that it makes booting Windows easier if they decide to remove 
+				the Linux installation.)  After the installation completes, they
+				then set the computer's BIOS to boot from the Linux drive.  Even
+				though the Linux boot loader is installed to a separate drive, it 
+				will see the Windows installation and add a boot choice for it.  By
+				booting from the Linux drive, you get the choice to boot either OS.  
+				If you later remove Linux, simply reset the BIOS to boot from the 
+				Windows drive and it will boot Windows as it did before your 
+				installation of Linux.</p>
+				<p>To accomplish this, you must choose the "Something else" option
+				from the "Installation Type" screen during installation.  On the 
+				following screen you will set-up your partitions and mount points 
+				manually.  Then, near the bottom of the window, you need to set the 
+				"location for boot loader installation" to the MBR of the drive 
+				containing Linux Lite.  For example, if you had two hard drives -- 
+				/dev/sda (Windows) and /dev/sdb (Linux) -- you would set the location
+				to /dev/sd<b>b</b> (without any partition number at the end).</p>
+				<p>If you are not experienced with partitioning, or are unsure about 
+				how to proceed, post on our 
+				<a href="https://www.linuxliteos.com/forums/" target="_blank">forums</a> 
+				for assistance.</p>
+				
+				<p><a href="#top">Top of page</a></p>
+				<hr>
+				<p>
+
+				&nbsp;</p>
 				<p>
 
 <font size="4"><b><a name="report"></a>Create System Report tool</b></font></p>
@@ -457,14 +547,14 @@ Lets get started.</p>
 Click on <b>Menu, System, Create System Report</b>.</p>
 				<p>
 
-<img border="0" src="img/hardware/systemreport1.png"></p>
+<img border="0" src="img/hardware/systemreport1.jpg"></p>
 				<p>
 
 A terminal will pop open, read the information in the window and enter your 
 password when ready.</p>
 				<p>
 
-<img border="0" src="img/hardware/systemreport2.png"></p>
+<img border="0" src="img/hardware/systemreport2.png" height="477" width="778"></p>
 				<p>
 
 The report will take anywhere from a few seconds to less than a minute depending 
@@ -472,11 +562,17 @@ on your hardware.<br>
 When it is finished you will see a screen like below.</p>
 				<p>
 
-<img border="0" src="img/hardware/systemreport3.png"></p>
+<img border="0" src="img/hardware/systemreport3.png" height="477" width="778"></p>
 				<p>
 
-You can see that it says, &#39;<b>You now have a file called 
-systeminfo-Friday-21-June-2013-22:51:54.txt in your Home folder.</b>&#39;</p>
+You can see that it says, &#39;<b>The system report is located in your home folder. 
+				Would you like to open the report now?</b>&#39;<br />
+				Type 'y' to view it, or 'n' to close the window. Remember, the 
+				report is now in your home folder and will be named something 
+				similar to: '<strong>systeminfo-Friday-09-May-2014-22:56:50.txt</strong>'</p>
+				<p>
+
+				<img src="img/hardware/sysreport.png" /></p>
 				<p>
 
 Go to the Linux Lite Forums. A link is provided here -
@@ -492,7 +588,7 @@ Now click on <b>Post</b>, and someone will help you as soon as they&#39;re
 available.</p>
 				<p>
 
-<img border="0" src="img/hardware/systemreport5.png"></p>
+<img border="0" src="img/hardware/systemreport4.png"></p>
 				<p>
 
 				<a href="#top">Top of page</a></p><hr>

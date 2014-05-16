@@ -15,7 +15,10 @@
 	border-style: solid;
 	border-width: 1px;
 }
-</style>
+	.auto-style4 {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+	</style>
   </head>
   <body>
     <div id="page">
@@ -34,7 +37,9 @@
           <h1>Linux Lite Installation Guide</h1>
         </div>
         <div class="main_body">
-          <p> <a href="#install">Installing Linux Lite to your computer</a><br />
+          <p>
+            <a href="#prepare">Preparing your Computer for the Installation</a><br />
+            <a href="#install">Installing Linux Lite to your computer</a><br />
             <a href="#language">Setting your Language</a><br />
             <a href="#mounting">Mounting drives &amp; partitions</a><br />
             <a href="#adduser">Adding another User</a><br />
@@ -43,6 +48,19 @@
             <a href="#password">Resetting your password</a><br />
             <a href="#terminal">Terminal Basics</a><br />
             <a href="#themes">Themes &amp; Icon sets</a></p>
+            <p>To install Linux Lite you will need to download the ISO file, then create either 
+            a bootable CD/DVD or USB stick from the ISO.  To create a bootable CD/DVD, you need
+            to burn the ISO as an "image" to the CD/DVD.  Below are listed three free Windows 
+            programs that will enable you to do that.  If burning to a USB stick, we have also 
+            listed a free program that we recommend for doing that in Windows; or a reliable 
+            method to create a bootable USB when using a Linux system, or OSX.</p>
+            <p>Once you have your bootable media created, you may need to access your computer's
+            BIOS settings to set the boot order for booting CD/DVD/USB's first (before the hard
+            drive).  Typically there will be one or two special keys that can be pressed during 
+            initial power-up of the computer (before an operating system starts booting) that will
+            allow you access to either the BIOS Settings/Startup Menu or a separate Boot Menu.  
+            Specific keys vary from one manufacturer to the next, so refer to your user manual if 
+            you are not sure how to access the settings.</p>
           <p> <b> <font size="4">Writing the latest Linux Lite ISO to a CD on 
 		  Windows</font></b></p>
           <p> Here is some free DVD burning software for you to select from:</p>
@@ -83,16 +101,16 @@
           <table width="800" border="0" bgcolor="#FFFF55" id="table1">
             <tbody>
               <tr>
-                <td><b>sudo dd if=linux-lite-2.0-beta-32bit.iso of=/dev/sdx bs=4M<br />
+                <td>sudo dd if=linux-lite-2.0-beta-32bit.iso of=/dev/sdx bs=4M<b><br />
                     <br />
                     for 64bit:<br />
                     <br />
-                    sudo dd if=linux-lite-2.0-beta-64bit.iso of=/dev/sdx bs=4M</b></td>
+                    </b>sudo dd if=linux-lite-2.0-beta-64bit.iso of=/dev/sdx bs=4M</td>
               </tr>
             </tbody>
           </table>
           <p> &nbsp;</p>
-          <p> where '<b>x</b>' is the letter of your USB device.</p>
+          <p> Change the '<b>x</b>' in 'sdx' to match the letter of <i>your</i> USB device.</p>
           <p> The Live DVD/USB image will boot into the desktop automatically, 
 		  there is no need to login manually.</p>
           <p> <font size="4"><b>No USB Boot option in the Bios? Use PloP</b></font><br />
@@ -103,7 +121,77 @@
           <p> <a href="#top">Top of page</a></p>
           <hr />
           <p> &nbsp;</p>
-          <p> <font size="4"><a name="install"></a><b>Installing Linux Lite to 
+          <p> <font size="4"><b><a name="prepare"></a>Preparing your Computer for the Installation</b></font>
+          <br />
+          <br />
+          <p>If you are planning to have Linux Lite as the sole operating system on your computer, there
+          is nothing special you need to do in preparation for the installation - even if another operating
+          system is currently occupying the hard drive.  Simply boot up your live installation disk, give 
+          Linux Lite a test run if you'd like, then start the installation by double-clicking the "Install"
+          icon on the desktop.  When you get to the "Installation Type" screen, tell the installer to use the 
+          whole disk and it will go ahead and erase anything that is already there, create the partitions 
+          needed, format them and install the system automatically.</p>
+          <p>If you currently have <b><u>one</u> physical hard drive</b> and want to dual-boot Windows and Linux Lite, 
+          then you should do a few things to prepare for the installation to insure the best results.</p>
+          <table width="850" border="0">
+            <tbody>
+              <tr>
+              		<td><ul><li>Create backup copies of any important data files.  (You probably won't need 
+              		them -- but if you do, you'll be glad you made the backups.)</li><br />
+          			<li>Create Windows recovery disk(s) if you haven't already done so before.</li><br />
+          			<li>Defragment your largest Windows partition (likely the "C: drive").  If Windows 
+          			partitions currently span the entire hard drive, one (or more) of its partitions will 
+          			need to be shrunk down to make room for the Linux installation.</li><br />
+          			<li>Shrink the Windows partition from within Windows disk management.  (You can shrink 
+          			the partition during the installation, but it is probably best to use Windows to shrink 
+          			Windows partitions.)</li><br />
+          			<li>If you defragmented and shrunk the Windows partition ahead of time, leave the resulting 
+          			space as unpartitioned, unused, free space.  <u>DO NOT</u> create any new partitions from 
+          			within Windows for the Linux Lite installation.  (If you are familiar with partitioning 
+          			and want to create the partitions ahead of time, use GParted for doing that while booted 
+          			in the live Linux Lite DVD/USB.)</li><br />
+          			<li>If you plan to have the shrinking done by the installer, it is still recommended that 
+          			you defragment the Windows partition ahead of time.</li></ul></td>
+              </tr>
+            </tbody>
+          </table><br />
+          <p>If you have <b><u>more than one</u> physical hard drives</b> and want to dual-boot Windows 
+          and Linux Lite, with Linux on its own dedicated physical drive, then we recommend you make a 
+          request for guidance in our 
+		  <a href="https://www.linuxliteos.com/forums/" target="_blank">forum</a> if you 
+          are unfamiliar with Linux installations.  Otherwise, general instructions for such an installation
+          are listed below.</p>
+          <table width="850" border="0">
+            <tbody>
+              <tr>
+              		<td><ul><li>Choose "Something else" on the "Installation Type" screen during 
+              		installation.  (See instructions in following section for pictures of installation 
+              		stages.)</li><br />
+          			<li>On the following page, choose the specific drive that you want for Linux Lite.</li><br />
+          			<li>Create your partitions, choose appropriate file system types, and designate
+          			mount points.</li><br />
+          			<li>Near bottom of the window, select a drive for the boot loader installation.  
+          			(That will be something like /dev/sd<b>a</b>, /dev/sd<b>b</b>, etc. -- without a 
+          			partition # after it.  Not /dev/sda1, for instance.)  It will be pre-filled for the
+          			MBR of the first hard drive.</li><br />
+          			<li>If Windows is on the first drive, it's boot loader will be replaced with the 
+          			Linux boot loader (grub2) unless you specify a different drive.  That is fine, but
+          			an alternative is to install the boot loader to the Linux hard drive, then set the
+          			BIOS to boot from that drive.  That will preserve the Windows boot loader on its 
+          			own drive.  If you need further help with that, post for help on the 
+          			<a href="https://www.linuxliteos.com/forums/" target="_blank">forums</a>.</li><br />
+          			<li>Once installation is complete, reboot and the Linux boot loader will have 
+          			automatically detected your Windows installation and added it to the boot menu choices.</li><br />
+          			</ul></td>
+              </tr>
+            </tbody>
+          </table><br />
+          <p> <a href="#top">Top of page</a></p>
+          <hr />
+            <p> &nbsp;</p>
+              
+              
+            <p> <font size="4"><b><a name="install"></a>Installing Linux Lite to 
 		  your computer<br />
               </b></font><br />
             Start your computer, and go into your system Bios and check that the 
@@ -147,7 +235,7 @@
 		  Welcome</b>
             section of the installer. From here you will select your preferred 
 		  language and view release notes for this version of Linux Lite.</p>
-          <p><img alt="" src="img/installer/1-language.png" /> </p>
+          <p><img alt="" src="img/installer/1-language.jpg" /> </p>
           <p>After selecting continue, you are presented with some requirements 
 		  for the installation. Ensure that these requirements are met by 
 		  viewing a check mark beside them. You may also choose to download any 
@@ -161,19 +249,20 @@
 		  recommended and will save you time in the long run. A typical install 
 		  on today's hardware will take around 10-15 minutes. If you check these 
 		  2 boxes, the install could take over an hour or longer.</p>
-          <p><img alt="" src="img/installer/2-prepare.png" /> </p>
+          <p><img alt="" src="img/installer/2-prepare.jpg" /> </p>
           <p>Now it is time to choose the method of installing Linux Lite to 
 		  your hard disk. You will have several options during this phase of the 
 		  installer.</p>
-          <p> <b>Install Linux alongside Windows</b> - otherwise known as a dual 
+          <p> <b>Install Linux alongside them</b> - otherwise known as a dual 
 		  boot. An option to boot from Windows or Linux Lite when your computer 
-		  starts.<br />
-            <b>Replace Windows with Linux</b> - completely replace Windows with 
-		  Linux Lite.<br />
-            <b>Something else</b> - a more advanced option. Manually set each 
-		  partition size. </p>
-          <p><img alt="" src="img/installer/3-selectinstall.png" /></p>
+		  starts.</p>
+			<p> <b>Note:</b>  If you DO have Windows on the computer, but are not
+		  offered the option to install "Alongside Windows", see the 
+			<a href="hardware.html#booting">
+		  trouble shooting guide</a>.</p>
+          <p><img alt="" src="img/installer/3-selectinstall.jpg" /></p>
           <p><strong>Erase Disk and Install Linux</strong> </p>
+          
           <p>Upon selecting Erase Disk and Install Linux you are presented with 
 		  a screen displaying how your install will be represented on the hard 
 		  disk. This is the most simple option available and will show your hard 
@@ -181,6 +270,19 @@
 		  select the disk you wish to install Linux Lite to from the menu 
 		  labeled: <b>Select Drive</b>. You may then select <b>Install Now</b>
             when you are ready to begin installing.</p>
+          
+          <!-- G_F edit:  added warning about installation of boot loader location. -->
+          <p>(<b>NOTE:</b>  This installation option will automatically install the Linux
+          bootloader to the first hard drive on the system.  That is typically how most 
+          people install and the Linux boot loader offers the choice of booting any other
+          operating systems that are on your computer.  However, if your intent is to 
+          keep the Windows boot loader in charge of booting the Windows drive and the Windows 
+          drive is the first one, then you need to use the "Something else" installation type.  
+          That way you can control the "location for boot loader installation" and set it for 
+          the specific drive you choose for Linux Lite.  Again, this is not a necessity when 
+          dual-booting.  We point this out only because some people prefer to keep the Windows 
+          drive as is.)</p>
+          
           <p><img alt="" src="img/installer/3c-replaceinstall.png" /> </p>
           <p><strong>Install Linux alongside Windows (dual booting)</strong></p>
           <p>If you have selected to install Linux Lite alongside an existing 
@@ -218,7 +320,11 @@
 		  original state you may use the <b>Revert</b> button. <strong>NOTE</strong><b>: 
 		  This will only work if you have not written changes to the disk.</b></p>
           <p>Under the partitioner there is a menu for selecting the location of 
-		  the boot loader's installation. You may select a drive's MBR, 
+		  the boot loader's installation. You may select a drive's 
+		  
+		  <!-- G_F edit:  defined MBR -->
+		  <abbr title="Master Boot Record">MBR</abbr>, 
+		  
 		  indicated by the device name e.g. /dev/sda, or you may select a 
 		  partition to install the boot loader to. The safest option is to 
 		  install the bootloader to the MBR of the first disk as the bootloader 
@@ -226,8 +332,20 @@
 		  Linux installs.</p>
           <p> <strong>NOTE: If you have any NTFS drives, it is important to give 
 		  these a mount point during the install. That way they will be easily 
-		  accessible after the installation.</strong></p>
-          <p><img alt="" src="img/installer/3a-manualinstall.png" /> </p>
+		  accessible after the installation.</strong>  
+		  
+		  <!-- G_F edit:  further explained "mount point". -->
+		  The mount point is simply "where" in the file system you want that
+		  partition's files to show up.  If you want them to show up in your
+		  home directory, then give it a mount point like: <code>
+		  <span class="auto-style4">/home/username/NTFS_Files</span></code>.
+		  Substitute your actual username (in all lowercase letters) for "username".
+		  You can name the mount point what ever you want, so you don't have to use "NTFS_Files"
+		  if you have a more descriptive name in mind.  Try not to have any spaces in the mount 
+		  point name.  Use any of the following characters in place of where you put a space:  
+		  period (.), underscore (_), or dash (-).</p>
+		  
+          <p><img alt="" src="img/installer/3a-manualinstall.jpg" /> </p>
           <p>After completing the partitioning phase of the installation, you 
 		  are prompted to set up some personal details about the system. The 
 		  installer will continue to work in the background while you are 
@@ -236,13 +354,13 @@
 		  via your ISP's information. If not, you may select your time zone by 
 		  either clicking on your region on the supplied map or by typing in 
 		  your area in the box below. </p>
-          <p><img alt="" src="img/installer/4-timezone.png" /> </p>
+          <p><img alt="" src="img/installer/4-timezone.jpg" /> </p>
           <p>The next step is to select your keyboard language and layout. You 
 		  may select the language that your keyboard corresponds to on the left 
 		  and any specialized layout on the right. This is the point where you 
 		  may select to enable international keys on your keyboard. Though, 
 		  these options may be changed later.</p>
-          <p><img alt="" src="img/installer/5-keyboardlayout.png" /> </p>
+          <p><img alt="" src="img/installer/5-keyboardlayout.jpg" /> </p>
           <p>On the next screen, you are greeted by several forms to fill. These 
 		  forms include:</p>
           <p> <b>Your name</b> - your personal name.<br />
@@ -259,14 +377,17 @@
 		  strong password. Use a program like <a target="_blank"
                 href="https://www.keepassx.org/">Keepassx</a> to keep all your 
 		  passwords safely stored and NEVER use the same password for different 
-		  websites.<br />
+		  websites.
+		  (Keepassx is available for installation from Menu, System, 
+		  Install/Remove Software.  
+		  You do not need to download it from their website.)<br />
               <br />
               Never compromise your security for convenience.</b></p>
           <p>Â&nbsp;There are also options to enable auto-login for your user or have 
 		  the computer prompt you for a password everytime you login. Finally, 
 		  there is a selection for encrypting your user's Home folder for extra 
 		  security.</p>
-          <p><img alt="" src="img/installer/6-userinfo.png" /> </p>
+          <p><img alt="" src="img/installer/6-userinfo.jpg" /> </p>
           <p>If you have a webcam, you may encounter a screen during the install 
 		  asking to 'Take a photo' this feature is supported so that when you 
 		  first log in, your photo will be displayed as your avatar. If you skip 
@@ -278,7 +399,8 @@
 		  in this version of Linux Lite. You may allow them to play on their own 
 		  or navigate through them using the arrow buttons on the sides of the 
 		  window.</p>
-          <p> <img width="754" height="537" src="img/installer/7-slideshow.png"
+          <p> 
+		  <img src="img/installer/7-slideshow.jpg"
               alt="slide" /> </p>
           <p>Once the installation is complete you will be prompted to either 
 		  restart your computer and begin using your newly installed Linux Lite 
@@ -291,14 +413,14 @@
           <p>After you have logged in you will see the desktop. Congratulations! 
 		  Now that we've installed Linux Lite, lets take a look at what's 
 		  available on the Menu by clicking <a href="index.html#menus">here</a>.</p>
-          <p> <img width="802" height="599" src="img/installer/desktop.png" alt="desktop" />Â&nbsp;</p>
+          <p> <img width="802" height="599" src="img/installer/desktop.jpg" alt="desktop" /></p>
           <p><a href="#top">Top of page</a></p>
           <hr />
             <p> &nbsp;</p>
           <p> <font size="4"><a name="language"></a>Setting your Language</font></p>
           <p> You may want to set a system wide language, here's how to do it.</p>
           <p> Click on <strong>Menu, Settings, Language Support</strong>.</p>
-          <p> <img src="img/installer/lang/lang1.png" /></p>
+          <p> <img src="img/installer/lang/lang1.jpg" /></p>
           <p> You will get one of two boxes pop up like the ones below, follow 
 		  the instructions by clicking on either <strong>Update</strong> or <strong>
 		  Install</strong>.</p>
@@ -340,7 +462,8 @@
 			<p> <font size="4"><a name="mounting"></a><b>Mounting drives &amp; 
 			partitions</b></font></p>
           <p> <a href="#ext4">EXT4</a><br />
-            <a href="#ext3">EXT3</a></p>
+            <a href="#ext3">EXT3</a><br />
+		    <a href="#fat" >FAT32</a></p>
           <p> During the installation process, you may forget to or not know how 
 		  to mount any other drives or partitions that you have.<br />
           </p>
@@ -374,10 +497,11 @@
             Make sure you leave a blank line at the bottom of the fstab file 
 		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ntfs.png" /></p>
-          <p> Where <strong>user</strong> is your username. Save the file. Open 
-		  a terminal and type: <strong>sudo mount -a</strong><br />
-            <br />
-            If all went to plan, in <strong>/home/user/ntfsfiles</strong> you 
+          <p> Substitute your <em>username</em> (in all lowercase letters) where 
+		  "<strong>user</strong>" is shown in the above example. Save the file. 
+		  Open a terminal and type: <strong>sudo mount -a</strong><br />
+		  <br />
+		  If all went to plan, in <strong>/home/user/ntfsfiles</strong> you 
 		  should see all your files.</p>
           <p> <strong><a name="ext4"></a><span class="auto-style1">EXT4</span></strong></p>
           <p> First we need to make a mount point in your home folder. This is 
@@ -409,10 +533,11 @@
 		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ext4.png" /><br />
             <br />
-            Where <strong>user</strong> is your username. Save the file. Open a 
-		  terminal and type: <strong>sudo mount -a</strong><br />
-            <br />
-            If all went to plan, in <strong>/home/user/ext4files</strong> you 
+            Substitute your <em>username</em> (in all lowercase letters) where "<strong>user</strong>" 
+		  is shown in the above example. Save the file. Open a terminal and 
+		  type: <strong>sudo mount -a</strong><br />
+		  <br />
+		  If all went to plan, in <strong>/home/user/ext4files</strong> you 
 		  should see all your files.</p>
           <p> <strong><a name="ext3"></a><span class="auto-style1">EXT3</span></strong></p>
           <p> First we need to make a mount point in your home folder. This is 
@@ -444,11 +569,46 @@
 		  before you save the file.</p>
           <p> <img src="img/installer/fstab_ext3.png" /><br />
             <br />
-            Where <strong>user</strong> is your username. Save the file. Open a 
-		  terminal and type: <strong>sudo mount -a</strong><br />
-            <br />
-            If all went to plan, in <strong>/home/user/ext3files</strong> you 
+            Substitute your <em>username</em> (in all lowercase letters) where "<strong>user</strong>" 
+		  is shown in the above example. Save the file. Open a terminal and 
+		  type: <strong>sudo mount -a</strong><br />
+		  <br />
+		  If all went to plan, in <strong>/home/user/ext3files</strong> you 
 		  should see all your files.</p>
+		  <p> <strong><a name="fat"></a><span class="auto-style1">FAT32</span></strong></p>
+		  <p>Follow the same general procedure for auto-mounting FAT32 partitions.</p>
+		  <p>First create a mount point in your home folder that will serve as
+		  the access point for the files on that partition.  Open the file manager
+		  to your home folder, right-click and make a new folder.  This example
+		  will name the folder 'fatfiles'.</p>
+		  <p>Open a terminal and enter this command:  <b>sudo blkid</b>.  Enter
+		  your password when asked.</p>
+		  <p>The command shows the UUID's for all drives and their partitions.  
+		  Find the one that corresponds to your FAT32 partition.</p>
+		  <p>Take that UUID and use it to create a new entry in the /etc/fstab file.  
+		  First, we will create a backup copy of the file with this command:</p>
+		  <p><b>sudo cp /etc/fstab /etc/fstab.bak</b></p>
+		  <p>While still in the terminal, type this command to open the /etc/fstab
+		  in your text editor:</p>
+		  <p><b>sudo leafpad /etc/fstab</b></p>
+		  <p>The file will be opened in the editor and you can now add your entries
+		  for the FAT32 partition.  This example will use the UUID "9CEC-37E5".
+		  (Substitute your correct UUID in place of the example's.)</p>
+		  <p>Add the following two lines to your /etc/fstab file:</p>
+		  <p><b># Mount FAT32 Partition</b><br />
+		  <b>UUID=9CEC-37E5 /home/user/fatfiles vfat defaults,uid=1000,gid=100,umask=007 0 0</b></p>
+		  <p>Make sure you leave a blank line at the bottom of the fstab file before
+		  saving the file.  Save the file, then close the editor.</p>
+		  <p>The first line (beginning with '#') is just a comment line describing
+		  what the second line does.  The second line is what actually gets
+		  implemented.</p>
+		  <p>Substitute <i>your username</i> (in all lowercase letters) where 
+		  <strong>"user"</strong> is shown in the above example. Save the file. 
+		  Open a terminal and type: <strong>sudo mount -a</strong></p>
+		  <p>If all went to plan, in <b>/home/user/fatfiles</b> you should see all of
+		  your files.</p>
+		  
+		  
           <p> <a href="#top">Top of page</a></p>
           <hr />
           <p> &nbsp;</p>
@@ -551,12 +711,22 @@
 		  complete the name. This will save you lots of time but be careful and 
 		  make sure you have typed the correct file name. In the examples below 
 		  'directory' also means 'folder'.</b></p>
-          <p> <b>ls</b> - display a list of files in the current directory</p>
-          <p> <b>ls -la</b> - a more comprehensive display of file properties in 
-		  the current directory, including hidden files</p>
-          <p> <b>pwd</b> - shows you the current directory you are in</p>
-          <p> <b>cd</b> - change directory, change to another directory</p>
-          <p> <b>cd ..</b> - go back one directory</p>
+		    <p>When you first open a terminal, your location in the file system will
+		    be your home directory.  You can confirm that by using the first command
+		    listed below, "<strong>pwd</strong>".  It will show that you are in "/home/username", where
+		    "username" is your actual username.</p>
+		    <p> <b>pwd</b> - shows you the present working directory (the directory you are
+		    currently in).  If you get lost, just type "pwd" and it will tell you where you
+		    are in the file system.</p>
+		    <p> <b>ls</b> - display a list of files and directories in the current directory</p>
+          <p> <b>ls -la</b> - a more comprehensive listing that displays file properties in 
+		  	 the current directory, including hidden files and their properties.</p>
+          <p> <b>cd</b> - change directory, change to another directory.  For instance, if
+          you are currently located at /home/username and want to go to your Documents folder, 
+          type:  <b>cd Documents</b>.  If you then type <b>pwd</b>, you will see that your
+          location is now <b>/home/username/Documents</b>.</p>
+          <p> <b>cd ..</b> - go back one directory (up to parent directory of your
+          current location).</p>
           <p> <img border="0" src="img/installer/term-basics1.png" /></p>
           <p> <b>cp</b> - copy file to another directory</p>
           <p> <b>rm</b> - remove a file or directory</p>
@@ -587,8 +757,8 @@
           <p><br />
             Click on <b>Appearance</b>. Here you will see the <b>Style</b> and
             <b>Icons</b> tabs.</p>
-          <p><img border="0" src="img/installer/themes2.png" /></p>
-          <p><img border="0" src="img/installer/themes3.png" /></p>
+          <p><img border="0" src="img/installer/themes2.jpg" /></p>
+          <p><img border="0" src="img/installer/themes3.jpg" /></p>
           <p>As you click through the various themes and icon sets you will 
 		  notice visual changes on your computer.<br />
             Close <b>Settings Manager</b> before moving onto the next part of 
