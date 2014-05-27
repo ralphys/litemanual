@@ -15,9 +15,6 @@
 	border-style: solid;
 	border-width: 1px;
 }
-	.auto-style4 {
-		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	}
 	</style>
   </head>
   <body>
@@ -216,7 +213,8 @@
             <b>Boot the first hard disk</b> - boot the existing operating 
 		  system.</p>
           <p> <b>NOTE: If you are having any trouble booting Linux Lite after 
-		  installation, please read through <a href="hardware.html#booting">this 
+		  installation, please read through 
+		  <a href="hardware.html#installissues">this 
 		  trouble shooting guide</a>.<br />
             </b><br />
             The computer will go through the boot up process, this may take 
@@ -288,12 +286,15 @@
           <p>If you have selected to install Linux Lite alongside an existing 
 		  copy of Windows, you will be greeted with a screen representing the 
 		  two operating systems on the disk. You may choose the disk to install 
-		  Linux Lite to from the top menu labeled: <b>Select Drive</b>. In the 
-		  main part of the window you will see your hard disk split into two 
+		  Linux Lite to from the top menu labeled: Select Drive. In the main 
+		  part of the window you will see your hard disk split into two 
 		  sections, one containing your Windows install and one for your 
 		  proposed Linux Lite installation. You may drag the empty space between 
 		  them to allocate space from one to the other as needed. You may then 
-		  select <b>Install Now</b> after you have made the desired changes.</p>
+		  select Install Now after you have made the desired changes.<br />
+		  If your computer has more than one physical hard drive and your intent 
+		  is to install Linux to a separate drive from the Windows drive, see 
+		  <a href="hardware.html#install_multi-drive">this section</a>.</p>
           <p><img alt="" src="img/installer/3b-installalong.png" /> </p>
           <p><strong>Something Else</strong></p>
           <p><strong>NOTE: FOR ADVANCED USERS ONLY</strong></p>
@@ -335,15 +336,14 @@
 		  accessible after the installation.</strong>  
 		  
 		  <!-- G_F edit:  further explained "mount point". -->
-		  The mount point is simply "where" in the file system you want that
-		  partition's files to show up.  If you want them to show up in your
-		  home directory, then give it a mount point like: <code>
-		  <span class="auto-style4">/home/username/NTFS_Files</span></code>.
-		  Substitute your actual username (in all lowercase letters) for "username".
-		  You can name the mount point what ever you want, so you don't have to use "NTFS_Files"
-		  if you have a more descriptive name in mind.  Try not to have any spaces in the mount 
-		  point name.  Use any of the following characters in place of where you put a space:  
-		  period (.), underscore (_), or dash (-).</p>
+		  The mount point is simply "where" in the file system you want that 
+		  partition's files to show up. If you want them to show up in your home 
+		  directory, then give it a mount point like: /home/username/NTFS_Files. 
+		  Substitute your actual username (in all lowercase letters) for 
+		  "username". You can name the mount point what ever you want, so you 
+		  don't have to use "NTFS_Files" if you have a more descriptive name in 
+		  mind. Try not to have any spaces in the mount point name. Use an 
+		  underscore (_) character in place of spaces.</p>
 		  
           <p><img alt="" src="img/installer/3a-manualinstall.jpg" /> </p>
           <p>After completing the partitioning phase of the installation, you 
@@ -383,7 +383,7 @@
 		  You do not need to download it from their website.)<br />
               <br />
               Never compromise your security for convenience.</b></p>
-          <p>Â&nbsp;There are also options to enable auto-login for your user or have 
+          <p>There are also options to enable auto-login for your user or have 
 		  the computer prompt you for a password everytime you login. Finally, 
 		  there is a selection for encrypting your user's Home folder for extra 
 		  security.</p>
@@ -393,7 +393,8 @@
 		  first log in, your photo will be displayed as your avatar. If you skip 
 		  this step, you can use a .png photo of yourself, rename it to <strong>
 		  .face</strong>
-            and place it in your <strong>/home/user</strong> folder.<br />
+            and place it in your <strong>/home/user</strong> folder.</p>
+			<p><br />
             After finishing all of these steps you will be greeted with a 
 		  slideshow detailing all of the features and software that are included 
 		  in this version of Linux Lite. You may allow them to play on their own 
@@ -425,29 +426,36 @@
 		  the instructions by clicking on either <strong>Update</strong> or <strong>
 		  Install</strong>.</p>
           <p> <img class="auto-style3" src="img/installer/lang/lang2.png" /></p>
-          <p> <img src="img/installer/lang/lang3.png" /></p>
+          <p> <img src="img/installer/lang/language-03.png" /></p>
           <p> You will then be prompted for your password, enter it to continue.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang4.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-04.png" /></p>
           <p> Now click on the button <strong>Install / Remove Languages</strong>.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang5.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-05.png" /></p>
           <p> In this example, we'll install the <strong>Portuguese</strong>
             language. Scroll down, find your language and tick the box next to 
 		  it, then click on <strong>Apply Changes</strong>.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang6.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-06.png" /></p>
           <p> Your computer will begin to download all the language files, this 
 		  may take a while.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang7.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-07.png" /></p>
           <p> Once that is done, scroll to the bottom of the <strong>Language 
 		  for menus and windows</strong> box and drag your newly installed 
 		  language to the top of the list. Then click on <strong>Apply 
 		  System-Wide</strong>, you'll be prompted for your password again.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang8.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-08.png" /></p>
           <p> Now click on the <strong>Regional Formats</strong> tab, select the 
 		  language you just installed, and click on <strong>Apply System-Wide</strong>.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang9.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-09.png" /></p>
           <p> Now logout and login again and you will see that your new language 
 		  has been applied.</p>
-          <p> <img class="auto-style3" src="img/installer/lang/lang10.png" /></p>
+          <p> 
+		  <img class="auto-style3" src="img/installer/lang/language-10.png" /></p>
           <p> Please note that not all programs may not have your language 
 		  applied. If this is the case, search for that program in <strong>
               Install/Remove Software</strong> and see if there is a language 
@@ -459,13 +467,20 @@
           <p> <a href="#top">Top of page</a></p>
           <hr />
           <p> &nbsp;</p>
-			<p> <font size="4"><a name="mounting"></a><b>Mounting drives &amp; 
-			partitions</b></font></p>
+			<p> <font size="4"><a name="mounting"></a><b>Mounting Drives &amp; 
+			Partitions</b></font></p>
           <p> <a href="#ext4">EXT4</a><br />
             <a href="#ext3">EXT3</a><br />
 		    <a href="#fat" >FAT32</a></p>
-          <p> During the installation process, you may forget to or not know how 
-		  to mount any other drives or partitions that you have.<br />
+          <p> If there are partitions on your drive(s) that you did not set-up 
+		  access for during the installation process, you can do that afterwards 
+		  by following the instructions in this section. The basic procedure 
+		  includes finding out the UUID for your partition, making a mount point 
+		  for it in the file system and creating an entry in the /etc/fstab file 
+		  for auto-mounting it on every boot-up. A 'mount point' is simply 
+		  'where' in the file system you want the partition's files to show up. 
+		  Most people like to see them in their Home folder, so that is what the 
+		  following examples depict.<br />
           </p>
           <p> <strong>NTFS</strong></p>
           <p> First we need to make a mount point in your home folder. This is 
@@ -580,7 +595,7 @@
 		  <p>First create a mount point in your home folder that will serve as
 		  the access point for the files on that partition.  Open the file manager
 		  to your home folder, right-click and make a new folder.  This example
-		  will name the folder 'fatfiles'.</p>
+		  will name the folder '<strong>fatfiles</strong>'.</p>
 		  <p>Open a terminal and enter this command:  <b>sudo blkid</b>.  Enter
 		  your password when asked.</p>
 		  <p>The command shows the UUID's for all drives and their partitions.  
@@ -595,10 +610,12 @@
 		  for the FAT32 partition.  This example will use the UUID "9CEC-37E5".
 		  (Substitute your correct UUID in place of the example's.)</p>
 		  <p>Add the following two lines to your /etc/fstab file:</p>
-		  <p><b># Mount FAT32 Partition</b><br />
-		  <b>UUID=9CEC-37E5 /home/user/fatfiles vfat defaults,uid=1000,gid=100,umask=007 0 0</b></p>
+		  <p><strong># FAT32 Drive<br />
+		  UUID=9CEC-37E5 /home/user/fatfiles vfat 
+		  defaults,uid=1000,gid=100,umask=007 0 0</strong></p>
 		  <p>Make sure you leave a blank line at the bottom of the fstab file before
 		  saving the file.  Save the file, then close the editor.</p>
+			<p><img src="img/installer/fstab_fat32.png" /></p>
 		  <p>The first line (beginning with '#') is just a comment line describing
 		  what the second line does.  The second line is what actually gets
 		  implemented.</p>
@@ -661,7 +678,7 @@
           <p> <a href="#top">Top of page</a></p>
           <hr />
           <p> &nbsp;</p>
-			<p> <font size="4"><a name="password"></a><b>Resetting your password</b></font></p>
+			<p> <font size="4"><a name="password"></a><b>Resetting your Password</b></font></p>
           <p> Forgot your password? It happens to all of us at some stage. 
 		  Fortunately setting it again is fairly straight forward.<br />
             Lets begin.</p>
@@ -747,18 +764,18 @@
           <hr />
           <p> &nbsp;</p>
 			<p> <font size="4"><a name="themes"></a><b>Themes &amp; Icon sets</b></font></p>
-          <p>The default theme for Linux Lite is <b>Mediterranean Light</b>. The 
+          <p>The default theme for Linux Lite is <b>Mediterranean White</b>. The 
 		  default icon set is <b>Faenza</b>.<br />
             There are some additional Theme and Icon sets in Linux Lite. Go to <b>
 		  Menu, Settings, Settings Manager</b>.<br />
             There are 2 main areas in the Settings Manager that take care of 
 		  these settings - <b>Appearance</b> and <b>Window Manager</b>.</p>
-          <p><img border="0" src="img/installer/themes1.png" /></p>
+          <p><img border="0" src="img/installer/themes-01.png" /></p>
           <p><br />
             Click on <b>Appearance</b>. Here you will see the <b>Style</b> and
             <b>Icons</b> tabs.</p>
-          <p><img border="0" src="img/installer/themes2.jpg" /></p>
-          <p><img border="0" src="img/installer/themes3.jpg" /></p>
+          <p><img border="0" src="img/installer/themes-02.png" /></p>
+          <p><img border="0" src="img/installer/themes-03.png" /></p>
           <p>As you click through the various themes and icon sets you will 
 		  notice visual changes on your computer.<br />
             Close <b>Settings Manager</b> before moving onto the next part of 
@@ -776,13 +793,13 @@
 		  theme. Some make installation easy via a PPA, this is a preferable 
 		  method to the one shown here. Click <a href="software.html#ppa">here</a>
               for more information on how to install a new PPA. Whichever theme 
-		  you choose, make sure that it mentions XFCE compatability.</b></p>
+		  you choose, make sure that it mentions XFCE compatibility.</b></p>
           <p>The first thing we need to do is open up our home folder. Click on
             <b>View, Show Hidden Files</b>.<br />
             Right click somewhere in your home folder, <b>Create Folder</b>, 
 		  make a folder called <b>.themes </b>(you will only need to do this 
 		  once.) This is where we will copy the new theme to.</p>
-          <p><img border="1" src="img/installer/themes4.png" /></p>
+          <p><img border="1" src="img/installer/themes-04.png" /></p>
           <p>Download a theme of your choosing. In this example we will choose 
 		  the <a href="http://xfce-look.org/content/show.php/Redbird?content=158228"
               target="_blank">Redbird</a> theme.</p>
@@ -790,27 +807,27 @@
 		  instructions, if they do, please follow those instructions.</b></p>
           <p>Next extract the theme you just downloaded (right click, <b>Extract 
 		  Here</b>)</p>
-          <p><img border="1" src="img/installer/themes5.png" /></p>
+          <p><img border="1" src="img/installer/themes-05.png" /></p>
           <p>Copy the Redbird theme folder to the <b>.themes</b> folder in your 
 		  home folder.</p>
-          <p><img border="1" src="img/installer/themes6.png" /></p>
+          <p><img border="1" src="img/installer/themes-06.png" /></p>
           <p>Now go to <b>Menu, Settings, Settings Manager</b>. There are 2 
 		  places we need to apply the new theme, <b>Appearance</b> and <b>Window 
 		  Manager</b>.</p>
-          <p><img border="1" src="img/installer/themes7.png" /></p>
+          <p><img border="1" src="img/installer/themes-01.png" /></p>
           <p>First we'll click into <b>Appearance</b>. Select <b>Redbird</b>
             from the list.</p>
-          <p><img border="1" src="img/installer/themes8.png" /></p>
+          <p><img border="1" src="img/installer/themes-07.png" /></p>
           <p>Click on <b>Overview</b> in the bottom left to go back to the <b>
 		  Settings Manager</b>.<br />
             Now click into <b>Window Manager</b> and select <b>Redbird</b>.</p>
-          <p><img border="1" src="img/installer/themes9.png" /></p>
+          <p><img border="1" src="img/installer/themes-08.png" /></p>
           <p>We're almost there. In the picture below you can see that it hasn't 
 		  quite displayed our tray icons properly.</p>
-          <p><img border="0" src="img/installer/themes10.png" /></p>
+          <p><img border="0" src="img/installer/themes-09.png" /></p>
           <p>Lets click on <b>Menu, Turn Off Computer,</b> and <b>Log Out</b>.<br />
             Log in again and our new theme now displays properly.</p>
-          <p><img border="0" src="img/installer/themes11.png" /></p>
+          <p><img border="0" src="img/installer/themes-10.png" /></p>
           <p>
             <a href="#top">Top of page</a></p>
           <hr />
@@ -831,25 +848,25 @@
             Right click somewhere in your home folder, <b>Create Folder</b>, 
 		  make a folder called <b>.icons </b>(you will only need to do this 
 		  once.) This is where we will copy the new Icon set to.</p>
-          <p><img border="1" src="img/installer/icons1.png" /></p>
+          <p><img border="1" src="img/installer/icons-01.png" /></p>
           <p>Download an icon set of your choosing. In this example we will 
-		  choose the <a href="http://gnome-look.org/content/show.php/Clarity?content=135654"
-              target="_blank"> Clarity Icon Set</a>.</p>
+		  choose the 
+		  <a href="http://gnome-look.org/content/show.php/Black-Gnome?content=110418" target="_blank">Black-Gnome Icon Set</a>.</p>
           <p><b>NOTE: Each icon set may come with a specific set of install 
 		  instructions, if they do, please follow those instructions.</b></p>
           <p>Next extract the icon set you just downloaded (right click, <b>
 		  Extract Here</b>)</p>
-          <p><img border="1" src="img/installer/icons2.png" /></p>
+          <p><img border="1" src="img/installer/icons-02.png" /></p>
           <p>Copy the icon set folder to the <b>.icons</b> folder in your home 
 		  folder.</p>
-          <p><img border="1" src="img/installer/icons3.png" /></p>
+          <p><img border="1" src="img/installer/icons-03.png" /></p>
           <p>Now go to <b>Menu, Settings, Appearance</b>. Select the <b> Icons</b>
             tab and click on your new Icon set.</p>
-          <p><img border="1" src="img/installer/icons4.png" /></p>
+          <p><img border="1" src="img/installer/icons-04.png" /></p>
           <p>Here is a look at our new icon theme.</p>
-          <p><img border="1" src="img/installer/icons5.png" /></p>
-          <p><img border="1" src="img/installer/icons6.png" /></p>
-          <p><img border="0" src="img/installer/icons7.png" /></p>
+          <p><img border="1" src="img/installer/icons-05.png" /></p>
+          <p><img border="1" src="img/installer/icons-06.png" /></p>
+          <p><img border="0" src="img/installer/icons-07.png" /></p>
           <p>
             <a href="#top">Top of page</a></p>
         </div>
