@@ -36,7 +36,8 @@
 				<a href="#sources">Change your Software Updates Country Location</a><br />
 				<a href="#additional">Install Additional Software</a><br />
 				<a href="#remove">Remove Additional Software</a><br />
-				<a href="#ppa">Adding a PPA</a><br>
+				<a href="#ppa">Adding a PPA</a><br />
+				<a href="#encrypt">File Encryption</a><br>
 				<a href="#archive">Creating &amp; Extracting Zip files</a><br>
 				<a href="#deskenv">A word on changing Desktop Environments</a></p>
 				<p><b><font size="4"><a name="software"></a>Installing &amp; 
@@ -225,7 +226,7 @@
 				<hr>
 				<p>&nbsp;</p>
 
-				<p><b><font size="4"><a name="ppa">Adding a PPA</font></b></p>
+				<p><a name="ppa"></a><b><font size="4">Adding a PPA</font></b></p>
 				<p>A PPA is a repository containing one or more applications. 
 				These are often set up for new software programs or updated 
 				versions of some applications. To add a new PPA to your system, 
@@ -272,7 +273,92 @@
 				<a href="#top">Top of page</a></p><hr>
 				<hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="archive"><a/>Creating and 
+				<p><b><font size="4"><a name="encrypt"></a>File Encryption</font></b></p>
+				<p>In todays world, security of your personal files is 
+				important. Whether your transporting documents on a USB drive or 
+				emailing sensitive information to a friend, colleague or company, 
+				encryption is a necessary security measure.</p>
+
+				<p>1. First we need to install the encryption software, in this 
+				example we'll use
+				<a href="https://en.wikipedia.org/wiki/Mcrypt" target="_blank">
+				mcrypt</a>. Encryption algorithms include DES, Blowfish, 
+				ARCFOUR, Enigma, GOST, LOKI97, RC2, Serpent, Threeway, Twofish, 
+				WAKE, and XTEA.</p>
+				<p>Open a terminal and type:</p>
+				<p><strong>sudo apt-get install mcrypt -y</strong></p>
+				<p>2. Once mcrypt is installed, we'll set a custom right click 
+				action in our file manager to make encryption of files super 
+				easy. Open up your home folder, click on <strong>Edit, Configure 
+				custom actions</strong>.</p>
+				<p><img src="img/software/encrypt/encrypt1.jpg" /></p>
+				<p>3. Click the plus + button on the right and enter in the 
+				following information, in the <strong>Command</strong> box type 
+				in:</p>
+				<p><strong>x-terminal-emulator -t "Encrypt file..." -e "mcrypt 
+				%f"</strong></p>
+				<p><img src="img/software/encrypt/encrypt2.jpg" /></p>
+				<p>Click on <strong>Appearance Conditions</strong> tab and tick 
+				every box except <strong>Directories</strong>.</p>
+				<p><img src="img/software/encrypt/encrypt2a.png" /></p>
+				<p>4. Go back to the <strong>Basic</strong> tab and click on the
+				<strong>No icon</strong> button and browse to <strong>Status 
+				Icons</strong>, and select the <strong>changes-prevent</strong> 
+				icon and click on <strong>Ok</strong>, then <strong>Ok</strong> 
+				on the next box.</p>
+				<p><img src="img/software/encrypt/encrypt3.jpg" /></p>
+				<p>Your <strong>Custom Actions</strong> box should now look like 
+				this:</p>
+				<p><img src="img/software/encrypt/encrypt4.jpg" /></p>
+				<p>5. Now we need to set up the <strong>Decrypt</strong> option. 
+				Repeat step 3 only this time enter in the following information, 
+				in the <strong>Command</strong> box type in:</p>
+				<p><strong>x-terminal-emulator -t "Decrypt file..." -e "mcrypt 
+				-d %f"</strong></p>
+				<p><img src="img/software/encrypt/encrypt5.jpg" /></p>
+				<p>Click on <strong>Appearance Conditions</strong> tab and
+				<strong>only</strong> tick the <strong>Other Files</strong> box, 
+				leave the rest unticked.</p>
+				<p><img src="img/software/encrypt/encrypt5a.png" /></p>
+				<p>6. Repeat step 4 only this time select the <strong>
+				changes-allow</strong> icon. The click on <strong>Ok</strong>, 
+				then <strong>Ok</strong> on the next box.</p>
+				<p><img src="img/software/encrypt/encrypt6.jpg" /></p>
+				<p>7. Your <strong>Custom Actions</strong> box should now look 
+				like this:</p>
+				<p><img src="img/software/encrypt/encrypt7.jpg" /></p>
+				<p>8. Click on the <strong>Close</strong> button on the <strong>
+				Custom Actions</strong> box.</p>
+				<p>Now we're ready to encrypt a file (only files can be 
+				encrypted with this method, not folders)</p>
+				<p>9. Right click on a file and select <strong>Encrypt file</strong>.</p>
+				<p><img src="img/software/encrypt/encrypt8.jpg" /></p>
+				<p>10. A window will pop up asking you to type in a password, it 
+				will then ask you to enter the same password again. Choose a 
+				good strong password, a mixture of letters, numbers and 
+				characters that you can easily remember.</p>
+				<p><img src="img/software/encrypt/encrypt9.png" /></p>
+				<p>You can now delete the unencrypted file permanently.<br />
+				Here you will see we have a new file with the letters '<strong>.nc</strong>' 
+				attached to the end of it signifying that the file is now 
+				encrypted.</p>
+				<p><img src="img/software/encrypt/encrypt10.jpg" />&nbsp;</p>
+				<p>11. To decrypt the file later, right click on the file and 
+				select <strong>Decrypt file</strong>.</p>
+				<p><img src="img/software/encrypt/encrypt11.jpg" />&nbsp;</p>
+				<p>12. A window will pop up asking you to type in a password. 
+				Enter the password you created in step 10.</p>
+				<p><img src="img/software/encrypt/encrypt12.png" />&nbsp;</p>
+				<p>As you can see our file is decrypted and ready to view.</p>
+				<p><img src="img/software/encrypt/encrypt13.jpg" />&nbsp;</p>
+				<p>If you make any changes to the decrypted file, you need to 
+				delete the existing encrypted file and re-encypt the changed 
+				file.</p>
+				<p>
+				<a href="#top">Top of page</a></p>
+				<hr>
+				<p>&nbsp;</p>
+				<p><a name="archive"></a><b><font size="4"><a/>Creating and 
 				Extracting Zip files</a></font></b></p>
 				<p>Sometimes we may have a collection of pictures to send 
 				someone over email. Good practice is to zip these files up so 
