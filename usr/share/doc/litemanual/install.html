@@ -38,6 +38,7 @@
             <a href="#prepare">Preparing your Computer for the Installation</a><br />
             <a href="#install">Installing Linux Lite to your computer</a><br />
             <a href="#language">Setting your Language</a><br />
+			<a href="#trim">Enabling TRIM on your SSD</a><br />
             <a href="#mounting">Mounting drives &amp; partitions</a><br />
             <a href="#adduser">Adding another User</a><br />
             <a href="#userperms">User permissions</a><br />
@@ -269,7 +270,6 @@
 		  labeled: <b>Select Drive</b>. You may then select <b>Install Now</b>
             when you are ready to begin installing.</p>
           
-          <!-- G_F edit:  added warning about installation of boot loader location. -->
           <p>(<b>NOTE:</b>  This installation option will automatically install the Linux
           bootloader to the first hard drive on the system.  That is typically how most 
           people install and the Linux boot loader offers the choice of booting any other
@@ -323,7 +323,6 @@
           <p>Under the partitioner there is a menu for selecting the location of 
 		  the boot loader's installation. You may select a drive's 
 		  
-		  <!-- G_F edit:  defined MBR -->
 		  <abbr title="Master Boot Record">MBR</abbr>, 
 		  
 		  indicated by the device name e.g. /dev/sda, or you may select a 
@@ -335,7 +334,6 @@
 		  these a mount point during the install. That way they will be easily 
 		  accessible after the installation.</strong>  
 		  
-		  <!-- G_F edit:  further explained "mount point". -->
 		  The mount point is simply "where" in the file system you want that 
 		  partition's files to show up. If you want them to show up in your home 
 		  directory, then give it a mount point like: /home/username/NTFS_Files. 
@@ -464,6 +462,46 @@
 		  translated properly. There is little we can do about this, an easy way 
 		  to rename <strong>Menu</strong> entries is by going to <strong>Menu, 
 		  Settings, Main Menu</strong> and editing the entries there.</p>
+          <p> <a href="#top">Top of page</a></p>
+          <hr />
+          <p> &nbsp;</p>
+          <p> <font size="4"><a name="trim"></a>Enabling TRIM on your SSD</font></p>
+          <p> Enabling trim on your SSD will significantly increase its life 
+		  span. Here's how to do it on Linux Lite.</p>
+			<p> <strong>CAUTION: You MUST edit the following file with great 
+			care, a misplaced comma, a gap that shouldn't be there or a missing 
+			line will cause you computer to not boot. Take your time and triple 
+			check this file for accuracy before saving it.</strong></p>
+			<p> Open a terminal and do:</p>
+			<p> &nbsp;<strong>sudo cp /etc/fstab /etc/fstab_bak-notrim</strong></p>
+			<p> When that has finished, in the same terminal do:</p>
+			<p> <strong>sudo leafpad /etc/fstab</strong></p>
+			<p> a file will open that will look similar to this:</p>
+			<p> <img src="img/installer/trim/trim1.png" /></p>
+			<p> Look for every line that contains the work <strong>ext4<br />
+			</strong>At the start on the next block of information, place the 
+			characters <strong>discard,</strong> (don't forget the <strong>comma</strong>)in 
+			front like in the picture below:</p>
+			<p> <img src="img/installer/trim/trim2.png" /></p>
+			<p> Now save and close the file. At this point you must restart your 
+			computer.</p>
+			<p> After your computer has rebooted, in a terminal do:</p>
+			<p> <strong>wget -O /tmp/test_trim.sh "</strong><a href="http://www.linuxliteos.com/files/test_trim.sh"><strong>http://www.linuxliteos.com/files/test_trim.sh</strong></a>"</p>
+			<p> when that file has downloaded, in the same terminal do:</p>
+			<p> <strong>chmod +x /tmp/test_trim.sh</strong></p>
+			<p> Now we are ready to test if we have TRIM enabled. In the same 
+			terminal do:</p>
+			<p> <strong>sudo /tmp/test_trim.sh tempfile 50 /dev/sda</strong></p>
+			<p> Wait for it to finish, your terminal should look something like 
+			this:</p>
+			<p> <img src="img/installer/trim/trim3.png" /></p>
+			<p> Hit any key to continue and wait 2 minutes for the test to 
+			restart.</p>
+			<p> If TRIM has been enabled properly, your terminal should now look 
+			like this:</p>
+			<p> <img src="img/installer/trim/trim4.png" /></p>
+			<p> If for some reason it doesn't, restart this tutorial again 
+			carefully following each step to the letter.</p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
           <p> &nbsp;</p>
