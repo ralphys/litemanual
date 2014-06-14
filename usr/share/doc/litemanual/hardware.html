@@ -4,6 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" />
 <title>Linux Lite | Hardware</title>
+<style type="text/css">
+.auto-style1 {
+	background-color: #FFFF00;
+}
+</style>
 </head>
 
 <body>
@@ -51,7 +56,9 @@
 &nbsp;- <a href="#nvidia">NVIDIA</a><br>
 &nbsp;- <a href="#optimus">NVIDIA-Optimus</a><br>
 				<a href="#sound">Sound Configuration</a><br>
-				<a href="#printer"><a href="#printer">Printer Setup</a><br><!--<a href="#wirelessdev">Wireless Devices</a><br>-->
+				<a href="#printer"><a href="#printer">Printer Setup</a><br />
+&nbsp;- <a href="#hpprinters">HP</a><br>
+&nbsp;- <a href="#canonprinters">Canon</a><br><!--<a href="#wirelessdev">Wireless Devices</a><br>-->
 				<a href="#keyboard">Keyboard Hotkeys and Multimedia Keys</a><br>
 				<a href="#booting">Booting issues</a><br />
 				<a href="#installissues">Installation issues</a><br><a href="#report">Create System Report tool</a><br>
@@ -336,7 +343,7 @@ Canon, Epson &amp; HP.<br />
 				<a href="http://welcome.solutions.brother.com/bsc/public_s/id/linux/en/download_prn.html">
 				Brother</a> - A list of drivers for Brother Printers.<b><br />
 				</b><br>
-				HP compatible printers can be found
+				<a name="hpprinters">HP compatible</a> printers can be found
 				<a href="http://hplipopensource.com/hplip-web/supported_devices/combined.html" target="_blank">
 				here</a>, the latest master driver for HP printers is available 
 				for download
@@ -352,8 +359,41 @@ Once it&#39;s installed go to <b>Menu, Settings, HPLIP Toolbox</b>. This will pl
 and HP icon in your tray where you can configure and manage your HP printer. 
 Right click on the icon for options.</p>
 				<p>
-<img border="0" src="img/hardware/printing-hplip.png"><br>
+<img border="0" src="img/hardware/printing-hplip.png"></p>
+			<p>
+			<strong><a name="canonprinters">Canon printers</a> on Linux Lite 2.0</strong></p>
+			<p>
+			If your Canon printer is not supported after a new install of Linux 
+			Lite, try the following.<br />
+			Open a terminal and do:</p>
+			<p>
+			<strong>wget http://cz.archive.ubuntu.com/ubuntu/pool/universe/t/tiff3/libtiff4_3.9.7-2ubuntu1_i386.deb<br />
+			sudo dpkg -i libtiff4_3.9.7-2ubuntu1_i386.deb<br />
+			sudo apt-get install -f<br />
+			rm libtiff*</strong><br />
+			<br />
+			<span class="auto-style1">OR if you are on 64bit:</span><br />
+			<br />
+			<strong>wget http://cz.archive.ubuntu.com/ubuntu/pool/universe/t/tiff3/libtiff4_3.9.7-2ubuntu1_amd64.deb<br />
+			sudo dpkg -i libtiff4_3.9.7-2ubuntu1_amd64.deb<br />
+			sudo apt-get install -f<br />
+			rm libtiff*</strong><br />
+			<br />
+			Then do:<br />
+			<br />
+			<strong>sudo add-apt-repository ppa:michael-gruz/canon-trunk<br />
+			sudo apt-get update</strong><br />
 				</p>
+			<p>
+			Now open <strong>Menu, System, Install/Remove Software</strong> and 
+			search for your printer name. For example if you had the Canon 
+			MX870Series Printer then you must use the following format:</p>
+			<p>
+			<strong>mx870series</strong></p>
+			<p>
+			in the search box. Now double click on your printer and click on the
+			<strong>Apply</strong> button on the toolbar. Now add your Printer 
+			starting from Step 3 above.</p>
 				<p>
 <a href="#top">Top of page</a></p><hr>
 				<p>
