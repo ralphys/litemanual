@@ -58,6 +58,7 @@
             <br />
             <a href="#prepare">Preparing your Computer for the Installation</a><br />
             <a href="#install">Installing Linux Lite to your computer</a><br />
+			<a href="#encrypthome">Encrypting your home folder</a><br />
             <a href="#language">Setting your Language</a><br />
 			<a href="#trim">Enabling TRIM on your SSD</a><br />
             <a href="#mounting">Mounting drives &amp; partitions</a><br />
@@ -281,6 +282,10 @@
 		  offered the option to install "Alongside Windows", see the 
 			<a href="hardware.html#booting">
 		  trouble shooting guide</a>.</p>
+			<p> <b>Note:</b>  If you want to encrypt your home folder, <strong>
+			do not</strong> select the option '<strong>Encrypt the new Linux 
+			installation for security</strong>' instead, please follow these 
+			instructions <a href="#encrypthome">here</a>.</p>
           <p><img alt="" src="img/installer/3-selectinstall.jpg" /></p>
           <p><strong>Erase Disk and Install Linux</strong> </p>
           
@@ -404,9 +409,11 @@
               <br />
               Never compromise your security for convenience.</b></p>
           <p>There are also options to enable auto-login for your user or have 
-		  the computer prompt you for a password everytime you login. Finally, 
-		  there is a selection for encrypting your user's Home folder for extra 
-		  security.</p>
+		  the computer prompt you for a password everytime you login.</p>
+			<p>&nbsp;<b>Note:</b>  If you want to encrypt your home folder,
+			<strong>do not</strong> select the option '<strong>Encrypt my home 
+			folder</strong>' instead, please follow these instructions 
+			<a href="#encrypthome">here</a>.</p>
           <p><img alt="" src="img/installer/6-userinfo.jpg" /> </p>
           <p>If you have a webcam, you may encounter a screen during the install 
 		  asking to 'Take a photo' this feature is supported so that when you 
@@ -435,6 +442,53 @@
 		  Now that we've installed Linux Lite, lets take a look at what's 
 		  available on the Menu by clicking <a href="index.html#menus">here</a>.</p>
           <p> <img width="802" height="599" src="img/installer/desktop.jpg" alt="desktop" /></p>
+          <p><a href="#top">Top of page</a></p>
+          <hr />
+            <p> &nbsp;</p>
+          <p> <font size="4"><a name="encrypthome"></a>Encrypting your home folder</font></p>
+          <p> After a new installation of Linux Lite, you have the option of 
+		  encrypting your home folder for added security. You won't be able to 
+		  encrypt your home folder while you are logged in. So we're going to 
+		  add a temporary user then when we are finished, we'll delete that 
+		  user.</p>
+			<p> 1. Click on <strong>Menu, Settings, User Manager</strong>. Click 
+			on <strong>New User</strong> and add the user <strong>tempuser</strong> 
+			with a password of your choosing. Make sure you tick the <strong>
+			sudo</strong> box on the right before closing out User Manager.</p>
+			<p> <img src="img/installer/encrypt/encrypt1.png" /></p>
+			<p> <img src="img/installer/encrypt/encrypt2.png" /></p>
+			<p> 2. Now logout, and login with the user <strong>tempuser</strong>.</p>
+			<p> <img src="img/installer/encrypt/encrypt3.png" /></p>
+			<p> 3. Open a terminal and enter the following command to encrypt 
+			your home directory, replacing <strong>user</strong> with the name 
+			of <strong>your</strong> user account:</p>
+			<p> &nbsp;<strong>sudo ecryptfs-migrate-home -u user</strong></p>
+			<p> <img src="img/installer/encrypt/encrypt4.png" /></p>
+			<p> 4. When this has finished (time to encrypt may vary) <strong>you 
+			must logout of tempuser and login as your user. DO NOT reboot.</strong></p>
+			<p> 5. Once logged in as your user, open a terminal and type in:</p>
+			<p> <strong>ecryptfs-add-paraphrase</strong></p>
+			<p> and enter your login password.</p>
+			<p> <img src="img/installer/encrypt/encrypt5.png" /></p>
+			<p> 6. To check that you have successfully created a passphrase, 
+			enter the command:</p>
+			<p> <strong>ecryptfs-unwrap-paraphrase</strong></p>
+			<p> <img src="img/installer/encrypt/encrypt6.png" /></p>
+			<p> 7. Clean up time. Open a terminal and enter the following 
+			commands:</p>
+			<p> <strong>sudo userdel tempuser</strong></p>
+			<p> <strong>sudo rm -rf /home/tempuser/</strong></p>
+			<p> <strong>sudo rm -rf /home/yourusername.3redf/</strong></p>
+			<p> When you do the last command, type a dot '.' after your username 
+			and press the tab key to complete the directory name.</p>
+			<p> <strong>Note: Be extremely careful when doing this last command, 
+			you run the risk of deleting your home folder if you do not follow 
+			these instructions to the letter.</strong></p>
+			<p> <img src="img/installer/encrypt/encrypt7.png" /></p>
+			<p> Your home folder should now be encrypted. To test, insert a live 
+			linux operating system cd/usb and reboot. Once you are in the live 
+			desktop, you shouldn't be able to browse your encrypted home folder.</p>
+			<p> <img src="img/installer/encrypt/encrypt8.png" /></p>
           <p><a href="#top">Top of page</a></p>
           <hr />
             <p> &nbsp;</p>
