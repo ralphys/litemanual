@@ -46,10 +46,11 @@
 			</table>
 
                 <p><br />
-				<a href="#keepassx">KeePassX</a> - create and store strong 
-				passwords.<br />
+				<a href="#keepassx">KeePassX</a> - create and store strong passwords.<br />
 				<!-- <a href="#plank">Plank Dock</a> - docking area for program 
-				launchers.</p> -->
+				launchers.<br /> -->
+				<a href="#vbox">VirtualBox</a> - use a virtual environment to run other
+				operating systems within Linux Lite.</p><br />
             
            		<p><strong><font size="4">General Information</font></strong></p>
 				<p>This page is a work in progress.  Over time more tutorials will be added
@@ -338,8 +339,237 @@
 				<a href="https://rhoconlinux.github.io/plank-themer/index.html" target="_blank">
 				Original creator's Plank-Themer information page</a></p> -->
 				
-				
-				<p><a href="#top">Top of page</a></p>
+				<br />
+				<p><a href="#top">Top of page</a></p><br />
+				<hr />
+				<p>&nbsp;</p>
+				<p><strong><font size="4"><a name="vbox">Virtual Box</a></font></strong></p>
+				<p>The VirtualBox (VBox) program allows you to run other OS's (operating systems)
+				within your main OS by creating a container of sorts for them to run in, independently
+				from the main OS.  You install other OS's to VBox just like you would to a normal
+				hard drive.  VBox creates a virtual hard drive for you to install to and the result
+				is referred to as a Virtual Machine (VM).</p>
+				<p>You can install to VBox using a bootable CD or DVD. Even more conveniently, you
+				can install using a downloaded ISO file without the need to burn it first to a
+				CD/DVD.  You can also just boot ISO files and run them as a live environment -- 
+				just as you would booting your computer from a live CD/DVD/USB -- without installing
+				it if you prefer.</p>
+				<p><span style="text-decoration: underline;">Some common uses for VBox are:</span>
+					<ul>
+						<li>Install a second copy of your main OS for testing and experimentation.</li>
+						<li>Install other Linux distros that you want to use regularly, but do
+						not want to install as a dual-boot on your computer.</li>
+						<li>Install, or just run live, other distros for testing purposes.</li>
+						<li>Install Windows so you can run its programs within Linux without
+						rebooting the computer.  (Note: Microsoft considers that to be a separate
+						installation of its software and requires another user license for that.)</li>
+					</ul>
+				</p><br />
+				<p><strong><span style="text-decoration: underline;">Installing VirtualBox</span></strong></p>
+				<p>To install VBox, go to <strong>Menu -> System -> Install Additional Software</strong>
+				and find it from the list of software to install.  Enter its corresponding number
+				and your password when asked for it.  VirtualBox will take a couple of minutes to
+				fully install, so just wait until the screen tells you it is done.</p>
+				<p><img src="img/software_tutorials/virtualbox/vbox-01.png" alt="vbox-01.png" /></p>
+				<p>After installation is complete, you will find VBox under both the <strong>Accessories</strong>
+				and <strong>System</strong> sections of the <strong>Menu</strong>.</p>
+				<p>VBox does not come pre-configured to use USB sticks.  You need to download an extra
+				package for that from their website.  Go ahead and start VBox, then follow the steps
+				below to install what you need for USB support.</p>
+					<ul>
+						<li>You need to know the version number of your VBox installation in order to
+						download the matching "<strong>Extension Pack</strong>".  It should be version
+						4.3.10; but double-check that by clicking <strong>Help -> About VirtualBox</strong>
+						from the main VBox window.  Then look along bottom of pop-up window for the
+						version number.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-02.png" border="1" alt="vbox-02.png" /><br />
+						<br />
+						<img src="img/software_tutorials/virtualbox/vbox-03.png" border="1" alt="vbox-03.png" /><br />
+						<p>&nbsp</p>
+						<li>Go to <a href="https://www.virtualbox.org/wiki/Download_Old_Builds_4_3/" >this
+						VirtualBox webpage</a> if you do have version 4.3.10.  Otherwise, go
+						<a href="https://www.virtualbox.org/wiki/Downloads" >here</a>, look for your
+						version number and follow same steps as below to continue.<br /><br />
+							<ul>
+								<li>Find the "<strong>Extension Pack</strong>" and click on "<strong>All Platforms</strong>"
+								to download it.  Save the download to your <strong>Downloads</strong> folder.</li><br />
+								<img src="img/software_tutorials/virtualbox/vbox-04.png" border="1" alt="vbox-04.png" /><br />
+								<br />
+								<img src="img/software_tutorials/virtualbox/vbox-05.png" alt="vbox-05.png" /><br />
+								<br />
+								<li>Once downloaded, in VBox main window, go to <strong>File -> Preferences</strong>
+								and click <strong>Extensions</strong> on the left side.</li>
+								<li>Look to the right side of the window and you will see two icons.  Click
+								the top icon to "Add Package".</li><br />
+								<img src="img/software_tutorials/virtualbox/vbox-06.png" alt="vbox-06.png" /><br />
+								<br />
+								<li>It will open your <strong>Downloads</strong> folder.  Click to highlight
+								the extension pack you just downloaded.  Hit "Open" to install it to VBox.</li><br />
+								<img src="img/software_tutorials/virtualbox/vbox-07.png" alt="vbox-07.png" /><br />
+								<br />
+								<li>A window will appear confirming that you want to install the extension pack.
+								Click "Install", then scroll down the license agreement and hit "I agree" to
+								the terms of use.</li><br />
+								<img src="img/software_tutorials/virtualbox/vbox-08.png" alt="vbox-08.png" /><br />
+								<br />
+								<img src="img/software_tutorials/virtualbox/vbox-09.png" border="1" alt="vbox-09.png" /><br />
+								<br />
+								<li>Enter your password when asked for it and finish the installation.  When
+								complete, you will see the extension pack added under <strong>Extensions</strong>
+								in the VBox Preferences, (VBox main window -> File -> Preferences).</li><br />
+								<img src="img/software_tutorials/virtualbox/vbox-10.png" alt="vbox-10.png" /><br />
+							</ul>
+						</li>
+					</ul><br />
+				<p>&nbsp;</p>
+				<p><strong><span style="text-decoration: underline;">Using VirtualBox</span></strong></p>
+				<p>VBox can boot from either a live CD/DVD or an ISO file saved to your hard drive (HDD).
+				In the following example we'll use a downloaded ISO file.  If you are using a bootable
+				CD/DVD, go ahead and load it into the tray before we get started.</p>
+					<ul>
+						<li>From main VBox window, click the <strong>New</strong> button to make a new virtual
+						machine environment.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-11.png" border="1" alt="vbox-11.png" /><br />
+						<br />
+						<li>Next, choose a <span style="text-decoration: underline;">name</span> for the virtual
+						machine, the <span style="text-decoration: underline;">type</span> of operating system
+						it	will be, and <span style="text-decoration: underline;">version</span> of the
+						operating system.  When filling in version, specify either 32 or 64-bit system and
+						choose the closest fit for the OS you will be installing if you don't see a listing
+						that matches exactly under the "Version" drop-down box.</li><br />
+						
+						<!-- ****************************************************************** -->
+						<!-- Redo vbox-12.png to show name of Voyager14 instead of just Voyager -->
+						<!-- ****************************************************************** -->
+						
+						<img src="img/software_tutorials/virtualbox/vbox-12.png" alt="vbox-12.png" /><br />
+						<br />
+						<li>In this example, we will make a new machine for another Ubuntu-based distro called
+						"Voyager" and we are using its 64-bit version.  There is no listing for Voyager, so
+						we'll just choose "Ubuntu 64-bit" because that is what it is based on.  (If you made a
+						virtual machine [VM] with Linux Lite installed, you would also choose Ubuntu for the
+						same reason.)  Click 'Next' to continue.</li><br />
+						<li>Decide how much of your RAM (memory) you want dedicated to operating the VM.
+						512MB-2GB will likely be fine most of the time.  Do not dedicate more than half
+						of your RAM to the VM -- that could cause problems with the operation of your
+						host OS, Linux Lite.  (The VM is operating from within the host OS -- you don't
+						want the VM using more resources than the host itself.)  In this example, the
+						computer has 8GB of RAM, so 2GB was allotted to the VM.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-13.png" alt="vbox-13.png" /><br />
+						<br />
+						<li>The next screen asks if you want to create a virtual hard drive?  That is what we
+						want, so we tick that radio button and click "Create".</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-14.png" alt="vbox-14.png" /><br />
+						<br />
+						<li>We'll choose "VDI (VirtualBox Disk Image)" from the Hard Drive File Type
+						screen.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-15.png" alt="vbox-15.png" /><br />
+						<br />
+						<li>We'll choose 'Dynamically allocated' from the Storage on physical hard drive
+						screen.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-16.png" alt="vbox-16.png" /><br />
+						<br />
+						<li>On the next screen we make the virtual drive 10GB.  (VBox will dedicate
+						space from your hard drive for the virtual drive -- so be sure you have enough
+						room on your HDD to accomodate creating the virtual drive.)</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-17.png" alt="vbox-17.png" /><br />
+						<br />
+						<li>After hitting 'Create' your new VM will be listed along the left-hand side
+						of the main VBox window.  (At this point, it is just an empty container.)</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-18.png" border="1" alt="vbox-18.png" /><br />
+						<br />
+						<li>You can adjust a few settings for the VM either before or after installing
+						the OS.  We'll do it before installation.  Highlight the VM and click
+						"<strong>Settings</strong>".  Then, click "<strong>Display</strong>" along the
+						left side and adjust the amount of video memory you want the VM to have. (Default
+						is 12MB; we'll give it 64MB in this example.)  Also, click to enable either
+						<strong>3-D</strong> or <strong>2-D</strong> acceleration.  (If one give you an
+						"invalid settings" message, unclick it and choose the other.)</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-19.png" alt="vbox-19.png" /><br />
+						<br />
+						<li>Now, click "<strong>USB</strong>" on the left side and make sure that the
+						USB controllers are enabled.  This will allow you to copy to/from USB sticks
+						in the VM.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-20.png" border="1" alt="vbox-20.png" /><br />
+						<br />
+						<li>Click <strong>OK</strong> when done to get back to main window.</li><br />
+						<li>With the VM highlighted on the left of main window, click <strong>Start</strong> arrow to begin
+						installation.</li><br />
+						<li>The first screen you see will ask you what to use as your installation source
+						and the CD/DVD drive will likely be already listed.  If that is what you are using
+						and the disk is loaded in the tray, go ahead and hit 'Start'.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-21.png" alt="vbox-21.png" /><br />
+						<br />
+						<li>In this example, we are using an ISO file that has been downloaded to the hard
+						drive.  For that, click the icon to the right of the CD/DVD drive box to bring up
+						a window for navigating to the location where you saved the ISO file.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-22.png" alt="vbox-22.png" /><br />
+						<br />
+						<li>After you've found and selected your ISO, it will appear filled in the source
+						box.  Hit <strong>Start</strong> and it will now boot from the live ISO/CD/DVD.</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-23.png" alt="vbox-23.png" /><br />
+						<br />
+						<li>When the live environment finishes loading, click the install icon on the desktop
+						to begin the installer.  The installation process is just the same as if you were
+						installing to the computer normally.  All references on the "Installation Type"
+						screen are to the virtual hard drive.  When asked if you want to "Erase disk and
+						install", it is NOT going to erase your real hard drive -- it is talking about the
+						virtual hard drive.  (Same thing if you choose 'Something else' and partition
+						the drive manually.)</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-24.png" alt="vbox-24.png" /><br />
+						<br />
+						<li>After install is complete, reboot the VM.  If the installation disk appears
+						to be stuck and not rebooting, click your mouse somewhere inside the VM window,
+						then hit the <strong>ENTER</strong> key.  If nothing happens, click the "x" on
+						the VM window and choose to "Shutdown" the machine.  Then just highlight the VM 
+						and hit the <strong>Start</strong> arrow again.</li><br />
+						<li>In the VM, you can do much the same as when installed for real on your
+						computer.  You can install things, download updates, etc., and it all happens
+						within the virtual environment on the virtual HDD.</li><br />
+						<li>Whenever you want to shutdown a running VM, shutdown using the normal shutdown
+						method of the OS in the VM -- not by closing the VM window.  (If the VM OS was Linux
+						Lite, you would click <strong>Menu -> Logout -> Shutdown</strong>, just like
+						on your computer.)</li>
+					</ul><br />
+				<p>&nbsp;</p>
+				<p><strong><span style="text-decoration: underline;">Using USB's in VirtualBox</span></strong></p>
+				<p>Assuming you've already added the the VBox "Extension Pack", to begin using USB's
+				in your new VM, you need to add your username to the "<strong>vboxusers</strong>" group.
+				(You only need to do that once; not for every individual VM you make.)  You should
+				perform the following steps while no VM's are open.</p>
+					<ul>
+						<li>Open the Linux Lite (not VBox) Settings Manager (Menu -> Settings -> Settings
+						Manager) and select the "<strong>User Manager</strong>".</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-25.png" alt="vbox-25.png" /><br />
+						<br />
+						<li>With your username showing under "Select user", scroll down the list in the
+						"<strong>Groups</strong>" column and place a check in the box next to
+						"<strong>vboxusers</strong>" to add yourself to that group and hit
+						"<strong>Apply</strong>".</li><br />
+						<img src="img/software_tutorials/virtualbox/vbox-26.png" alt="vbox-26.png" /><br />
+						<br />
+						<li>Close out the User Manager and Settings Manager and start up your VM.</li><br />
+						<li>Once up and running you will see a little <span style="text-decoration: underline;">
+						USB icon</span> along bottom right edge of the VBox window.  Right-click on it to
+						choose the USB you want to use.</li><br />
+					
+						<!-- ****************************************** -->
+						<!-- Think about new screenshot for vbox-27.png -->
+						<!-- ****************************************** -->
+					
+						<img src="img/software_tutorials/virtualbox/vbox-27.png" alt="vbox-27.png" /><br />
+					</ul><br />
+				<p>&nbsp;</p>
+				<p><strong><span style="text-decoration: underline;">Additional VirtualBox Information 
+				Sources:</span></strong></p>
+					<ul>
+						<li><a href="https://www.virtualbox.org/">VirtualBox homepage</a></li>
+						<li><a href="https://www.virtualbox.org/manual/UserManual.htm">VirtualBox User
+						Manual</a></li>
+						<li><a href="https://forums.virtualbox.org/">VirtualBox Help Forums</a></li>
+					</ul>
+				<p>&nbsp;</p>
+				<p><a href="#top">Top of page</a></p><br />
 
             </div>
             
