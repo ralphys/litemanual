@@ -52,7 +52,8 @@
 <p><a href="software_tutorials.html">Software Tutorials</a> - a 
 new page where you can discover how to install and configure useful software.<br />
 			</p>
-			<p><a href="#updates">Updates</a><br>
+			<p><a href="#updates">Updates</a><br />
+			<a href="#heldpack">Packages that have been kept back</a><br>
 				<a href="#sources">Change your Software Updates Country Location</a><br />
 				<a href="#additional">Install Additional Software</a><br />
 				<a href="#remove">Remove Additional Software</a><br />
@@ -60,6 +61,10 @@ new page where you can discover how to install and configure useful software.<br
 				<a href="#encrypt">File Encryption</a><br>
 				<a href="#archive">Creating &amp; Extracting Zip files</a><br>
 				<a href="#deskenv">A word on changing Desktop Environments</a></p>
+			<p><strong>IMPORTANT: Linux Lite is a heavily modified operating 
+			system. As such we do not recommend you ever do a:<br />
+			sudo apt-get dist-upgrade This command has the potential to break 
+			your system.</strong></p>
 				<p><b><font size="4"><a name="software"></a>Installing &amp; 
 				Removing Software</font></b></p>
 				<p>Installing and removing software in Linux is much easier than in Windows.  The 
@@ -141,6 +146,53 @@ new page where you can discover how to install and configure useful software.<br
 				update individual software programs manually.  When you run <b>Install Updates</b>, that will update
 				all packages that have updates available for them.)</p>
 				<p><a href="#top">Top of page</a></p><hr>
+				<p>&nbsp;</p>
+				<p><b><a/><font size="4"></font><font size="4"><a name="heldpack">
+				<a/>Packages that have been kept back</font></b></p>
+				<a/>
+				<p>Sometimes when performing <strong>Install Updates</strong>, 
+				you will notice that there are held packages. Why does this 
+				occur?</p>
+			<p><img src="img/software/heldpack/held_pack1.png" /></p>
+			<p>The reason those package are kept back is because they either 
+			depend on extra packages not already installed or they are waiting 
+			on compatible software from other sources. In other words, those 
+			programs are waiting on other software to become available. When the 
+			other software becomes available, the held packages will come out of 
+			hold and be included in your regular updates. This occurs because 
+			software is created by different people and comes from different 
+			sources, those different projects must be compatible in order for 
+			the software to function properly.</p>
+			<p>If these held packages are installed prematurely, it could cause 
+			that program to become unstable or even worse, unusable. You may 
+			also inadvertently destabilize your system. <strong>The safest 
+			course of action is to wait until the other packages are ready.</strong> 
+			Then <strong>Install Updates</strong> will take care of all that for 
+			you and merge the software together.</p>
+			<p>There are some exceptions to this however. In the above example, 
+			we can see there are held packages for LibreOffice. In the current 
+			version of LibreOffice there is a bug which prevents users from 
+			being able to save files. Here is where the exception takes 
+			priority. Information gathered from the community states that an 
+			upgrade of LibreOffice fixes this bug. So we need these held 
+			packages.</p>
+			<p>Close <strong>Install Updates</strong> if you have it open. Now 
+			go to <strong>Menu, System, Install/Remove Software</strong>. Click 
+			on <strong>Installed (upgradable)</strong> in the left pane, then 
+			select all the packages that you want to upgrade, in this example 
+			all the <strong>libreoffice</strong> packages. Now click on <strong>
+			Apply</strong> and let the upgrade run its course.</p>
+			<p><img src="img/software/heldpack/held_pack2.png" /></p>
+			<p>In this particular example, installing the held <strong>
+			LibreOffice</strong> packages fixes a known bug. This was first 
+			tested on a working system, then the public was notified that it was 
+			safe to do.</p>
+			<p><strong>GOLDEN RULE: If your system if working fine, do not be 
+			tempted to force installation of held packages, if it's working you 
+			don't need it. This includes held kernel updates. Remember the old 
+			saying, "If it ain't broke, don't fix it".</strong></p>
+				<p><a href="#top">Top of page</a></p>
+			<hr>
 				<p>&nbsp;</p>
 				<p><b><font size="4"><a name="sources"><a/>Change your Software Updates Country 
 				Location</font></b></p>
