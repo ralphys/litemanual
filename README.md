@@ -1,6 +1,5 @@
-####################################
-# Linux Lite Help & Support Manual #
-####################################
+litemanual
+================
 
 Authors - Bill Hahnen, Adam Grubbs, John Jenkins, Jerry Bezencon
 
