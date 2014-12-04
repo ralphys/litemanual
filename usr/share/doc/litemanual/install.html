@@ -122,11 +122,11 @@
           <table width="800" border="0" bgcolor="#FFFF55" id="table1">
             <tbody>
               <tr>
-                <td>sudo dd if=linux-lite-2.0-32bit.iso of=/dev/sdx bs=4M<b><br />
+                <td>sudo dd if=linux-lite-2.2-32bit.iso of=/dev/sdx bs=4M<b><br />
                     <br />
                     for 64bit:<br />
                     <br />
-                    </b>sudo dd if=linux-lite-2.0-64bit.iso of=/dev/sdx bs=4M</td>
+                    </b>sudo dd if=linux-lite-2.2-64bit.iso of=/dev/sdx bs=4M</td>
               </tr>
             </tbody>
           </table>
@@ -233,7 +233,9 @@
 		  Lite in safe graphics mode</b>.</p>
           <p> The other options are:<br />
             <br />
-            <b>Run memtest</b> - Test your computer memory for faults.<br />
+            <b>Check Install Media</b> - run this to check that the Linux Lite 
+		  image is free from errors.<b><br />
+		  Run memtest</b> - Test your computer memory for faults.<br />
             <b>Boot the first hard disk</b> - boot the existing operating 
 		  system.</p>
           <p> <b>NOTE: If you are having any trouble booting Linux Lite after 
@@ -426,22 +428,24 @@
 		  slideshow detailing all of the features and software that are included 
 		  in this version of Linux Lite. You may allow them to play on their own 
 		  or navigate through them using the arrow buttons on the sides of the 
-		  window.</p>
+		  window (the picture below may vary from version to version).</p>
           <p> 
-		  <img src="img/installer/7-slideshow.jpg"
+		  <img src="img/installer/7-slideshow.png"
               alt="slide" /> </p>
           <p>Once the installation is complete you will be prompted to either 
 		  restart your computer and begin using your newly installed Linux Lite 
 		  system or to continue using the testing environment on the DVD/USB 
 		  that you are using. If for some reason your computer hangs on restart, 
-		  press F4.</p>
+		  press F4 or Enter.</p>
           <p><img alt="" src="img/installer/8-finished.png" /> </p>
           <p>After a reboot you will be greeted by the login screen:</p>
           <p> <img border="0" src="img/installer/login.png" /></p>
-          <p>After you have logged in you will see the desktop. Congratulations! 
+          <p>After you have logged in you will see the desktop and <b>Welcome</b> 
+		  window. Be sure to read through the <b>Welcome</b> window to get you off to 
+		  the best possible start to using Linux Lite. Congratulations! 
 		  Now that we've installed Linux Lite, lets take a look at what's 
 		  available on the Menu by clicking <a href="index.html#menus">here</a>.</p>
-          <p> <img width="802" height="599" src="img/installer/desktop.jpg" alt="desktop" /></p>
+          <p> <img src="img/installer/desktop.png" alt="desktop" /></p>
           <p><a href="#top">Top of page</a></p>
           <hr />
             <p> &nbsp;</p>
@@ -497,7 +501,7 @@
 		  Linux Lite. If you selected a language during the install, skip steps 
 		  4, 5 and 7.</p>
           <p> 1. Click on <strong>Menu, Settings, Language Support</strong>.</p>
-          <p> <img src="img/installer/lang/lang1.jpg" /></p>
+          <p> <img src="img/installer/lang/lang1.png" /></p>
           <p> 2. You will get a dialog box pop up, click on <strong>
 		  Install</strong>.</p>
           <p> <img src="img/installer/lang/language-03.png" /></p>
@@ -787,7 +791,8 @@
 		  you are asked for <strong>your</strong> password, please enter it and 
 		  then click <strong>Ok</strong>. Next a confirmation box will appear, 
 		  read the message and if you want to proceed click on <strong>Yes</strong>. 
-		  The user account and all their data has now been removed.</p>
+		  If you get an error message regarding <strong>/var/mail/youruser</strong> 
+		  this is safe to ignore. The user account and all their data has now been removed.</p>
           <p> <img class="auto-style3" src="img/installer/liteuser4.png" /></p>
           <p> <a href="#top">Top of page</a></p>
           <hr />
@@ -985,14 +990,9 @@
           <hr />
           <p>&nbsp;</p>
 			<p><font size="4"><a name="mouse_pointer">Changing mouse pointer size</a></font></p>
-          <p>Open a terminal and do:</p>
-			<p><strong>sudo apt-get install dmz-cursor-theme</strong></p>
-			<p>This will install a standard mouse pointer theme that is scalable 
-			on the fly.<br />
-			<br />
-			Once installed go to, Menu, Settings, Mouse and Touchpad, click on 
-			the Theme tab.<br />
-			Select the DMZ theme (black or white, you choose) then adjust the 
+          <p>Go to, <strong>Menu, Settings, Mouse and Touchpad</strong>, click on 
+			the <strong>Theme</strong> tab.<br />
+			Select the <strong>DMZ</strong> theme (black or white, you choose) then adjust the 
 			mouse pointer size to your liking, it will change when you click 
 			Close.</p>
 			<p>
