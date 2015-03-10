@@ -8,6 +8,9 @@
 .auto-style1 {
 	border-width: 0;
 }
+.auto-style2 {
+	background-color: #FFFF00;
+}
 </style>
 </head>
 
@@ -55,16 +58,16 @@ new page where you can discover how to install and configure useful software.<br
 			<p><a href="#updates">Updates</a><br />
 			<a href="#heldpack">Packages that have been kept back</a><br>
 				<a href="#sources">Change your Software Updates Country Location</a><br />
-				<a href="#additional">Install Additional Software</a><br />
-				<a href="#remove">Remove Additional Software</a><br />
-				<a href="#cleaner">Lite Cleaner</a><br />
+				<a href="#installsoftware">Lite Software - Install Software</a><br />
+				<a href="#removesoftware">Lite Software - Remove Software</a><br />
+				<a href="#tweaks">Lite Tweaks</a><br />
 				<a href="#ppa">Adding a PPA</a><br />
 				<a href="#encrypt">File Encryption</a><br>
 				<a href="#archive">Creating &amp; Extracting Zip files</a><br>
 				<a href="#deskenv">A word on changing Desktop Environments</a></p>
 			<p><strong>IMPORTANT: Linux Lite is a heavily modified operating 
-			system. As such we do not recommend you ever do a:<br />
-			sudo apt-get dist-upgrade This command has the potential to break 
+			system. As such we do not recommend you ever do:<br />
+			<span class="auto-style2">sudo apt-get dist-upgrade</span> This command has the potential to break 
 			your system.</strong></p>
 				<p><b><font size="4"><a name="software"></a>Installing &amp; 
 				Removing Software</font></b></p>
@@ -140,11 +143,8 @@ new page where you can discover how to install and configure useful software.<br
 				<img border="0" src="img/software/menu_updates.jpg"></p>
 				<p>We&#39;ve made the update process as simple as possible. Simply 
 				click on <b>Install Updates</b> and you will be asked for your 
-				password. <u>Be aware that nothing will show on the screen as you type
-				your password</u>, but it is being registered.  Just type it and hit
-				enter.  The program will then search for updates and if it 
-				finds any it will ask you if you want to continue. Type <b>Y</b> 
-				and then hit enter if you do.</p>
+				password. The program will then search for updates and if it 
+				finds any it will ask you if you want to continue.</p>
 				<p><strong>Important:</strong>  On rare occasions the update process
 				may pause to ask you if you want to replace an existing configuration
 				file with a new one from the package maintainer.  If that happens,
@@ -240,80 +240,107 @@ new page where you can discover how to install and configure useful software.<br
 				install and remove software.</p>
 				<p><a href="#top">Top of page</a></p><hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="additional"></a>Install 
-				Additional Software</font></b></p>
+				<p><b><font size="4"><a name="installsoftware"></a>Lite Software - 
+				Install Software</font></b></p>
 				<p>Installing some of the more widely popular programs on Linux 
 				Lite like Chrome, Dropbox and Skype is just a few simple steps 
 				on Linux Lite.</p>
-				<p>Go to <strong>Menu, System, Install Additional Software</strong>.</p>
-				<p><img src="img/software/inadd/inadd1.png" /></p>
+				<p>Go to <strong>Menu, System, Lite Software</strong>.</p>
+				<p>
+				<img src="img/software/lite-software-menu.png" height="500" width="400" /></p>
 				<p>Enter your password and click <strong>OK</strong>.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-01.png" /></p>
-				<p>Next, you'll see the following window pop up. Select software
-				to install by placing a check mark in the box next to it.  You
-				may choose and install more than one package at a time if you
-				like.  In this example we'll choose to install the <strong>
-				Password Manager</strong> program called <strong>KeePassX</strong>.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-02.png" /></p>
-				<p>In the next dialog, we can see some information regarding the 
-				software we have chosen to install. It pays to read this each 
-				time as the information is a very important part of the install 
-				process. Click <strong>Yes</strong> when ready.  If you chose
-				more than one package for installation, a separate confirmation
-				window will appear for each one during the install process.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-03.png" /></p>
-				<p>The program is now being downloaded and installed 
+				<p><img src="img/software/ls-password.png" /></p>
+				<p>Next you will be shown the <strong>Update Sources</strong> 
+				window, always answer <strong>Yes</strong>.</p>
+			<p><img src="img/software/update_sources.png" /></p>
+			<p>Sources will be updated:</p>
+			<p><img src="img/software/update_sources2.png" />&nbsp;</p>
+			<p>Once the sources have been updated, the following window will 
+			appear, select <strong>Install Software</strong> and click <strong>
+			OK</strong>.</p>
+			<p><img src="img/software/inadd/lite-software-select.png" /></p>
+			<p>Next, you'll see the following window pop up. Select software to 
+			install by placing a check mark in the box next to it. You may 
+			choose and install more than one package at a time if you like. In 
+			this example we'll choose to install, <strong>Instant Messenger</strong>,
+			<strong>Password Manager</strong> and <strong>Torrent Software</strong>.</p>
+				<p><img src="img/software/inadd/install_add_sftwr-02.png" />&nbsp;</p>
+				<p>In the next dialog, you'll be shown which applications you've 
+				selected to install. Click <strong>Yes</strong> when ready.</p>
+				<p><img src="img/software/inadd/software-list.png" />&nbsp;</p>
+				<p>The programs will now be downloaded and installed 
 				automatically for you. This can take anywhere from a few seconds 
-				to a few minutes depending on the size of the program and the 
+				to a few minutes depending on how many applications you've 
+				selected, the size of the program/s and the 
 				speed of your internet connection.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-04.png" /></p>
-				<p>When the install is complete, the dialog box will inform 
-				you where to find your newly installed program.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-05.png" /></p>
+				<p><img src="img/software/inadd/software-download.png" /></p>
+			<p><img src="img/software/inadd/software-installing.png" />&nbsp;</p>
+				<p>When the install is complete, you will get a confirmation 
+				like the following.</p>
+				<p><img src="img/software/inadd/install-complete.png" />&nbsp;</p>
+			<p>The <strong>Lite Software</strong> window will reappear at the 
+			end in case you want to perform another task. If you have finished, 
+			select <strong>Exit</strong> and click <strong>OK</strong> or simply 
+			click on <strong>Quit</strong>.</p>
+			<p><img src="img/software/lite-software-exit.png" /></p>
 				<p>
 				<a href="#top">Top of page</a></p>
 				<hr>
 				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="remove"></a>Remove 
-				Additional Software</font></b></p>
+				<p><b><font size="4"><a name="removesoftware"></a>Lite Software - Remove 
+				Software</font></b></p>
 				<p>Removing Additional Software in Linux Lite is just a few 
 				simple steps.</p>
-				<p>Click on <strong>Menu, System, Remove Additional Software</strong>.&nbsp;</p>
-				<p><img src="img/software/remadd/remadd1.png" /></p>
-				<p>In the next window, we're asked for our password, type in 
-				your password and click <strong>OK</strong>.&nbsp;</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-01.png" />&nbsp;</p>
-				<p>In this example, we'll choose to remove <strong>Video Editing
-				Software</strong> called <strong>Openshot</strong>.  Place a
-				check mark in the box next to the program you want to remove
-				and click <strong>Remove</strong>.
-				<p>
-				<img src="img/software/remadd/remove_add_sftwr-02.png" />&nbsp;</p>
-				<p>You'll get a confirmation at this point asking if you want to 
-				proceed, click <strong>Yes</strong> to go ahead with the deletion.</p>
+				<p>Click on <strong>Menu, System, Lite Software</strong>.&nbsp;</p>
+				<p><img src="img/software/lite-software-menu.png" /></p>
+				<p>Enter your password and click <strong>OK</strong>.</p>
+				<p><img src="img/software/ls-password.png" /></p>
+				<p>Next you will be shown the <strong>Update Sources</strong> 
+				window, always answer <strong>Yes</strong>.</p>
+			<p><img src="img/software/update_sources.png" /></p>
+			<p>Sources will be updated:</p>
+			<p><img src="img/software/update_sources2.png" />&nbsp;</p>
+			<p>Once the sources have been updated, the following window will 
+			appear, select <strong>Remove Software</strong> and click <strong>OK</strong>.</p>
+			<p><img src="img/software/remadd/lite-software-select-remove.png" /></p>
+			<p>Next, you'll see the following window pop up. Select software to 
+			remove by placing a check mark in the box next to it. You may 
+			choose and remove more than one package at a time if you like. In 
+			this example we'll choose to remove, <strong>Instant Messenger</strong>,
+			<strong>Password Manager</strong> and <strong>Torrent Software</strong>.</p>
+				<p><img src="img/software/remadd/remove_add_sftwr-02.png" />&nbsp;</p>
+				<p>In the next dialog, you'll be shown which applications you've 
+				selected to remove. Click <strong>Yes</strong> when ready.</p>
 				<p><img src="img/software/remadd/remove_add_sftwr-03.png" />&nbsp;</p>
-				<p>The software is now being removed.</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-04.png" />&nbsp;</p>
-				<p>A dialog box will inform you when the removal has been completed.
-				Click <strong>OK</strong> to close the window.</p>
+				<p>The programs will now be removed 
+				automatically for you. This can take anywhere from a few seconds 
+				to a few minutes depending on how many applications you've 
+				selected and the size of the program/s.</p>
+				<p><img src="img/software/remadd/remove_add_sftwr-04.png" /></p>
+				<p>When the removal process is complete, you will get a confirmation 
+				like the following.</p>
 				<p><img src="img/software/remadd/remove_add_sftwr-05.png" />&nbsp;</p>
+				<p>The <strong>Lite Software</strong> window will reappear at 
+				the end in case you want to perform another task. If you have 
+				finished, select <strong>Exit</strong> and click <strong>OK</strong> 
+				or simply click on <strong>Quit</strong>.</p>
+			<p><img src="img/software/lite-software-exit.png" /></p>
 				<p>
 				<a href="#top">Top of page</a></p>
 				<hr>
 				<p>&nbsp;</p>
 				
-				<p><b><font size="4"><a name="cleaner"></a>Lite Cleaner</font></b></p>
-				<p><strong>Lite Cleaner</strong> is a tool that can be used periodically
+				<p><b><font size="4"><a name="tweaks"></a>Lite Tweaks</font></b></p>
+				<p><strong>Lite Tweaks</strong> is a tool that can be used periodically
 				to clean up your system and free up more space on your hard drive.  It
 				will do things like clean out various cached files, remove old
 				dependency packages that are no longer needed, empty your trash and
 				remove old kernels if you have installed new ones.</p>
 				
-				<p>Lite Cleaner is in <strong>Menu -> System -> Lite
-				Cleaner</strong>.</p>
+				<p>Lite Cleaner is in <strong>Menu -&gt; System -&gt; Lite Tweaks</strong>.</p>
 				<p><img src="img/software/cleaner/cleaner-02.png" /></p>
-				<p>Once opened, the Lite Cleaner window will show various categories of
-				files that can be cleaned and will display in the "Description" column
+				<p>Once opened, the <strong>Lite Tweaks</strong> window will show various categories of
+				files that can be cleaned and will display in the <strong>Description</strong> column
 				how much space will be freed up by removing them.  As an example, we'll
 				use the cleaner to remove an old linux kernel.</p>
 				<p><img src="img/software/cleaner/cleaner-03.png" /></p>
@@ -342,7 +369,17 @@ new page where you can discover how to install and configure useful software.<br
 				<p>Your kernel(s) will then be removed.  (This may take a few minutes.)</p>
 				<p><img src="img/software/cleaner/cleaner-07.png" /></p>
 				<p>Upon completion, click <strong>OK</strong> to close the window.</p>
-				<p><img src="img/software/cleaner/cleaner-08.png" /></p>			
+				<p><img src="img/software/cleaner/cleaner-08.png" /></p>
+			<p>When the task has completed, you'll be asked if you want to 
+			perform additional tasks.</p>
+			<p><img src="img/software/cleaner/tweaks-finished.png" />&nbsp;</p>
+			<p>You can also select multiple tasks to perform in <strong>Lite 
+			Tweaks</strong>. Simply select the tasks you want to complete and 
+			click on <strong>Begin</strong>.</p>
+			<p><img src="img/software/lite-tweaks-multiple.png" /></p>
+			<p>Enter your password when asked and when the tasks have completed, 
+			you'll be asked if you want to perform additional tasks.</p>
+			<p><img src="img/software/cleaner/tweaks-finished.png" />&nbsp;</p>
 				<p>
 				<a href="#top">Top of page</a></p>
 				<hr>

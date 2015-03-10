@@ -91,7 +91,7 @@
           <p>ImgBurn - <a href="http://www.imgburn.com/" target="_blank">
               http://www.imgburn.com/</a></p>
           <p>Place a blank DVD in your DVD drive, open up the program, select 
-		  the iso file that you want to burn. Choose the lowest burn speed, this 
+		  the ISO file that you want to burn. Choose the lowest burn speed, this 
 		  will greatly reduce the risk of your burn becoming corrupt as can 
 		  sometimes happen. A 4x speed is recommended if you have it.</p>
           <p> <br />
@@ -121,11 +121,11 @@
           <table width="800" border="0" bgcolor="#FFFF55" id="table1">
             <tbody>
               <tr>
-                <td>sudo dd if=linux-lite-2.2-32bit.iso of=/dev/sdx bs=4M<b><br />
+                <td>sudo dd if=linux-lite-2.4-32bit.iso of=/dev/sdx bs=4M<b><br />
                     <br />
                     for 64bit:<br />
                     <br />
-                    </b>sudo dd if=linux-lite-2.2-64bit.iso of=/dev/sdx bs=4M</td>
+                    </b>sudo dd if=linux-lite-2.4-64bit.iso of=/dev/sdx bs=4M</td>
               </tr>
             </tbody>
           </table>
@@ -363,13 +363,9 @@
 		  accessible after the installation.</strong>  
 		  
 		  The mount point is simply "where" in the file system you want that 
-		  partition's files to show up. If you want them to show up in your home 
-		  directory, then give it a mount point like: /home/username/NTFS_Files. 
-		  Substitute your actual username (in all lowercase letters) for 
-		  "username". You can name the mount point what ever you want, so you 
-		  don't have to use "NTFS_Files" if you have a more descriptive name in 
-		  mind. Try not to have any spaces in the mount point name. Use an 
-		  underscore (_) character in place of spaces.</p>
+		  partition's files to show up. You can name the mount point what ever 
+		  you want, be sure to give it a simple, no spaces lowercase name like 
+		  eg. <strong>/myntfs</strong> do not use <strong>/My NTFS</strong>.</p>
 		  
           <p><img alt="" src="img/installer/3a-manualinstall.jpg" /> </p>
           <p>After completing the partitioning phase of the installation, you 
@@ -470,12 +466,12 @@
 			<p> 4. When this has finished (time to encrypt may vary) <strong>you 
 			must logout of tempuser and login as your user. DO NOT reboot.</strong></p>
 			<p> 5. Once logged in as your user, open a terminal and type in:</p>
-			<p> <strong>ecryptfs-add-paraphrase</strong></p>
+			<p> <strong>ecryptfs-add-passphrase</strong></p>
 			<p> and enter your login password.</p>
 			<p> <img src="img/installer/encrypt/encrypt5.png" /></p>
 			<p> 6. To check that you have successfully created a passphrase, 
 			enter the command:</p>
-			<p> <strong>ecryptfs-unwrap-paraphrase</strong></p>
+			<p> <strong>ecryptfs-unwrap-passphrase</strong></p>
 			<p> <img src="img/installer/encrypt/encrypt6.png" /></p>
 			<p> 7. Clean up time. Open a terminal and enter the following 
 			commands:</p>
