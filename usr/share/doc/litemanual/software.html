@@ -1,658 +1,1210 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
+<title>Help Manual - Software</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Linux Lite | Software</title>
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
 <style type="text/css">
-.auto-style1 {
-	border-width: 0;
-}
-.auto-style2 {
-	background-color: #FFFF00;
-}
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#EBEBEB;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#FFFFFF;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-vn4c{background-color:#FFFFFF}
 </style>
 </head>
-
 <body>
-    <div id="page">
-		
-        <div id="header">
-        	<h1><a name="top"></a>Linux Lite Manual</h1>
-            <ul>
-           	<li><a href="index.html">Home</a></li>
-               	<li><a href="install.html">Install Guide</a></li>
-                <li><a href="network.html">Network</a></li>
-                <li><a href="software.html">Software</a></li>
-                <li><a href="hardware.html">Hardware</a></li>
-            </ul>
-        </div>
-  
-        <div id="main">
-        
-        	<div class="main_top">
-            	<h1>Software & Updates</h1>
-            </div>
-            
-<div class="main_body">
-            <table style="width: 500px" align="right">
-				<tr>
-					<td class="auto-style4"><script>
-  (function() {
-    var cx = '006509465696283590503:mookvjo3sfw';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search></td>
-				</tr>
-			</table>
-<p><a href="software_tutorials.html">Software Tutorials</a> - a 
-new page where you can discover how to install and configure useful software.<br />
-			</p>
-			<p><a href="#updates">Updates</a><br />
-			<a href="#heldpack">Packages that have been kept back</a><br>
-				<a href="#sources">Change your Software Updates Country Location</a><br />
-				<a href="#installsoftware">Lite Software - Install Software</a><br />
-				<a href="#removesoftware">Lite Software - Remove Software</a><br />
-				<a href="#tweaks">Lite Tweaks</a><br />
-				<a href="#ppa">Adding a PPA</a><br />
-				<a href="#encrypt">File Encryption</a><br>
-				<a href="#archive">Creating &amp; Extracting Zip files</a><br>
-				<a href="#deskenv">A word on changing Desktop Environments</a></p>
-			<p><strong>IMPORTANT: Linux Lite is a heavily modified operating 
-			system. As such we do not recommend you ever do:<br />
-			<span class="auto-style2">sudo apt-get dist-upgrade</span> This command has the potential to break 
-			your system.</strong></p>
-				<p><b><font size="4"><a name="software"></a>Installing &amp; 
-				Removing Software</font></b></p>
-				<p>Installing and removing software in Linux is much easier than in Windows.  The 
-				vast majority of programs that you may want/need to install are all centrally
-				located in what are called software repositories (repos).  Rather than searching the 
-				web, downloading programs from various sites (some of which may not be reliable), 
-				running the installer, rebooting, etc., available software is all centrally 
-				located and available for installation in seconds.  The packages/(programs) in the 
-				repositories are tested, approved for inclusion in the repos and securely signed
-				to insure their validity.</p>
-				<p>There are a few common methods for installing and removing 
-				software.  Linux 
-				Lite comes with the Synaptic Package Manager.  When you already know the name of
-				the program you want, Synaptic makes installing easy.</p>  
-				
-				<p><b>IMPORTANT: Before you run Install/Remove 
-				Software for the first time, <a href="#sources">read this first</a>.<br>
-				Then come back to here to learn how to install and remove software.</b></p>
-				<p>To install software use the following steps:</p>
-				<p>1. Click on <b>Menu</b>, <b>System</b>, <b>Install/Remove 
-				Software</b></p>
-				<p>
-				<img src="img/software/menu_synaptic.png" class="auto-style1"></p>
-				<p>2. Make sure <b>All</b> is selected in the left pane and in the <b>Quick Filter</b> 
-				or spy glass
-				<img border="0" src="img/software/spyglass.png"> type in your search query. In 
-				this example we will search for the &#39;<b>audacious</b>&#39; music 
-				player.</p>
-				<p>
-				<img border="1" src="img/software/synaptic_search.png"></p>
-				<p>3. Double click on the package you want to install.</p>
-				<p>4. Some software will ask you to <b>Mark additional required 
-				changes?</b> These are also known as dependencies and are 
-				required for the program to function properly.</p>
-				<p>
-				<img border="0" src="img/software/synaptic_deps.png"></p>
-				<p>5. Click on <b>Mark</b>. Now hit the <b>Apply</b> button on 
-				the Synaptic toolbar. The software will install and a <b>Menu</b> 
-				entry will be created in the relevant <b>Menu</b> category. For 
-				<b>audacious</b> 
-				the <b>Menu</b> category would be <b>Multimedia</b>.</p>
-				<p>
-				<img border="1" src="img/software/synaptic_apply.png"></p>
-				<p>6. Go to the <b>Menu</b> and your new software will be there. 
-				An alternative way to find your new software is to click on <b>
-				Menu</b>, <b>Accessories</b>, <b>Application Finder</b>. Type 
-				your program name in the <b>Search</b> box and the result will 
-				display on the right. Double click on the program name and it 
-				will launch for you.</p>
-				<p>
-				<img border="0" src="img/software/app_finder.png"></p>
-				<p><b>Uninstalling Software:</b></p>
-				<p>7.<b> </b>Uninstalling software is the reverse process of 
-				installing software in the <b>Synaptic Package Manager</b>. Type 
-				the name of the software into the <b>Quick Filter</b> or spy 
-				glass
-				<img border="0" src="img/software/spyglass.png"> box.</p>
-				<p>8. Right click on the software and select <b>Mark for Removal</b>. 
-				Now hit the <b>Apply</b> button on the Synaptic toolbar and your 
-				software will uninstall. Be very careful with this process as 
-				you can inadvertently uninstall crucial system software. If you 
-				have any doubts, please search the net first to see if it is 
-				safe to uninstall the software. Synaptic is pretty good at 
-				warning you should there be any potential problems.</p>
-				<p><a href="#top">Top of page</a></p><hr>
-				<p>&nbsp;</p>
-				<p><b><a name="updates"><font size="4">Updates</font></a></b></p>
-				<p>Keeping Linux Lite up to date is a simple process.</p>
-				<p>At the top of your <b>Menu</b>, you will see <b>Install 
-				Updates</b>.</p>
-				<p>
-				<img border="0" src="img/software/menu_updates.jpg"></p>
-				<p>We&#39;ve made the update process as simple as possible. Simply 
-				click on <b>Install Updates</b> and you will be asked for your 
-				password. The program will then search for updates and if it 
-				finds any it will ask you if you want to continue.</p>
-				<p><strong>Important:</strong>  On rare occasions the update process
-				may pause to ask you if you want to replace an existing configuration
-				file with a new one from the package maintainer.  If that happens,
-				<u>always</u> select the default answer of "N" for NO.  You want to
-				keep the existing configuration file, not replace it.</p>
-				<p>(<b>Note:</b> The update process updates all software on the system that 
-				came from the repos.  Unlike in Windows, there is no need to 
-				update individual software programs manually.  When you run <b>Install Updates</b>, that will update
-				all packages that have updates available for them.)</p>
-				<p><a href="#top">Top of page</a></p><hr>
-				<p>&nbsp;</p>
-				<p><b><a/><font size="4"></font><font size="4"><a name="heldpack">
-				<a/>Packages that have been kept back</font></b></p>
-				<a/>
-				<p>Sometimes when performing <strong>Install Updates</strong>, 
-				you will notice that there are held packages. Why does this 
-				occur?</p>
-			<p><img src="img/software/heldpack/held_pack1.png" /></p>
-			<p>The reason those package are kept back is because they either 
-			depend on extra packages not already installed or they are waiting 
-			on compatible software from other sources. In other words, those 
-			programs are waiting on other software to become available. When the 
-			other software becomes available, the held packages will come out of 
-			hold and be included in your regular updates. This occurs because 
-			software is created by different people and comes from different 
-			sources, those different projects must be compatible in order for 
-			the software to function properly.</p>
-			<p>If these held packages are installed prematurely, it could cause 
-			that program to become unstable or even worse, unusable. You may 
-			also inadvertently destabilize your system. <strong>The safest 
-			course of action is to wait until the other packages are ready.</strong> 
-			Then <strong>Install Updates</strong> will take care of all that for 
-			you and merge the software together.</p>
-			<p>There are some exceptions to this however. In the above example, 
-			we can see there are held packages for LibreOffice. In the current 
-			version of LibreOffice there is a bug which prevents users from 
-			being able to save files. Here is where the exception takes 
-			priority. Information gathered from the community states that an 
-			upgrade of LibreOffice fixes this bug. So we need these held 
-			packages.</p>
-			<p>Close <strong>Install Updates</strong> if you have it open. Now 
-			go to <strong>Menu, System, Install/Remove Software</strong>. Click 
-			on <strong>Installed (upgradeable)</strong> in the left pane, then 
-			select all the packages that you want to upgrade, in this example 
-			all the <strong>libreoffice</strong> packages. Now click on <strong>
-			Apply</strong> and let the upgrade run its course.</p>
-			<p><img src="img/software/heldpack/held_pack2.png" /></p>
-			<p>In this particular example, installing the held <strong>
-			LibreOffice</strong> packages fixes a known bug. This was first 
-			tested on a working system, then the public was notified that it was 
-			safe to do.</p>
-			<p><strong>GOLDEN RULE: If your system if working fine, do not be 
-			tempted to force installation of held packages, if it's working you 
-			don't need it. This includes held kernel updates. Remember the old 
-			saying, "If it ain't broke, don't fix it".</strong></p>
-				<p><a href="#top">Top of page</a></p>
-			<hr>
-				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="sources"><a/>Change your Software Updates Country 
-				Location</font></b></p>
-				<a/>
-				<p>To ensure that you get your updates and software downloaded 
-				as fast as possible, try selecting a location close to you.<br>
-				In the following tutorial we will show you how to do this.</p>
-				<p>Click on <b>Menu, System, Install/Remove Software</b> and 
-				enter your password.</p></a>
-				<p><img border="0" src="img/software/sources-password.jpg"></p>
-				<p><b>Synaptic Package Manager</b> will open up, click on <b>
-				Settings, Repositories</b>.</p>
-				<p>
-				<img src="img/software/sources-repos.jpg" class="auto-style1"></p>
-				<p>The <b>Software Sources</b> window will pop up. From the <b>
-				Download from:</b> drop down box, select <b>Other...</b></p>
-				<p><img border="0" src="img/software/sources-other.jpg"></p>
-				<p>A <b>Choose a Download Server</b> box will pop up. From here 
-				select your country, and then a server, preferably an Ubuntu 
-				server if it is listed or another server if an Ubuntu server is 
-				not in the list. Click on the <b>Choose Server</b> button once 
-				you have made your selection. Now click on <b>Close</b> in the
-				<b>Software Sources</b> window.</p>
-				<p><img border="0" src="img/software/sources-country.jpg"></p>
-				<p>In the top left of the <b>Synaptic Package Manager</b> 
-				window, click on the <b>Reload</b> button. This will change all 
-				the software sources to your location for faster downloads.</p>
-				<p>
-				<img src="img/software/sources-reload.jpg" class="auto-style1"></p>
-				<p>The following window will appear, then close when it has 
-				finished.</p>
-				<p><img border="0" src="img/software/sources-reload2.jpg"></p>
-				<p>You should now have faster downloads for updates and software 
-				installs in <b>Synaptic Package Manager</b> from a location much 
-				nearer you. Click <a href="#software">here</a> to learn how to 
-				install and remove software.</p>
-				<p><a href="#top">Top of page</a></p><hr>
-				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="installsoftware"></a>Lite Software - 
-				Install Software</font></b></p>
-				<p>Installing some of the more widely popular programs on Linux 
-				Lite like Chrome, Dropbox and Skype is just a few simple steps 
-				on Linux Lite.</p>
-				<p>Go to <strong>Menu, System, Lite Software</strong>.</p>
-				<p>
-				<img src="img/software/lite-software-menu.png" height="500" width="400" /></p>
-				<p>Enter your password and click <strong>OK</strong>.</p>
-				<p><img src="img/software/ls-password.png" /></p>
-				<p>Next you will be shown the <strong>Update Sources</strong> 
-				window, always answer <strong>Yes</strong>.</p>
-			<p><img src="img/software/update_sources.png" /></p>
-			<p>Sources will be updated:</p>
-			<p><img src="img/software/update_sources2.png" />&nbsp;</p>
-			<p>Once the sources have been updated, the following window will 
-			appear, select <strong>Install Software</strong> and click <strong>
-			OK</strong>.</p>
-			<p><img src="img/software/inadd/lite-software-select.png" /></p>
-			<p>Next, you'll see the following window pop up. Select software to 
-			install by placing a check mark in the box next to it. You may 
-			choose and install more than one package at a time if you like. In 
-			this example we'll choose to install, <strong>Instant Messenger</strong>,
-			<strong>Password Manager</strong> and <strong>Torrent Software</strong>.</p>
-				<p><img src="img/software/inadd/install_add_sftwr-02.png" />&nbsp;</p>
-				<p>In the next dialog, you'll be shown which applications you've 
-				selected to install. Click <strong>Yes</strong> when ready.</p>
-				<p><img src="img/software/inadd/software-list.png" />&nbsp;</p>
-				<p>The programs will now be downloaded and installed 
-				automatically for you. This can take anywhere from a few seconds 
-				to a few minutes depending on how many applications you've 
-				selected, the size of the program/s and the 
-				speed of your internet connection.</p>
-				<p><img src="img/software/inadd/software-download.png" /></p>
-			<p><img src="img/software/inadd/software-installing.png" />&nbsp;</p>
-				<p>When the install is complete, you will get a confirmation 
-				like the following.</p>
-				<p><img src="img/software/inadd/install-complete.png" />&nbsp;</p>
-			<p>The <strong>Lite Software</strong> window will reappear at the 
-			end in case you want to perform another task. If you have finished, 
-			select <strong>Exit</strong> and click <strong>OK</strong> or simply 
-			click on <strong>Quit</strong>.</p>
-			<p><img src="img/software/lite-software-exit.png" /></p>
-				<p>
-				<a href="#top">Top of page</a></p>
-				<hr>
-				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="removesoftware"></a>Lite Software - Remove 
-				Software</font></b></p>
-				<p>Removing Additional Software in Linux Lite is just a few 
-				simple steps.</p>
-				<p>Click on <strong>Menu, System, Lite Software</strong>.&nbsp;</p>
-				<p><img src="img/software/lite-software-menu.png" /></p>
-				<p>Enter your password and click <strong>OK</strong>.</p>
-				<p><img src="img/software/ls-password.png" /></p>
-				<p>Next you will be shown the <strong>Update Sources</strong> 
-				window, always answer <strong>Yes</strong>.</p>
-			<p><img src="img/software/update_sources.png" /></p>
-			<p>Sources will be updated:</p>
-			<p><img src="img/software/update_sources2.png" />&nbsp;</p>
-			<p>Once the sources have been updated, the following window will 
-			appear, select <strong>Remove Software</strong> and click <strong>OK</strong>.</p>
-			<p><img src="img/software/remadd/lite-software-select-remove.png" /></p>
-			<p>Next, you'll see the following window pop up. Select software to 
-			remove by placing a check mark in the box next to it. You may 
-			choose and remove more than one package at a time if you like. In 
-			this example we'll choose to remove, <strong>Instant Messenger</strong>,
-			<strong>Password Manager</strong> and <strong>Torrent Software</strong>.</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-02.png" />&nbsp;</p>
-				<p>In the next dialog, you'll be shown which applications you've 
-				selected to remove. Click <strong>Yes</strong> when ready.</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-03.png" />&nbsp;</p>
-				<p>The programs will now be removed 
-				automatically for you. This can take anywhere from a few seconds 
-				to a few minutes depending on how many applications you've 
-				selected and the size of the program/s.</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-04.png" /></p>
-				<p>When the removal process is complete, you will get a confirmation 
-				like the following.</p>
-				<p><img src="img/software/remadd/remove_add_sftwr-05.png" />&nbsp;</p>
-				<p>The <strong>Lite Software</strong> window will reappear at 
-				the end in case you want to perform another task. If you have 
-				finished, select <strong>Exit</strong> and click <strong>OK</strong> 
-				or simply click on <strong>Quit</strong>.</p>
-			<p><img src="img/software/lite-software-exit.png" /></p>
-				<p>
-				<a href="#top">Top of page</a></p>
-				<hr>
-				<p>&nbsp;</p>
-				
-				<p><b><font size="4"><a name="tweaks"></a>Lite Tweaks</font></b></p>
-				<p><strong>Lite Tweaks</strong> is a tool that can be used periodically
-				to clean up your system and free up more space on your hard drive.  It
-				will do things like clean out various cached files, remove old
-				dependency packages that are no longer needed, empty your trash and
-				remove old kernels if you have installed new ones.</p>
-				
-				<p>Lite Cleaner is in <strong>Menu -&gt; System -&gt; Lite Tweaks</strong>.</p>
-				<p><img src="img/software/cleaner/cleaner-02.png" /></p>
-				<p>Once opened, the <strong>Lite Tweaks</strong> window will show various categories of
-				files that can be cleaned and will display in the <strong>Description</strong> column
-				how much space will be freed up by removing them.  As an example, we'll
-				use the cleaner to remove an old linux kernel.</p>
-				<p><img src="img/software/cleaner/cleaner-03.png" /></p>
-				<p>The example computer has three kernels installed to it - the
-				original kernel and two kernels manually added to it later.  If you have
-				decided to install newer kernels to your Linux Lite, it is not a bad
-				idea to keep two working kernels on the system.  If you end up having
-				problems with one, you will then have the ability to boot into the
-				system with the other one from the grub menu.</p>
-				<p>The kernel cleaner will only display the kernels that are not
-				currently in use.  So in screenshot below only two of the three kernels
-				are displayed.  We will remove one of them.  To remove a kernel, make
-				sure to select the "image" and "header" files that correspond to the
-				version number of the kernel, then click <strong>Begin</strong>.</p>
-				<p><img src="img/software/cleaner/cleaner-04.png" /></p>
-				<p>In the screenshot above you will notice that the original 3.13.0-24
-				kernel and a newer 3.13.0-27 kernel are shown.  The newer kernel did not
-				work correctly on this machine, so that is the one selected for
-				removal.  Place a check mark in the boxes next to the "image" and "header"
-				files, then click <strong>Remove</strong>.</p>
-				<p>A confirmation box will pop-up.  Click <strong>Yes</strong> if you
-				are sure you want to proceed with the deletion.</p>
-				<p><img src="img/software/cleaner/cleaner-05.png" /></p>
-				<p>Enter your password and click <strong>OK</strong>.</p>
-				<p><img src="img/software/cleaner/cleaner-06.png" /></p>
-				<p>Your kernel(s) will then be removed.  (This may take a few minutes.)</p>
-				<p><img src="img/software/cleaner/cleaner-07.png" /></p>
-				<p>Upon completion, click <strong>OK</strong> to close the window.</p>
-				<p><img src="img/software/cleaner/cleaner-08.png" /></p>
-			<p>When the task has completed, you'll be asked if you want to 
-			perform additional tasks.</p>
-			<p><img src="img/software/cleaner/tweaks-finished.png" />&nbsp;</p>
-			<p>You can also select multiple tasks to perform in <strong>Lite 
-			Tweaks</strong>. Simply select the tasks you want to complete and 
-			click on <strong>Begin</strong>.</p>
-			<p><img src="img/software/lite-tweaks-multiple.png" /></p>
-			<p>Enter your password when asked and when the tasks have completed, 
-			you'll be asked if you want to perform additional tasks.</p>
-			<p><img src="img/software/cleaner/tweaks-finished.png" />&nbsp;</p>
-				<p>
-				<a href="#top">Top of page</a></p>
-				<hr>
-				<p>&nbsp;</p>
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li class="active"><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/pages/Linuxlite/572323192787066"><i> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite"><i class="twitter"> </i></a></li>
+				<li><a href="https://plus.google.com/+linuxliteos"><i class="gmail"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li class="active"><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
 
-				<p><a name="ppa"></a><b><font size="4">Adding a PPA</font></b></p>
-				<p>A PPA is a repository containing one or more applications. 
-				These are often set up for new software programs or updated 
-				versions of some applications. To add a new PPA to your system, 
-				follow the guide below.</p>
-				<p>Go to <b>Menu, System, Install/Remove Programs</b>. Enter 
-				your password when asked.</p>
-				<p><img border="0" src="img/software/menu_synaptic.png"></p>
-				<p>Go to <b>Settings, Repositories</b>.</p>
-				<p><img src="img/software/ppa2.jpg" class="auto-style1"></p>
-				<p>Click on the <b>Other Software</b> tab and click on the <b>Add
-				</b>(bottom left) button and paste into the box the address of 
-				the PPA.<br>
-				In this example, we are going to add <b>Spotify</b> to our 
-				system. Now click on <b>Add Source</b>. To finish, click on <b>
-				Close</b>.<br>
-				Close <b>Synaptic Package Manager</b>.</p>
-				<p><img border="0" src="img/software/ppa3.png"></p>
-				<p>Each PPA comes with a signed key. This is a security measure 
-				and ensures that the person who created the PPA has followed 
-				strict standards. Open up a terminal and type in the key string:</p>
-				<table border="0" width="800" id="table1" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo apt-key adv --keyserver keyserver.ubuntu.com 
-						--recv-keys 94558F59</b></td>
-					</tr>
-				</table>
-				<p>&nbsp;</p>
-				<p><img border="0" src="img/software/ppa4.png"></p>
-				<p>Now in the same terminal type in:</p>
-				<table border="0" width="800" id="table2" bgcolor="#FFFF55">
-					<tr>
-						<td><b>sudo apt-get update &amp;&amp; 
-				sudo apt-get install spotify-client</b></td>
-					</tr>
-				</table>
-				<p>&nbsp;</p>
-				<p><img border="0" src="img/software/ppa5.png"></p>
-				<p>This will update your sources to include the new Spotify 
-				repository. The second part of the command will install Spotify 
-				for you. Your new program is now installed and ready to use.</p>
-				<p>
-				<img border="0" src="img/software/ppa6.png"></p>
-				<p>
-				<a href="#top">Top of page</a></p><hr>
-				<hr>
-				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="encrypt"></a>File Encryption</font></b></p>
-				<p>In todays world, security of your personal files is 
-				important. Whether your transporting documents on a USB drive or 
-				emailing sensitive information to a friend, colleague or company, 
-				encryption is a necessary security measure.</p>
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
 
-				<p>1. First we need to install the encryption software, in this 
-				example we'll use
-				<a href="https://en.wikipedia.org/wiki/Mcrypt" target="_blank">
-				mcrypt</a>. Encryption algorithms include DES, Blowfish, 
-				ARCFOUR, Enigma, GOST, LOKI97, RC2, Serpent, Threeway, Twofish, 
-				WAKE, and XTEA.</p>
-				<p>Open a terminal and type:</p>
-				<p><strong>sudo apt-get install mcrypt -y</strong></p>
-				<p>2. Once mcrypt is installed, we'll set a custom right click 
-				action in our file manager to make encryption of files super 
-				easy. Open up your home folder, click on <strong>Edit, Configure 
-				custom actions</strong>.</p>
-				<p><img src="img/software/encrypt/encrypt1.jpg" /></p>
-				<p>3. Click the plus + button on the right and enter in the 
-				following information, in the <strong>Command</strong> box type 
-				in:</p>
-				<p><strong>x-terminal-emulator -t "Encrypt file..." -e "mcrypt 
-				%f"</strong></p>
-				<p><img src="img/software/encrypt/encrypt2.jpg" /></p>
-				<p>Click on <strong>Appearance Conditions</strong> tab and tick 
-				every box except <strong>Directories</strong>.</p>
-				<p><img src="img/software/encrypt/encrypt2a.png" /></p>
-				<p>4. Go back to the <strong>Basic</strong> tab and click on the
-				<strong>No icon</strong> button and browse to <strong>Status 
-				Icons</strong>, and select the <strong>changes-prevent</strong> 
-				icon and click on <strong>Ok</strong>, then <strong>Ok</strong> 
-				on the next box.</p>
-				<p><img src="img/software/encrypt/encrypt3.jpg" /></p>
-				<p>Your <strong>Custom Actions</strong> box should now look like 
-				this:</p>
-				<p><img src="img/software/encrypt/encrypt4.jpg" /></p>
-				<p>5. Now we need to set up the <strong>Decrypt</strong> option. 
-				Repeat step 3 only this time enter in the following information, 
-				in the <strong>Command</strong> box type in:</p>
-				<p><strong>x-terminal-emulator -t "Decrypt file..." -e "mcrypt 
-				-d %f"</strong></p>
-				<p><img src="img/software/encrypt/encrypt5.jpg" /></p>
-				<p>Click on <strong>Appearance Conditions</strong> tab and
-				<strong>only</strong> tick the <strong>Other Files</strong> box, 
-				leave the rest unticked.</p>
-				<p><img src="img/software/encrypt/encrypt5a.png" /></p>
-				<p>6. Repeat step 4 only this time select the <strong>
-				changes-allow</strong> icon. The click on <strong>Ok</strong>, 
-				then <strong>Ok</strong> on the next box.</p>
-				<p><img src="img/software/encrypt/encrypt6.jpg" /></p>
-				<p>7. Your <strong>Custom Actions</strong> box should now look 
-				like this:</p>
-				<p><img src="img/software/encrypt/encrypt7.jpg" /></p>
-				<p>8. Click on the <strong>Close</strong> button on the <strong>
-				Custom Actions</strong> box.</p>
-				<p>Now we're ready to encrypt a file (only files can be 
-				encrypted with this method, not folders)</p>
-				<p>9. Right click on a file and select <strong>Encrypt file</strong>.</p>
-				<p><img src="img/software/encrypt/encrypt8.jpg" /></p>
-				<p>10. A window will pop up asking you to type in a password, it 
-				will then ask you to enter the same password again. Choose a 
-				good strong password, a mixture of letters, numbers and 
-				characters that you can easily remember.</p>
-				<p><img src="img/software/encrypt/encrypt9.png" /></p>
-				<p>You can now delete the unencrypted file permanently.<br />
-				Here you will see we have a new file with the letters '<strong>.nc</strong>' 
-				attached to the end of it signifying that the file is now 
-				encrypted.</p>
-				<p><img src="img/software/encrypt/encrypt10.jpg" />&nbsp;</p>
-				<p>11. To decrypt the file later, right click on the file and 
-				select <strong>Decrypt file</strong>.</p>
-				<p><img src="img/software/encrypt/encrypt11.jpg" />&nbsp;</p>
-				<p>12. A window will pop up asking you to type in a password. 
-				Enter the password you created in step 10.</p>
-				<p><img src="img/software/encrypt/encrypt12.png" />&nbsp;</p>
-				<p>As you can see our file is decrypted and ready to view.</p>
-				<p><img src="img/software/encrypt/encrypt13.jpg" />&nbsp;</p>
-				<p>If you make any changes to the decrypted file, you need to 
-				delete the existing encrypted file and re-encypt the changed 
-				file.</p>
-				<p>
-				<a href="#top">Top of page</a></p>
-				<hr>
-				<p>&nbsp;</p>
-				<p><a name="archive"></a><b><font size="4"><a/>Creating and 
-				Extracting Zip files</a></font></b></p>
-				<p>Sometimes we may have a collection of pictures to send 
-				someone over email. Good practice is to zip these files up so 
-				that the overall size is much less. The following is an example 
-				of how to zip files and folders.</p>
-				<p>Linux Lite supports creation and extraction of these archive
-				file types using the <b>File Roller</b> program: <b>.zip .rar .tar
-				.tar.gz .tar.bz2 .7z</b></p>
-				<p>Archive files can be created/extracted through the right-click menu in the
-				file manager, or by going to <b>Menu -> Accessories -> Archive
-				Manager</b> and selecting files to archive or extract from there.</p>
-				<p><b>Creating a zip file</b></p>
-				<p>From within the file manager, right-click on any file or folder 
-				and select <b>Create Archive</b>.  The following example will use a
-				file named "file.txt".</p>
-				<p><img border="0" src="img/software/archive/archive-01.jpg"></p>
-				<p>A new window will pop up. From here, type in the <b>Filename</b>,
-				eg. "file".</br>
-				Use the drop-down box next to the filename to select the <b>zip</b>
-				extension as the archive type.</br>
-				Choose a location to save the file in, then click on the
-				<b>Create</b> button.</p>
-				<p><img border="0" src="img/software/archive/archive-02.png"></p>
-				<p>We now have a file called <b>file.zip</b></p>
-				<p><img border="0" src="img/software/archive/archive-03.png"></p>
-				<p><b>Zipping up multiple files</b></p>
-				<p>Best practice here is to place all the files you want to zip 
-				up into a folder. In this example we have a folder called <b>
-				holiday</b> and inside 4 files.</p>
-				<p><img border="1" src="img/software/archive/archive-04.jpg"></p>
-				<p>Go back to your home folder and right click on the folder 
-				containing the files you wish to zip up.<br>
-				Right click the folder and select <b>Create Archive</b></p>
-				<p><img border="0" src="img/software/archive/archive-05.jpg"></p>
-				<p>A new window will pop up. From here, type in the <b>Filename</b> 
-				of the file (eg. <b>holiday</b>>) and select <b>zip</b> for the
-				archive type extension.  Choose a location for the file, then
-				click the <b>Create</b> button.</p>
-				<p><img border="0" src="img/software/archive/archive-06.png"></p>
-				<p>We now have a zip file called <b>holiday.zip</b></p>
-				<p><img border="0" src="img/software/archive/archive-07.png"></p>
-				<p><b>Extracting Zip files</b></p>
-				<p>Right click on the zip file and select <b>Extract Here</b></p>
-				<p><img border="0" src="img/software/archive/archive-08.jpg"></p>
-				<p>We how have a folder called <b>holiday</b>, with our 4 files inside 
-				of it.</p>
-				<p><img border="0" src="img/software/archive/archive-09.png"></p>
-				<p><img border="0" src="img/software/archive/archive-04.jpg"></p>
-				</br>
-				<p><b>Using Archive Manager (File Roller) from the Menu to create
-				a zip file.</b></p>
-				<p>Go to <b>Menu -> Accessories -> Archive Manager</b> to open the
-				File Roller program.</p>
-				<p><img border="0" src="img/software/archive/archive-10.png"></p>
-				<p>The program will open up to a blank window like below.  To
-				create a zip file, click the "Create New Archive" button.</p>
-				<p><img border="0" src="img/software/archive/archive-11.png"></p>
-				<p>In this example, we'll make a file named "Testing", choose
-				the ".zip" extension type, use the "Location" box to point to
-				where we want to save the files we are zipping, then click "Create".</p>
-				<p><img border="0" src="img/software/archive/archive-12.png"></p>
-				<p>A window will pop-up where you can <b>add</b> files to your
-				zip archive.</p>
-				<p><img border="0" src="img/software/archive/archive-13.png"></p>
-				<p>Click <b>Add Files</b>, then in the following window navigate
-				to the files you want to archive and place a	check mark in the
-				box(es) next to those you want to include.  Once all items are
-				checked off, click <b>Add</b>.</p>
-				<p><img border="0" src="img/software/archive/archive-14.png"></p>
-				<p>You will then see the files that were added in the Archive
-				Manager window and the zip file will show up where you instructed
-				it to be created.  You may close the Archive Manager at this point
-				if you are done.</p>
-				<p><img border="0" src="img/software/archive/archive-15.png"></p>
-				<p><img border="0" src="img/software/archive/archive-16.png"></p></br>
-				<p><b>Using Archive Manager (File Roller) from the Menu to unzip
-				a zip file.</b></p>
-				<p>Go to <b>Menu -> Accessories -> Archive Manager</b>, click
-				<b>Open</b> and navigate to the archive file you want, then click
-				<b>Open</b> again.</p>
-				<p><img border="0" src="img/software/archive/archive-17.png"></p>
-				<p><img border="0" src="img/software/archive/archive-18.png"></p>
-				<p>The files will be displayed in the Archive Manager.</p>
-				<p><img border="0" src="img/software/archive/archive-19.png"></p>
-				<p>Click <b>Extract</b> and direct them to the location you want them
-				extracted to on the next window.</p>
-				<p><img border="0" src="img/software/archive/archive-20.png"></p>
-				<p>A pop-up window will notify you that the extraction is done.</p>
-				<p><img border="0" src="img/software/archive/archive-21.png"></p>
-				<p>If you click <b>Show the Files</b>, it will open the file
-				manager to display their location.</p>
-				<p><img border="0" src="img/software/archive/archive-22.png"></p>
-				<p>
-				<a href="#top">Top of page</a></p><hr>
-				<br />
-				<p>
-				<font size="4">
-				<b><a name="deskenv">Changing Desktop Environments</a></b></font></p>
-				<p>
-				This distro is a heavily modified version of the XFCE desktop 
-				environment. However, being GNU/Linux based allows people the 
-				freedom to modify their system as they see fit. There are 
-				numerous desktop environments in GNU/Linux. Including but not 
-				limited to:</p>
-				<p>
-				Enlightenment<br>
-				Gnome<br>
-				KDE<br>
-				LXDE<br>
-				Razor-qt</p>
-				<p>
-				If you desire to install another desktop environment, we cannot 
-				provide specific instructions on how to do this. There are far 
-				too many variables involved and much can go wrong. This kind of 
-				system modification is best left to experienced Linux users. The 
-				whole philosophy behind Linux Lite is to provide new users to 
-				Linux based operating systems an easy to use, functional desktop 
-				experience. Our support time is better spent dedicated to helping
-				existing Linux Lite users on the XFCE desktop.</p>
-				<p>
-				<a href="#top">Top of page</a></p>
+            				<p><a href="#ppa">Adding a PPA</a><br />
+            				<a href="#deskenv">Changing Desktop Environments</a><br />
+            				<a href="#archive">Creating and Extracting Zip files</a><br />
+            				<a href="#encrypt">File Encryption</a><br />
+            				<a href="#heldpack">Held Packages</a><br />
+					<a href="#software">Installing &amp; Removing Software</a><br />
+            				<a href="#instsoftware">Installing Software</a><br />
+            				<a href="#installsoftware">Lite Software - Install Software</a><br />
+            				<a href="#removesoftware">Lite Software - Remove Software</a><br />
+            				<a href="#tweaks">Lite Tweaks</a><br />
+            				<a href="#sources">Software Updates by Country</a><br />
+					<a href="#uninstsoftware">Uninstalling Software</a><br />
+            				<a href="#updates">Updates</a><br />
+            				<a href="#winprogs">Windows Equivalents of Linux Programs</a></p>
+
+					<h2><a name="software">Installing &amp; Removing Software</a></h2>
+					<p>Installing and removing software in Linux is much easier than in Windows. The vast majority of programs that you may want/need to install are all centrally
+					located in what are called software repositories (repos).  Rather than searching the web, downloading programs from various sites (some of which may not be reliable), 
+					running the installer, rebooting, etc., available software is all centrally located and available for installation in seconds.  The packages/(programs) in the 
+					repositories are tested, approved for inclusion in the repos and securely signed to insure their validity.</p>
+					<p>There are a few common methods for installing and removing software. Linux Lite comes with the Synaptic Package Manager.  When you already know the name of
+					the program you want, Synaptic makes installing easy.</p>
+
+					<p><b>IMPORTANT: Linux Lite is a heavily modified operating system.<br>
+					As such we do not recommend you ever do:</b></p>
+						<div class="codeheader"></div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get dist-upgrade</code></pre><br>
+					<p><b>This command has the potential to break your system.</b></p>
+				
+					<p><b>IMPORTANT: Before you run Install/Remove Software for the first time, <a href="#sources">read this first</a>. Then come back to here to learn how to 
+					install and remove software.</b></p>
+
+					<h2><a name="instsoftware">Installing Software</a></h2>
+					<p><b>1.</b> Click on <b>Menu</b>, <b>System</b>, <b>Install/Remove Software.</b></p>
+					<p><img src="images/software/insoft/menu_synaptic.png"></p>
+
+					<p><b>2.</b> Make sure <b>All</b> is selected in the left pane and in the <b>Quick Filter</b> or spy glass: <img src="images/software/insoft/spyglass.png"> type in your search query. In 
+					this example we will search for the &#39;<b>audacious</b>&#39; music player.</p>
+					<p><img border="1" src="images/software/insoft/synaptic_search.png"></p>
+
+					<p><b>3.</b> Double click on the package you want to install.</p>
+					<p><b>4.</b> Some software will ask you to <b>Mark additional required changes?</b> These are also known as dependencies and are 
+					required for the program to function properly.</p>
+					<p><img src="images/software/insoft/synaptic_deps.png"></p>
+
+					<p><b>5.</b> Click on <b>Mark</b>. Now hit the <b>Apply</b> button on the Synaptic toolbar. The software will install and a <b>Menu</b> 
+					entry will be created in the relevant <b>Menu</b> category. For <b>audacious</b> the <b>Menu</b> category would be <b>Multimedia</b>.</p>
+					<p><img border="1" src="images/software/insoft/synaptic_apply.png"></p>
+
+					<p><b>6.</b> Go to the <b>Menu</b> and your new software will be there. An alternative way to find your new software is to click on <b>Menu, 
+					Accessories, Application Finder</b>. Type your program name in the <b>Search</b> box and the result will display on the right. 
+					Double click on the program name and it will launch for you.</p>
+					<p><img src="images/software/insoft/app_finder.png"></p>
+
+					<h2><a name="uninstsoftware">Uninstalling Software</a></h2>
+					<h2> Software</h2>
+					<p><b>1. </b>Uninstalling software is the reverse process of installing software in the <b>Synaptic Package Manager</b>. Type 
+					the name of the software into the <b>Quick Filter</b> or the spy glass box: 
+					<img src="images/software/insoft/spyglass.png"></p>
+
+					<p><b>2. </b>Right click on the software and select <b>Mark for Removal</b>. Now hit the <b>Apply</b> button on the Synaptic toolbar and your 
+					software will uninstall. Be very careful with this process as you can inadvertently uninstall crucial system software. If you 
+					have any doubts, please search the net first to see if it is safe to uninstall the software. Synaptic is pretty good at 
+					warning you should there be any potential problems.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="updates">Updates</a></h2>
+					<p>Keeping Linux Lite up to date is a simple process.</p>
+					<p>At the top of your <b>Menu</b>, you will see <b>Install Updates</b>.</p>
+					<p><img src="images/software/updates/menu_updates.jpg"></p>
+
+					<p>We&#39;ve made the update process as simple as possible. Simply click on <b>Install Updates</b> and you will be asked for your 
+					password. The program will then search for updates and if it finds any it will ask you if you want to continue.</p>
+					<p><b>Important:</b>  On rare occasions the update process may pause to ask you if you want to replace an existing configuration
+					file with a new one from the package maintainer.  If that happens, <u>always</u> select the default answer of "N" for NO.  You want to
+					keep the existing configuration file, not replace it.</p>
+					<p>(<b>Note:</b> The update process updates all software on the system that came from the repos.  Unlike in Windows, there is no need to 
+					update individual software programs manually.  When you run <b>Install Updates</b>, that will update all packages that have updates available for them.)</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="heldpack">Packages that have been kept back</a></h2>
+
+					<p>Sometimes when performing <b>Install Updates</b>, you will notice that there are held packages. Why does this occur?</p>
+					<p><img src="images/software/heldpack/held_pack1.png" /></p>
+
+					<p>The reason those package are kept back is because they either depend on extra packages not already installed or they are waiting 
+					on compatible software from other sources. In other words, those programs are waiting on other software to become available. When the 
+					other software becomes available, the held packages will come out of hold and be included in your regular updates. This occurs because 
+					software is created by different people and comes from different sources, those different projects must be compatible in order for 
+					the software to function properly.</p>
+
+					<p>If these held packages are installed prematurely, it could cause that program to become unstable or even worse, unusable. You may 
+					also inadvertently destabilize your system. <b>The safest course of action is to wait until the other packages are ready.</b> 
+					Then <b>Install Updates</b> will take care of all that for you and merge the software together.</p>
+
+					<p>There are some exceptions to this however. In the above example, we can see there are held packages for LibreOffice. In the current 
+					version of LibreOffice there is a bug which prevents users from being able to save files. Here is where the exception takes 
+					priority. Information gathered from the community states that an upgrade of LibreOffice fixes this bug. So we need these held packages.</p>
+
+					<p>Close <b>Install Updates</b> if you have it open. Now go to <b>Menu, System, Install/Remove Software</b>. Click on <b>Installed (upgradeable)</b> in the left pane, then 
+					select all the packages that you want to upgrade, in this example all the <b>libreoffice</b> packages. Now click on <b>Apply</b> and let the upgrade run its course.</p>
+					<p><img src="images/software/heldpack/held_pack2.png" /></p>
+
+					<p>In this particular example, installing the held <b>LibreOffice</b> packages fixes a known bug. This was first tested on a working system, 
+					then the public was notified that it was safe to do.</p>
+
+					<p><b>GOLDEN RULE: If your system if working fine, do not be tempted to force installation of held packages, if it's working you 
+					don't need it. This includes held kernel updates. Remember the old saying, "If it ain't broke, don't fix it".</b></p>
+
+					<p><a href="#top">Top of page</a></p>
+			
+					<h2><a name="sources">Change your Software Updates Country Location</a></h2>
+					<p>To ensure that you get your updates and software downloaded as fast as possible, try selecting a location close to you. 
+					In the following tutorial we will show you how to do this.</p>
+					<p>Click on <b>Menu, System, Install/Remove Software</b> and enter your password.</p>
+					<p><img src="images/software/countryloc/sources-password.jpg"></p>
+
+					<p><b>Synaptic Package Manager</b> will open up, click on <b>Settings, Repositories</b>.</p>
+					<p><img src="images/software/countryloc/sources-repos.jpg"></p>
+
+					<p>The <b>Software Sources</b> window will pop up. From the <b>Download from:</b> drop down box, select <b>Other...</b></p>
+					<p><img src="images/software/countryloc/sources-other.jpg"></p>
+
+					<p>A <b>Choose a Download Server</b> box will pop up. From here select your country, and then a server, preferably an Ubuntu 
+					server if it is listed or another server if an Ubuntu server is not in the list. Click on the <b>Choose Server</b> button once 
+					you have made your selection. Now click on <b>Close</b> in the <b>Software Sources</b> window.</p>
+					<p><img src="images/software/countryloc/sources-country.jpg"></p>
+
+					<p>In the top left of the <b>Synaptic Package Manager</b> window, click on the <b>Reload</b> button. This will change all 
+					the software sources to your location for faster downloads.</p>
+					<p><img src="images/software/countryloc/sources-reload.jpg"></p>
+
+					<p>The following window will appear, then close when it has finished.</p>
+					<p><img src="images/software/countryloc/sources-reload2.jpg"></p>
+
+					<p>You should now have faster downloads for updates and software installs in <b>Synaptic Package Manager</b> from a location much 
+					nearer you. Click <a href="#software">here</a> to learn how to install and remove software.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="installsoftware">Lite Software - Install Software</a></h2>
+					<p>Installing some of the more widely popular programs on Linux Lite like Chrome, Dropbox and Skype is just a few simple steps on Linux Lite.</p>
+
+					<p>Go to <b>Menu, System, Lite Software</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-menu.png" /></p>
+
+					<p>Enter your password and click <b>OK</b>.</p>
+					<p><img src="images/software/litesoftware/ls-password.png" /></p>
+
+					<p>Next you will be shown the <b>Update Sources</b> window, always answer <b>Yes</b>.</p>
+					<p><img src="images/software/litesoftware/update_sources.png" /></p>
+
+					<p>Sources will be updated:</p>
+					<p><img src="images/software/litesoftware/update_sources2.png" /></p>
+
+					<p>Once the sources have been updated, the following window will appear, select <b>Install Software</b> and click <b>OK</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-select.png" /></p>
+
+					<p>Next, you'll see the following window pop up. Select software to install by placing a check mark in the box next to it. You may 
+					choose and install more than one package at a time if you like. In this example we'll choose to install, <b>Instant Messenger,
+					Password Manager</b> and <b>Torrent Software</b>.</p>
+					<p><img src="images/software/litesoftware/install_add_sftwr-02.png" /></p>
+
+					<p>In the next dialog, you'll be shown which applications you've selected to install. Click <b>Yes</b> when ready.</p>
+					<p><img src="images/software/litesoftware/software-list.png" /></p>
+
+					<p>The programs will now be downloaded and installed automatically for you. This can take anywhere from a few seconds 
+					to a few minutes depending on how many applications you've selected, the size of the program/s and the speed of your internet connection.</p>
+					<p><img src="images/software/litesoftware/software-download.png" /></p>
+
+					<p><img src="images/software/litesoftware/software-installing.png" /></p>
+
+					<p>When the install is complete, you will get a confirmation like the following.</p>
+					<p><img src="images/software/litesoftware/install-complete.png" /></p>
+
+					<p>The <b>Lite Software</b> window will reappear at the end in case you want to perform another task. If you have finished, 
+					select <b>Exit</b> and click <b>OK</b> or simply click on <b>Quit</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-exit.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+				
+					<h2><a name="removesoftware">Lite Software - Remove Software</a></h2>
+					<p>Removing Additional Software in Linux Lite is just a few simple steps.</p>
+					<p>Click on <b>Menu, System, Lite Software</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-menu.png" /></p>
+
+					<p>Enter your password and click <b>OK</b>.</p>
+					<p><img src="images/software/litesoftware/ls-password.png" /></p>
+
+					<p>Next you will be shown the <b>Update Sources</b> window, always answer <b>Yes</b>.</p>
+					<p><img src="images/software/litesoftware/update_sources.png" /></p>
+
+					<p>Sources will be updated:</p>
+					<p><img src="images/software/litesoftware/update_sources2.png" /></p>
+
+					<p>Once the sources have been updated, the following window will appear, select <b>Remove Software</b> and click <b>OK</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-select-remove.png" /></p>
+
+					<p>Next, you'll see the following window pop up. Select software to remove by placing a check mark in the box next to it. You may 
+					choose and remove more than one package at a time if you like. In this example we'll choose to remove, <b>Instant Messenger</b>,
+					<b>Password Manager</b> and <b>Torrent Software</b>.</p>
+					<p><img src="images/software/litesoftware/remove_add_sftwr-02.png" /></p>
+
+					<p>In the next dialog, you'll be shown which applications you've selected to remove. Click <b>Yes</b> when ready.</p>
+					<p><img src="images/software/litesoftware/remove_add_sftwr-03.png" /></p>
+
+					<p>The programs will now be removed automatically for you. This can take anywhere from a few seconds to a few minutes depending on how many applications you've 
+					selected and the size of the program/s.</p>
+					<p><img src="images/software/litesoftware/remove_add_sftwr-04.png" /></p>
+
+					<p>When the removal process is complete, you will get a confirmation like the following.</p>
+					<p><img src="images/software/litesoftware/remove_add_sftwr-05.png" /></p>
+
+					<p>The <b>Lite Software</b> window will reappear at the end in case you want to perform another task. If you have finished, select <b>Exit</b> and click <b>OK</b> 
+					or simply click on <b>Quit</b>.</p>
+					<p><img src="images/software/litesoftware/lite-software-exit.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="winprogs">Windows Equivalents of Linux Programs</a></h2>
+					<p>The following is a community compiled list of Windows equivalents of Linux programs.</p>
+					<p>Most of these programs can be installed via <b>Menu, System, Install/Remove Software</b>. 
+					In the <b>Linux</b> column, you can click on any of the links to find out more about that piece of software.</p>
+					<p>Thank you to <a target="_blank" href="https://www.linuxliteos.com/forums/index.php?action=profile;u=411">bitsnpcs</a> 
+					and the rest of the community who contributed <a target="_blank" href="https://www.linuxliteos.com/forums/on-topic/linux-replacements-for-windows-programs/">here.</a></p>
+
+<p>
+    <b>Office & Design</b>
+</p>
+<table class="tg" width=100%>
+    <tr>
+        <td class="tg-vn4c">Windows</td>
+        <td class="tg-vn4c">Linux</td>
+    </tr>
+    <tr>
+        <td>Microsoft Office Suite</td>
+        <td>
+            <a target="_blank" href="http://www.libreoffice.org/">LibreOffice,</a>
+            <a target="_blank" href="http://www.openoffice.org/">OpenOffice.org,</a>
+            <a target="_blank" href="http://siag.nu/">Siag Office,</a>
+            <a target="_blank" href="https://www.calligra.org/">Calligra,</a>
+            <a target="_blank" href="http://www.wps.com/linux/">WPS Office,</a>
+            <a target="_blank" href="http://www.multiracio.com/index.php?lang=en&">EuroOffice</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Word</td>
+        <td>
+            <a target="_blank" href="http://www.libreoffice.org/discover/writer">LibreOffice Writer,</a>
+            <a target="_blank" href="http://www.openoffice.org/product/writer.html">OOWriter,</a>
+            <a target="_blank" href="http://www.abisource.com/">AbiWord</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Excel</td>
+        <td>
+            <a target="_blank" href="http://www.libreoffice.org/discover/calc">LibreOffice Calc,</a>
+            <a target="_blank" href="http://www.openoffice.org/product/calc.html">OOCalc,</a>
+            <a target="_blank" href="http://www.gnumeric.org/">Gnumeric</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Access</td>
+        <td>
+            <a target="_blank" href="http://www.libreoffice.org/discover/base">LibreOffice Base,</a>
+            <a target="_blank" href="http://www.openoffice.org/product/base.html">OOBase,</a>
+            <a target="_blank" href="http://www.kexi-project.org/">Kexi</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Powerpoint</td>
+        <td>
+            <a target="_blank" href="http://www.libreoffice.org/discover/impress">LibreOffice Impress,</a>
+            <a target="_blank" href="http://www.openoffice.org/product/impress.html">OOImpress,</a>
+            <a target="_blank" href="http://sourceforge.net/projects/impressive/">Impressive</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Project</td>
+        <td>
+            <a target="_blank" href="http://sourceforge.net/projects/openproj/">OpenProj,</a>
+            <a target="_blank" href="https://wiki.gnome.org/Apps/Planner/Screenshots">Planner,</a>
+            <a target="_blank" href="http://www.ganttproject.biz/">Gantt,</a>
+            <a target="_blank" href="http://www.moosprojectviewer.com/">MOOS Project Viewer</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Publisher, Quark</td>
+        <td>
+            <a target="_blank" href="http://www.scribus.net/">Scribus</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Visio</td>
+        <td>
+            <a target="_blank" href="http://www.gliffy.com/">gliffy,</a>
+            <a target="_blank" href="http://www.libreoffice.org/discover/draw">LibreOffice Draw,</a>
+            <a target="_blank" href="http://www.openoffice.org/product/draw.html">OODraw,</a>
+            <a target="_blank" href="http://dia-installer.de/index.html.en">DIA,</a>
+            <a target="_blank" href="http://www.yworks.com/en/products/yfiles/yed/">yEd Graph Editor</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Notepad, Wordpad </td>
+        <td>
+            <a target="_blank" href="https://wiki.gnome.org/Apps/Gedit">gedit,</a>
+            <a target="_blank" href="http://www.kde.org/applications/utilities/kate/">Kate,</a>
+            <a target="_blank" href="http://kate-editor.org/about-kate/">KWrite,</a>
+            <a target="_blank" href="http://www.geany.org/">Geany,</a>
+            <a target="_blank" href="https://launchpad.net/xpad">XPad,</a>
+            <a target="_blank" href="http://notepadqq.altervista.org/wp/">notepadqq,</a>
+            <a target="_blank" href="http://tarot.freeshell.org/leafpad/">Leafpad,</a>
+            <a target="_blank" href="http://www.sublimetext.com/">Sublime text,</a>
+            <a target="_blank" href="http://sourceforge.net/projects/nedit/">Nedit,</a>
+            <a target="_blank" href="https://atom.io/">Atom</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Business Card Designer Pro</td>
+        <td>
+            <a target="_blank" href="http://glabels.sourceforge.net/">gLabels</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Adobe Acrobat Viewer</td>
+        <td>
+            <a target="_blank" href="https://wiki.gnome.org/Apps/Evince">Evince,</a>
+            <a target="_blank" href="http://www.foolabs.com/xpdf/">Xpdf,</a>
+            <a target="_blank" href="http://okular.kde.org/">Okular,</a>
+            <a target="_blank" href="http://code-industry.net/free-pdf-editor.php">Master PDF Editor</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Adobe Acrobat Distiller</td>
+        <td>
+            <a target="_blank" href="http://www.cups-pdf.de/">CUPS-PDF</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Adobe Acrobat PDF Editor</td>
+        <td>
+            <a target="_blank" href="http://pdfedit.cz/en/index.html">pdfedit,</a>
+            <a target="_blank" href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">pdftk,</a>
+            <a target="_blank" href="http://freecode.com/projects/pdfjam/">pdfjam</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft Money, Quicken</td>
+        <td>
+            <a target="_blank" href="http://www.gnucash.org/">GnuCash,</a>
+            <a target="_blank" href="http://kmymoney2.sourceforge.net/index-home.html">KMyMoney,</a>
+            <a target="_blank" href="http://www.grisbi.org/">grisbi,</a>
+            <a target="_blank" href="http://homebank.free.fr/">Homebank</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Microsoft FrontPage, Dreamweaver</td>
+        <td>
+            <a target="_blank" href="http://bluegriffon.org/">BlueGriffon,</a>
+            <a target="_blank" href="http://www.kompozer.net/">KompoZer,</a>
+            <a target="_blank" href="http://www.w3.org/Amaya/">Amaya,</a>
+            <a target="_blank" href="http://bluefish.openoffice.nl/index.html">Bluefish</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Autodesk AutoCAD</td>
+        <td>
+            <a target="_blank" href="http://www.bricsys.com/en_INTL/bricscad/index.jsp">Bricscad,</a>
+            <a target="_blank" href="http://freecadweb.org/">FreeCAD</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Evernote</td>
+        <td>
+            <a target="_blank" href="https://github.com/nvbn/everpad/wiki/how-to-install">Everpad,</a>
+            <a target="_blank" href="http://rednotebook.sourceforge.net/">RedNotebook,</a>
+            <a target="_blank" href="http://sourceforge.net/projects/nevernote/">NixNote,</a>
+            <a target="_blank" href="https://github.com/byhestia/springseed">Springseed,</a>
+            <a target="_blank" href="http://www.giuspen.com/cherrytree/">Cherrytree,</a>
+            <a target="_blank" href="http://www.tagspaces.org/downloads/">TagSpaces</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Mealmaster</td>
+        <td>
+            <a target="_blank" href="http://thinkle.github.io/gourmet/">Gourmet Recipe Manager</a>
+        </td>
+    </table>
+    <br>
+        <p>
+            <b>Internet Applications</b>
+        </p>
+        <table class="tg" width=100%>
+            <tr>
+                <td class="tg-vn4c">Windows</td>
+                <td class="tg-vn4c">Linux</td>
+            </tr>
+            <tr>
+                <td>Internet Explorer</td>
+                <td>
+                    <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox,</a>
+                    <a target="_blank" href="https://www.google.com/chrome/browser/">Chrome,</a>
+                    <a target="_blank" href="http://www.opera.com/">Opera,</a>
+                    <a target="_blank" href="http://www.konqueror.org/">Konqueror,</a>
+                    <a target="_blank" href="http://midori-browser.org/">Midori</a>
+                </td>
+            </tr>
+            <tr>
+                <td>videoGET</td>
+                <td>
+                    <a target="_blank" href="http://flavio.tordini.org/minitube">Minitube</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Microsoft Outlook</td>
+                <td>
+                    <a target="_blank" href="https://www.mozilla.org/en-US/thunderbird/">Thunderbird</a>
+                    <a target="_blank" href="https://userbase.kde.org/Kontact">Kontact,</a>
+                    <a target="_blank" href="http://www.zimbra.com/downloads/zimbra-desktop">Zimbra Desktop,</a>
+                    <a target="_blank" href="https://wiki.gnome.org/Apps/Evolution">Evolution</a>
+                </td>
+            </tr>
+            <tr>
+                <td>MSN Messenger</td>
+                <td>
+                    <a target="_blank" href="http://www.pidgin.im/">Pidgin,</a>
+                    <a target="_blank" href="http://www.amsn-project.net/">aMSN,</a>
+                    <a target="_blank" href="http://kopete.kde.org/">Kopete,</a>
+                    <a target="_blank" href="http://blog.emesene.org/">Emesene,</a>
+                    <a target="_blank" href="http://gabber.sourceforge.net/">Gabber,</a>
+                    <a target="_blank" href="http://psi-im.org/">Psi</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Microsoft Netmeeting</td>
+                <td>
+                    <a target="_blank" href="http://ekiga.org/">Ekiga</a>
+                </td>
+            </tr>
+            <tr>
+                <td>eMule</td>
+                <td>
+                    <a target="_blank" href="http://sourceforge.net/projects/amule/">aMule</a>
+                </td>
+            </tr>
+            <tr>
+                <td>uTorrent, Azureus</td>
+                <td>
+                    <a target="_blank" href="https://www.transmissionbt.com/">Transmission,</a>
+                    <a target="_blank" href="http://www.kde.org/applications/internet/ktorrent/">Ktorrent,</a>
+                    <a target="_blank" href="http://www.vuze.com/">Vuze,</a>
+                    <a target="_blank" href="http://deluge-torrent.org/">Deluge,</a>
+                    <a target="_blank" href="http://www.qbittorrent.org/">qBittorrent,</a>
+                    <a target="_blank" href="http://ugetdm.com/">uGet</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Skype (VoIP)</td>
+                <td>
+                    <a target="_blank" href="http://www.skype.com/en/">Skype,</a>
+                    <a target="_blank" href="http://ekiga.org/">Ekiga,</a>
+                    <a target="_blank" href="https://jitsi.org/">Jitsi,</a>
+                    <a target="_blank" href="http://www.google.com/hangouts/">Google Hangouts</a>
+                </td>
+            </tr>
+            <tr>
+                <td>CuteFTP, WS FTP</td>
+                <td>
+                    <a target="_blank" href="https://filezilla-project.org/">FileZilla,</a>
+                    <a target="_blank" href="http://www.kftp.org/">KFTPgrabber,</a>
+                    <a target="_blank" href="http://fireftp.net/">FireFTP</a>
+                </td>
+            </tr>
+            <tr>
+                <td>mIRC</td>
+                <td>
+                    <a target="_blank" href="http://xchat.org/">Xchat,</a>
+                    <a target="_blank" href="http://www.pidgin.im/">Pidgin,</a>
+                    <a target="_blank" href="http://konversation.kde.org/">Konversation</a>
+                </td>
+            </tr>
+            <tr>
+                <td>UltraVNC, Remote Desktop</td>
+                <td>
+                    <a target="_blank" href="http://www.rdesktop.org/">rdesktop,</a>
+                    <a target="_blank" href="https://www.nomachine.com/">NX,</a>
+                    <a target="_blank" href="http://www.tightvnc.com/">TightVNC,</a>
+                    <a target="_blank" href="http://www.karlrunge.com/x11vnc/">x11vnc,</a>
+                    <a target="_blank" href="http://www.openssh.com/">SSH,</a>
+                    <a target="_blank" href="http://synergy-project.org/">Synergy,</a>
+                    <a target="_blank" href="https://wiki.gnome.org/Apps/Vinagre">Vinagre</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Forte Agent</td>
+                <td>
+                    <a target="_blank" href="http://pan.rebelbase.com/">Pan</a>
+                </td>
+            </tr>
+        </table>
+        <br>
+            <p>
+                <b>Multimedia Applications</b>
+            </p>
+            <table class="tg" width=100%>
+                <tr>
+                    <td class="tg-vn4c">Windows</td>
+                    <td class="tg-vn4c">Linux</td>
+                </tr>
+                <tr>
+                    <td>Adobe Photoshop</td>
+                    <td>
+                        <a target="_blank" href="http://www.gimp.org/">GIMP,</a>
+                        <a target="_blank" href="http://www.gimpshop.com/">GIMPshop,</a>
+                        <a target="_blank" href="https://krita.org/">Krita</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adobe Photoshop Elements</td>
+                    <td>
+                        <a target="_blank" href="http://f-spot.org/">F-Spot,</a>
+                        <a target="_blank" href="http://www.kphotoalbum.org/">KPhotoAlbum,</a>
+                        <a target="_blank" href="https://wiki.gnome.org/action/show/Apps/gthumb?action=show&redirect=gthumb">gThumb,</a>
+                        <a target="_blank" href="http://gwenview.sourceforge.net/">Gwenview,</a>
+                        <a target="_blank" href="https://www.digikam.org/">digiKam</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Corel Draw, Adobe Illustrator</td>
+                    <td>
+                        <a target="_blank" href="http://www.inkscape.org/en/">Inkscape,</a>
+                        <a target="_blank" href="http://www.xaraxtreme.org/">Xara Xtreme</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Microsoft Paint</td>
+                    <td>
+                        <a target="_blank" href="http://www.tuxpaint.org/">Tux Paint,</a>
+                        <a target="_blank" href="http://www.kolourpaint.org/">KolourPaint</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ACDSee, Irfanview </td>
+                    <td>
+                        <a target="_blank" href="http://www.xnview.com/en/">XnView,</a>
+                        <a target="_blank" href="http://sourceforge.net/projects/mirageiv.berlios/">Mirage,</a>
+                        <a target="_blank" href="https://wiki.gnome.org/action/show/Apps/gthumb?action=show&redirect=gthumb">gThumb,</a>
+                        <a target="_blank" href="http://gqview.sourceforge.net/">GQview,</a>
+                        <a target="_blank" href="http://gwenview.sourceforge.net/">Gwenview,</a>
+                        <a target="_blank" href="http://linux.softpedia.com/get/Multimedia/Graphics/Ristretto-Xfce-30156.shtml">Ristretto,</a>
+                        <a target="_blank" href="http://www.teejeetech.in/p/timeshift.html">nomacs</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3D Studio MAX, Maya</td>
+                    <td>
+                        <a target="_blank" href="http://www.blender.org/">Blender,</a>
+                        <a target="_blank" href="http://www.k-3d.org/">K-3D,</a>
+                        <a target="_blank" href="http://www.autodesk.com/products/softimage/overview">Softimage,</a>
+                        <a target="_blank" href="http://www.autodesk.com/products/maya/overview">Maya</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Movie Maker, Adobe Premiere</td>
+                    <td>
+                        <a target="_blank" href="http://sourceforge.net/projects/kdenlive/">Kdenlive,</a>
+                        <a target="_blank" href="http://cinelerra.org/1/">Cinellera,</a>
+                        <a target="_blank" href="http://kinodv.org/">Kino,</a>
+                        <a target="_blank" href="http://lives.sourceforge.net/">LiVES,</a>
+                        <a target="_blank" href="http://www.avidemux.org/">AviDemux,</a>
+                        <a target="_blank" href="http://www.pitivi.org/?go=download">PiTiVi,</a>
+                        <a target="_blank" href="http://openshot.org/">OpenShot</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TMPGEnc DVD Author, ConvertXtoDVD</td>
+                    <td>
+                        <a target="_blank" href="http://www.rastersoft.com/programas/devede.html">DeVeDe,</a>
+                        <a target="_blank" href="http://www.bombono.org/cgi-bin/wiki/">Bombono,</a>
+                        <a target="_blank" href="https://handbrake.fr/">Handbrake,</a>
+                        <a target="_blank" href="http://qdvdauthor.sourceforge.net/">Q DVD Author</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Videora</td>
+                    <td>
+                        <a target="_blank" href="http://thinliquidfilm.org/">Thin Liquid Film</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Windows Media Player</td>
+                    <td>
+                        <a target="_blank" href="http://www.videolan.org/vlc/">VLC,</a>
+                        <a target="_blank" href="https://wiki.gnome.org/Apps/Videos">Totem,</a>
+                        <a target="_blank" href="https://projects.kde.org/projects/extragear/multimedia/kaffeine">Kaffeine,</a>
+                        <a target="_blank" href="http://www.xine-project.org/home">xine,</a>
+                        <a target="_blank" href="http://www.mplayerhq.hu/design7/news.html">MPlayer,</a>
+                        <a target="_blank" href="http://qt-apps.org/content/show.php/QMPlay2?content=153339">QMPlay2,</a>
+                        <a target="_blank" href="https://wiki.gnome.org/Apps/Rhythmbox/">Rhythmbox</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Winamp, iTunes</td>
+                    <td>
+                        <a target="_blank" href="https://wiki.gnome.org/Apps/Rhythmbox/">Rhythmbox,</a>
+                        <a target="_blank" href="https://amarok.kde.org/en/">Amarok,</a>
+                        <a target="_blank" href="http://banshee.fm/">Banshee,</a>
+                        <a target="_blank" href="http://audacious-media-player.org/">Audacious,</a>
+                        <a target="_blank" href="http://www.atunes.org/">aTunes</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cubase, CoolEdit, Cakewalk</td>
+                    <td>
+                        <a target="_blank" href="http://ardour.org/">Ardour,</a>
+                        <a target="_blank" href="http://audacity.sourceforge.net/">Audacity,</a>
+                        <a target="_blank" href="https://testbit.eu/wiki/Beast_Home">Beast,</a>
+                        <a target="_blank" href="http://www.gnu.org/software/gnusound/">GNUsound,</a>
+                        <a target="_blank" href="http://www.rosegardenmusic.com/">Rosegarden</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>NoteWorthy Composer</td>
+                    <td>
+                        <a target="_blank" href="http://musescore.org/">MuseScore,</a>
+                        <a target="_blank" href="http://lilypond.org/">LilyPond</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Guitar Pro</td>
+                    <td>
+                        <a target="_blank" href="http://www.tuxguitar.com.ar/">TuxGuitar,</a>
+                        <a target="_blank" href="http://musescore.org/">MuseScore</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MP3Tag</td>
+                    <td>
+                        <a target="_blank" href="https://wiki.gnome.org/Apps/EasyTAG">EasyTAG,</a>
+                        <a target="_blank" href="http://puddletag.sourceforge.net/">Puddletag</a>
+                    </td>
+                </tr>
+            </table>
+            <br>
+                <p>
+                    <b>CD/DVD Recording</b>
+                </p>
+                <table class="tg" width=100%>
+                    <tr>
+                        <td class="tg-vn4c">Windows</td>
+                        <td class="tg-vn4c">Linux</td>
+                    </tr>
+                    <tr>
+                        <td>Nero Burning ROM, Alcohol 120%</td>
+                        <td>
+                            <a target="_blank" href="https://wiki.gnome.org/Apps/Brasero">Brasero,</a>
+                            <a target="_blank" href="http://www.k3b.org/">K3b,</a>
+                            <a target="_blank" href="http://www.xcdroast.org/">X-CD-Roast,</a>
+                            <a target="_blank" href="http://goodies.xfce.org/projects/applications/xfburn">Xfburn</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UltraISO, PowerISO</td>
+                        <td>
+                            <a target="_blank" href="http://www.littlesvr.ca/isomaster/">ISO Master,</a>
+                            <a target="_blank" href="http://sourceforge.net/projects/acetoneiso/">AcetoneISO,</a>
+                            <a target="_blank" href="http://cdemu.sourceforge.net/">CDemu</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Daemon Tools</td>
+                        <td>
+                            <a target="_blank" href="http://cdemu.sourceforge.net/">CDemu</a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                    <p>
+                        <b>Server & Networking Applications</b>
+                    </p>
+                    <table class="tg" width=100%>
+                        <tr>
+                            <td class="tg-vn4c">Windows</td>
+                            <td class="tg-vn4c">Linux</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft IIS</td>
+                            <td>
+                                <a target="_blank" href="http://www.apache.org/">Apache,</a>
+                                <a target="_blank" href="http://www.lighttpd.net/">lighttpd,</a>
+                                <a target="_blank" href="http://www.zope.org/">Zope,</a>
+                                <a target="_blank" href="http://www.acme.com/software/thttpd/">thttpd,</a>
+                                <a target="_blank" href="http://yaws.hyber.org/">Yaws,</a>
+                                <a target="_blank" href="http://wiki.nginx.org/Main">nginx</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Serv-U FTP Server, Filezilla FTP Server</td>
+                            <td>
+                                <a target="_blank" href="https://security.appspot.com/vsftpd.html">vsftpd,</a>
+                                <a target="_blank" href="http://www.pureftpd.org/project/pure-ftpd">Pure-FTPd,</a>
+                                <a target="_blank" href="http://www.proftpd.org/">ProFTPD</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>File/Printer Sharing</td>
+                            <td>
+                                <a target="_blank" href="https://www.samba.org/">Samba</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Exchange</td>
+                            <td>
+                                <a target="_blank" href="http://www.zimbra.com/">Zimbra,</a>
+                                <a target="_blank" href="http://www.open-xchange.com/home">Open-Xchange,</a>
+                                <a target="_blank" href="http://www.citadel.org/doku.php">Citadel</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft Sharepoint</td>
+                            <td>
+                                <a target="_blank" href="http://www.knowledgetree.com/">KnowledgeTree,</a>
+                                <a target="_blank" href="http://www.open-xchange.com/home">Open-Xchange</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Small Business Server</td>
+                            <td>
+                                <a target="_blank" href="http://www.clearfoundation.com/Software/overview.html">ClearOS,</a>
+                                <a target="_blank" href="http://www.zentyal.com/">Zentyal,</a>
+                                <a target="_blank" href="http://wiki.contribs.org/Main_Page">SME Server</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>NetLimiter</td>
+                            <td>
+                                <a target="_blank" href="http://l7-filter.clearfoundation.com/">L7-filter,</a>
+                                <a target="_blank" href="https://www.mastershaper.org/">MasterShaper,</a>
+                                <a target="_blank" href="https://wiki.archlinux.org/index.php/Trickle">trickle,</a>
+                                <a target="_blank" href="http://www.bandwidtharbitrator.com/">Bandwidth Arbitrator</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PA Server Monitor</td>
+                            <td>
+                                <a target="_blank" href="http://www.zenoss.com/">ZenOSS,</a>
+                                <a target="_blank" href="http://www.nagios.org/">Nagios,</a>
+                                <a target="_blank" href="http://www.zabbix.com/">Zabbix</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Inssider</td>
+                            <td>
+                                <a target="_blank" href="http://sourceforge.net/projects/linssid/">LinSSID</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Norton AntiVirus, McAfee</td>
+                            <td>
+                                <a target="_blank" href="http://www.clamav.net/index.html">ClamAV,</a>
+                                <a target="_blank" href="http://www.avira.com/en/downloads">Avira,</a>
+                                <a target="_blank" href="http://free.avg.com/gb-en/free-antivirus-download">AVG,</a>
+                                <a target="_blank" href="https://www.avast.com/index">Avast</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ZoneAlarm, Sygate Firewall</td>
+                            <td>
+                                <a target="_blank" href="http://www.fs-security.com/">Firestarter,</a>
+                                <a target="_blank" href="http://firehol.org/">FireHOL,</a>
+                                <a target="_blank" href="http://www.simonzone.com/software/guarddog/">Guarddog,</a>
+                                <a target="_blank" href="http://gufw.org/">Gufw,</a>
+                                <a target="_blank" href="http://www.kmyfirewall.org/">KMyFirewall</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                        <p>
+                            <b>Utilities</b>
+                        </p>
+                        <table class="tg" width=100%>
+                            <tr>
+                                <td class="tg-vn4c">Windows</td>
+                                <td class="tg-vn4c">Linux</td>
+                            </tr>
+                            <tr>
+                                <td>Norton Partition Magic</td>
+                                <td>
+                                    <a target="_blank" href="http://gparted.sourceforge.net/">Gparted,</a>
+                                    <a target="_blank" href="http://qtparted.sourceforge.net/">Qtparted,</a>
+                                    <a target="_blank" href="http://partedmagic.com/">Parted Magic</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Norton Ghost</td>
+                                <td>
+                                    <a target="_blank" href="http://clonezilla.org/">Clonezilla,</a>
+                                    <a target="_blank" href="http://www.partimage.org/Main_Page">Partimage,</a>
+                                    <a target="_blank" href="http://www.feyrer.de/g4u/">g4u,</a>
+                                    <a target="_blank" href="http://en.wikipedia.org/wiki/Dd_%28Unix%29">dd,</a>
+                                    <a target="_blank" href="http://redobackup.org/">Redo Backup,</a>
+                                    <a target="_blank" href="http://sourceforge.net/projects/qt4-fsarchiver/">qt4-fsarchiver,</a>
+                                    <a target="_blank" href="http://www.teejeetech.in/p/timeshift.html">TimeShift</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Winzip, WinRAR, 7-zip</td>
+                                <td>
+                                    <a target="_blank" href="http://fileroller.sourceforge.net/">File Roller,</a>
+                                    <a target="_blank" href="https://utils.kde.org/projects/ark/">Ark,</a>
+                                    <a target="_blank" href="http://kde-apps.org/content/show.php/KArchiver?content=10316">Karchiver,</a>
+                                    <a target="_blank" href="http://www.7-zip.org/">7-Zip,</a>
+                                    <a target="_blank" href="http://xarchiver.sourceforge.net/">Xarchiver</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Capsa Network Analyzer</td>
+                                <td>
+                                    <a target="_blank" href="https://www.wireshark.org/">Wireshark,</a>
+                                    <a target="_blank" href="http://www.aos5.com/cloud">Ethereal</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bitvise Tunnelier</td>
+                                <td>
+                                    <a target="_blank" href="http://sourceforge.net/projects/gstm/">Gnome SSH Tunnel Manager,</a>
+                                    <a target="_blank" href="https://wiki.gnome.org/Apps/HotSSH">HotSSH</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FreeFile Sync</td>
+                                <td>
+                                    <a target="_blank" href="http://sourceforge.net/projects/freefilesync/">FreeFile Sync,</a>
+                                    <a target="_blank" href="http://en.wikipedia.org/wiki/Rsync">rsync,</a>
+                                    <a target="_blank" href="http://www.rsnapshot.org/">rsnapshot,</a>
+                                    <a target="_blank" href="http://duplicity.nongnu.org/">duplicity,</a>
+                                    <a target="_blank" href="http://zbackup.org/">ZBackup,</a>
+                                    <a target="_blank" href="http://backintime.le-web.org/">Back In Time</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dragon Naturally Speaking</td>
+                                <td>
+                                    <a target="_blank" href="https://simon.kde.org/">Simon</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+
+					<p>Please report any dead links from above <a href="mailto:valtam@linuxliteos.com?subject=Windows Equivalents Dead Link Report">here</a>.</p>
+
+					<p><a href="#top">Top of page</a></p>
+				
+					<h2><a name="tweaks">Lite Tweaks</a></h2>
+					<p><b>Lite Tweaks</b> is a tool that can be used periodically to clean up your system and free up more space on your hard drive. It
+					will do things like clean out various cached files, remove old dependency packages that are no longer needed, empty your trash and
+					remove old kernels if you have installed new ones.</p>
+				
+					<p>Lite Cleaner is in <b>Menu, System, Lite Tweaks</b>.</p>
+					<p><img src="images/software/litetweaks/cleaner-02.png" /></p>
+
+					<p>Once opened, the <b>Lite Tweaks</b> window will show various categories of files that can be cleaned and will display in the <b>Description</b> column
+					how much space will be freed up by removing them. As an example, we'll use the cleaner to remove an old linux kernel.</p>
+					<p><img src="images/software/litetweaks/cleaner-03.png" /></p>
+
+					<p>The example computer has three kernels installed to it - the original kernel and two kernels manually added to it later. If you have
+					decided to install newer kernels to your Linux Lite, it is not a bad idea to keep two working kernels on the system. If you end up having
+					problems with one, you will then have the ability to boot into the system with the other one from the grub menu.</p>
+
+					<p>The kernel cleaner will only display the kernels that are not currently in use. So in screenshot below only two of the three kernels
+					are displayed.  We will remove one of them.  To remove a kernel, make sure to select the "image" and "header" files that correspond to the
+					version number of the kernel, then click <b>Begin</b>.</p>
+					<p><img src="images/software/litetweaks/cleaner-04.png" /></p>
+
+					<p>In the screenshot above you will notice that the original 3.13.0-24 kernel and a newer 3.13.0-27 kernel are shown. The newer kernel did not
+					work correctly on this machine, so that is the one selected for removal. Place a check mark in the boxes next to the "image" and "header"
+					files, then click <b>Remove</b>.</p>
+
+					<p>A confirmation box will pop-up. Click <b>Yes</b> if you are sure you want to proceed with the deletion.</p>
+					<p><img src="images/software/litetweaks/cleaner-05.png" /></p>
+
+					<p>Enter your password and click <b>OK</b>.</p>
+					<p><img src="images/software/litetweaks/cleaner-06.png" /></p>
+
+					<p>Your kernel(s) will then be removed. (This may take a few minutes.)</p>
+					<p><img src="images/software/litetweaks/cleaner-07.png" /></p>
+
+					<p>Upon completion, click <b>OK</b> to close the window.</p>
+					<p><img src="images/software/litetweaks/cleaner-08.png" /></p>
+
+					<p>When the task has completed, you'll be asked if you want to perform additional tasks.</p>
+					<p><img src="images/software/litetweaks/tweaks-finished.png" /></p>
+
+					<p>You can also select multiple tasks to perform in <b>Lite Tweaks</b>. Simply select the tasks you want to complete and click on <b>Begin</b>.</p>
+					<p><img src="images/software/litetweaks/lite-tweaks-multiple.png" /></p>
+
+					<p>Enter your password when asked and when the tasks have completed, you'll be asked if you want to perform additional tasks.</p>
+					<p><img src="images/software/litetweaks/tweaks-finished.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="ppa">Adding a PPA</a></h2>
+					<p>A PPA is a repository containing one or more applications. These are often set up for new software programs or updated 
+					versions of some applications. To add a new PPA to your system, follow the guide below.</p>
+
+					<p>Go to <b>Menu, System, Install/Remove Programs</b>. Enter your password when asked.</p>
+					<p><img src="images/software/ppa/menu_synaptic.png"></p>
+
+					<p>Go to <b>Settings, Repositories</b>.</p>
+					<p><img src="images/software/ppa/ppa2.jpg"></p>
+
+					<p>Click on the <b>Other Software</b> tab and click on the <b>Add </b>(bottom left) button and paste into the box the address of the PPA. 
+					In this example, we are going to add <b>Spotify</b> to our system. Now click on <b>Add Source</b>. To finish, click on <b>Close</b>. 
+					Close <b>Synaptic Package Manager</b>.</p>
+					<p><img src="images/software/ppa/ppa3.png"></p>
+
+					<p>Each PPA comes with a signed key. This is a security measure and ensures that the person who created the PPA has followed 
+					strict standards. Open up a terminal and type in the key string:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59</code></pre><br>
+					<p><img src="images/software/ppa/ppa4.png"></p>
+
+					<p>Now in the same terminal type in:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update &amp;&amp; sudo apt-get install spotify-client</code></pre><br>
+					<p><img src="images/software/ppa/ppa5.png"></p>
+
+					<p>This will update your sources to include the new Spotify repository. The second part of the command will install Spotify 
+					for you. Your new program is now installed and ready to use.</p>
+					<p><img src="images/software/ppa/ppa6.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="encrypt">File Encryption</a></h2>
+					<p>In todays world, security of your personal files is important. Whether your transporting documents on a USB drive or 
+					emailing sensitive information to a friend, colleague or company, encryption is a necessary security measure.</p>
+
+					<p><b>1.</b> First we need to install the encryption software, in this example we'll use<a href="https://en.wikipedia.org/wiki/Mcrypt" target="_blank">
+					mcrypt</a>. Encryption algorithms include DES, Blowfish, ARCFOUR, Enigma, GOST, LOKI97, RC2, Serpent, Threeway, Twofish, WAKE, and XTEA.</p>
+					<p>Open a terminal and type:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install mcrypt -y</code></pre><br>
+
+					<p><b>2.</b> Once mcrypt is installed, we'll set a custom right click action in our file manager to make encryption of files super 
+					easy. Open up your home folder, click on <b>Edit, Configure custom actions</b>.</p>
+					<p><img src="images/software/encrypt/encrypt1.jpg" /></p>
+
+					<p><b>3.</b> Click the plus + button on the right and enter in the following information, in the <b>Command</b> box type in: 
+					<b>x-terminal-emulator -t "Encrypt file..." -e "mcrypt %f"</b></p>
+					<p><img src="images/software/encrypt/encrypt2.jpg" /></p>
+
+					<p>Click on <b>Appearance Conditions</b> tab and tick every box except <b>Directories</b>.</p>
+					<p><img src="images/software/encrypt/encrypt2a.png" /></p>
+
+					<p><b>4.</b> Go back to the <b>Basic</b> tab and click on the <b>No icon</b> button and browse to <b>Status Icons</b>, and select the <b>changes-prevent</b> 
+					icon and click on <b>Ok</b>, then <b>Ok</b> on the next box.</p>
+					<p><img src="images/software/encrypt/encrypt3.jpg" /></p>
+
+					<p>Your <b>Custom Actions</b> box should now look like this:</p>
+					<p><img src="images/software/encrypt/encrypt4.jpg" /></p>
+
+					<p><b>5.</b> Now we need to set up the <b>Decrypt</b> option. Repeat step 3 only this time enter in the following information, in the <b>Command</b> box type in: 
+					<b>x-terminal-emulator -t "Decrypt file..." -e "mcrypt -d %f"</b></p>
+					<p><img src="images/software/encrypt/encrypt5.jpg" /></p>
+
+					<p>Click on <b>Appearance Conditions</b> tab and <b>only</b> tick the <b>Other Files</b> box, leave the rest unticked.</p>
+					<p><img src="images/software/encrypt/encrypt5a.png" /></p>
+
+					<p><b>6.</b> Repeat step 4 only this time select the <b>changes-allow</b> icon. The click on <b>Ok</b>, then <b>Ok</b> on the next box.</p>
+					<p><img src="images/software/encrypt/encrypt6.jpg" /></p>
+
+					<p><b>7.</b> Your <b>Custom Actions</b> box should now look like this:</p>
+					<p><img src="images/software/encrypt/encrypt7.jpg" /></p>
+
+					<p><b>8.</b> Click on the <b>Close</b> button on the <b>Custom Actions</b> box.</p>
+					<p>Now we're ready to encrypt a file (only files can be encrypted with this method, not folders)</p>
+					<p><b>9.</b> Right click on a file and select <b>Encrypt file</b>.</p>
+					<p><img src="images/software/encrypt/encrypt8.jpg" /></p>
+
+					<p><b>10.</b> A window will pop up asking you to type in a password, it will then ask you to enter the same password again. Choose a 
+					good strong password, a mixture of letters, numbers and characters that you can easily remember.</p>
+					<p><img src="images/software/encrypt/encrypt9.png" /></p>
+
+					<p>You can now delete the unencrypted file permanently. Here you will see we have a new file with the letters '<b>.nc</b>' 
+					attached to the end of it signifying that the file is now encrypted.</p>
+					<p><img src="images/software/encrypt/encrypt10.jpg" /></p>
+
+					<p><b>11.</b> To decrypt the file later, right click on the file and select <b>Decrypt file</b>.</p>
+					<p><img src="images/software/encrypt/encrypt11.jpg" /></p>
+
+					<p><b>12.</b> A window will pop up asking you to type in a password. Enter the password you created in step 10.</p>
+					<p><img src="images/software/encrypt/encrypt12.png" /></p>
+
+					<p>As you can see our file is decrypted and ready to view.</p>
+					<p><img src="images/software/encrypt/encrypt13.jpg" /></p>
+
+					<p>If you make any changes to the decrypted file, you need to delete the existing encrypted file and re-encypt the changed file.</p>
+
+					<p><a href="#top">Top of page</a></p>
+				
+					<h2><a name="archive">Creating and Extracting Zip files</a></h2>
+					<p>Sometimes we may have a collection of pictures to send someone over email. Good practice is to zip these files up so 
+					that the overall size is much less. The following is an example of how to zip files and folders.</p>
+					<p>Linux Lite supports creation and extraction of these archive file types using the <b>File Roller</b> program: <b>.zip .rar .tar .tar.gz .tar.bz2 .7z</b></p>
+					<p>Archive files can be created/extracted through the right-click menu in the file manager, or by going to <b>Menu, Accessories, Archive 
+					Manager</b> and selecting files to archive or extract from there.</p>
+
+					<p><b>Creating a zip file</b></p>
+					<p>From within the file manager, right-click on any file or folder and select <b>Create Archive</b>.  The following example will use a file named "file.txt".</p>
+					<p><img src="images/software/archive/archive-01.jpg"></p>
+
+					<p>A new window will pop up. From here, type in the <b>Filename</b>, eg. "file". Use the drop-down box next to the filename to select the <b>zip</b> 
+					extension as the archive type. Choose a location to save the file in, then click on the <b>Create</b> button.</p>
+					<p><img src="images/software/archive/archive-02.png"></p>
+
+					<p>We now have a file called <b>file.zip</b></p>
+					<p><img src="images/software/archive/archive-03.png"></p>
+
+					<p><b>Zipping up multiple files</b></p>
+					<p>Best practice here is to place all the files you want to zip up into a folder. In this example we have a folder called <b>holiday</b> and inside 4 files.</p>
+					<p><img border="1" src="images/software/archive/archive-04.jpg"></p>
+
+					<p>Go back to your home folder and right click on the folder containing the files you wish to zip up. Right click the folder and select <b>Create Archive</b></p>
+					<p><img src="images/software/archive/archive-05.jpg"></p>
+
+					<p>A new window will pop up. From here, type in the <b>Filename</b> of the file (eg. <b>holiday</b>>) and select <b>zip</b> for the
+					archive type extension.  Choose a location for the file, then click the <b>Create</b> button.</p>
+					<p><img src="images/software/archive/archive-06.png"></p>
+
+					<p>We now have a zip file called <b>holiday.zip</b></p>
+					<p><img src="images/software/archive/archive-07.png"></p>
+
+					<p><b>Extracting Zip files</b></p>
+					<p>Right click on the zip file and select <b>Extract Here</b></p>
+					<p><img src="images/software/archive/archive-08.jpg"></p>
+
+					<p>We how have a folder called <b>holiday</b>, with our 4 files inside of it.</p>
+					<p><img src="images/software/archive/archive-09.png"></p>
+
+					<p><img src="images/software/archive/archive-04.jpg"></p>
+
+					<p><b>Using Archive Manager (File Roller) from the Menu to create a zip file.</b></p>
+					<p>Go to <b>Menu, Accessories, Archive Manager</b> to open the File Roller program.</p>
+					<p><img src="images/software/archive/archive-10.png"></p>
+
+					<p>The program will open up to a blank window like below.  To create a zip file, click the "Create New Archive" button.</p>
+					<p><img src="images/software/archive/archive-11.png"></p>
+
+					<p>In this example, we'll make a file named "Testing", choose the ".zip" extension type, use the "Location" box to point to
+					where we want to save the files we are zipping, then click "Create".</p>
+					<p><img src="images/software/archive/archive-12.png"></p>
+
+					<p>A window will pop-up where you can <b>add</b> files to your zip archive.</p>
+					<p><img src="images/software/archive/archive-13.png"></p>
+
+					<p>Click <b>Add Files</b>, then in the following window navigate to the files you want to archive and place a check mark in the box(es) next to those you want to include. Once all items are 
+					checked off, click <b>Add</b>.</p>
+					<p><img src="images/software/archive/archive-14.png"></p>
+
+					<p>You will then see the files that were added in the Archive Manager window and the zip file will show up where you instructed it to be created. 
+					You may close the Archive Manager at this point if you are done.</p>
+					<p><img src="images/software/archive/archive-15.png"></p>
+
+					<p><img src="images/software/archive/archive-16.png"></p>
+
+					<p><b>Using Archive Manager (File Roller) from the Menu to unzip a zip file.</b></p>
+					<p>Go to <b>Menu, Accessories, Archive Manager</b>, click <b>Open</b> and navigate to the archive file you want, then click <b>Open</b> again.</p>
+					<p><img src="images/software/archive/archive-17.png"></p>
+
+					<p><img src="images/software/archive/archive-18.png"></p>
+
+					<p>The files will be displayed in the Archive Manager.</p>
+					<p><img src="images/software/archive/archive-19.png"></p>
+
+					<p>Click <b>Extract</b> and direct them to the location you want them extracted to on the next window.</p>
+					<p><img src="images/software/archive/archive-20.png"></p>
+
+					<p>A pop-up window will notify you that the extraction is done.</p>
+					<p><img src="images/software/archive/archive-21.png"></p>
+
+					<p>If you click <b>Show the Files</b>, it will open the file manager to display their location.</p>
+					<p><img src="images/software/archive/archive-22.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="deskenv">Changing Desktop Environments</a></h2>
+					<p>This distro is a heavily modified version of the XFCE desktop environment. However, being GNU/Linux based allows people the 
+					freedom to modify their system as they see fit. There are numerous desktop environments in GNU/Linux. Including but not limited to:</p>
+
+					<ul class="feature-grid">
+							<li><i> </i>Enlightenment</li>
+							<li><i>  </i>Gnome</li>
+							<li><i>  </i>Mate</li>
+							<li><i> </i>KDE</li>
+							<li><i>  </i>LXDE</li>
+							<li><i>  </i>Razor-qt</li>
+							<li><i>  </i>LXQT</li>
+						</ul><br>
+
+					<p>If you desire to install another desktop environment, we cannot provide specific instructions on how to do this. There are far too many variables involved and much can go wrong. 
+					This kind of system modification is best left to experienced Linux users. The whole philosophy behind Linux Lite is to provide new users to 
+					Linux based operating systems an easy to use, functional desktop experience. Our support time is better spent dedicated to helping existing Linux Lite users on the XFCE desktop.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
 				</div>
-            
-           	<div class="main_bottom"></div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
 </body>
 </html>
-
- <!--
-Design by Bryant Smith
-http://www.bryantsmith.com
-http://www.aszx.net
-email: templates [-at-] bryantsmith [-dot-] com
-Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
-
-Name       : The Slant
-Version    : 1.0
-Released   : 2009-07-25
--->

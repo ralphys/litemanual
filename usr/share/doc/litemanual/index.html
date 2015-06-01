@@ -1,306 +1,280 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
+<title>Linux Lite - Help Manual</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>Linux Lite | Help & Support</title>
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
 </head>
-
 <body>
-    <div id="page">
-		
-        <div id="header">
-        	<h1><a name="top"></a>Linux Lite Manual</h1>
-            <ul>
-           	<li><a href="index.html">Home</a></li>
-               	<li><a href="install.html">Install Guide</a></li>
-                <li><a href="network.html">Network</a></li>
-                <li><a href="software.html">Software</a></li>
-                <li><a href="hardware.html">Hardware</a></li>
-            </ul>
-        </div>
-  
-        <div id="main">
-        
-        	<div class="main_top">
-            	<h1>Welcome to Linux Lite - simple, fast, free.</h1>
-            </div>
-            
-           	<div class="main_body">
-				<table style="width: 100%">
-					<tr>
-						<td>
-						<p><b>Version:</b> 2.4 | <b>Date published:</b> 
-						11th March, 2015</p>
-						</td>
-						<td style="width: 500px"><script>
-  (function() {
-    var cx = '006509465696283590503:mookvjo3sfw';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search></td>
-					</tr>
-					<tr>
-						<td colspan="2">
-						<p><b>Authors:</b> Bill Hahnen, Adam 
-						Grubbs, John Jenkins, Jerry Bezencon | <strong>New:</strong> 
-						Updated Help Manual for Linux Lite 2.4<br />
-						<br />
-						Thank you for choosing the Linux Lite Operating System.</p>
-						</td>
-					</tr>
-					</table>
-				<p><font size="4"><b>Operating System:</b></font></p>
-				<p><b>Current Release Name:</b> Linux Lite 2.4<b><br />
-				Architecture: </b> 32bit and 64bit<b><br>
-				Software Base:</b> Ubuntu 14.04.2 LTS<b><br>
-				Desktop Environment:</b> XFCE 4.11<br>
-				<b>Media Type:</b> DVD, 2gb or larger USB device<br>
-				<b>Online Support:</b> Click <a href="#support">here</a></p>
-				<p><font size="4"><b>Keyboard Shortcuts:</b></font><br><br>
-<b>Ctrl+Alt+T</b> - opens a terminal.<br />
-<b>Windows key</b> - opens the Menu.<br>
-<b>Windows key+H</b> - opens your home folder.<br>
-<b>Windows key+L</b> - locks the screen.<br>
-<b>Alt+F2</b> - opens the <strong>Application Finder</strong> dialogue box.<br>
-<b>Printscreen key</b> - opens the screenshot program.<br>
-				<br>
-				<b>Included Software:</b> Help Manual, GParted, LibreOffice Writer, 
-				LibreOffice Calc, LibreOffice Impress, Scanner, Bluetooth, XFBurn CD/DVD Burner, VLC Media Player, 
-				Firefox Web Browser with Flash, OpenJDK Java, 
-				Steam (32bit), Thunderbird Email, Gimp Image Editor, Leafpad 
-				Text Editor, File Roller Archive Manager, Lite User Manager, 
-				Lite Software, Lite Welcome, Lite Tweaks, Lite Upgrade, Lite 
-				Fonts, Whisker Menu.<br><br>
-				<b>Post-Installation:</b> The first thing you should do after a new install is click on
-				<b>Menu, Install Updates</b>. Next if you have any wireless, wired, 
-				graphics card devices or other hardware devices,
-click on <b>Menu, Settings, Install Drivers</b>. Please read the information
-provided very carefully before choosing a suitable driver. It is usually
-best to choose the <b>recommended</b> driver. You can look through how to 
-				connect to the internet by clicking <a href="network.html">here</a>. 
-				More information on drivers can be found <a href="hardware.html">
-				here</a>.</p>
-				<p><font size="4"><b>Secure Boot</b></font><b><font size="4">:</font></b></p>
-				<p>Linux Lite recommends that you set your Bios to Legacy. If you already have Windows installed and 
-				you wish to dual boot with Linux Lite, we recommend you set your Bios to Legacy mode then reinstall Windows, 
-				and then Linux Lite. Linux Lite does not support or advocate the use of Secure Boot.</p>
-				<p><font size="4"><b>UEFI</b></font><b><font size="4">:</font></b></p>
-				<p>Linux Lite can work with UEFI, the solution requires an 
-				intermediate knowledge of linux.<br />
-				A tutorial can be found here -
-				<a href="http://www.youtube.com/watch?v=ZOmZXxXPwBU" target="_blank">
-				http://www.youtube.com/watch?v=ZOmZXxXPwBU</a> </p>
-				<p><font size="4"><b>Keyboard Function</b></font></p>
-				<p>On some laptops you may have to enable <b>Numlock</b> as it is 
-				disabled by default. You could also try <b>FN + Numlock</b> to use your keys, 
-				or <b>FN +</b> one of the <b>F</b> keys across the top of your keyboard.
-				This varies from computer to computer.</p>
-				<p><font size="4"><b>Create System Report</b></font></p>
-				<p>Linux Lite comes with the <b>Create 
-				System Report</b> tool found under <b>Menu, System</b>. This tool helps our Support team more 
-				accurately identify any problems you may be having, thus 
-				providing you with better service. Click
-				<a href="hardware.html#report">here</a> to learn more about 
-				this.</p>
-				<hr>
-				<p>&nbsp;</p>
-				<p><b><font size="4"><a name="support"></a></font>
-				<font size="5">Online Support</font></b></p>
-				<p>If you cannot find the answer to your question in this 
-				manual, please choose from the following:</p>
-				<p><b><font size="4">Forums:</font></b></p>
-				<p>Click 
-				<a href="https://www.linuxliteos.com/forums/" target="_blank">here</a> to get support for Linux Lite on the
-				<a href="https://www.linuxliteos.com/forums/" target="_blank">
-				Linux Lite Forums</a>. Please search the Forums before 
-				posting your question, chances are the question you have, has 
-				previously been answered.
-							
-				When posting for support, make your title descriptive as possible.  Within the post, specify
-				details of the problem, describe the procedure you followed that led to it, steps you tried in
-				order to resolve the issue, and any error messages you may have encountered at various stages 
-				in the process.  Also include information on your computer - model 
-				number,  approximate age, CPU, 
-				RAM, etc.  (The 
-				<a href="hardware.html#report">Create System Report</a> tool is good for that.)
-				The more info you provide the easier it will be for people to evaluate the situation 
-				and offer appropriate guidance.<p><b><font size="4">Support:</font></b></p>
-				<p>When you launch <b>Menu, Internet</b>, <b>Support</b> 
-				this will automatically connect you to the Linux Lite
-				<a href="http://www.linuxliteos.com/forums/" target="_blank">
-				Forums</a>.</p>
-				<p><font size="4"><b>Social Networks:</b></font></p>
-				<p><b>Facebook:</b>
-				<a target="_blank" href="https://www.facebook.com/pages/Linuxlite/572323192787066">
-				https://www.facebook.com/pages/Linuxlite/572323192787066</a><br>
-				<b>Twitter:</b>
-				<a target="_blank" href="https://twitter.com/LinuxLite">
-				https://twitter.com/LinuxLite</a><br />
-				<strong>Google+:</strong>
-				<a href="https://plus.google.com/+linuxliteos/" target="_blank">
-				https://plus.google.com/+linuxliteos/</a><br />
-				<strong>LinkedIn:</strong>
-				<a href="http://www.linkedin.com/in/jerrybezencon">
-				http://www.linkedin.com/in/jerrybezencon</a><br>
-				</p>
-				<p><b><font size="4">General Software Support:</font></b></p>
-				<p>If you are using a program for example <b>Firefox</b>, the 
-				first port of call should always be the developer and or 
-				creator/s directly. Most programs have a <b>Help</b> menu 
-				somewhere on their program. The <b>Help</b> menu will then have 
-				a link to their support area. This is where the experts are and 
-				you should receive excellent support. If after trying this you 
-				are still getting nowhere, feel free to use one of our above 
-				services. Because Linux Lite is based on the popular Ubuntu 
-				Operating System, many questions can also be answered by simply 
-				entering the issue you are having into your favorite search engine.</p>
-				<p><a href="#top">Top of page</a><br>
-				</p>
-				        <div id="main">
-        
-        	<div class="main_top">
-            	<h1><a name="menus"></a>Menus</h1>
-            </div>
-            
-           	<div class="main_body">
-                <p>The menu system on Linux Lite has been greatly simplified to 
-				make navigation straight forward and intuitive.<p><b>
-				<font size="4">System:</font></b><p>
-				<img border="0" src="img/home/menu_system.png"><p>
-				<b>Lite Software</b> - Gives you the option to 
-				install or remove common applications like a video editor, an instant 
-				messaging client etc. Installing and Removing software is easy, 
-				simply follow the onscreen instructions.<b><br />
-				Create System Report</b> - Creates a comprehensive hardware 
-				and software report for your system.<b><br />
-				Install/Remove Software</b> - Install and Remove software with 
-				<a href="software.html#software" target="_blank">Synaptic Package Manager</a><b>.<br />
-				Lite Tweaks</b> - Provides system wide cleaning of your 
-				computer, and other useful tools.<b><br />
-				Log File Viewer</b> - View system your logs, helps with 
-				troubleshooting.<b><br>
-				Login Settings</b> - Enable or disable automatic login for 1 
-				user.<b><br>
-				Network Share Settings</b> - Here you can configure your 
-				computer to connect to your Windows shares.<br>
-				<b>NTFS Configuration Tool</b> - Allows you to access ntfs file 
-				systems on external drives (enabled by default).<br>
-				<b>Partition Drives</b> - View and edit your hard drive partitions 			
-				with <a target="_blank" href="http://gparted.sourceforge.net/">GParted</a> 
-				program.<br>
-				<b>Printers</b> - Install and set up printers.<br>
-				<b>Resource Usage</b> - Shows you how much cpu and memory your 
-				computer is using. Also displays system processes.<br>
-				<b>System Information</b> - View hardware like your cpu, memory, 
-				graphics card etc in detailed information.<br>
-				<b>Task Manager</b> - An overview of currently running computer 
-				processes. You can kill applications here to.
-            	<p><b><font size="4">Office:</font></b><p>
-				<img border="0" src="img/home/menu_office.png" height="500" width="400"><p>
-				<b>
-				<a target="_blank" href="http://www.libreoffice.org/features/writer/">New Document</a></b> - 
-				Open LibreOffice Writer, an application similar to Microsoft 
-				Word.<br>
-                                <b>
-				<a target="_blank" href="http://www.libreoffice.org/features/impress/">New Presentation</a></b> - 
-				Open LibreOffice Impress, an application similar to Microsoft 
-				PowerPoint.<br>
-				<b>
-				<a target="_blank" href="http://www.libreoffice.org/features/calc/">New Spreadsheet</a></b> - 
-				Open LibreOffice Calc, an application similar to Microsoft 
-				Excel.<br>
-				<b>PDF Viewer</b> - View PDF documents with this application.<p><b>
-				<font size="4">Multimedia:</font></b><p>
-				<img border="0" src="img/home/menu_multimedia.png"><p>
-				<b>
-				<a target="_blank" href="http://goodies.xfce.org/projects/applications/xfburn">CD/DVD Burner</a></b> - 
-				A fully featured CD &amp; DVD burning program - XFBurn.<br>
-				<b>
-				<a target="_blank" href="http://www.videolan.org/vlc/index.html">VLC Media Player</a></b> - 
-				A fantastic all around media player, play mp3&#39;s, avi&#39;s, mkv&#39;s 
-				etc. Plays all your media files.<br />
-				<b>Volume Control</b> - Individually set volume levels for each 
-				program that is running and configure your sound devices.<p><b><font size="4">Internet:</font></b><p>
-				<img border="0" src="img/home/menu_internet.png"><p>
-				<b>
-				<a target="_blank" href="http://www.mozilla.org/en-US/firefox/new/">Firefox Web Browser</a></b> - 
-				Browse the internet.<br />
-				<b>Network Connections</b> - Manage and connect to wired, wireless, 
-				3g and VPN networks.<br>
-				<strong>Support</strong> - Get Support 
-				at the Linux Lite
-				<a href="http://www.linuxliteos.com/forums/" target="_blank">
-				Forums</a>.<br />
-				<b>
-				<a target="_blank" href="http://www.mozilla.org/en-US/thunderbird/">Thunderbird Mail</a></b> - 
-				Email program, send and receive email.<br>
-				<br>
-				<b><font size="4">Graphics:</font></b><p>
-				<img border="0" src="img/home/menu_graphics.png"><p>
-				<b><a target="_blank" href="http://www.gimp.org/">GIMP Image Editor</a></b> - 
-				A powerful, and fully featured image manipulation program with 
-				features similar to Photoshop.<br>
-				<b>Image Viewer</b> - Preview your pictures with this viewer.<br>
-				<b>Scanner</b> - Scan your documents and pictures.<p>
-				<b><font size="4">Games: (32bit only version)</font></b><p>
-				<img border="0" src="img/home/menu_games.png"><p>
-				<b>Steam</b> - The Steam for Linux client, with games like Dota 
-				2, Team Fortress 2 and Counterstrike.<br />
-				<b><a target="_blank" href="http://www.humblebundle.com">Buy 
-				Humble Bundle Games</a></b> - A link to the Humble Bundle games 
-				website, an online indie games store.<br>
-				<b><a target="_blank" href="https://wiki.ubuntu.com/Valve">Steam 
-				Driver Information</a></b> - Essential information for driver 
-				requirements to run Steam. <b>Please read first.</b><br>
-				<b><a target="_blank" href="http://store.steampowered.com/">
-				Steam Homepage</a></b> - A link to the Steam homepage.<p><b>
-				<font size="4">Accessories:</font></b><p>
-				<img border="0" src="img/home/menu_accessories.png"><p>
-				<b>Application Finder</b> -<b> </b>A handy pop up menu to all 
-				your programs, by category and in alphabetical order.<b><br />
-				Archive Manager</b> - A utility to compress and uncompress zip 
-				files etc.<b><br />
-				Backups</b> - A simple to use backup solution for your computer.<b><br>
-				Calculator</b> - A<b> </b> basic calculator also capable of 
-				scientific functions.<b><br />
-				File Search</b> - Locate files and folders on your computer.<b><br>
-				Home Folder</b> -<b> </b>Your home folder.<b><br>
-				Screenshot</b> -<b> </b>Take a screenshot of a window, and 
-				selected area, or the entire desktop.<b><br>
-				Terminal</b> - Sometimes referred to as the &#39;shell&#39; a terminal 
-				is a place to input various system commands.<b><br>
-				Text Editor</b> - A basic text editor, a program to type text 
-				into. 
-							 
-				Can also be used to create and/or edit configuration files.<p>
-				<b><font size="4">Application Finder:</font></b><p>
-				<img border="0" src="img/home/run_program.jpg"><p>
-				Clicking on this, you can run any program that is installed on 
-				the computer by its name.<p><b><font size="4">
-				Help Manual:</font></b> A 
-				link to this Help manual.<p><font size="4"><b>Install Updates: </b></font>
-				Checks for updates for Linux Lite. Click <a href="software.html">
-				here</a> to learn more about installing software and updates.<p><a href="#top">Top of page</a></div>
-            
-           	</body>
+	<div class="header">
+	<!---->
+		<div class="header-left">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png" alt=""></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li class="active" ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/pages/Linuxlite/572323192787066"><i> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite"><i class="twitter"> </i></a></li>
+				<li><a href="https://plus.google.com/+linuxliteos"><i class="gmail"> </i></a></li>
+			</ul>
+
+		</div>
+		<!---->
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png" alt=""> </span>
+				<ul >
+					<li class="active" ><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="content-grid">
+				<a href="start.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/start.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Start</span>
+								<p>Start Here</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="contents.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/contents.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Contents</span>
+								<p>Contents</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="install.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/install.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Install Guide</span>
+								<p>Install Linux Lite</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="install.html#setlang" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/language.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Language</span>
+								<p>Setting your Language</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="software.html#updates" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/updates.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Updates</span>
+								<p>Updating Linux Lite</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="software.html#instsoftware" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/installsoftware.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Installing Software</span>
+								<p>Installing Software</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="software.html#installsoftware" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/litesoftware.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Lite Software</span>
+								<p>Install Popular Software</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="network.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/networks.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Internet & Networks</span>
+								<p>Connecting to Networks</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="hardware.html#graphics" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/graphicsdrivers.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Graphics Drivers</span>
+								<p>Graphics Drivers and Setup</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="hardware.html#sound" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/sound.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Sound</span>
+								<p>Sound Configuration</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid grid9">
+				<a href="hardware.html#printer" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/printers.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Printers</span>
+								<p>Printer Setup</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="install.html#adduser" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/users.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>User Manager</span>
+								<p>Add & Remove Users</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="customize.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/customize.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Customize</span>
+								<p>Customizing Linux Lite</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="customize.html#themes" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/themes.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Themes</span>
+								<p>Themes & Icon sets</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="start.html#support" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/support.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Support</span>
+								<p>Finding Help Online</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="content-grid">
+				<a href="glossary.html" class="b-link-stripe b-animate-go  thickbox">
+					<img  src="images/home/glossary.png" />
+						<div class="b-wrapper">
+							<h2 class="b-animate b-from-left    b-delay03 ">
+								<span>Glossary</span>
+								<p>Word Meanings</p>
+								<i> </i>
+							</h2>
+						</div>
+				</a>
+			</div>
+			<div class="clear"> </div>
+
+		<div class="clear"> </div>
+	</div>
+</body>
 </html>
-
- <!--
-Design by Bryant Smith
-http://www.bryantsmith.com
-http://www.aszx.net
-email: templates [-at-] bryantsmith [-dot-] com
-Released under Creative Commons Attribution 2.5 Generic.  In other words, do with it what you please; but please leave the link if you'd be so kind :)
-
-Name       : The Slant
-Version    : 1.0
-Released   : 2009-07-25
--->
