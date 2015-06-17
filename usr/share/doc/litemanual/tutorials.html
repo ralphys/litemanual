@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Help Manual - Tutorials</title>
+<meta name="description" content="Description to go here." />
+<!-- jQuery-->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<link href="css/code.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!--fonts-->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+<!--//fonts-->
+<style>
+b    {font-weight: 400;}
+</style>
+<style>
+i    {font-style: italic;}
+</style>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#444;background-color:#EBEBEB;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#999;color:#fff;background-color:#FFFFFF;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-vn4c{background-color:#FFFFFF}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header-left header-left1">
+			<div class="logo">
+				<center><a href="index.html"><img src="images/logo.png"></a></center>
+			</div>
+			<div class="top-nav">
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li class="active"><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+			</div>
+			<ul class="social-in">
+				<li><a href="https://www.facebook.com/pages/Linuxlite/572323192787066"><i> </i></a></li>
+				<li><a href="https://twitter.com/linuxlite"><i class="twitter"> </i></a></li>
+				<li><a href="https://plus.google.com/+linuxliteos"><i class="gmail"> </i></a></li>
+			</ul>
+		</div>
+		<!---->
+		<div class="header-top">
+			<div class="logo-in">
+				<a href="index.html"><img src="images/logo.png"></a>
+			</div>
+			<div class="top-nav-in">
+			<span class="menu"><img src="images/menu.png"> </span>
+				<ul >
+					<li><a href="index.html" >HOME</a></li>
+					<li><a href="contents.html" class="black" > CONTENTS</a></li>	
+					<li><a href="start.html" class="black1"> START</a></li>
+					<li><a href="install.html" class="black2" > INSTALL</a></li>	
+					<li><a href="network.html" class="black3"> NETWORK</a></li>
+					<li><a href="software.html" class="black4" > SOFTWARE</a></li>
+					<li><a href="hardware.html" class="black" > HARDWARE</a></li>
+					<li class="active"><a href="tutorials.html" class="black4" > TUTORIALS</a></li>
+					<li><a href="customize.html" class="black1" > CUSTOMIZE</a></li>
+					<li><a href="glossary.html" class="black2" > GLOSSARY</a></li>
+				</ul>
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav-in ul").slideToggle(500, function(){
+						});
+					});
+			</script>
+
+			</div>
+			<div class="clear"> </div>
+		</div>
+			<!---->
+		<div class="content">
+			<div class="about">
+				<div class="about-top">
+					<div class="grid-about">
+					</div>
+
+            				<p><a href="#catfish">Catfish</a> - a file and folder search utility.<br />
+            				<a href="#keepassx">KeePassX</a> - create and store strong passwords.<br />
+					<!-- <a href="#plank">Plank Dock</a> - docking area for program launchers.<br /> -->
+            				<a href="#vbox">VirtualBox</a> - use a virtual environment to run other operating systems within Linux Lite.</p>
+
+           				<p><h2>General Information</h2></p>
+					<p>This page is a work in progress. Over time more tutorials will be added to it. Some of them may deal with software that is already included in the
+					standard Linux Lite installation. Many will be for software that needs to be installed first because it is not part of the standard installation. Two
+					choices listed under <b>Menu, System</b> will be used frequently for installing software.</p>
+
+					<p>What you will see when installing from <b>Menu, System, Lite Software.</b></p>
+					<p><img src="images/software/litesoftware/lite-software-menu.png" /></p>
+
+					<p>Lite Software below. Learn how to use it <a href="software.html#installsoftware">here</a>.</p>
+					<p><img src="images/software/litesoftware/lite-software-select.png" /></p>
+
+					<p>What you will see when installing from <b>Menu, System, Install/Remove Software</b> (Synaptic Package Manager).</p>
+					<p><img src="images/software/insoft/menu_synaptic.png" /></p>
+
+					<p>The Synaptic Package Manager below. Learn how to use it <a href="software.html#instsoftware">here</a>.</p>
+					<p><img src="images/software/insoft/synaptic_search.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="keepassx">KeePassX</a></h2></p>
+					<p>KeePassX is a password manager program used for securely creating and storing passwords. It includes a password generator 
+					that will create strong passwords for you. When using KeePassX, you only need to remember one password - the one 
+					you use for opening the program. Once your KeePassX data file is opened, transferring a password from the program to its entry form is done quickly 
+					and easily with a few mouse clicks.</p>
+
+					<p>To install, go to <b>Menu, System, Install Additional Software</b>, type the number corresponding to KeePassX from the list shown 
+					in the pop-up window and enter your password when prompted for it.</p>
+
+					<p>After it's installed you can start it from <b>Menu, Accessories, KeePassX</b>. On your first startup you will need to create a new database 
+					for your passwords - click the interface button for that in the upper-left corner.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-01.png" border="1" /></p>
+
+					<p>You will then be prompted to make a master password for the database that will contain your passwords. This is the only password 
+					you will need to remember. Do your best to make one that you not only can remember, but is strong also. Make it reasonably long with a 
+					combination of letters, numbers and other characters if possible.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-02.png" /></p>
+
+					<p>After entering your password you will see that the database is now populated with two <b>groups</b> shown on the left: <b>Internet</b> and 
+					<b>eMail</b>. Groups are just ways to organize your passwords according to their use. (You can edit, delete and create new groups 
+					by clicking <b>'Groups'</b> along the top of the window.)</p>
+					<p><img src="images/tutorials/keepassx/keepassx-03.png" /></p>
+
+					<p>To create a password entry, click the '<b>Add New Entry</b>' button along the top.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-04.png" border="1" /></p>
+
+					<p>Select which group the password should fall under, fill-in your information, then enter your password (if you already have one) or click on 
+					the <b>'Gen'</b> button to bring up the <b>Password Generator</b> to make one for you.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-05.png" /></p>
+
+					<p>In the <b>Password Generator</b> you can specify the types of characters to include, the password length, etc. along with the option 
+					to enable entropy collection to further strengthen the password.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-06.png" /></p>
+
+					<p>If you enable <b>entropy collection</b> move your mouse around randomly when the collection window pops up. 
+					The mouse data will be incorporated by the algorithm to produce the random password.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-07.png" /></p>
+
+					<p>When it's done, hit '<b>OK</b>' and it will fill-in the password it produced for you.If you would like to see it, click the eye symbol next to 
+					the password box.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-08.png" /></p>
+
+					<p>Click '<b>OK</b>' when you are satisfied with everything, your new password entry will now appear in the list for the group you put 
+					it under. When you are done making your entries (or changes to existing ones), make sure to save everything by 
+					clicking the <b>Save Database</b> button along the top of the window.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-09.png" /></p>
+
+					<p>A dialog box will pop-up for you to specify a name for the file and where to save it. It will automatically put the '.kdb' 
+					(keepassx data base) extension on the file name and it will default to saving it in your home folder. (You can 
+					designate a different location to save to if you'd like.)  So the example below will save a file called 'my-keepassx-data.kdb' under /home/bill.</p>
+					<p><img src="images/tutorials/keepassx/keepassx-10.png" /></p>
+
+					<p><b>VERY IMPORTANT!</b><br />
+					<u>Be sure to make at least one extra copy of your '.kdb' file to an external source, like a USB backup stick.</u> If 
+					your hard drive fails, or something else goes wrong that prevents you from retrieving your files you will lose all of your passwords and access to the 
+					accounts you set them for. That will not be a pleasant experience if you don't have a backup copy made - so do that immediately and 
+					update it everytime you make changes to the database.</p>
+
+					<p><b>Using KeePassX is simple!</b></p>  
+					<p>Start KeePassX and highlight the site you want to log into. Navigate to the website, then click the <b>person icon</b> along the top of the 
+					KeePassX window to copy your username to the clipboard temporarily. Right-click in the website entry field 
+					for it and paste. Click the <b>key icon</b> (next to the person icon) to copy the password to the clipboard and paste it into the website 
+					password field. That's all there is to it (Note:  the information is automatically deleted from the clipboard after 20 seconds. 
+					You can change that and other settings by going to <b>Extras, Settings, Security</b>.)</p>
+					<p><img src="images/tutorials/keepassx/keepassx-11.png" border="1" /></p>
+
+					<p><b>Additional Keepassx Resources</b></p>
+					<p><a href="https://www.keepassx.org/" target="_blank">KeePassX Homepage</a><br />
+					<a href="https://www.keepassx.org/forum/" target="_blank">KeePassX Help Forum</a></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+
+					<!-- <p><h2><a name="plank">Plank Dock</a></h2></p>
+					<p>Plank is a lightweight docking application for program launchers and works
+				well with the Xfce desktop used in Linux Lite. Conveniently add launchers for
+				all of your favorite programs on the launcher for quick, easy access. The Plank
+				dock can be positioned along any edge of the screen. You can start the dock
+				from the main menu or have it start automatically upon boot-up of the computer.</p>
+				<p>Plank is one of the applications you can add easily from the <b>Install
+				Additional Software</b> section in the <b>Menu</b>. The Plank
+				installer in Linux Lite will also download and install many different themes
+				for the dock and put a dark <b>plank-themer-ondock</b> icon on the
+				dock, which you can click to list and choose from the different themes.</p>
+				<p><img src="images/tutorials/plank_dock/themer_icon.png" alt="themer_icon.png" /></p>
+				<p>The dock themes will not display properly unless <i>compositing</i> is enabled;
+				so do the following to make sure you have it enabled.</p>
+				<p>Go to <b>Menu, Settings, Settings Manager</b>, then choose
+				<b>Window Manager Tweaks</b>.</p>
+				<p><img src="images/tutorials/plank_dock/win_mgr_tweaks.png" alt="win_mgr_tweaks.png" /></p>
+				<p>Click the <b>Compositor</b> tab and click '<b>Enable display compositing</b>'.</p>
+				<p><img src="images/tutorials/plank_dock/compositor.png" alt="compositor.png" /></p>
+				<p>Now you're ready to install Plank. Go to <b>Menu, System, 
+				Install Additional Software</b> and choose <b>Plank Dock</b> from
+				the applications listed in the pop-up.</p>
+				<p><img src="images/tutorials/plank_dock/install_plank.png" alt="install_plank.png" /></p>
+				<p>When installation is complete you will find <b>Plank</b> listed under
+				<b>Menu, Accessories</b>.</p>
+				<p><img src="images/tutorials/plank_dock/menu_plank.png" alt="menu_plank.png" /></p>
+				<p><b>POSITIONING THE DOCK</b></p>
+				<p>Plank's default position is centered along the bottom of your screen display.
+				If your panel is also along the bottom it will block part of the dock. You will
+				need to move either the dock or the panel to a different position. Either one
+				of them can be moved to the top, bottom, or either side of the screen.</p>
+				<p><img src="images/tutorials/plank_dock/plank-01.png" border="1" alt="plank-01.png" /></p>
+				<ul>
+					<li><b><span style="text-decoration: underline;">To Move the Panel:</span></b>
+					<br />
+						<ul>
+							<li>Right-click an empty area on the panel</li>
+							<li>Choose: <b>Panel, Panel Preferences, Display (tab)</b></li>
+							<li>Uncheck the "Lock Panel" box</li>
+							<li>With mouse, grab either <u>end</u> of the panel to move it</li>
+							<li>Lock the panel again after move to new position</li>
+							<li>Note:  change <b>'Mode'</b> to 'Deskbar' or 'Vertical' if you want the
+							panel on one of the sides of the display.</li>
+						</ul>
+					</li><br />
+					<br />
+					<li><b><span style="text-decoration: underline;">To Move the Plank Dock:</span></b>
+					<br />
+						<ul>
+							<li>Open your file manager, click <b>View, Show Hidden Files</b></li>
+							<li>Navigate to <b>.config/plank/dock1</b> and open the <b>settings</b>
+							file (with <b>leafpad</b> text editor).</li>
+							<li>Or, from <b>Terminal</b> enter this command:  <code>
+							<span class="auto-style1"><b>leafpad 
+							~/.config/plank/dock1/settings</b></span></code></li>
+							<li>In opened <b>settings</b> file (see pic below under 'All Other Plank
+							Dock Settings' heading):
+								<ul>
+									<li>Change value in line #18 according to the description on previous line #17</li>
+									<li>Save the file</li>
+								</ul>
+							</li>
+							<li>If setting did not take immediate effect, right-click the <b>Plank</b>
+							icon on the dock and select 'Quit' to close the dock.</li>
+							<li>Re-start the dock from <b>Menu, Accessories, Plank</b></li>
+						</ul>
+					</li>
+				</ul>
+				<br /><br />
+				<p><img src="images/tutorials/plank_dock/plank_settings-1.png" alt="plank_settings-1.png" /></p>
+				<p>After the move operation you will be able to see the dock properly.</p>
+				<p><img src="images/tutorials/plank_dock/plank-02.png" border="1" alt="plank-02.png" /></p>
+				<p><b>ADDING PROGRAM LAUNCHERS TO THE DOCK</b></p>
+				<p>When you open a program from the Menu it will then appear on the dock. When you close
+				the application its icon will then disappear from the dock. For programs you use often,
+				you'll want to keep them on the dock for easy access so you don't need to navigate the
+				Menu. There are two basic ways to accomplish that:</p>
+				<ol>
+					<li>Open a program through the <b>Menu</b>, right-click the icon that appears
+					on the dock and choose 'Keep in Dock'.</li>
+					<li>Open the <b>Menu</b>, find program to add, then drag it and drop it
+					on the dock.</li>
+				</ol>
+				<br />
+				<p><b>REMOVING PROGRAM LAUNCHERS FROM THE DOCK</b></p>
+				<p>Two ways to remove items from the dock are:</p>
+				<ol>
+					<li>Right-click the launcher icon and un-select 'Keep on Dock'.</li>
+					<li>Simply grab, drag and drop the icon somewhere off of the dock.</li>
+				</ol>
+				<br />
+				<p><b>ARRANGING LAUNCHER POSITIONS ON THE DOCK</b></p>
+				<p>You can change the order of items on the dock by grabbing them with
+				your mouse and moving them to the right or left and dropping them
+				into place. The dark <b>plank-themer-ondock</b> icon is
+				the only one you can not grab. To change its position on the dock,
+				move the other icons to its left or right until it ends up where you'd
+				like it to reside.</p>
+				<p><b>CHANGING THE DOCK'S THEME</b></p>
+				<p>Click on the dark <b>themer</b> icon to see a list of almost
+				30 themes to choose from. Click the one you want and the dock will 
+				change to it without the need for a restart of Plank. Here are a few
+				theme examples.</p>
+				<p><img src="images/tutorials/plank_dock/theme-1.png" border="1" alt="theme-1.png" /></p>
+				<p><img src="images/tutorials/plank_dock/theme-2.png" border="1" alt="theme-2.png" /></p>
+				<p><img src="images/tutorials/plank_dock/theme-3.png" border="1" alt="theme-3.png" /></p>
+				<p><img src="images/tutorials/plank_dock/theme-4.png" border="1" alt="theme-4.png" /></p>
+				<p><img src="images/tutorials/plank_dock/theme-5.png" border="1" alt="theme-5.png" /></p>
+				<br />
+				<p><b>LAUNCHING MORE THAN ONE INSTANCE OF A PROGRAM</b></p>
+				<p>When you click the launcher of a program that is already running, it
+				will bring that running window into focus on the screen (bring it to
+				the foreground). If instead you would like to launch another instance of
+				the program then:</p>
+				<ul>
+					<li>Middle mouse click on the launcher icon, or</li>
+					<li>Use 'Ctrl' key while left-clicking the icon with your mouse.</li>
+				</ul>
+				<br />
+				<p><b>SETUP PLANK TO START AUTOMATICALLY ON BOOT</b></p>
+				<p>Go to <b>Menu, Settings, Session and Startup, Application
+				Autostart (tab)</b></p>
+				<ul>
+					<li>Hit '+' button to add new startup entry</li>
+					<li><b>Name</b> = Plank Dock</li>
+					<li><b>Description</b> = Start Plank dock on startup</li>
+					<li><b>Command</b> = plank</li>
+					<li>Click 'OK' when done</li>
+				</ul><br />
+				<p>Close the <b>Session and Startup</b> window when done. Your next
+				reboot will start Plank automatically.</p><br />
+				<p><b>ALL OTHER PLANK DOCK SETTINGS</b></p>
+				<p>All other settings can be adjusted through the dock's <b>
+				settings</b>
+				file. Use your file manager or the terminal to open file located in the
+				<code><span class="auto-style1"><b>~/.config/plank/dock1</b></span></code> directory. (Remember to set file manager
+				to 'View Hidden Files'.)  You can edit various lines in the file to make your changes.
+				If changes do not take effect immediately after saving the changed file, quit and
+				restart Plank. Please refer to the following picture while reading about the various
+				settings that can be changed.</p>
+				<p>(Note: we hope to have a working GUI interface for these settings available
+				within a couple of months, time permitting.)</p>
+				<p><img src="images/tutorials/plank_dock/plank_settings-2.png" alt="plank_settings-2.png" /></p>
+				<p>Changes that you can make by editing the <b>settings</b> 
+				file are:</p>
+				<ul>
+					<li>(Lines #5-6) Show only windows of the current workspace on the dock.
+						<ul>
+							<li>False = icons show on dock for programs opened on any workspace</li>
+							<li>True = only icons for the current workspace show on the dock</li>
+						</ul>
+					</li><br />
+					<li>(Lines #7-8) Change the size of the launcher icons on the dock</li><br />
+					<li>(Lines #9-12) Control hiding behavior and time delay for hiding the dock</li><br />
+					<li>(Lines #13-14) Set which monitor to show the dock on if you have more than one.</li>
+					<li>(Lines #15-16) DO NOT MODIFY</li><br />
+					<li>(Lines #17-18) Specify which edge of the screen to position dock on.</li><br />
+					<li>(Lines #19-20) Offset the dock from center position
+						<ul>
+							<li>20 would offset the dock to the right of center by 20 percent</li>
+							<li>-20 would offset the dock to the left of center by 20 percent</li>
+						</ul>
+					</li><br />
+					<li>(Lines #21-22) Name of dock theme to use. This is handled automatically
+					by using the <b>themer</b> icon on the dock.<br />
+					You can change themes
+					manually here if you need to.</li><br />
+					<li>(Lines #23-24) Change the dock alignment on the screen edge it is on.
+					For example, if you have the dock along the bottom edge, you can center it,
+					align left, or align it right. You can also choose 'panel-mode' to make the
+					dock appear like a panel instead of a dock.</li><br />
+					<li>(Lines 25-26) If 'panel-mode' was chosen, you can align the launcher icons
+					on the panel</li><br />
+					<li>(Lines 27-28) Enable or disable the ability to drag and drop items from the
+					panel for deletion. If you find that you have problems accidentally dragging things
+					off the dock and deleting them, change this setting.</li><br />
+					<li>(Lines 29-30) Pressure-based revealing of the dock if that is supported.</li>
+				</ul><br />
+				<p><b>ADDITIONAL PLANK DOCK INFORMATION</b></p>
+				<p><a href="https://launchpad.net/~ricotz/+archive/docky/" target="_blank">Docky's PPA page</a><br />
+				<a href="https://answers.launchpad.net/plank/" target="_blank">Docky help site</a><br />
+				<a href="https://github.com/rhoconlinux/plank-themer" target="_blank">Original source code
+				for Plank-Themer installer</a> which we adapted slightly for installation on Linux Lite.<br />
+				<a href="https://rhoconlinux.github.io/plank-themer/index.html" target="_blank">
+				Original creator's Plank-Themer information page</a></p>
+
+
+					<p><a href="#top">Top of page</a></p> -->
+				
+					<p><h2><a name="vbox">VirtualBox</a></h2></p>
+					<p>The VirtualBox (VirtualBox) program allows you to run other OS's (operating systems) within your main OS by creating a container 
+					of sorts for them to run in, independently from the main OS. You install other OS's to VirtualBox just like you would to a normal 
+					hard drive. VirtualBox creates a virtual hard drive for you to install to and the result is referred to as a Virtual Machine (VM).</p>
+
+					<p>You can install to VirtualBox using a bootable CD or DVD. Even more conveniently, you can install using a downloaded ISO 
+					file without the need to burn it first to a CD/DVD. You can also just boot ISO files and run them as a live environment - 
+					just as you would booting your computer from a live CD/DVD/USB - without installing it if you prefer.</p>
+
+					<p><b>Some common uses for VirtualBox are:</b></p>
+					<p>- Install a second copy of your main OS for testing and experimentation.<br />
+					- Install other Linux distros that you want to use regularly, but do not want to install as a dual-boot on your computer.<br />
+					- Install, or just run live, other distros for testing purposes.<br />
+					- Install Windows so you can run its programs within Linux without rebooting the computer.<br />
+					(Note: Microsoft considers that to be a separate installation of its software and requires another user license for that.)</p>
+
+					<p><b>Installing VirtualBox</b></p>
+					<p>To install VirtualBox, go to <b>Menu, System, Install Additional Software</b> and find it from the list of software to install. 
+					Enter its corresponding number and your password when asked for it. VirtualBox will take a couple of minutes to 
+					fully install, so just wait until the screen tells you it is done.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-01.png" /></p>
+
+					<p>After installation is complete, you will find VirtualBox under both the <b>Accessories</b> and <b>System</b> sections of the <b>Menu</b>.</p>
+					<p>VirtualBox does not come pre-configured to use USB sticks. You need to download an extra package for that from their website. Go ahead and start 
+					VirtualBox, then follow the steps below to install what you need for USB support.</p>
+
+					<p><b>NB: Version numbers for VirtualBox - Please note that new versions are being released regularly, the information here is 
+					provided as a guide only. The latest version number of VirtualBox will change with time.</b></p>
+
+					<p>You need to know the version number of your VirtualBox installation in order to download the matching "Extension Pack". It should be 
+					version 4.3.10; but double-check that by clicking <b>Help, About VirtualBox</b> from the main VirtualBox window. Then look along bottom of 
+					pop-up window for the version number.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-02.png" /></p>
+
+					<p><img src="images/tutorials/virtualbox/vbox-03.png" /></p>
+
+					<p>For the latest version, go to this <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">VirtualBox</a> webpage. Otherwise, go 
+					<a href="http://download.virtualbox.org/virtualbox/" target="_blank">here</a>, look for your version number and follow same steps as below to 
+					continue.</p>
+					<p>Find the "Extension Pack" listed under the heading for your VirtualBox version and click on <b>All supported platforms</b> to download it. Save 
+					the download to your Downloads folder.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-04.png" border="1" /></p>
+
+					<p><img src="images/tutorials/virtualbox/vbox-05.png" /></p>
+
+					<p>Once downloaded, in VirtualBox main window, go to <b>File, Preferences</b> and click <b>Extensions</b> on the left side.</p>
+					<p>Look to the right side of the window and you will see two icons. Click the top icon to <b>Add Package</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-06.png" alt="vbox-06.png" /></p>
+
+					<p>It will open your <b>Downloads</b> folder. Click to highlight the extension pack you just downloaded. Click <b>Open</b> to install it to VirtualBox.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-07.png" /></p>
+
+					<p>A window will appear confirming that you want to install the extension pack. Click <b>Install</b>, then scroll down the 
+					license agreement and hit <b>I Agree</b> to the terms of use.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-08.png" /></p>
+
+					<p><img src="images/tutorials/virtualbox/vbox-09.png" border="1" /></p>
+
+					<p>Enter your password when asked for it and finish the installation. When complete, you will see the extension pack added 
+					under Extensions in the VirtualBox Preferences, (VirtualBox main window: <b>File, Preferences</b>).</p>
+					<p><img src="images/tutorials/virtualbox/vbox-10.png" /></p>
+
+					<p><b>Using VirtualBox</b></p>
+					<p>VirtualBox can boot from either a live CD/DVD or an ISO file saved to your hard drive (HDD). In the following example we'll use a 
+					downloaded ISO file. If you are using a bootable CD/DVD, go ahead and load it into the tray before we get started.</p>
+
+					<p>From main VirtualBox window, click the <b>New</b> button to make a new virtual machine environment.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-11.png" border="1" /></p>
+
+					<p>Next, choose a <b>Name</b> for the virtual machine, the <b>Type</b> of operating system it	will be, and 
+					<b>Version</b> of the operating system. When filling in version, specify either 32 or 64-bit system and 
+					choose the closest fit for the OS you will be installing if you don't see a listing that matches exactly under the <b>Version</b> drop-down box.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-12.png" /></p>
+
+					<p>In this example, we will make a new machine for another Ubuntu-based distro called <b>Voyager</b> and we are using its 64-bit version. There 
+					is no listing for Voyager, so we'll just choose <b>Ubuntu 64-bit</b> because that is what it is based on. (If you made a virtual machine 
+					[VM] with Linux Lite installed, you would also choose Ubuntu for the same reason.) Click <b>Next</b> to continue.</p>
+
+					<p>Decide how much of your RAM (memory) you want dedicated to operating the VM. 512MB-2GB will likely be fine most of the time. Do not 
+					dedicate more than half of your RAM to the VM - that could cause problems with the operation of your host OS, Linux Lite. (The VM is 
+					operating from within the host OS - you don't want the VM using more resources than the host itself.) In this example, the computer has 
+					8GB of RAM, so 2GB was allotted to the VM.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-13.png" /></p>
+
+					<p>The next screen asks if you want to <b>Create a virtual hard drive now</b>. That is what we want, so we tick that radio button and click <b>Create</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-14.png" /></p>
+
+					<p>We'll choose <b>VDI (VirtualBox Disk Image)</b> from the <b>Hard Drive File Type</b> screen.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-15.png" /></p>
+
+					<p>We'll choose <b>Dynamically allocated</b> from the <b>Storage on physical hard drive</b> screen.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-16.png" /></p>
+
+					<p>On the next screen we make the virtual drive 10GB. (VirtualBox will dedicate space from your hard drive for the virtual drive - so be 
+					sure you have enough room on your HDD to accommodate creating the virtual drive.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-17.png" /></p>
+
+					<p>After hitting <b>Create </b>your new VM will be listed along the left-hand side of the main VirtualBox window. (At this point, it is just 
+					an empty container.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-18.png" border="1" /></p>
+
+					<p>You can adjust a few settings for the VM either before or after installing the OS. We'll do it before installation. Highlight the VM 
+					and click <b>Settings</b>. Then, click <b>Display</b> along the left side and adjust the amount of video memory you want the VM to have. (Default 
+					is 12MB, we'll give it 64MB in this example.) Also, click to Enable either <b>3-D</b> or <b>2-D Acceleration</b>. (If one gives you an "invalid 
+					settings" message, unclick it and choose the other.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-19.png" /></p>
+
+					<p>Now, click <b>USB</b> on the left side and make sure that the USB controllers are enabled. This will allow you to copy to/from USB sticks in the VM.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-20.png" border="1" /></p>
+
+					<p>Click <b>OK</b> when done to get back to main window. With the VM highlighted on the left of main window, click the <b>Start</b> 
+					arrow to begin installation.</p>
+					<p>The first screen you see will ask you what to use as your installation source and the CD/DVD drive will likely be already 
+					listed. If that is what you are using and the disk is loaded in the tray, go ahead and hit <b>Start</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-21.png" /></p>
+
+					<p>In this example, we are using an ISO file that has been downloaded to the hard drive. For that, click the icon to the right 
+					of the CD/DVD drive box to bring up a window for navigating to the location where you saved the ISO file.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-22.png" /></p>
+
+					<p>After you've found and selected your ISO, it will appear filled in the source box. Hit <b>Start</b> and it will now boot from the live ISO/CD/DVD.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-23.png" /></p>
+
+					<p>When the live environment finishes loading, click the install icon on the desktop to begin the installer. The installation process 
+					is just the same as if you were installing to the computer normally. All references on the "Installation Type" screen are to the virtual 
+					hard drive. When asked if you want to "Erase disk and install", it is NOT going to erase your real hard drive - it is talking about 
+					the virtual hard drive. (Same thing if you choose 'Something else' and partition the drive manually.)</p>
+					<p><img src="images/tutorials/virtualbox/vbox-24.png" /></p>
+
+					<p>After install is complete, reboot the VM. If the installation disk appears to be stuck and not rebooting, click your mouse 
+					somewhere inside the VM window, then hit the ENTER key. If nothing happens, click the "x" on the VM window and choose to Shutdown the 
+					machine. Then just highlight the VM and hit the <b>Start</b> arrow again.</p>
+
+					<p>In the VM, you can do much the same as when installed for real on your computer. You can install things, download updates, etc., and 
+					it all happens within the virtual environment on the virtual HDD.</p>
+
+					<p>Whenever you want to shutdown a running VM, shutdown using the normal shutdown method of the OS in the VM - not by closing the VM 
+					window. (If the VM OS was Linux Lite, you would click Menu, Logout, Shutdown, just like on your computer.)</p>
+
+					<p><b>Using USB's in VirtualBox</b></p>
+					<p>Assuming you've already added the the VirtualBox "Extension Pack",to begin using USB's in your new VM, you need to add your username 
+					to the "<b>vboxusers</b>" group. (You only need to do that once, not for every individual VM you make.)  You should 
+					perform the following steps while no VM's are open.</p>
+
+					<p>Open the Linux Lite (not VirtualBox) Settings Manager, <b>Menu, Settings, Settings Manager</b> and select the <b>User Manager</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-25.png" /></p>
+
+					<p>With your username showing under <b>Select user</b>, scroll down the list in the <b>Groups</b> column and place 
+					a check in the box next to <b>vboxusers</b> to add yourself to that group and hit <b>Apply</b>.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-26.png" /></p>
+
+					<p>Close out the User Manager, the Settings Manager and any other open programs.</p>
+					<p>Log out of computer, then log back in for the new setting to take effect.</p>
+					<p>Open VirtualBox and start your new VM.</p>
+					<p>Once up and running you will see a little USB icon along bottom right edge of the VirtualBox window. Right-click on it to choose the USB 
+					you want to use.</p>
+					<p><img src="images/tutorials/virtualbox/vbox-27.png" /></p>
+
+					<p><b>Additional VirtualBox Information Sources:</b></p>
+					<p><a href="https://www.virtualbox.org/" target="_blank">VirtualBox Homepage</a><br />
+					<a href="https://www.virtualbox.org/manual/UserManual.html" target="_blank">VirtualBox User Manual</a><br />
+					<a href="https://forums.virtualbox.org/" target="_blank">VirtualBox Help Forums</a></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="catfish">Catfish</a></h2></p>
+					<p>Catfish is an easy to use GUI file search utility found under <b>Menu, Accessories, File Search</b>.</p>
+					<p><img src="images/tutorials/catfish/catfish-menu.png" /></p>
+
+					<p>Upon opening Catfish, you will see this file search window:</p>
+					<p><img src="images/tutorials/catfish/catfish-01.png" /></p>
+
+					<p>Catfish uses the <i>locate</i> command to search for files. The locate command relies on a database it maintains of the files on your computer. 
+					That database gets automatically updated periodically - normally once a day. Before conducting a search it is a good idea to manually update 
+					the database index to make sure that any file changes made since the last update are reflected in the search results. Click the gear icon 
+					in upper-right corner and choose <b>Update Search Index</b>.</p>
+					<p><img src="images/tutorials/catfish/catfish-02.png" /></p>
+
+					<p>You can also use the gear button for other options like displaying advanced settings in the search window. The advanced settings display 
+					lets you filter search results by file modification dates, file types, file extensions, etc.</p>
+					<p><img src="images/tutorials/catfish/catfish-03.png" /></p>
+
+					<p>The example below shows a search in my Home folder for any file with "song" in the file name.</p>
+					<p><img src="images/tutorials/catfish/catfish-04.png" /></p>
+
+					<p>To limit the results to only music files, simply click "Music" under "File Type" in the advanced settings.</p>
+					<p><img src="images/tutorials/catfish/catfish-05.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+				</div>
+				<div class="clear"> </div>
+			</div>
+		</div>
+		<div class="clear"> </div>
+	</div>
+</body>
+</html>
