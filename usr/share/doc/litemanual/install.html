@@ -456,8 +456,34 @@ i    {font-style: italic;}
 						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/rc.local</code></pre><br>
 
 					<p>Above the line <b>exit 0</b> in that file, add the TRIM command <b>fstrim -v</b> for every EXT4 partition from your fstab file.</p>
-					<p>Use the image below as a guide. We include the creation of a log for you so you can check if trim is performed during boot up. The log is in <b>/var/log/trim.log</b></p>
-					<p><img src="images/install/trim/trim3.png"></p>
+					<p>Copy the text below and edit it to match your set up. We include the creation of a log for you so you can check if trim is performed during boot up. The log is in <b>/var/log/trim.log</b></p>
+
+					<table width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td>#!/bin/sh -e<br>
+						#<br>
+						# rc.local<br>
+						#<br>
+						# This script is executed at the end of each multiuser runlevel.<br>
+						# Make sure that the script will "exit 0" on success or any other<br>
+						# value on error.<br>
+						#<br>
+						# In order to enable or disable this script just change the execution<br>
+						# bits.<br>
+						#<br>
+						# By default this script does nothing.<br>
+						<br>
+						LOG=/var/log/trim.log<br>
+						echo “*** $(date -R) ***” >> $LOG<br>
+						fstrim -v /boot >> $LOG<br>
+						fstrim -v / >> $LOG<br>
+						fstrim -v /home >> $LOG<br>
+						fstrim -v /sparessd >> $LOG<br>
+						echo " " >> $LOG<br><br>
+						
+						exit 0</td>
+					</tr>
+					</table><br>
 
 					<p>We now need to disable the weekly cron job for Trim. Open a terminal and do:</p>
 						<div class="codeheader">Terminal Command:</div>
