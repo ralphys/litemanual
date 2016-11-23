@@ -91,19 +91,26 @@ i    {font-style: italic;}
             				<a href="#wireless">Connecting to the Internet - Wireless</a><br />
             				<a href="#wintolin">Linux Lite Shares from Windows</a><br />
             				<a href="#shares">Network Shares</a><br />
-            				<a href="#date">Setting the Date &amp; Time</a><br />
+            				<a href="#date">Setting the Time &amp; Date</a><br />
 					<a href="#usbmodem">USB Broadband Modem</a><br />
             				<a href="#lintowin">Windows Shares from Linux Lite</a></p>
 
 					<h2><a name="wired">Connecting to the Internet - Wired</a></h2>
 					<p>For the most part, you shouldn't have to configure anything in Network Connections if you are connected to your router with an ethernet cable.
 					Your router is most likely already set up to give you an IP address automatically. So in this tutorial we will instead focus on connecting to your router with a static IP address.</p>
-					<p>Make sure Enable Networking has a tick beside it. The first step is to left click on the network tray icon and select Edit Connections.
-					You may be asked for your password before you go to change any of your Network Connection settings.</p>
-					<p><img src="images/network/wired/wired1.jpg" alt=""></p>
+					<p>Make sure Enable Networking has a tick beside it. The first step is to left click on the network tray icon and select Edit Connections.</p>
+					<p>If at any point you are asked to enter your password, please do so.</p>
+					<p><img src="images/network/wired/wired1.png" alt=""></p>
 
-					<p>A box will pop up with a number of tabs across the top, make sure to select the Wired tab.</p>
-					<p><img src="images/network/wired/wired2.jpg" alt=""></p>
+					<p>Highlight the <b>Wired connection</b> entry, and click on the <b>Edit</b> button.</p>
+					<p><img src="images/network/wired/wired2.png" alt=""></p>
+
+					<p>Click on the <b>IPv4 or IPv6</b> tab (consult your ISP on which one to use, IPv4 is the default) and select <b>Manual</b>.</p>
+					<p><img src="images/network/wired/wired3.png" alt=""></p>
+
+					<p>Click on the <b>Add</b> button in <b>Addresses</b> an enter in the appropriate numbers. Be sure to include the <b>DNS</b> address. This is typically 
+					the same address as your router web login address (just the 4 sets of numbers). Click on <b>Save</b> to finish.</p>
+					<p><img src="images/network/wired/wired4.png" alt=""></p>
 
 					<h2><a name="wireless">Connecting to the Internet - Wireless</a></h2>
 					<p>In the system tray (near the clock, bottom right hand side of your screen) if you have no connection at the moment you will
@@ -146,28 +153,28 @@ i    {font-style: italic;}
 					<p>First thing you need to do is find the IP address of your NAS. You may know this already or your NAS manual will show you
 					how to find this. Once you have your NAS's IP address, open up your home folder and type in the following:</p>
 					<p><b>smb://192.168.0.5</b> where 192.168.0.5 is your NAS's IP address.</p>
-					<p><img src="images/network/nas/nas1.jpg" /></p>
+					<p><img src="images/network/nas/nas1.png" /></p>
 
 					<p>Put in the username of the NAS, in most cases it is <b>admin</b>, but again refer to your manual for the correct information.
 					Put in the workgroup (<b>Domain</b>) name, and finally the password for your NAS. Place a dot in <b>Remember forever</b> if you want it to save your details.</p>
-					<p><img src="images/network/nas/nas2.jpg" /></p>
+					<p><img src="images/network/nas/nas2.png" /></p>
 
 					<p>You should now see all of your NAS folders.</p>
-					<p><img src="images/network/nas/nas3.jpg" /></p>
+					<p><img src="images/network/nas/nas3.png" /></p>
 
-					<p>Lets look inside the <b>Movies</b> folder for this device, as you can see I have a movie file in there called <b>RevolutionOS.mp4</b></p>
-					<p><img src="images/network/nas/nas4.jpg" /></p>
+					<p>Lets look inside the <b>Movies</b> folder for this device, as you can see I have a movie file in there called <b>The Code Story of Linux Documentary.mp4</b></p>
+					<p><img src="images/network/nas/nas4.png" /></p>
 
 					<p>Before we can start playing media files across the network, we need to set up VLC so that it can access and play files remotely.
 					In Linux Lite, click on <b>Menu, Multimedia, VLC Media Player</b>. With VLC open, click on <b>Tools, Preferences</b>.</p>
-					<p><img src="images/network/nas/nas5.jpg" /></p>
+					<p><img src="images/network/nas/nas5.png" /></p>
 
 					<p>In the window that pops up, in the bottom left click on <b>All</b>. Then on the left, expand <b>Input / Codecs, Access modules, SMB</b>. Then put in your NAS's username,
 					password and finally the <b>SMB domain</b> (Workgroup). Click on <b>Save</b> to finish and close VLC.</p>
-					<p><img src="images/network/nas/nas6.jpg" /></p>
+					<p><img src="images/network/nas/nas6.png" /></p>
 
 					<p>Now that we've given VLC the network credentials it needs to access your NAS, we can browse and play our files.</p>
-					<p><img src="images/network/nas/nas7.jpg" /></p>
+					<p><img src="images/network/nas/nas7.png" /></p>
 
 					<p><a href="#top">Top of page</a></p>
 
@@ -206,7 +213,7 @@ i    {font-style: italic;}
 						[global]<br>
 						workgroup = <b>WORKGROUP</b><br>
 						server string = Linux Lite Shares<br>
-						netbios name = <b>lappy</b><br>
+						netbios name = <b>linuxlite</b><br>
 						security = user<br>
 						encrypt passwords = true<br>
 						username map = /etc/samba/smbusers<br>
@@ -340,25 +347,26 @@ i    {font-style: italic;}
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="lintowin">Accessing your Windows Shares from Linux Lite</a></h2>
-					<p>Go to your Windows machine and find the ip address. To do this, open a command prompt and type in: <b>ipconfig</b>.</p>
+					<p>Go to your Windows machine and find the ip address. To do this, open a command prompt and type in: <b>ipconfig</b></p>
 					<p><img src="images/network/smb/win_ipconfig.png"></p>
 
-					<p>Usually the results at the top has your ip address listed. In the above example, the ip address is: <b>192.168.0.8 </b>Make a note of this ip address.</p>
+					<p>Usually the results at the top has your ip address listed. In the above example, the ip address is: <b>192.168.1.5 </b>Make a note of this ip address.</p>
 					<p>Now go back to your Linux Lite computer, and open your home folder.</p>
 
 					<p>NOTE: If by the end of this Shares tutorial you are still not seeing any shares, try restarting both machines. Also note that sometimes it can take a while before the shares appear.</p>
 
 					<p>In the address bar, type in: <b>smb://ipaddressofwindowspc</b> where <b>ipaddressofwindowspc</b> is the actual numbered ip address of your Windows computer.</p>
-					<p><img src="images/network/smb/smb_address_bar.jpg"></p>
+					<p><img src="images/network/smb/smb_address_bar.png"></p>
 
 					<p>If everything went to plan, you should now be prompted for your Windows username, domain or workgroup and your Windows password.</p>
 					<p><b>Windows username - Windows workgroup name - Windows password</b></p>
-					<p><img src="images/network/smb/smb_password.jpg"></p>
+					<p><img src="images/network/smb/smb_password.png"></p>
 
 					<p>Now you can copy and paste files to your Windows computer.</p>
-					<p><img src="images/network/smb/smb_shares.jpg"></p>
+					<p><img src="images/network/smb/smb_shares.png"></p>
 
-					<p><b>NOTE:</b> If the ip address method does not work eg. <b>smb://192.168.0.8</b> try <b>smb://linuxlite</b> where <b>linuxlite</b> is your netbios name.</p>
+					<p><b>NOTE:</b> If the ip address method does not work eg. <b>smb://192.168.1.5</b> try <b>smb://windowspc</b> where <b>windowspc</b> is the netbios name 
+					of the Windows computer.</p>
 					<p><b>NOTE: If you are still not having any luck with either method, try <a target="_blank" href="http://nitroshare.net/">
 					NitroShare</a>, a cross-platform network sharing application for Windows, Mac and Linux. You can view a video tutorial on it
 					<a target="_blank" href="http://www.youtube.com/watch?v=0QduAP4CxXI">here</a>. Another method you could consider is setting up an FTP
@@ -366,15 +374,14 @@ i    {font-style: italic;}
 
 					<p><a href="#top">Top of page</a></p>
 
-					<h2><a name="date">Setting the Date &amp; Time</a></h2>
-					<p>Go to <b>Menu, Settings, Date &amp; Time</b> and enter your password when asked.</p>
+					<h2><a name="date">Setting the Time and Date</a></h2>
+					<p>Go to <b>Menu, Settings, Time and Date</b> click on the <b>Unlock</b> button and enter your password when asked.</p>
 					<p><img src="images/network/datetime/date-time1.png" /></p>
 
-				<p>On the <b>Date and Time</b> tab you can set the date, hours, minutes and seconds. Alternatively you can choose to sync with a server on the internet. Click on <b>OK</b> to finish.</p>
-				<p><img src="images/network/datetime/date-time2.png" /></p>
+					<p>Click inside the <b>Time zone</b> box.</p>
+					<p><img src="images/network/datetime/date-time2.png" /></p>
 
-				<p>On the <b>Time Zone</b> tab, click on your city or region on the map shown. You can click on the zoom slider on the left hand side to to more accurately select your location. To finish
-				click on <b>OK</b>.</p>
+				<p>Click on one of the <b>red</b> dots in your timezone/location. Click on <b>Close</b> to finish.</p>
 				<p><img src="images/network/datetime/date-time3.png" /></p>
 
 			<p><a href="#top">Top of page</a></div>

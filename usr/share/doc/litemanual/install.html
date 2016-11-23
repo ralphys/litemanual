@@ -123,23 +123,23 @@ i    {font-style: italic;}
 
 					<h2><a name="llusbwin">Writing the Linux Lite ISO to USB on Windows</a></h2>
 					<p><b>Win32DiskImager </b>allows you to create a bootable Live USB drive. Download it
-					from <a href="http://sourceforge.net/projects/win32diskimager/files/Archive/win32diskimager-v0.9-binary.zip/download" target="_blank">here</a>.</p>
+					from <a href="https://sourceforge.net/projects/win32diskimager/files/latest/download" target="_blank">here</a>.</p>
 
 					<h2><a name="lldvdusbosx">Writing the Linux Lite ISO to USB in Linux and OSX</a></h2>
 					<p>To find out the letter of your USB stick, open a terminal and type: <b>df -h</b> It is usually listed as <b>media</b> or similar.
 					Be very careful to make sure you choose the right drive letter, as you can see in the Filesystem column, my device is sdb another
-					clue is the value in the Size column, here it is shown as 15G. In this example my device is an Apacer 15gb USB stick.</p>
+					clue is the value in the Size column, here it is shown as 15G. In this example my device is a TDK 15gb USB stick.</p>
 					<p><img src="images/install/df-h.png"></p>
 
 					<p>Open a folder and make sure you are in the directory that the iso file is in. Open a terminal in that directory and type the following:</p>
 					<p><b>32bit:</b></p>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-2.8-32bit.iso of=/dev/sdx bs=4M</code></pre><br>
+						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-3.2-32bit.iso of=/dev/sdx bs=4M</code></pre><br>
 					<p><b>64bit:</b></p>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-2.8-64bit.iso of=/dev/sdx bs=4M</code></pre><br>
+						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-3.2-64bit.iso of=/dev/sdx bs=4M</code></pre><br>
 
 					<p>Change the <b>x</b> in <b>sdx</b> to match the letter of your USB device.</p>
 					<p>The Live DVD/USB image will boot into the desktop automatically, there is no need to login manually.</p>
@@ -187,9 +187,6 @@ i    {font-style: italic;}
 
             				<p>Once you are happy with your bios set up, insert the DVD disc or USB stick into your computer and reboot your computer. You'll be greeted
 					with the following screen. Let the timer run down if you want to boot to the Live session.</p>
-					<p><img src="images/install/installwizard/boot1.png"></p>
-
-          				<p>Press any key to see the next screen.</p>
           				<p><img src="images/install/installwizard/boot2.png"></p>
 
           				<p>Make sure <b>Start Linux Lite</b> is highlighted, press the enter key to boot the Live session. This is also a good way to check that
@@ -201,7 +198,7 @@ i    {font-style: italic;}
 		  			<b>Run memtest</b> - Test your computer memory for faults.<br />
             				<b>Boot the first hard disk</b> - boot the existing operating system.<br />
             				<b>Restart</b> - reboot your computer.<br />
-            				<b>Shutdown</b> - turn off your computer.</p>
+            				<!-- <b>Shutdown</b> - turn off your computer.</p> -->
           				<p><b>NOTE: If you are having any trouble booting Linux Lite after installation, please read through <a href="hardware.html#installissues">this trouble shooting guide</a></b>.</p>
 
             				<p>The computer will go through the boot up process, this may take anywhere from a few seconds to a couple of minutes depending on your
@@ -215,38 +212,44 @@ i    {font-style: italic;}
 
           				<p>The installer will then open on the desktop and display the <b>Welcome </b>section of the installer. From here you will select your preferred
 		  			language and view release notes for this version of Linux Lite.</p>
-          				<p><img src="images/install/installwizard/language.jpg"></p>
+          				<p><img src="images/install/installwizard/install-ll1.png"></p>
 
           				<p>After selecting continue, you are presented with some requirements for the installation. Ensure that these requirements are met by
 		  			viewing a check mark beside them. You may also choose to download any available updates while installing or install third-party software
 		  			during the installation.</p>
-					<p><b>NOTE: Please verify the legal status of the use of the third party software in your country/territory.</b></p>
 
-          				<p><b>NOTE: Generally we don't recommend ticking Download updates while installing and Install the third-party software as this will significantly
+          				<p><b>NOTE: Generally we don't recommend ticking 'Download updates while installing Linux' as this will significantly
 					slow down the install process. Updating after a fresh install is recommended and will save you time in the long run. A typical install  on today's hardware will take
 					around 10-15 minutes. If you check these 2 boxes, the install could take over an hour or longer.</b></p>
-          				<p><img src="images/install/installwizard/prepare.jpg"></p>
+
+					<p><b>NOTE: 'Install third-party software for graphics and Wi-Fi hardware, Flash, MP3 and other media' 
+					Please verify the legal status of the use of the third party software in your country/territory before choosing this option. This option will install codecs for playing 
+					media files, and proprietary drivers for some of your hardware. It is a legal requirement for us to inform you of this.</b></p>
+
+          				<p><img src="images/install/installwizard/install-ll2.png"></p>
 
           				<p>Now it is time to choose the method of installing Linux Lite to  your hard disk. You will have several options during this phase of the installer.</p>
 
-          				<p><b>Install Linux alongside them</b> - otherwise known as a dual boot. An option to boot from Windows or Linux Lite when your computer starts.</p>
+          				<p><b>Install Linux alongside (Operating System)</b> - otherwise known as a dual boot. An option to boot from Windows, another Linux based operating system 
+					or Linux Lite when your computer starts.</p>
 
 					<p><b>Note: If you want to encrypt your home folder, <b>do not</b> select the option '<b>Encrypt the new Linux installation for security</b>' instead, please follow these
 					instructions <a href="#encrypthome">here</a>.</b></p>
-          				<p><img src="images/install/installwizard/selectinstall.jpg"></p>
+
+          				<p>It is not recommended to choose <b>Encrypt the new Linux installation for security</b> unless you are well versed in this method. The same goes for 
+					<b>Use LVM with the new Linux installation</b>. For the purpose of this tutorial, we are keeping it simple.</p>
+
+          				<p><img src="images/install/installwizard/install-ll3.png"></p>
 
           				<p><b>Erase Disk and Install Linux</b></p>
-          				<p>Upon selecting Erase Disk and Install Linux you are presented with a screen displaying how your install will be represented on the hard
-		  			disk. This is the most simple option available and will show your hard disk being completely and solely occupied by Linux Lite. You may
-		  			select the disk you wish to install Linux Lite to from the menu labeled: <b>Select Drive</b>. You may then select <b>Install Now</b>
-            				when you are ready to begin installing.</p>
+          				<p>Upon selecting Erase Disk, the installer will automatically select the default partitioning scheme. Click on <b>Continue</b> to accept the changes.</p>
 
           				<p><b>NOTE: This installation option will automatically install the Linux bootloader to the first hard drive on the system. That is typically how most
           				people install and the Linux boot loader offers the choice of booting any other operating systems that are on your computer. However, if your intent is to
          				keep the Windows boot loader in charge of booting the Windows drive and the Windows drive is the first one, then you need to use the "Something else" installation type.
           				That way you can control the "location for boot loader installation" and set it for the specific drive you choose for Linux Lite. Again, this is not a necessity when
           				dual-booting. We point this out only because some people prefer to keep the Windows drive as is.<b></p>
-          				<p><img src="images/install/installwizard/replaceinstall.png"></p>
+          				<p><img src="images/install/installwizard/install-ll4.png"></p>
 
 					<p><b>Install Linux alongside Windows (dual booting)</b></p>
           				<p>If you have selected to install Linux Lite alongside an existing copy of Windows, you will be greeted with a screen representing the
@@ -255,7 +258,7 @@ i    {font-style: italic;}
 		  			proposed Linux Lite installation. You may drag the empty space between them to allocate space from one to the other as needed. You may then
 		  			select Install Now after you have made the desired changes. If your computer has more than one physical hard drive and your intent
 		  			is to install Linux to a separate drive from the Windows drive, see <a href="hardware.html#install-multi-drive">this section</a>.</p>
-          				<p><img src="images/install/installwizard/installalong.png"></p>
+          				<p><img src="images/install/installwizard/install-ll5.png"></p>
 
           				<p><b>Something Else</b></p>
           				<p><b>NOTE: FOR ADVANCED USERS ONLY</b></p>
@@ -278,23 +281,28 @@ i    {font-style: italic;}
           				<p><b>NOTE: If you have any NTFS drives, it is important to give these a mount point during the install. That way they will be easily accessible after the installation.</b> </p>
 		  			<p>The mount point is simply "where" in the file system you want that partition's files to show up. You can name the mount point what ever
 		  			you want, be sure to give it a simple, no spaces lowercase name like eg. <b>/myntfs</b> do not use <b>/My NTFS</b>.</p>
-          				<p><img src="images/install/installwizard/manualinstall.jpg"></p>
+          				<p><img src="images/install/installwizard/install-ll6.jpg"></p>
 
+					<p><b>Where are you?</b></p>
           				<p>After completing the partitioning phase of the installation, you are prompted to set up some personal details about the system. The
 		  			installer will continue to work in the background while you are filling out this information. The first step is to select your time
 		  			zone. The installer may detect your time zone based on your location via your ISP's information. If not, you may select your time zone by
 		  			either clicking on your region on the supplied map or by typing in your area in the box below.</p>
-          				<p><img src="images/install/installwizard/timezone.jpg"></p>
+          				<p><img src="images/install/installwizard/install-ll7.png"></p>
 
+					<p><b>Keyboard layout</b></p>
           				<p>The next step is to select your keyboard language and layout. You may select the language that your keyboard corresponds to on the left
-		  			and any specialized layout on the right. This is the point where you may select to enable international keys on your keyboard. Though, these options may be changed later.</p>
-          				<p><img src="images/install/installwizard/keyboardlayout.jpg"></p>
+		  			and any specialized layout on the right. This is the point where you may select to enable international keys on your keyboard. Though, these options may be changed later. 
+					<b>We recommend you leave the default English (US) options here, and adjust your language settings once Linux Lite has been installed and you have rebooted for the 
+					first time.</p>
+          				<p><img src="images/install/installwizard/install-ll8.png"></p>
 
-          				<p>On the next screen, you are greeted by several forms to fill. These forms include:</p>
+					<p><b>Who are you?</b></p>
+          				<p>On the next screen, you are greeted by several fields to fill. These fields include:</p>
           				<p><b>Your name</b> - your personal name.<br />
             				<b>Your computer's name</b> - the name that you wish to use to identify the computer on your network.<br />
             				<b>Pick a username</b> - your user name that is used to login to the system.<br />
-            				<b>Choose a password</b> - your password that you wish to use for your user and sudo password.<br />
+            				<b>Choose a password</b> - your password that you wish to use for your user and sudo (administrator) password.<br />
             				<b>Confirm your password</b> - enter the above password again.</p>
 
           				<p><b>NOTE: Choose a strong password, a mix of upper and lower case as well as a mix of numbers and characters. An example of this would
@@ -304,32 +312,32 @@ i    {font-style: italic;}
 
               				<p>NEVER COMPROMISE YOUR SECURITY FOR CONVENIENCE.</b></p>
 
-          				<p>There are also options to enable auto-login for your user or have the computer prompt you for a password every time you login.</p>
+          				<p>There are also options to enable auto-login for your user or have the computer prompt you for a password everytime you login.</p>
 					<p><b>Note: If you want to encrypt your home folder, do not select the option 'Encrypt my home folder' instead, please follow these instructions
 					<a href="#encrypthome">here</a>.</b></p>
-          				<p><img src="images/install/installwizard/userinfo.jpg"></p>
+          				<p><img src="images/install/installwizard/install-ll9.png"></p>
 
           				<p>If you have a webcam, you may encounter a screen during the install asking to <b>Take a photo</b> this feature is supported so that when you
 		  			first log in, your photo will be displayed as your avatar. If you skip this step, you can use a .png photo of yourself, rename it to <b>.face</b>
-           				and place it in your <b>/home/user</b> folder.</p>
+           				and place it in your <b>/home/user</b> folder. By default, the Linux Lite logo will represent your login icon.</p>
 
 					<p>After finishing all of these steps you will be greeted with a slideshow detailing all of the features and software that are included
 		  			in this version of Linux Lite. You may allow them to play on their own or navigate through them using the arrow buttons on the sides of the
 		  			window (the picture below may vary from version to version).</p>
-          				<p><img src="images/install/installwizard/slideshow.png" alt="slide"></p>
+          				<p><img src="images/install/installwizard/install-ll10.png" alt="slide"></p>
 
           				<p>Once the installation is complete you will be prompted to either restart your computer and begin using your newly installed Linux Lite
 		  			system or to continue using the testing environment on the DVD/USB that you are using. If for some reason your computer hangs on restart, press <b>F4</b> or <b>Enter</b>.</p>
-          				<p><img src="images/install/installwizard/finished.png"></p>
+          				<p><img src="images/install/installwizard/install-ll11.png"></p>
 
           				<p>After a reboot you will be greeted by the login screen:</p>
-          				<p><img src="images/install/installwizard/login.png"></p>
+          				<p><img src="images/install/login.png"></p>
 
           				<p>After you have logged in you will see the desktop and <b>Welcome</b> window. Be sure to read through the <b>Welcome</b> window to get you off to
-		  			the best possible start to using Linux Lite.</p>
+		  			the best possible start to using Linux Lite. Be sure to <b>Install Updates</b> first, followed by a check to <b>Install Drivers</b>.</p>
 					<p>Congratulations! Now that we've installed Linux Lite, lets take a look at what's
 		  			available on the Menu by clicking <a href="start.html#menus">here</a>.</p>
-          				<p><img src="images/install/installwizard/desktop.png" alt="desktop"></p>
+          				<p><img src="images/install/installwizard/install-ll12.png" alt="desktop"></p>
 
           				<p><a href="#top">Top of page</a></p>
 
@@ -352,7 +360,7 @@ i    {font-style: italic;}
 
 					<p><img src="images/install/encrypt/encrypt4.png"></p>
 
-					<p><b>4.</b> When this has finished (time to encrypt may vary) <b>you must logout of tempuser and login as your user. DO NOT reboot.</b></p>
+					<p><b>4.</b> When this has finished (time to encrypt may vary) <b>you must logout of tempuser and login as your user. DO NOT Reboot.</b></p>
 					<p><b>5.</b> Once logged in as your user, open a terminal and type in:</p>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
@@ -394,23 +402,23 @@ i    {font-style: italic;}
           				<p><b>1.</b> Click on <b>Menu, Settings, Language Support</b>.</p>
           				<p><img src="images/install/lang/lang1.png"></p>
 
-          				<p><b>2.</b> You will get a dialog box pop up, click on <b>Install</b>.</p>
+          				<p><b>2.</b> You will get a dialog box pop up, click on <b>Remind Me Later</b>.</p>
           				<p><img src="images/install/lang/lang2.png"></p>
 
-          				<p><b>3.</b> You will then be prompted for your password, enter it to continue.</p>
+          				<p><b>3.</b> Now click on the button <b>Install / Remove Languages</b>.</p>
           				<p><img src="images/install/lang/lang3.png"></p>
 
-          				<p><b>4.</b> Now click on the button <b>Install / Remove Languages</b>.</p>
+          				<p><b>4.</b> In this example, we'll install the <b>Portuguese </b>language. Scroll down, find your language and tick the box next to it, then click on <b>Apply</b>.</p>
           				<p><img src="images/install/lang/lang4.png"></p>
 
-          				<p><b>5.</b> In this example, we'll install the <b>Portuguese </b>language. Scroll down, find your language and tick the box next to it, then click on <b>Apply Changes</b>.</p>
+          				<p>You'll then be prompted for your password.</p>
           				<p><img src="images/install/lang/lang5.png"></p>
 
-          				<p>Your computer will begin to download all the language files, this may take a while.</p>
+          				<p>After you've entered your password, your computer will begin to download all the language files, this may take a while.</p>
           				<p><img src="images/install/lang/lang6.png"></p>
 
-          				<p><b>6.</b> Once that is done, scroll to the bottom of the <b>Language for menus and windows</b> box and drag your newly installed language to the top of the list. Then click on <b>Apply
-		  			System-Wide</b>, you'll be prompted for your password again.</p>
+          				<p><b>6.</b> Once that is done, scroll to the bottom of the <b>Language for menus and windows</b> box and <b>drag your newly installed language to the top of the list</b>. Then click on <b>Apply
+		  			System-Wide</b>, you'll be prompted for your password again. Now wait for the settings to be applied, it will take a few moments.</p>
           				<p><img src="images/install/lang/lang7.png"></p>
 
           				<p><b>7.</b> Now click on the <b>Regional Formats</b> tab, select the language you just installed, and click on <b>Apply System-Wide</b>.</p>
@@ -449,7 +457,7 @@ i    {font-style: italic;}
 					<p><b>Do not</b> enable Trim on the swap line.</p>
 					<p><b>Do not</b> place <b>noatime,</b> on partitions or drives that are not on the SSD, eg. IDE or regular hard drives.</p>
 					<p><img src="images/install/trim/trim2.png"></p>
-
+						
 					<p>Now save and close the file.</p>
 					<p>Now open a terminal and do:</p>
 						<div class="codeheader">Terminal Command:</div>
@@ -479,7 +487,6 @@ i    {font-style: italic;}
 						fstrim -v /boot >> $LOG<br>
 						fstrim -v / >> $LOG<br>
 						fstrim -v /home >> $LOG<br>
-						fstrim -v /sparessd >> $LOG<br>
 						echo " " >> $LOG<br><br>
 
 						exit 0</td>
@@ -678,7 +685,7 @@ i    {font-style: italic;}
 		  			also removes all that persons documents, pictures, videos, files etc.</b></p>
           				<p>This is as easy as selecting the user that you want to remove from the <b>Select user</b> drop down box, clicking on <b>Remove this user</b> and clicking on <b>Apply</b>.
 					If you are asked for <b>your</b> password, please enter it and then click <b>Ok</b>. Next a confirmation box will appear, read the message and if you want to proceed click on <b>Yes</b>.
-		  			If you get an error message regarding <b>/var/mail/youruser</b> this is safe to ignore. The user account and all their data has now been removed.</p>
+		  			The user account and all their data has now been removed.</p>
           				<p><img src="images/install/user/liteuser4.png"></p>
 
           				<p><a href="#top">Top of page</a></p>
@@ -714,7 +721,7 @@ i    {font-style: italic;}
           				<p><img src="images/install/resetpass/pass1.png"></p>
 
           				<p>Now login with your password.</p>
-          				<p><img src="images/install/resetpass/login2.png"></p>
+          				<p><img src="images/install/login.png"></p>
 
           				<p><a href="#top">Top of page</a></p>
 

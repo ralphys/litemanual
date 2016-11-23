@@ -97,13 +97,14 @@ i    {font-style: italic;}
             				<a href="#archive">Creating and Extracting Zip files</a><br />
             				<a href="#encrypt">File Encryption</a><br />
             				<a href="#heldpack">Held Packages</a><br />
-					<a href="#software">Installing &amp; Removing Software</a><br />
+										<a href="#software">Installing &amp; Removing Software</a><br />
             				<a href="#instsoftware">Installing Software</a><br />
+										<a href="#literepos">Lite Software - Change Repository Location</a><br />
             				<a href="#installsoftware">Lite Software - Install Software</a><br />
             				<a href="#removesoftware">Lite Software - Remove Software</a><br />
             				<a href="#tweaks">Lite Tweaks</a><br />
             				<a href="#sources">Software Updates by Country</a><br />
-					<a href="#uninstsoftware">Uninstalling Software</a><br />
+										<a href="#uninstsoftware">Uninstalling Software</a><br />
             				<a href="#updates">Updates</a><br />
             				<a href="#winprogs">Linux Equivalents of Windows Programs</a></p>
 
@@ -115,18 +116,11 @@ i    {font-style: italic;}
 					<p>There are a few common methods for installing and removing software. Linux Lite comes with the Synaptic Package Manager.  When you already know the name of
 					the program you want, Synaptic makes installing easy.</p>
 
-					<p><b>IMPORTANT: Linux Lite is a heavily modified operating system.<br>
-					As such we do not recommend you ever do:</b></p>
-						<div class="codeheader"></div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get dist-upgrade</code></pre><br>
-					<p><b>This command has the potential to break your system.</b></p>
-
 					<p><b>IMPORTANT: Before you run Install/Remove Software for the first time, <a href="#sources">read this first</a>. Then come back to here to learn how to
 					install and remove software.</b></p>
 
 					<h2><a name="instsoftware">Installing Software</a></h2>
-					<p><b>1.</b> Click on <b>Menu</b>, <b>System</b>, <b>Install/Remove Software.</b></p>
+					<p><b>1.</b> Click on <b>Menu</b>, <b>System</b>, <b>Install/Remove Software</b> and enter your password when prompted.</p>
 					<p><img src="images/software/insoft/menu_synaptic.png"></p>
 
 					<p><b>2.</b> Make sure <b>All</b> is selected in the left pane and in the <b>Quick Filter</b> or spy glass: <img src="images/software/insoft/spyglass.png"> type in your search query. In
@@ -142,7 +136,7 @@ i    {font-style: italic;}
 					entry will be created in the relevant <b>Menu</b> category. For <b>audacious</b> the <b>Menu</b> category would be <b>Multimedia</b>.</p>
 					<p><img border="1" src="images/software/insoft/synaptic_apply.png"></p>
 
-					<p><b>6.</b> Go to the <b>Menu</b> and your new software will be there. An alternative way to find your new software is to click on <b>Menu,
+					<p><b>6.</b> Go to the <b>Menu</b> and your new software will be there under the relative Category. An alternative way to find your new software is to click on <b>Menu,
 					Accessories, Application Finder</b>. Type your program name in the <b>Search</b> box and the result will display on the right.
 					Double click on the program name and it will launch for you.</p>
 					<p><img src="images/software/insoft/app_finder.png"></p>
@@ -163,7 +157,7 @@ i    {font-style: italic;}
 					<h2><a name="updates">Updates</a></h2>
 					<p>Keeping Linux Lite up to date is a simple process.</p>
 					<p>At the top of your <b>Menu</b>, you will see <b>Install Updates</b>.</p>
-					<p><img src="images/software/updates/menu_updates.jpg"></p>
+					<p><img src="images/software/updates/menu_updates.png"></p>
 
 					<p>We&#39;ve made the update process as simple as possible. Simply click on <b>Install Updates</b> and you will be asked for your
 					password. The program will then search for updates and if it finds any it will ask you if you want to continue.</p>
@@ -202,7 +196,7 @@ i    {font-style: italic;}
 					then the public was notified that it was safe to do.</p>
 
 					<p><b>GOLDEN RULE: If your system if working fine, do not be tempted to force installation of held packages, if it's working you
-					don't need it. This includes held kernel updates. Remember the old saying, "If it ain't broke, don't fix it".</b></p>
+					don't need it. This includes held kernel updates. Remember the old saying, "If it ain't broke, don't try to fix it".</b></p>
 
 					<p><a href="#top">Top of page</a></p>
 
@@ -210,29 +204,50 @@ i    {font-style: italic;}
 					<p>To ensure that you get your updates and software downloaded as fast as possible, try selecting a location close to you.
 					In the following tutorial we will show you how to do this.</p>
 					<p>Click on <b>Menu, System, Install/Remove Software</b> and enter your password.</p>
-					<p><img src="images/software/countryloc/sources-password.jpg"></p>
+					<p><img src="images/software/countryloc/sources-password.png"></p>
 
 					<p><b>Synaptic Package Manager</b> will open up, click on <b>Settings, Repositories</b>.</p>
-					<p><img src="images/software/countryloc/sources-repos.jpg"></p>
+					<p><img src="images/software/countryloc/sources-repos.png"></p>
 
 					<p>The <b>Software Sources</b> window will pop up. From the <b>Download from:</b> drop down box, select <b>Other...</b></p>
-					<p><img src="images/software/countryloc/sources-other.jpg"></p>
+					<p><img src="images/software/countryloc/sources-other.png"></p>
 
 					<p>A <b>Choose a Download Server</b> box will pop up. From here select your country, and then a server, preferably an Ubuntu
 					server if it is listed or another server if an Ubuntu server is not in the list. Click on the <b>Choose Server</b> button once
 					you have made your selection. Now click on <b>Close</b> in the <b>Software Sources</b> window.</p>
-					<p><img src="images/software/countryloc/sources-country.jpg"></p>
+					<p><img src="images/software/countryloc/sources-country.png"></p>
 
 					<p>In the top left of the <b>Synaptic Package Manager</b> window, click on the <b>Reload</b> button. This will change all
 					the software sources to your location for faster downloads.</p>
-					<p><img src="images/software/countryloc/sources-reload.jpg"></p>
+					<p><img src="images/software/countryloc/sources-reload.png"></p>
 
 					<p>The following window will appear, then close when it has finished.</p>
-					<p><img src="images/software/countryloc/sources-reload2.jpg"></p>
+					<p><img src="images/software/countryloc/sources-reload2.png"></p>
 
 					<p>You should now have faster downloads for updates and software installs in <b>Synaptic Package Manager</b> from a location much
 					nearer you. Click <a href="#software">here</a> to learn how to install and remove software.</p>
 
+					<p><a href="#top">Top of page</a></p>
+					
+					<h2><a name="literepos">Lite Software - Change Repository Location</a></h2>
+					<p>After changing your <a href="software.html#sources">Software Updates Country Location</a>, consider changing the location where you get your Lite Software application updates.</p>
+					<p>For a list of locations for Linux Lite Software application updates, click <a href="https://www.linuxliteos.com/download.php#mirrors" target="_blank"> here</a> and scroll down to <b>REPOSITORY MIRRORS</b> 
+					and choose a location close to you.</p>
+
+					<p>Open your home folder and navigate to <b>/etc/apt/</b> right click on the <b>sources.d</b> folder and <b>Open as Administrator</b>.</p>
+					<p><img src="images/software/repos/lite-repo1.png" /></p>
+					
+					<p>Double click on the file <b>linuxlite.list</b> and copy and paste the new repository link of your choice from <b>REPOSITORY MIRRORS</b> replacing the existing line. 
+					Be sure to change the word <b>repo</b> to the codename from that Linux Lite Series eg. replace <b>repo</b> with <b>citrine</b>. See the notes on the Download page for Series information. Save and Close the file.</p>
+					<p><img src="images/software/repos/lite-repo2.png" /></p>
+					
+					<p>Now double click on the file <b>linuxlite.list.save</b> and copy and paste the same new repository link over the existing entry. 
+					Be sure to change the word <b>repo</b> to the codename from that Linux Lite Series eg. replace  <b>repo</b> with <b>citrine</b>. Save and Close the file.</p>
+					<p><img src="images/software/repos/lite-repo3.png" /></p>
+					
+					<p>Next time you run <b>Menu, Favorites, Install Updates</b> you will get Lite Software application updates from your newly selected location.</p>
+					<p>If for some reason that new repository selection does not work, choose another location.</p>					
+					
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="installsoftware">Lite Software - Install Software</a></h2>
@@ -253,7 +268,7 @@ i    {font-style: italic;}
 					<p>Once the sources have been updated, the following window will appear, select <b>Install Software</b> and click <b>OK</b>.</p>
 					<p><img src="images/software/litesoftware/lite-software-select.png" /></p>
 
-					<p>Next, you'll see the following window pop up. Select software to install by placing a check mark in the box next to it. You may
+					<p>Next, you'll see the following window pop up. Select each application by holding down the <b>Ctrl</b> key. You may
 					choose and install more than one package at a time if you like. In this example we'll choose to install, <b>Instant Messenger,
 					Password Manager</b> and <b>Torrent Software</b>.</p>
 					<p><img src="images/software/litesoftware/install_add_sftwr-02.png" /></p>
@@ -954,11 +969,12 @@ i    {font-style: italic;}
 					remove old kernels if you have installed new ones.</p>
 
 					<p>Lite Cleaner is in <b>Menu, System, Lite Tweaks</b>.</p>
-					<p><img src="images/software/litetweaks/cleaner-02.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks1.png" /></p>
 
 					<p>Once opened, the <b>Lite Tweaks</b> window will show various categories of files that can be cleaned and will display in the <b>Description</b> column
-					how much space will be freed up by removing them. As an example, we'll use the cleaner to remove an old linux kernel.</p>
-					<p><img src="images/software/litetweaks/cleaner-03.png" /></p>
+					how much space will be freed up by removing them. As an example, we'll use the cleaner to remove an old linux kernel. Select <b>Kernel Removal</b>, 
+					then click on <b>Begin</b>.</p>
+					<p><img src="images/software/litetweaks/tweaks2.png" /></p>
 
 					<p>The example computer has three kernels installed to it - the original kernel and two kernels manually added to it later. If you have
 					decided to install newer kernels to your Linux Lite, it is not a bad idea to keep two working kernels on the system. If you end up having
@@ -967,32 +983,29 @@ i    {font-style: italic;}
 					<p>The kernel cleaner will only display the kernels that are not currently in use. So in screenshot below only two of the three kernels
 					are displayed.  We will remove one of them.  To remove a kernel, make sure to select the "image" and "header" files that correspond to the
 					version number of the kernel, then click <b>Begin</b>.</p>
-					<p><img src="images/software/litetweaks/cleaner-04.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks3.png" /></p>
 
 					<p>In the screenshot above you will notice that the original 3.13.0-24 kernel and a newer 3.13.0-27 kernel are shown. The newer kernel did not
 					work correctly on this machine, so that is the one selected for removal. Place a check mark in the boxes next to the "image" and "header"
 					files, then click <b>Remove</b>.</p>
 
 					<p>A confirmation box will pop-up. Click <b>Yes</b> if you are sure you want to proceed with the deletion.</p>
-					<p><img src="images/software/litetweaks/cleaner-05.png" /></p>
-
-					<p>Enter your password and click <b>OK</b>.</p>
-					<p><img src="images/software/litetweaks/cleaner-06.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks4.png" /></p>
 
 					<p>Your kernel(s) will then be removed. (This may take a few minutes.)</p>
-					<p><img src="images/software/litetweaks/cleaner-07.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks5.png" /></p>
 
 					<p>Upon completion, click <b>OK</b> to close the window.</p>
-					<p><img src="images/software/litetweaks/cleaner-08.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks6.png" /></p>
 
 					<p>When the task has completed, you'll be asked if you want to perform additional tasks.</p>
-					<p><img src="images/software/litetweaks/tweaks-finished.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks7.png" /></p>
 
 					<p>You can also select multiple tasks to perform in <b>Lite Tweaks</b>. Simply select the tasks you want to complete and click on <b>Begin</b>.</p>
-					<p><img src="images/software/litetweaks/lite-tweaks-multiple.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks8.png" /></p>
 
 					<p>Enter your password when asked and when the tasks have completed, you'll be asked if you want to perform additional tasks.</p>
-					<p><img src="images/software/litetweaks/tweaks-finished.png" /></p>
+					<p><img src="images/software/litetweaks/tweaks9.png" /></p>
 
 					<p><a href="#top">Top of page</a></p>
 
@@ -1001,37 +1014,24 @@ i    {font-style: italic;}
 					versions of some applications. To add a new PPA to your system, follow the guide below.</p>
 
 					<p>Go to <b>Menu, System, Install/Remove Programs</b>. Enter your password when asked.</p>
-					<p><img src="images/software/ppa/menu_synaptic.png"></p>
+					<p><img src="images/software/insoft/menu_synaptic.png"></p>
 
 					<p>Go to <b>Settings, Repositories</b>.</p>
-					<p><img src="images/software/ppa/ppa2.jpg"></p>
+					<p><img src="images/software/countryloc/sources-repos.png"></p>
 
 					<p>Click on the <b>Other Software</b> tab and click on the <b>Add </b>(bottom left) button and paste into the box the address of the PPA.
-					In this example, we are going to add <b>Spotify</b> to our system. Now click on <b>Add Source</b>. To finish, click on <b>Close</b>.
-					Close <b>Synaptic Package Manager</b>.</p>
-					<p><img src="images/software/ppa/ppa3.png"></p>
+					In this example, we are going to add the <b>Gimp</b> PPA to our system. Now click on <b>Add Source</b>. To finish, click on <b>Close</b>.
+					You'll be prompted to put in your password. The sources list will reload and your new PPA will be loaded.</p>
+					<p><img src="images/software/ppa/ppa1.png"></p>
 
-					<p>Each PPA comes with a signed key. This is a security measure and ensures that the person who created the PPA has followed
-					strict standards. Open up a terminal and type in the key string:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59</code></pre><br>
-					<p><img src="images/software/ppa/ppa4.png"></p>
-
-					<p>Now in the same terminal type in:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update &amp;&amp; sudo apt-get install spotify-client</code></pre><br>
-					<p><img src="images/software/ppa/ppa5.png"></p>
-
-					<p>This will update your sources to include the new Spotify repository. The second part of the command will install Spotify
-					for you. Your new program is now installed and ready to use.</p>
-					<p><img src="images/software/ppa/ppa6.png"></p>
+					<p>Search for your application in the <b>Search</b> box, in this example <b>Gimp</b>, and then double click on it to install the program. 
+					Click on the <b>Apply</b> button at the top of the window, and follow the on screen intructions.</p>
+					<p><img src="images/software/ppa/ppa2.png"></p>
 
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="encrypt">File Encryption</a></h2>
-					<p>In today's world, security of your personal files is important. Whether your transporting documents on a USB drive or
+					<p>In todays world, security of your personal files is important. Whether your transporting documents on a USB drive or
 					emailing sensitive information to a friend, colleague or company, encryption is a necessary security measure.</p>
 
 					<p><b>1.</b> First we need to install the encryption software, in this example we'll use<a href="https://en.wikipedia.org/wiki/Mcrypt" target="_blank">
@@ -1043,56 +1043,56 @@ i    {font-style: italic;}
 
 					<p><b>2.</b> Once mcrypt is installed, we'll set a custom right click action in our file manager to make encryption of files super
 					easy. Open up your home folder, click on <b>Edit, Configure custom actions</b>.</p>
-					<p><img src="images/software/encrypt/encrypt1.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt1.png" /></p>
 
 					<p><b>3.</b> Click the plus + button on the right and enter in the following information, in the <b>Command</b> box type in:
 					<b>x-terminal-emulator -t "Encrypt file..." -e "mcrypt %f"</b></p>
-					<p><img src="images/software/encrypt/encrypt2.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt2.png" /></p>
 
 					<p>Click on <b>Appearance Conditions</b> tab and tick every box except <b>Directories</b>.</p>
-					<p><img src="images/software/encrypt/encrypt2a.png" /></p>
+					<p><img src="images/software/encrypt/encrypt3.png" /></p>
 
 					<p><b>4.</b> Go back to the <b>Basic</b> tab and click on the <b>No icon</b> button and browse to <b>Status Icons</b>, and select the <b>changes-prevent</b>
 					icon and click on <b>Ok</b>, then <b>Ok</b> on the next box.</p>
-					<p><img src="images/software/encrypt/encrypt3.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt4.png" /></p>
 
 					<p>Your <b>Custom Actions</b> box should now look like this:</p>
-					<p><img src="images/software/encrypt/encrypt4.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt5.png" /></p>
 
 					<p><b>5.</b> Now we need to set up the <b>Decrypt</b> option. Repeat step 3 only this time enter in the following information, in the <b>Command</b> box type in:
 					<b>x-terminal-emulator -t "Decrypt file..." -e "mcrypt -d %f"</b></p>
-					<p><img src="images/software/encrypt/encrypt5.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt6.png" /></p>
 
 					<p>Click on <b>Appearance Conditions</b> tab and <b>only</b> tick the <b>Other Files</b> box, leave the rest unticked.</p>
-					<p><img src="images/software/encrypt/encrypt5a.png" /></p>
+					<p><img src="images/software/encrypt/encrypt7.png" /></p>
 
 					<p><b>6.</b> Repeat step 4 only this time select the <b>changes-allow</b> icon. The click on <b>Ok</b>, then <b>Ok</b> on the next box.</p>
-					<p><img src="images/software/encrypt/encrypt6.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt8.png" /></p>
 
 					<p><b>7.</b> Your <b>Custom Actions</b> box should now look like this:</p>
-					<p><img src="images/software/encrypt/encrypt7.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt9.png" /></p>
 
 					<p><b>8.</b> Click on the <b>Close</b> button on the <b>Custom Actions</b> box.</p>
 					<p>Now we're ready to encrypt a file (only files can be encrypted with this method, not folders)</p>
 					<p><b>9.</b> Right click on a file and select <b>Encrypt file</b>.</p>
-					<p><img src="images/software/encrypt/encrypt8.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt10.png" /></p>
 
 					<p><b>10.</b> A window will pop up asking you to type in a password, it will then ask you to enter the same password again. Choose a
 					good strong password, a mixture of letters, numbers and characters that you can easily remember.</p>
-					<p><img src="images/software/encrypt/encrypt9.png" /></p>
+					<p><img src="images/software/encrypt/encrypt11.png" /></p>
 
 					<p>You can now delete the unencrypted file permanently. Here you will see we have a new file with the letters '<b>.nc</b>'
 					attached to the end of it signifying that the file is now encrypted.</p>
-					<p><img src="images/software/encrypt/encrypt10.jpg" /></p>
-
-					<p><b>11.</b> To decrypt the file later, right click on the file and select <b>Decrypt file</b>.</p>
-					<p><img src="images/software/encrypt/encrypt11.jpg" /></p>
-
-					<p><b>12.</b> A window will pop up asking you to type in a password. Enter the password you created in step 10.</p>
 					<p><img src="images/software/encrypt/encrypt12.png" /></p>
 
+					<p><b>11.</b> To decrypt the file later, right click on the file and select <b>Decrypt file</b>.</p>
+					<p><img src="images/software/encrypt/encrypt13.png" /></p>
+
+					<p><b>12.</b> A window will pop up asking you to type in a password. Enter the password you created in step 10.</p>
+					<p><img src="images/software/encrypt/encrypt14.png" /></p>
+
 					<p>As you can see our file is decrypted and ready to view.</p>
-					<p><img src="images/software/encrypt/encrypt13.jpg" /></p>
+					<p><img src="images/software/encrypt/encrypt15.png" /></p>
 
 					<p>If you make any changes to the decrypted file, you need to delete the existing encrypted file and re-encypt the changed file.</p>
 
@@ -1188,13 +1188,16 @@ i    {font-style: italic;}
 					freedom to modify their system as they see fit. There are numerous desktop environments in GNU/Linux. Including but not limited to:</p>
 
 					<ul class="feature-grid">
-							<li><i> </i>Enlightenment</li>
+							<li><i>  </i>Budgie</li>
+							<li><i>  </i>Cinnamon</li>
+							<li><i>  </i>Enlightenment</li>
 							<li><i>  </i>Gnome</li>
-							<li><i>  </i>Mate</li>
-							<li><i> </i>KDE</li>
+							<li><i>  </i>KDE</li>
 							<li><i>  </i>LXDE</li>
-							<li><i>  </i>Razor-qt</li>
 							<li><i>  </i>LXQT</li>
+							<li><i>  </i>Mate</li>
+							<li><i>  </i>Pantheon</li>
+							<li><i>  </i>Razor-qt</li>
 						</ul><br>
 
 					<p>If you desire to install another desktop environment, we cannot provide specific instructions on how to do this. There are far too many variables involved and much can go wrong.

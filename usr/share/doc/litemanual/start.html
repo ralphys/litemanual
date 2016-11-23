@@ -88,16 +88,16 @@ i    {font-style: italic;}
 
 					<h2>Welcome to Linux Lite - simple, fast, free.</h2>
 					<p>Thank you for choosing the Linux Lite Operating System.</p>
-					<p><b>Version:</b> 1.1-0110 for Series: 2.8 | Date published:  15th February, 2016</p>
-					<p><b>What's New:</b> Updated Hardware DB links</p>
-					<p><b>Authors:</b> Bill Hahnen, Milos Pavlovic, Adam Grubbs, John Jenkins, Jerry Bezencon</p>
+					<p><b>Version:</b> 3.2 | Date published:  22nd November, 2016</p>
+					<p><b>What's New:</b> New guide, <a href="software.html#literepos"> Lite Software - Change Repository Location</a></p>
+					<p><b>Authors:</b> Jerry Bezencon, Bill Hahnen, Milos Pavlovic, Adam Grubbs, John Jenkins</p>
 
 					<h2><a name="opsystem">Operating System</a></h2>
 					<ul class="feature-grid">
-							<li><i> </i>Current Release Name: Linux Lite 2.8</li>
+							<li><i> </i>Current Release Name: Linux Lite 3.2</li>
 							<li><i>  </i>Architecture: 32bit and 64bit</li>
-							<li><i> </i>Software Base: Ubuntu 14.04.3 LTS</li>
-							<li><i>  </i>Desktop Environment: XFCE 4.10</li>
+							<li><i> </i>Software Base: Ubuntu 16.04.1 LTS</li>
+							<li><i>  </i>Desktop Environment: XFCE 4.12</li>
 							<li><i>  </i>Media Type: DVD, 2gb or larger USB device</li>
 						</ul><br>
 
@@ -117,7 +117,6 @@ i    {font-style: italic;}
             				<a href="#appfinder">Application Finder</a><br />
             				<a href="#createsysreport">Create System Report</a><br />
             				<a href="#forums">Forums</a><br />
-            				<a href="#gamesmenu">Games: (32bit only version) Menu</a><br />
             				<a href="#gensoftsup">General Software Support</a><br />
             				<a href="#graphicsmenu">Graphics Menu</a><br />
             				<a href="#helpmanual">Help Manual</a><br />
@@ -127,9 +126,11 @@ i    {font-style: italic;}
 					<a href="#kbfunction">Keyboard Function</a><br />
             				<a href="#menus">Menus</a><br />
             				<a href="#multimediamenu">Multimedia Menu</a><br />
+            				<a href="#mycomputermenu">My Computer Menu</a><br />
             				<a href="#officemenu">Office Menu</a><br />
             				<a href="#postinst">Post Installation</a><br />
 					<a href="#secboot">Secure Boot</a><br />
+					<a href="#liteinfo">Share Hardware Configuration</a><br />
             				<a href="#socnetworks">Social Networks</a><br />
             				<a href="#support">Support</a><br />
             				<a href="#systemmenu">System Menu</a><br />
@@ -137,12 +138,13 @@ i    {font-style: italic;}
 
 					<h2><a name="inclsoftware">Included Software</a></h2>
 					<p>Help Manual, GParted, LibreOffice Writer, LibreOffice Calc, LibreOffice Impress, Scanner, Bluetooth, XFBurn CD/DVD Burner,
-					VLC Media Player, Firefox Web Browser with Flash, OpenJDK Java, Steam (32bit), Thunderbird Email, Gimp Image Editor, Leafpad Text Editor,
-					File Roller Archive Manager, Lite User Manager, Lite Software, Lite Welcome, Lite Tweaks, Lite Upgrade, Lite Fonts, Whisker Menu.</p>
+					VLC Media Player, Firefox Web Browser with Flash, OpenJDK Java, Thunderbird Email, Backups, Gimp Image Editor, Leafpad Text Editor,
+					File Roller Archive Manager, Lite User Manager, Lite Software, Lite Welcome, Lite Tweaks, Lite Themes, Lite Upgrade, Lite Info 
+					(Share Hardware Configuration), Systemback, Whisker Menu.</p>
 
 					<h2><a name="postinst">Post Installation</a></h2>
-					<p>The first thing you should do after a new install is click on Menu, Install Updates. Next if you have any wireless, wired,
-					graphics card devices or other hardware devices, click on Menu, Settings, Install Drivers. Please read the information
+					<p>The first thing you should do after a new install is click on <b>Menu, Favorites, Install Updates</b>. Next if you have any wireless, wired,
+					graphics card devices or other hardware devices, click on <b>Menu, Settings, Install Drivers</b>. Please read the information
 					provided very carefully before choosing a suitable driver. It is usually best to choose the recommended driver. You can look through how to
 					connect to the internet by clicking <a href="network.html">here</a>. More information on drivers can be found <a href="hardware.html">here</a>.</p>
 
@@ -151,9 +153,17 @@ i    {font-style: italic;}
 					you wish to dual boot with Linux Lite, we recommend you set your Bios to Legacy mode then reinstall Windows,
 					and then Linux Lite. Linux Lite does not support or advocate the use of Secure Boot.</p>
 
+					<h2><a name="">Disable Secure Boot in Windows</a></h2>
+					<p>See the following link for generic instructions on how to disable Secure Boot in Windows (configuration will differ slightly depending on the manufacturer)
+					 - <a href="http://www.youtube.com/watch?v=WWGlJVV3djw" target="_blank">http://www.youtube.com/watch?v=WWGlJVV3djw</a></p>
+
 					<h2><a name="uefi">UEFI</a></h2>
 					<p>Linux Lite can work with UEFI, the solution requires an intermediate knowledge of linux.
 					A tutorial can be found here - <a href="http://www.youtube.com/watch?v=ZOmZXxXPwBU" target="_blank">http://www.youtube.com/watch?v=ZOmZXxXPwBU</a></p>
+
+					<h2><a name="">Changing Bios mode from UEFI to Legacy</a></h2>
+					<p>See the following link for generic instructions on how to change the BIOS Mode from UEFI to Legacy (configuration will differ slightly depending on the manufacturer)
+					 - <a href="http://www.youtube.com/watch?v=fmMLoYmvNyg" target="_blank">http://www.youtube.com/watch?v=fmMLoYmvNyg</a></p>
 
 					<h2><a name="kbfunction">Keyboard Function</a></h2>
 					<p>On some laptops you may have to enable <b>Numlock</b> as it is disabled by default. You could also try <b>FN + Numlock</b> to use your keys,
@@ -172,6 +182,13 @@ i    {font-style: italic;}
 					<h2><a name="createsysreport">Create System Report</a></h2>
 					<p>Linux Lite comes with the <b>Create System Report</b> tool found under <b>Menu, System</b>. This tool helps our Support team more
 					accurately identify any problems you may be having, thus providing you with better service. Click <a href="hardware.html#sysreport">here</a> to learn more about this.</p>
+
+					<h2><a name="liteinfo">Share Hardware Configuration</a></h2>
+					<p>The purpose of the Linux Lite Hardware Database, is to give people an idea of different computer configurations from within a Linux Lite Series. 
+					The Linux Lite Hardware Database displays <b>Make and Model, CPU, Graphics, Audio, Network and Storage</b> technical specifications. 
+					This provides a snapshot of the kind of computers people are able to use with Linux Lite. No personal or security related information is gathered or displayed. 
+					Click on <b>Menu, System, Share Hardware Configuration</b> to share your hardware and help others.
+					Click <a href="https://www.linuxliteos.com/hardware.php" target="_blank">here</a> to go to the Linux Lite Hardware Database.</p>
 
 					<h2><a name="support">Support</a></h2>
 					<p>If you cannot find the answer to your question in this Manual, please choose from the following:</p>
@@ -195,7 +212,7 @@ i    {font-style: italic;}
 					Operating System, many questions can also be answered by simply entering the issue you are having into your favorite search engine.</p>
 
 					<h2><a name="socnetworks">Social Networks</a></h2>
-					<p><b>Facebook: </b><a target="_blank" href="https://www.facebook.com/pages/Linuxlite/572323192787066">https://www.facebook.com/pages/Linuxlite/572323192787066</a><br />
+					<p><b>Facebook: </b><a target="_blank" href="https://www.facebook.com/linuxliteos">https://www.facebook.com/linuxliteos</a><br />
 					<b>Twitter: </b><a target="_blank" href="https://twitter.com/LinuxLite">https://twitter.com/LinuxLite</a><br />
 					<b>Google+: </b><a href="https://plus.google.com/+linuxliteos/" target="_blank">https://plus.google.com/+linuxliteos/</a><br />
 					<b>LinkedIn: </b><a href="http://www.linkedin.com/in/jerrybezencon">http://www.linkedin.com/in/jerrybezencon</a></p>
@@ -212,15 +229,16 @@ i    {font-style: italic;}
 					<b>Create System Report</b> - Creates a comprehensive hardware and software report for your system.<br />
 					<b>Install/Remove Software</b> - Install and Remove software with <a href="software.html#software">Synaptic Package Manager</a>.<br />
 					<b>Lite Tweaks</b> - Provides system wide cleaning of your computer, and other useful tools.<br />
-					<b>Log File Viewer</b> - View system your logs, helps with troubleshooting.<br />
 					<b>Login Settings</b> - Enable or disable automatic login for 1 user.<br />
 					<b>Network Share Settings</b> - Here you can configure your computer to connect to your Windows shares.<br />
 					<b>NTFS Configuration Tool</b> - Allows you to access ntfs file systems on external drives (enabled by default).<br />
 					<b>Partition Drives</b> - View and edit your hard drive partitions with <a target="_blank" href="http://gparted.sourceforge.net/">GParted</a> program.<br />
 					<b>Printers</b> - Install and set up printers.<br />
 					<b>Resource Usage</b> - Shows you how much cpu and memory your computer is using. Also displays system processes.<br />
+					<b>Share Hardware Configuration</b> - <a target="_blank" href="http://www.linuxliteos.com/hardware.php">Share hardware information with the community</a>.<br />
 					<b>Systemback</b> - System restore and creation application, <a target="_blank" href="http://sourceforge.net/projects/systemback/">Systemback.</a><br />
 					<b>System Information</b> - View hardware like your cpu, memory, graphics card etc in detailed information.<br />
+					<b>System Log</b> - View system your logs, helps with troubleshooting.<br />
 					<b>Task Manager</b> - An overview of currently running computer processes. You can kill applications here to.</p>
 
 					<h2><a name="officemenu">Office Menu</a></h2>
@@ -253,14 +271,6 @@ i    {font-style: italic;}
 					<b>Image Viewer</b> - Preview your pictures with this viewer.<br />
 					<b>Scanner</b> - Scan your documents and pictures.</p>
 
-					<h2><a name="gamesmenu">Games: (32bit only version) Menu</a></h2>
-					<p><img src="images/start/menus/menu_games.png"></p>
-
-					<p><b>Steam</b> - The Steam for Linux client, with games like Dota 2, Team Fortress 2 and Counterstrike.<br />
-					<a target="_blank" href="http://www.humblebundle.com">Buy Humble Bundle Games</a> - A link to the Humble Bundle games website, an online indie games store.<br />
-					<a target="_blank" href="https://wiki.ubuntu.com/Valve">Steam Driver Information</a> - Essential information for driver requirements to run Steam. <b>Please read first</b>.<br />
-					<a target="_blank" href="http://store.steampowered.com/">Steam Homepage</a> - A link to the Steam homepage.</p>
-
 					<h2><a name="accessoriesmenu">Accessories Menu</a></h2>
 					<p><img src="images/start/menus/menu_accessories.png"></p>
 
@@ -274,8 +284,13 @@ i    {font-style: italic;}
 					<b>Terminal</b> - Sometimes referred to as the &#39;shell&#39; a terminal is a place to input various system commands.<br />
 					<b>Text Editor</b> - A basic text editor, a program to type text into. Can also be used to create and/or edit configuration files.</p>
 
+					<h2><a name="mycomputermenu">My Computer Menu</a></h2>
+					<p><img src="images/start/menus/menu_mycomputer.png"></p>
+
+					<p>Conveniently placed shortcuts to your file system and all the folders in your home directory.<br /></p>
+
 					<h2><a name="appfinder">Application Finder</a></h2>
-					<p><img src="images/start/runprogram/run_program.jpg"></p>
+					<p><img src="images/start/runprogram/run_program.png"></p>
 
 					<p>Clicking on this, you can run any program that is installed on the computer by its name.</p>
 

@@ -5,4 +5,4 @@
 # Creation Date - 10th May, 2014
 # Website - http://www.linuxliteos.com
 
-xdg-open /usr/share/doc/litemanual/index.html
+exo-open /usr/share/doc/litemanual/index.html

@@ -128,6 +128,13 @@ i    {font-style: italic;}
 					<p>If you have a modern video card and you would like to use the latest driver, continue reading below.</p>
 
                 			<h2><a name="ati">Graphics - ATI</a></h2>
+					<p><b>NOTE: Linux Lite is based on Ubuntu 16.04 'Xenial' and therefore does not support the ATI Catalyst drivers. If  you want to use the ATI Catalyst drivers 
+					we recommend you install <a href="https://sourceforge.net/projects/linuxlite/files/2.8/" target="_blank">Linux Lite 2.8</a> which is supported until April 2019.</p>
+					<p>If you have an ATI graphics card, there is no need to install any graphics drivers in the Linux Lite 3.x Series.</b><p>
+					<p><img src="images/hardware/ati/ati-no-support.png"></p>
+
+<!-- NO support for ATI Catalyst drivers in Linux Lite 3.x Series
+
 					<p>If you&#39;re not sure whether or not you have ATI graphics, open up a terminal and run this command:</p>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
@@ -141,35 +148,37 @@ i    {font-style: italic;}
 
 					<p>The program will then scan your computer for any drivers that you may need, this may take some time.</p>
 					<p>When it has finished scanning, you will see a dialog box similar to the one below.</p>
-					<p><img src="images/hardware/ati/ati5.png"></p>
+					<p><img src="images/hardware/ati/ati2.png"></p>
 
 					<p>For <b>ATI</b>, we would select: <b>Using Video Driver for the AMD graphics accelerators from fglrx (proprietary) </b>(second in the list in the above picture).
 					Now click on <b>Apply Changes</b>. Enter your password when prompted.</p>
 					<p><img src="images/hardware/driverpassword.png"></p>
 
 					<p> You will then see this dialog as it downloads and installs the driver:</p>
-					<p><img src="images/hardware/ati/ati5a.png"></p>
+					<p><img src="images/hardware/ati/ati3.png"></p>
 
 					<p>When the driver has finished, click on <b>Close. Now restart your computer.</b></p>
 					<p>Now we need to make sure that our new <b>Menu</b> entries launch correctly. Go to <b>Menu, Settings, Main Menu</b>.</p>
-					<p><img src="images/hardware/ati/ati6.png"></p>
+					<p><img src="images/hardware/ati/ati4.png"></p>
 
 					<p>A new window will pop up, select <b>Settings</b> on the left then the first AMD menu entry on the right and click on <b>Properties</b>.
 					This will bring up a new window, edit each field so that it looks the same as in the picture below. When you have finished
 					editing, click on <b>OK </b>on the<b> Launcher Properties </b>window.</p>
-					<p><img src="images/hardware/ati/ati7.jpg"></p>
+					<p><img src="images/hardware/ati/ati5.jpg"></p>
 
 					<p>Now click on the second AMD menu entry on the right and click on <b>Properties</b>. This will bring up a new window, edit each field so that it
 					looks the same as in the picture below. When you have finished editing, click on <b>OK </b>on the<b> Launcher Properties </b>
 					window. Now click on <b>Close</b> on the <b>Main Menu</b> window.</p>
-					<p><img src="images/hardware/ati/ati8.jpg"></p>
+					<p><img src="images/hardware/ati/ati6.jpg"></p>
 
 					<p>The <b>AMD Catalyst</b> menu item will let you configure your graphics, with limited access in the <b>Catalyst Control Center</b>.</p>
-					<p><img src="images/hardware/ati/ati9.jpg"></p>
+					<p><img src="images/hardware/ati/ati7.jpg"></p>
 
 					<p>The <b>AMD Catalyst Admin</b> window will give you full access to all the settings in the <b>Catalyst Control Center</b> including
 					options like&nbsp; <b>Switchable Graphics</b> if you have it. You will need to enter your password to access this control panel.</p>
-					<p><img src="images/hardware/ati/ati10.jpg"></p>
+					<p><img src="images/hardware/ati/ati8.jpg"></p>
+
+NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
 
 					<p><a href="#top">Top of page</a></p>
 
@@ -187,10 +196,10 @@ i    {font-style: italic;}
 					<p><img src="images/hardware/install_drivers.png"></p>
 
 					<p>The program will then scan your computer for any drivers that you may need, this may take some time.</p>
-					<p><img src="images/hardware/nvidia/nvidiascan.png"></p>
+					<p><img src="images/hardware/nvidia/nvidia2.png"></p>
 
 					<p>When it has finished scanning, you will see a dialogue box similar to the one below.</p>
-					<p><img src="images/hardware/nvidia/nvidia2.png"></p>
+					<p><img src="images/hardware/nvidia/nvidia3.png"></p>
 
 					<p>Generally you will want to select the current version, the tested driver. In the above example we selected the <b>Using NVIDIA binary driver (proprietary, tested).</b></p>
 					<p><b>NOTE:</b> If you plan to play graphic intensive games or you have a lot of Steam games, you need to select the <b>proprietary, tested</b> driver.</p>
@@ -203,11 +212,11 @@ i    {font-style: italic;}
 					<p>When the driver has finished, restart your computer.</p>
 
 					<p>Now head over to <b>Menu, Settings, NVIDIA X Server Settings</b>.</p>
-					<p><img src="images/hardware/nvidia/nvidia11.jpg"></p>
+					<p><img src="images/hardware/nvidia/nvidia5.jpg"></p>
 
 					<p>Once you open <b>NVIDIA X Server Settings,</b> you will be brought to a window similar to this one. It's best to allow the resolution to be set
 					to auto for most monitors, however you can adjust it manually using the drop down menu <b>Resolution</b>. </p>
-					<p><img src="images/hardware/nvidia/nvidia8.jpg"></p>
+					<p><img src="images/hardware/nvidia/nvidia6.jpg"></p>
 
 					<p><b>Test your settings before saving.</b> When you are happy with your changes, click on <b>Save to X Configuration File</b> (you will be prompted for your
 					password to write the xconfig file), Then click on <b>Quit</b> to exit the settings window. Any adjustments should be automatic.</p>
@@ -222,7 +231,7 @@ i    {font-style: italic;}
 						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install nvidia-prime nvidia-331-updates nvidia-settings</code></pre><br>
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install nvidia-prime nvidia-361-updates nvidia-settings</code></pre><br>
 
 					<p>Now restart your computer.</p>
 
@@ -288,38 +297,38 @@ i    {font-style: italic;}
 
 					<h2><a name="sound">Sound Configuration</a></h2>
 					<p>The audio icon can be found in the lower right hand corner, commonly referred to as the system tray.</p>
-					<p><img src="images/hardware/icons.png"></p>
+					<p><img src="images/hardware/sound/sound_config1.png"></p>
 
 					<p>You can drag the main slider to the left or right to control main volume. Now click on <b>Sound Settings</b>.
-					<p><img src="images/hardware/sound/audio1.jpg"></p>
+					<p><img src="images/hardware/sound/sound_config2.png"></p>
 
 					<p>You will be brought to a window similar to this one. On the tabs you will see <b>Playback</b>, for adjusting the volume of
 					programs currently playing or capable of playback. <b>Recording</b> for programs currently using recording devices, namely your
 					microphone. <b>Output Devices</b> is for main configuration of sound levels across your system. <b>Configuration</b>
 					is used for selecting profiles and misc settings.</p>
-					<p><img src="images/hardware/sound/audio2.png"></p>
+					<p><img src="images/hardware/sound/sound_config3.png"></p>
 
 					<p>In the window above you can adjust volume settings for output. Using the blue sliding bars. You can toggle mute with the
-					speaker icon: <img src="images/hardware/sound/audio7.png"> It will change it's background color when active: <img src="images/hardware/sound/audio8.png">
-					You can lock channels using: <img src="images/hardware/sound/audio9.png"> so that when volume is raised or lowered it is done
-					equally. Or you can toggle and set the volume to be louder on one side. This icon: <img src="images/hardware/sound/audio10.png">is
+					speaker icon: <img src="images/hardware/sound/sound_config4.png"> It will change it's background color when active: <img src="images/hardware/sound/sound_config5.png">
+					You can lock channels using: <img src="images/hardware/sound/sound_config6.png"> so that when volume is raised or lowered it is done
+					equally. Or you can toggle and set the volume to be louder on one side. This icon: <img src="images/hardware/sound/sound_config7.png">is
 					used to specify the default device used by PulseAudio.</p>
 
 					<p><b>Input Devices </b>- this includes microphones and other line-in devices, such as TV tuner cards with line in. Adjusting the
 					levels and settings are the same method as described above.</p>
-					<p><img src="images/hardware/sound/audio3.png"></p>
+					<p><img src="images/hardware/sound/sound_config8.png"></p>
 
 					<p><b>Configuration </b>- this lists known profiles for your sound card. In most cases there is no need to select anything here
 					unless you intend to disable your sound completely, or have a unique profile setting, such as surround sound, mono, or stereo out.</p>
-					<p><img src="images/hardware/sound/audio4.png"></p>
+					<p><img src="images/hardware/sound/sound_config9.png"></p>
 
 					<p><b>Recording </b>- will list programs currently using an input method, be it line-in or a microphone. You can toggle access per program and or adjust volume
 					per program here. The method used is the same as mentioned above.</p>
-					<p><img src="images/hardware/sound/audio5.png"></p>
+					<p><img src="images/hardware/sound/sound_config10.png"></p>
 
 					<p><b>Playback </b>- will list programs currently producing audio, or able to. You can toggle access per program and
 					or adjust volume per program here. The method used is the same as mentioned above.</p>
-					<p><img src="images/hardware/sound/audio6.png"></p>
+					<p><img src="images/hardware/sound/sound_config11.png"></p>
 
 					<p><b>Notes</b>: Being able to toggle on mute and unmute on multiple things can cause issues. And at times the device may
 					be muted upon install. Show caution here as you may mute a certain program and forget about it entirely. If unmuting and adjusting
@@ -389,7 +398,7 @@ i    {font-style: italic;}
 					Right click on the icon for options.</p>
 					<p><img src="images/hardware/printing/printing-hplip.png"></p>
 
-					<h2><a name="canonprinters">Canon Printers on Linux Lite</a></h2>
+					<h2><a name="canonprinters">Canon Printers on Linux Lite (requires testing on 3.x Series)</a></h2>
 					<p>If your Canon printer is not supported after a new install of Linux Lite, try the following. Open a terminal and do:</p>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
@@ -460,7 +469,7 @@ i    {font-style: italic;}
 					<p><img src="images/hardware/bootissues/pass4.png"></p>
 
 					<p>After which shortly you will get your normal login screen. Now you can login and install your <a href="#graphics">graphics drivers</a>.</p>
-					<p><img src="images/hardware/bootissues/login2.png"></p>
+					<p><img src="images/install/login.png"></p>
 
 					<h2><a name="dualboot">Dual Boot Modification/Repair</a></h2>
 					<p>You may be in a situation where you want to modify or repair your dual boot set up.</p>
@@ -470,19 +479,16 @@ i    {font-style: italic;}
 						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:yannubuntu/boot-repair</code></pre><br>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo sed 's/trusty/saucy/g' -i /etc/apt/sources.list.d/yannubuntu-boot-repair-trusty.list</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install -y boot-repair &amp;&amp; (boot-repair &amp;)</code></pre><br>
 
 						<p>After the install <b>Boot-Repair</b> will launch automatically and scan your computer for your boot configuration and other operating systems.</p>
-						<p><img src="images/hardware/bootrep/bootrep1.jpg"></p>
+						<p><img src="images/hardware/bootrep/bootrep1.png"></p>
 
 						<p>Click <b>Advanced options</b> to see all the features.</p>
-						<p><img src="images/hardware/bootrep/bootrep2.jpg"></p>
+						<p><img src="images/hardware/bootrep/bootrep2.png"></p>
 
 						<p>Now use <b>Boot-Repair</b> to carry out the task you need doing. <b>Boot-Repair</b> is in <b>Menu, System</b>. More information can be found here -
 						<a href="https://help.ubuntu.com/community/Boot-Repair" target="_blank">https://help.ubuntu.com/community/Boot-Repair</a> </p>
