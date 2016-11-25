@@ -451,13 +451,15 @@ NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
 					<h2><a name="bluetooth">Bluetooth - Enabling full support</a></h2>
 					<p>Credit to - N4RPS, Wirezfree and colin23erk <a target="_blank" href="https://www.linuxliteos.com/forums/network/(solved)-enabling-full-bluetooth-support-in-linux-lite/">https://www.linuxliteos.com/forums/network/(solved)-enabling-full-bluetooth-support-in-linux-lite/</a>.</p>
 					<p>This has been tested on the Targus AC10US1, but does not work on some of the newer Broadcom adapters. It also doesn't work on the Intel integrated WiFi/Bluetooth internal cards in certain HP laptops. 
-					The good news is that all this 'works like a champ' on the super cheap USB Bluetooth adapters available on Amazon or eBay</p>
+					The good news is that all this 'works like a champ' on the super cheap USB Bluetooth adapters available on Amazon or eBay.</p>
 
-					<p>1. Create the folowing file /etc/bluetooth/audio.conf file:</p>
+					<p>1. Create the following file <b>/etc/bluetooth/audio.conf</b> file:</p>
 
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/bluetooth/audio.conf</code></pre><br>
+
+					<p>Copy and paste the following into it:</p>
 
 					<table width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
