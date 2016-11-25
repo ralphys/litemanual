@@ -86,7 +86,8 @@ i    {font-style: italic;}
 					<div class="grid-about">
 					</div>
 
-            				<p><a href="#booting">Booting Issues</a><br />
+            				<p><a href="#bluetooth">Bluetooth - Enabling full support</a><br />
+            				<a href="#booting">Booting Issues</a><br />
             				<a href="#canonprinters">Canon Printers on Linux Lite</a><br />
             				<a href="#sysreport">Create System Report tool</a><br />
             				<a href="#install-multi-drive">Dual Boot - Multiple Drives</a><br />
@@ -431,6 +432,7 @@ NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:michael-gruz/canon-trunk</code></pre><br>
+
 						<div class="codeheader">Terminal Command:</div>
 						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
@@ -445,6 +447,49 @@ NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
                 			<!--<p><b><a name="wirelessdev"></a>Wireless Devices</b></p>
 					<p>To be written.</p>
 					<a href="#top">Top of page</a></p>-->
+
+					<h2><a name="bluetooth">Bluetooth - Enabling full support</a></h2>
+					<p>Credit to - N4RPS, Wirezfree and colin23erk <a target="_blank" href="https://www.linuxliteos.com/forums/network/(solved)-enabling-full-bluetooth-support-in-linux-lite/">https://www.linuxliteos.com/forums/network/(solved)-enabling-full-bluetooth-support-in-linux-lite/</a>.</p>
+					<p>This has been tested on the Targus AC10US1, but does not work on some of the newer Broadcom adapters. It also doesn't work on the Intel integrated WiFi/Bluetooth internal cards in certain HP laptops. 
+					The good news is that all this 'works like a champ' on the super cheap USB Bluetooth adapters available on Amazon or eBay</p>
+
+					<p>1. Create the folowing file /etc/bluetooth/audio.conf file:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/bluetooth/audio.conf</code></pre><br>
+
+					<table width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br>[General]<br>
+						Enable = Source,Sink,Headset,Gateway,Control,Media<br>
+						Disable = Socket<br><br>
+
+						HFP=false<br><br>
+
+						[A2DP]<br>
+						SBCSources=1<br>
+						MPEG12Sources=0<br><br></td>
+					</tr>
+					</table><br>
+
+					<p>Save and close the file.</p>
+
+					<p>2. Add the following PPA:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:cschramm/blueman</code></pre><br>
+
+					<p>3. Then do:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update && sudo apt-get install blueman pavucontrol pulseaudio-module-bluetooth -y</code></pre><br>
+
+					<p>4. Reboot. The Bluetooth Manager will now allow Audio Sink (A2DP) to be enabled.</p>
+
+					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="keyboard">Keyboard Related</a></h2>
 					<p>You can find information for adding or modifying hotkeys (or shortcuts) on the <a target="_blank" href="http://docs.xfce.org/xfce/xfce4-settings/keyboard">XFCE wiki</a>.</p>
