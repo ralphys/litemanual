@@ -1,0 +1,13 @@
+Package: lite-manual
+Version: 2.0-0100-linuxlite
+Essential: yes
+Section: base
+Priority: required
+Installed-Size: 8600
+Depends: xdg-utils
+Homepage: http://www.linuxliteos.com
+Maintainer: Jerry Bezencon<valtam@linuxliteos.com>
+Architecture: all
+Description: Linux Lite Help and Support Manual
+ The Help and Support Manual for Linux Lite.
+ Web, mobile and tablet friendly.
