@@ -3,7 +3,7 @@ Version: 2.0-0100-linuxlite
 Essential: yes
 Section: base
 Priority: required
-Installed-Size: 8600
+Installed-Size: 7900
 Depends: xdg-utils
 Homepage: http://www.linuxliteos.com
 Maintainer: Jerry Bezencon<valtam@linuxliteos.com>
