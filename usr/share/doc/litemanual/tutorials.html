@@ -92,7 +92,8 @@ i    {font-style: italic;}
 					<div class="grid-about">
 					</div>
 
-            				<p><a href="#catfish">Catfish</a> - a file and folder search utility.<br />
+            				<p><a href="#antivirus">AntiVirus</a> - scan your system for viruses.<br />
+            				<a href="#catfish">Catfish</a> - a file and folder search utility.<br />
             				<a href="#keepassx">KeePassX</a> - create and store strong passwords.<br />
 					<!-- <a href="#plank">Plank Dock</a> - docking area for program launchers.<br /> -->
             				<a href="#systembackres">Systemback</a> - Creating a Restore Point.<br />
@@ -116,6 +117,73 @@ i    {font-style: italic;}
 
 					<p>The Synaptic Package Manager below. Learn how to use it <a href="software.html#instsoftware">here</a>.</p>
 					<p><img src="images/software/insoft/synaptic_search.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<p><h2><a name="antivirus">AntiVirus</a></h2></p>
+
+					<p>Viruses can occur on any computer system. The following tutorial is a collection of commands that allows you to scan your entire system for viruses.</p>
+
+					<p>Install the virus scanner:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install clamav</code></pre><br>
+
+					<p>Download the latest virus definitions:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>If you get the following error in your terminal:</p>
+
+						<div class="codeheader">Terminal:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">ERROR: /var/log/clamav/freshclam.log is locked by another process</code></pre><br>
+
+					<p>Run the following command in your terminal:</p>
+
+						<div class="codeheader">Terminal:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo rm -rf /var/log/clamav/freshclam.log</code></pre><br>
+
+					<p>Then run the following command again in your terminal:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>Once your virus database is up to date, proceed to scan your system for viruses:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo clamscan -r -i / | grep FOUND >> /home/youruser/virus-scan-report.txt</code></pre><br>
+
+					<p>Where <b>youruser</b> is your username.</p>
+					<p>The scan will take anywhere from several minutes to several hours, depending on how many files there are to scan.</p>
+
+					<p>To just scan your home folder, run the following:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">clamscan -r -i /home/youruser/ | grep FOUND >> /home/youruser/virus-scan-report.txt</code></pre><br>
+
+					<p>Where <b>youruser</b> is your username.</p>
+
+					<p>When the scan has finished, open the <b>virus-scan-report.txt</b> in your home folder and look to see where any viruses may be residing:</p>
+
+					<p><img src="images/tutorials/antivirus/antivirus1.png" /></p>
+
+					<p>You can then go into the folder where the virus was found and delete it.</p>
+
+					<p>Be sure to run the following command in your terminal before running a new virus scan to ensure your virus definitions are up to date:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo freshclam</code></pre><br>
+
+					<p>Then run your new virus scan.</p>
 
 					<p><a href="#top">Top of page</a></p>
 
