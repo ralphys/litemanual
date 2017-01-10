@@ -88,7 +88,6 @@ i    {font-style: italic;}
 
             				<p><a href="#bluetooth">Bluetooth - Enabling full support</a><br />
             				<a href="#booting">Booting Issues</a><br />
-            				<a href="#canonprinters">Canon Printers on Linux Lite</a><br />
             				<a href="#sysreport">Create System Report tool</a><br />
             				<a href="#install-multi-drive">Dual Boot - Multiple Drives</a><br />
             				<a href="#dualboot">Dual Boot - Modification/Repair</a><br />
@@ -412,49 +411,6 @@ NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
 					<p>Once it&#39;s installed go to <b>Menu, Settings, HPLIP Toolbox</b>. This will place and HP icon in your tray where you can configure and manage your HP printer.
 					Right click on the icon for options.</p>
 					<p><img src="images/hardware/printing/printing-hplip.png"></p>
-
-					<h2><a name="canonprinters">Canon Printers on Linux Lite (requires testing on 3.x Series)</a></h2>
-					<p>If your Canon printer is not supported after a new install of Linux Lite, try the following. Open a terminal and do:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">wget http://old-releases.ubuntu.com/ubuntu/pool/universe/t/tiff3/libtiff4_3.9.7-2ubuntu1_i386.deb</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo dpkg -i libtiff4_3.9.7-2ubuntu1_i386.deb</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install -f</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">rm libtiff*</code></pre><br>
-
-					<p>OR if you are on 64bit:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">wget http://old-releases.ubuntu.com/ubuntu/pool/universe/t/tiff3/libtiff4_3.9.7-2ubuntu1_amd64.deb</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo dpkg -i libtiff4_3.9.7-2ubuntu1_amd64.deb</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get install -f</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">rm libtiff*</code></pre><br>
-
-					<p>Then do:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo add-apt-repository ppa:michael-gruz/canon-trunk</code></pre><br>
-
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo apt-get update</code></pre><br>
-
-					<p>Now open <b>Menu, System, Install/Remove Software</b> and search for your printer name. For example if you had the Canon
-					<b>MX870Series</b> Printer then you must use the following format:</p>
-					<p><b>mx870series</b></p>
-					<p>in the search box. Now double click on your printer and click on the <b>Apply</b> button on the toolbar. Now add your Printer starting from Step 3 above.</p>
 
 					<p><a href="#top">Top of page</a></p>
 
