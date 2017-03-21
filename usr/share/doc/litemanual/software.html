@@ -92,30 +92,32 @@ i    {font-style: italic;}
 					<div class="grid-about">
 					</div>
 
-            				<p><a href="#ppa">Adding a PPA</a><br />
-            				<a href="#deskenv">Changing Desktop Environments</a><br />
-            				<a href="#archive">Creating and Extracting Zip files</a><br />
-            				<a href="#encrypt">File Encryption</a><br />
-            				<a href="#heldpack">Held Packages</a><br />
-					<a href="#software">Installing &amp; Removing Software</a><br />
-            				<a href="#instsoftware">Installing Software</a><br />
-            				<a href="#winprogs">Linux Equivalents of Windows Programs</a><br />
-					<a href="#literepos">Lite Software - Change Repository Location</a><br />
-            				<a href="#installsoftware">Lite Software - Install Software</a><br />
-            				<a href="#removesoftware">Lite Software - Remove Software</a><br />
-            				<a href="#tweaks">Lite Tweaks</a><br />
-            				<a href="#sources">Software Updates by Country</a><br />
+		      		<p><a href="#ppa">Adding a PPA</a><br />
+          			<a href="#deskenv">Changing Desktop Environments</a><br />
+					<a href="#archive">Creating and Extracting Zip files</a><br />
+        			<a href="#encrypt">File Encryption</a><br />
+					<a href="#software">Getting Software</a><br />
+        			<a href="#heldpack">Held Packages</a><br />
+        			<a href="#instsoftware">Installing Software</a><br />
+        			<a href="#winprogs">Linux Equivalents of Windows Programs</a><br />
+					<a href="#litesoftware">Lite Software</a><br />
+					<a href="#literepos">&emsp;- Change Repository Location</a><br />
+          			<a href="#installsoftware">&emsp;- Install Software</a><br />
+					<a href="#removesoftware">&emsp;- Remove Software</a><br />
+        			<a href="#tweaks">Lite Tweaks</a><br />
+					<a href="#tweaks-autoremove-packages">&emsp;- Autoremove Packages</a><br />
 					<a href="#uninstsoftware">Uninstalling Software</a><br />
 					<a href="#updates">Updates</a><br />
-            				<a href="#wine">Wine - Run Windows programs</a></p>
+					<a href="#sources">&emsp;- Software Updates Country Location</a><br />
+          			<a href="#wine">Wine - Run Windows programs</a></p>
 
-					<h2><a name="software">Installing &amp; Removing Software</a></h2>
-					<p>Installing and removing software in Linux is much easier than in Windows. The vast majority of programs that you may want/need to install are all centrally
+					<h2><a name="software">Getting Software</a></h2>
+					<p>Getting software on Linux is easier than on Windows. The vast majority of programs that you may want/need to install are all centrally
 					located in what are called software repositories (repos).  Rather than searching the web, downloading programs from various sites (some of which may not be reliable),
 					running the installer, rebooting, etc., available software is all centrally located and available for installation in seconds.  The packages/(programs) in the
 					repositories are tested, approved for inclusion in the repos and securely signed to insure their validity.</p>
-					<p>There are a few common methods for installing and removing software. Linux Lite comes with the Synaptic Package Manager.  When you already know the name of
-					the program you want, Synaptic makes installing easy.</p>
+					<p>There are a few common methods for installing and removing software. Linux Lite comes with <a href="#litesoftware">Lite Software</a> and Synaptic Package Manager applications.
+					When the program you want is not listed in Lite Software and you already know its name, Synaptic Package Manager makes installing easy.</p>
 
 					<p><b>IMPORTANT: Before you run Install/Remove Software for the first time, <a href="#sources">read this first</a>. Then come back to here to learn how to
 					install and remove software.</b></p>
@@ -143,7 +145,6 @@ i    {font-style: italic;}
 					<p><img src="images/software/insoft/app_finder.png"></p>
 
 					<h2><a name="uninstsoftware">Uninstalling Software</a></h2>
-					<h2> Software</h2>
 					<p><b>1. </b>Uninstalling software is the reverse process of installing software in the <b>Synaptic Package Manager</b>. Type
 					the name of the software into the <b>Quick Filter</b> or the spy glass box:
 					<img src="images/software/insoft/spyglass.png"></p>
@@ -202,7 +203,7 @@ i    {font-style: italic;}
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="sources">Change your Software Updates Country Location</a></h2>
-					<p>To ensure that you get your updates and software downloaded as fast as possible, try selecting a location close to you.
+					<p>To ensure that you get updates and software downloaded as fast as possible, try selecting servers from locations closer to you.
 					In the following tutorial we will show you how to do this.</p>
 					<p>Click on <b>Menu, System, Install/Remove Software</b> and enter your password.</p>
 					<p><img src="images/software/countryloc/sources-password.png"></p>
@@ -229,26 +230,34 @@ i    {font-style: italic;}
 					nearer you. Click <a href="#software">here</a> to learn how to install and remove software.</p>
 
 					<p><a href="#top">Top of page</a></p>
-					
+
+					<h2><a name="litesoftware">Lite Software</a></h2>
+					<p>Lite Software is a graphic user interface (GUI) tool to easily install and remove popular software in Linux Lite. It is a convenient way to gather the most commonly
+					used applications together and present them to the user.</p>
+
+					<p>The applications listed in Lite Software are not built-in with Linux Lite. Your computer must be connected to the internet in order to download and install these applications.
+					If the application you are looking for is not listed in Lite Software, please use <a href="#software">Synaptic Package Manager</a> to search for it and install it.</p>
+
 					<h2><a name="literepos">Lite Software - Change Repository Location</a></h2>
-					<p>After changing your <a href="software.html#sources">Software Updates Country Location</a>, consider changing the location where you get your Lite Software application updates.</p>
-					<p>For a list of locations for Linux Lite Software application updates, click <a href="https://www.linuxliteos.com/download.php#mirrors" target="_blank"> here</a> and scroll down to <b>REPOSITORY MIRRORS</b> 
+					<p>Before installing new applications, although completely optional, it is recommended to change the <a href="software.html#sources">Software Updates Country Location</a> and the Repository Location - the servers
+					from which you download built-in Lite applications updates.</p>
+					<p>For a list of locations for Linux Lite Software application updates, click <a href="https://www.linuxliteos.com/download.php#mirrors" target="_blank"> here</a> and scroll down to <b>REPOSITORY MIRRORS</b>
 					and choose a location close to you.</p>
 
 					<p>Open your home folder and navigate to <b>/etc/apt/</b> right click on the <b>sources.d</b> folder and <b>Open as Administrator</b>.</p>
 					<p><img src="images/software/repos/lite-repo1.png" /></p>
-					
-					<p>Double click on the file <b>linuxlite.list</b> and copy and paste the new repository link of your choice from <b>REPOSITORY MIRRORS</b> replacing the existing line. 
+
+					<p>Double click on the file <b>linuxlite.list</b> and copy and paste the new repository link of your choice from <b>REPOSITORY MIRRORS</b> replacing the existing line.
 					Be sure to change the word <b>repo</b> to the codename from that Linux Lite Series eg. replace <b>repo</b> with <b>citrine</b>. See the notes on the Download page for Series information. Save and Close the file.</p>
 					<p><img src="images/software/repos/lite-repo2.png" /></p>
-					
-					<p>Now double click on the file <b>linuxlite.list.save</b> and copy and paste the same new repository link over the existing entry. 
+
+					<p>Now double click on the file <b>linuxlite.list.save</b> and copy and paste the same new repository link over the existing entry.
 					Be sure to change the word <b>repo</b> to the codename from that Linux Lite Series eg. replace  <b>repo</b> with <b>citrine</b>. Save and Close the file.</p>
 					<p><img src="images/software/repos/lite-repo3.png" /></p>
-					
+
 					<p>Next time you run <b>Menu, Favorites, Install Updates</b> you will get Lite Software application updates from your newly selected location.</p>
-					<p>If for some reason that new repository selection does not work, choose another location.</p>					
-					
+					<p>If for some reason that new repository selection does not work, choose another location.</p>
+
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="installsoftware">Lite Software - Install Software</a></h2>
@@ -966,9 +975,9 @@ i    {font-style: italic;}
 					<p><img src="images/software/wine/winehqlogo.jpg" /></p>
 
 					<p>Wine application is a compatibility layer capable of running many Windows programs in Linux.</p>
-					<p>Software programs are designed for different operating 
+					<p>Software programs are designed for different operating
 					systems, and most won't work on systems that they weren't designed for.</p>
-					<p>Windows programs won't natively run in Linux because they contain instructions that the system can't understand until they're translated by the Windows environment. 
+					<p>Windows programs won't natively run in Linux because they contain instructions that the system can't understand until they're translated by the Windows environment.
 					In that same way, Linux programs won't run under the Windows operating system because Windows is unable to interpret all of their instructions.</p>
 					<p>Through Wine's compatibility layer, when a Windows program tries to perform a function that Linux doesn't normally understand, Wine will translate that program's instruction into one supported by Linux.</p>
 
@@ -979,13 +988,13 @@ i    {font-style: italic;}
 
 					<h2><a name="tweaks">Lite Tweaks</a></h2>
 					<p><b>Lite Tweaks</b> is a program to customize, optimize and clean up your system. Used periodically it can do things like clean out various cached files,
-					empty the trash, remove old kernels from the system if new ones are installed, remove old dependency packages no longer needed and more, 
+					empty the trash, remove old kernels from the system if new ones are installed, remove old dependency packages no longer needed and more,
 					freeing up additional space in your hard drive.</p>
 
 					<p>Lite Tweaks can be found under <b>Menu, System, Lite Tweaks</b>.</p>
 					<p><img src="images/software/litetweaks/tweaks1.png" /></p>
 
-					<p>Once opened, the <b>Lite Tweaks</b> window features multiple tasks, alphabetically organized by their <b>Name</b> by default. The <b>Description</b> column provides information related to the task(s) to be 
+					<p>Once opened, the <b>Lite Tweaks</b> window features multiple tasks, alphabetically organized by their <b>Name</b> by default. The <b>Description</b> column provides information related to the task(s) to be
 					performed. Users can select either a single or multiple tasks for execution. They will be executed in sequential order until every selected task has been completed.</p>
 
 					<p>Simply select the tasks you want to complete and click on <b>Begin</b>.</p>
@@ -998,10 +1007,10 @@ i    {font-style: italic;}
 					<p><img src="images/software/litetweaks/browsers-cache-lite-tweak.png" /></p>
 
 					<p>The tasks to clear the web cache will appear in Lite Tweaks only for web browsers installed in your system and only if there is web cache to be cleared. After cleaning the browser's cache from those shown above,
-					Lite Tweaks no longer display the tasks related to web browsers cache until there is cache to be cleared once again.</p> 
+					Lite Tweaks no longer display the tasks related to web browsers cache until there is cache to be cleared once again.</p>
 					<p><img src="images/software/litetweaks/browsers-cache-clean-lite-tweak.png" /></p>
 
-					<p>Another example, let's use Lite Tweaks kernel cleaner to remove an old linux kernel. Select <b>Kernel Removal</b>, 
+					<p>Another example, let's use Lite Tweaks kernel cleaner to remove an old linux kernel. Select <b>Kernel Removal</b>,
 					then click on <b>Begin</b>.</p>
 					<p><img src="images/software/litetweaks/tweaks2.png" /></p>
 
@@ -1025,6 +1034,11 @@ i    {font-style: italic;}
 
 					<p><a href="#top">Top of page</a></p>
 
+					<h2><a name="tweaks-autoremove-packages">Lite Tweaks - Autoremove Packages</a></h2>
+
+					<p>Autoremove Packages is used to remove packages that were automatically installed to satisfy dependencies for some packages and that are no more needed.
+					This task requires administrative privileges for execution.</p>
+
 					<h2><a name="ppa">Adding a PPA</a></h2>
 					<p>A PPA is a repository containing one or more applications. These are often set up for new software programs or updated
 					versions of some applications. To add a new PPA to your system, follow the guide below.</p>
@@ -1040,7 +1054,7 @@ i    {font-style: italic;}
 					You'll be prompted to put in your password. The sources list will reload and your new PPA will be loaded.</p>
 					<p><img src="images/software/ppa/ppa1.png"></p>
 
-					<p>Search for your application in the <b>Search</b> box, in this example <b>Gimp</b>, and then double click on it to install the program. 
+					<p>Search for your application in the <b>Search</b> box, in this example <b>Gimp</b>, and then double click on it to install the program.
 					Click on the <b>Apply</b> button at the top of the window, and follow the on screen intructions.</p>
 					<p><img src="images/software/ppa/ppa2.png"></p>
 
@@ -1217,7 +1231,7 @@ i    {font-style: italic;}
 						</ul><br>
 
 					<p>If you desire to install another desktop environment, we cannot provide specific instructions on how to do this. There are far too many variables involved and much can go wrong.
-					This kind of system modification is best left to experienced Linux users. The whole philosophy behind Linux Lite is to provide new users to a 
+					This kind of system modification is best left to experienced Linux users. The whole philosophy behind Linux Lite is to provide new users to a
 					Linux based operating system, an easy to use, functional desktop experience. Our support time is better spent dedicated to helping existing Linux Lite users on the XFCE desktop.</p>
 
 					<p><a href="#top">Top of page</a></p>
