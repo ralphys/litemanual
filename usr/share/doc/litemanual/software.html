@@ -92,24 +92,25 @@ i    {font-style: italic;}
 					<div class="grid-about">
 					</div>
 
-		      		<p><a href="#ppa">Adding a PPA</a><br />
-          			<a href="#deskenv">Changing Desktop Environments</a><br />
+		      <p><a href="#ppa">Adding a PPA</a><br />
+      		<a href="#deskenv">Changing Desktop Environments</a><br />
 					<a href="#archive">Creating and Extracting Zip files</a><br />
-        			<a href="#encrypt">File Encryption</a><br />
+        	<a href="#encrypt">File Encryption</a><br />
 					<a href="#software">Getting Software</a><br />
-        			<a href="#heldpack">Held Packages</a><br />
-        			<a href="#instsoftware">Installing Software</a><br />
-        			<a href="#winprogs">Linux Equivalents of Windows Programs</a><br />
+        	<a href="#heldpack">Held Packages</a><br />
+        	<a href="#instsoftware">Installing Software</a><br />
+        	<a href="#winprogs">Linux Equivalents of Windows Programs</a><br />
 					<a href="#litesoftware">Lite Software</a><br />
 					<a href="#literepos">&emsp;- Change Repository Location</a><br />
-          			<a href="#installsoftware">&emsp;- Install Software</a><br />
+          <a href="#installsoftware">&emsp;- Install Software</a><br />
 					<a href="#removesoftware">&emsp;- Remove Software</a><br />
-        			<a href="#tweaks">Lite Tweaks</a><br />
+        	<a href="#tweaks">Lite Tweaks</a><br />
 					<a href="#tweaks-autoremove-packages">&emsp;- Autoremove Packages</a><br />
+					<a href="#updatesnotify">Lite Updates Notify</a><br />
 					<a href="#uninstsoftware">Uninstalling Software</a><br />
 					<a href="#updates">Updates</a><br />
 					<a href="#sources">&emsp;- Software Updates Country Location</a><br />
-          			<a href="#wine">Wine - Run Windows programs</a></p>
+          <a href="#wine">Wine - Run Windows programs</a></p>
 
 					<h2><a name="software">Getting Software</a></h2>
 					<p>Getting software on Linux is easier than on Windows. The vast majority of programs that you may want/need to install are all centrally
@@ -1037,6 +1038,52 @@ i    {font-style: italic;}
 
 					<p>Autoremove Packages is used to remove packages that were automatically installed to satisfy dependencies for some packages and that are no more needed.
 					This task requires administrative privileges for execution.</p>
+
+
+					<h2><a name="updatesnotify">Lite Updates Notify</a></h2>
+					<p>Lite Updates Notify is an application first introduced with Linux Lite 3.4. It provides desktop notifications to inform users when new updates are available for the system.
+					It features a simple-to-follow interafce that allows users to control how often should it check for updates. Lite Updates Notify is disabled by default in Linux Lite.</p>
+					<p><img src="images/software/liteupdatesnotify/lite-updatesnotify-default.png" /></p>
+
+					<p>To enable updates notifications, open <b>Menu</b>, <b>Settings</b>, <b>Lite Updates Notify</b>. Click <b>Authenticate</b> and enter your password when prompted to do so.
+					 Administraive privileges are required to configure schedules.</p>
+					<p><img src="images/software/liteupdatesnotify/lun-authenticate.png" /></p>
+
+					<p>Select the desired option depending on how frequently you would like Lite Updates Notify to check for updates and click on <b>Set</b>. You can also double-click any of
+					the available schedules instead.
+					<p><img src="images/software/liteupdatesnotify/lun-schedule-select.png" /></p>
+
+					<p>A confirmation box will pop-up once the defined schedule is set.</p>
+					<p><img src="images/software/liteupdatesnotify/lun-schedule-confirmation.png" /></p>
+
+					<p>The <b>Schedule</b> column in Lite Updates Notify main window, hints which of the available schedules is currently active.</p>
+					<p><img src="images/software/liteupdatesnotify/lun-active-schedule.png" /></p>
+
+					<p>Lite Updates Notify will check for new updates on shcedule as defined by the user. If no new updates are available
+					since the last time updates were installed in the system, Lite Updates Notify will notify that the system is up to date, once. No further notifications are displayed up until new updates
+					become available once again.</p>
+					<div style="text-align: center;">
+					<div style="display: inline-block; margin-right: 20px;">
+					<p><img src="images/software/liteupdatesnotify/new-updates-notify.png" /></p>
+					</div>
+					<div style="display: inline-block;">
+					<p><img src="images/software/liteupdatesnotify/custom-new-updates-notify.png" /></p>
+					</div>
+					</div>
+					<div style="text-align: center;">
+					<div style="display: inline-block; margin-right: 20px;">
+					<p><img src="images/software/liteupdatesnotify/default-system-up-to-date.png" /></p>
+					</div>
+					<div style="display: inline-block;">
+					<p><img src="images/software/liteupdatesnotify/custom-system-up-to-date.png" /></p>
+					</div>
+					</div>
+					<p>To customize how notifications appear on your screen, see <b>Menu</b>, <b>All Settings</b>, <b>Notifications</b> to define notifications theme, timeout,
+					position on the screen and opacity. You must restart the session (logout and login) for notifications settings to take effect.</p>
+					<p><img src="images/software/liteupdatesnotify/all-settings-notifications.png" /></p>
+
+					<p><a href="#top">Top of page</a></p>
+
 
 					<h2><a name="ppa">Adding a PPA</a></h2>
 					<p>A PPA is a repository containing one or more applications. These are often set up for new software programs or updated

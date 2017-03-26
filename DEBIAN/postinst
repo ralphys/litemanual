@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+chown root:root /usr/share/doc/litemanual -R
+# Folders and files permissions
+find /usr/share/doc/litemanual/ -type d -exec chmod 755 {} \;
+find /usr/share/doc/litemanual/ -type f -exec chmod 644 {} \;
