@@ -523,156 +523,38 @@ i    {font-style: italic;}
           				<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="mountpartdrives">Mounting Drives &amp; Partitions</a></h2>
-          				<p><a href="#ext4">EXT4</a><br />
-            				<a href="#ext3">EXT3</a><br />
-		    			<a href="#fat" >FAT32</a></p>
-          				<p>If there are partitions on your drive(s) that you did not set-up access for during the installation process, you can do that afterwards
-		  			by following the instructions in this section. The basic procedure includes finding out the UUID for your partition, making a mount point
-		  			for it in the file system and creating an entry in the /etc/fstab file for auto-mounting it on every boot-up. A 'mount point' is simply
-		  			'where' in the file system you want the partition's files to show up. Most people like to see them in their Home folder, so that is what the
-		  			following examples depict.</p>
 
-          				<p><b>NTFS</b></p>
-          				<p>First we need to make a mount point in your home folder. This is where you will access those files. In your home folder, right click and make a new folder, in this
-		  			example we'll call it '<b>ntfsfiles</b>'. Now onto the next step.</p>
-            				<p>Open a terminal and type: <b>sudo blkid</b> followed by your password. This will output the uuid's for all your hard drives.</p>
-            				<p>Take the uuid for that drive and place it into /etc/fstab, first we will back up the fstab file:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo cp /etc/fstab /etc/fstab.bak</code></pre><br>
+					<p>The instructions below gives an example of how you would mount an existing Windows partition in Linux Lite.</p>
 
-            				<p>In the terminal still, type in:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/fstab</code></pre><br>
+					<p>Click on <b>Menu, Settings, Disks</b>.</p>
 
-            				<p>A text file will open up. Lets say the uuid for our new ntfs drive is:</p>
-					<p><b>0463741f-a838-40c8-b40f-3dbb7f988e29</b>. We would enter this into our fstab as:</p>
-						<div class="codeheader"></div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 /home/user/ntfsfiles ntfs defaults,umask=007,uid=1000,gid=1000 0 0</code></pre><br>
+					<p>Select the disk on the left you want to make available, then click on the cogs icon and select <b>Edit Mount Options</b> as shown in the image.</p>
 
-					<p>You can put the above line anywhere in the fstab file. Make sure you leave a blank line at the bottom of the fstab file before you save the file.</p>
-          				<p><img src="images/install/mount/fstab_ntfs.png"></p>
+          				<p><img src="images/install/mount/mount1.png"></p>
 
-          				<p>Substitute your username (in all lowercase letters) where "<b>user</b>" is shown in the above example. Save the file.
-		  			<p>Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo mount -a</code></pre><br>
+					<p>Use the following options:</p>
 
-					<p>If all went to plan, in <b>/home/user/ntfsfiles</b> you should see all your files.</p>
+					<p>- Mount at startup <b>(2)</b></p>
+					<p>- defaults <b>(3)</b></p>
+					<p>- Mount Point /mnt/sdb  (yours may be sdb1, sdb2, or similar - select from the drop down menu) <b>(5)</b></p>
+					<p>- Identify As /dev/sdb (matches sdb or sdb1 or sdb2) <b>(4)</b></p>
+					<p>- Filesystem <b>auto</b> or <b>ntfs (Windows), ext4 (Linux)</b> if you want to be explicit <b>(6)</b>.</p>
 
-          				<p><b><a name="ext4"></a>EXT4</b></p>
-          				<p>First we need to make a mount point in your home folder. This is where you will access those files. In your home folder, right click and make a new folder, in this
-		  			example we'll call it '<b>ext4files</b>'. Now onto the next step.</p>
+					<p>Reboot or manually mount the device so that you don't have to reboot. (It will mount automatically on every reboot after step #1 above). To manually mount the drive click the 
+					little triangle shown in the screenshot above after selecting the drive/partition.</p>
 
-            				<p>Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo blkid</code></pre><br>
+          				<p><img src="images/install/mount/mount2.png"></p>
 
-            				<p>followed by your password. This will output the uuid's for all your hard drives.</p>
+					<p>Create a shortcut in your Home folder so that you can access the mounted partition from the Side Pane. Name the shortcut anything you want.</p>
 
-            				<p>Take the uuid for that drive and place it into /etc/fstab, first we will back up the fstab file:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo cp /etc/fstab /etc/fstab.bak</code></pre><br>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/fstab</code></pre><br>
+          				<p><img src="images/install/mount/mount3.png"></p>
 
-            				<p>A text file will open up. Lets say the uuid for our new ext4 drive is - <b>0463741f-a838-40c8-b40f-3dbb7f988e29</b>. We would enter this into our fstab as:</p>
-						<div class="codeheader"></div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 /home/user/ext4files ext4 defaults 0 2</code></pre><br>
+					<p>You should be able to read and write to that drive by default after mounting it, else permission changes may be needed. You should not need to enter your password 
+					after each reboot to read or write to the drive.</p>
 
-          				<p>You can put the above line anywhere in the fstab file. Make sure you leave a blank line at the bottom of the fstab file before you save the file.</p>
-          				<p><img src="images/install/mount/fstab_ext4.png" /><p>
+          				<p><img src="images/install/mount/mount4.png"></p>
 
-            				<p>Substitute your username (in all lowercase letters) where "<b>user</b>" is shown in the above example. Save the file. Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo mount -a</code></pre><br>
-
-		  			<p>If all went to plan, in <b>/home/user/ext4files</b> you should see all your files.</p>
-
-          				<p><b><a name="ext3"></a>EXT3</b></p>
-          				<p>First we need to make a mount point in your home folder. This is where you will access those files. In your home folder, right click and make a new folder, in this
-		  			example we'll call it '<b>ext3files</b>'. Now onto the next step.</p>
-            				<p>Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo blkid</code></pre><br>
-
-            				<p>followed by your password. This will output the uuid's for all your hard drives.</p>
-
-            				<p> Take the uuid for that drive and place it into /etc/fstab, first we will back up the fstab file:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo cp /etc/fstab /etc/fstab.bak</code></pre><br>
-
-            				<p>In the terminal still, type in:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/fstab</code></pre><br>
-
-            				<p>A text file will open up. Lets say the uuid for our new ext3 drive is - <b>0463741f-a838-40c8-b40f-3dbb7f988e29</b>. We would enter this into our fstab as:</p>
-						<div class="codeheader"></div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">UUID=0463741f-a838-40c8-b40f-3dbb7f988e29 /home/user/ext3files ext3 defaults,errors=remount-ro 0 1</code></pre><br>
-
-          				<p>You can put the above line anywhere in the fstab file. Make sure you leave a blank line at the bottom of the fstab file before you save the file.</p>
-          				<p><img src="images/install/mount/fstab_ext3.png"></p>
-
-            				<p>Substitute your username (in all lowercase letters) where "<b>user</b>" is shown in the above example. Save the file. Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo mount -a</code></pre><br>
-
-					<p>If all went to plan, in <b>/home/user/ext3files</b> you should see all your files.</p>
-
-		  			<p><b><a name="fat"></a>FAT32</b></p>
-		  			<p>Follow the same general procedure for auto-mounting FAT32 partitions.</p>
-
-		  			<p>First create a mount point in your home folder that will serve as the access point for the files on that partition. Open the file manager to your home folder,
-					right-click and make a new folder. This example will name the folder '<b>fatfiles</b>'.</p>
-
-		  			<p>Open a terminal and enter this command:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo blkid</code></pre><br>
-
-					<p>Enter your password when asked.</p>
-		 			<p>The command shows the UUID's for all drives and their partitions. Find the one that corresponds to your FAT32 partition.</p>
-		  			<p>Take that UUID and use it to create a new entry in the /etc/fstab file. First, we will create a backup copy of the file with this command:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo cp /etc/fstab /etc/fstab.bak</code></pre><br>
-
-		  			<p>While still in the terminal, type this command to open the /etc/fstab in your text editor:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo leafpad /etc/fstab</code></pre><br>
-
-		  			<p>The file will be opened in the editor and you can now add your entries for the FAT32 partition. This example will use the UUID "9CEC-37E5".
-		  			(Substitute your correct UUID in place of the example's.)</p>
-		  			<p>Add the following line to your /etc/fstab file:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">UUID=9CEC-37E5 /home/user/fatfiles vfat defaults,uid=1000,gid=100,umask=007 0 0</code></pre><br>
-
-		  			<p>Make sure you leave a blank line at the bottom of the fstab file before saving the file. Save the file, then close the editor.</p>
-					<p><img src="images/install/mount/fstab_fat32.png"></p>
-
-		  			<p>The first line (beginning with '#') is just a comment line describing what the second line does. The second line is what actually gets implemented.</p>
-		  			<p>Substitute <i>your username</i> (in all lowercase letters) where <b>"user"</b> is shown in the above example. Save the file.
-		  			Open a terminal and type:</p>
-						<div class="codeheader">Terminal Command:</div>
-						<pre style="margin: 0; padding: 0;">
-						<code style="overflow: scroll;" class="bbc_code">sudo mount -a</code></pre><br>
-
-		  			<p>If all went to plan, in <b>/home/user/fatfiles</b> you should see all of your files.</p>
+          				<p><img src="images/install/mount/mount5.png"></p>
 
           				<p><a href="#top">Top of page</a></p>
 

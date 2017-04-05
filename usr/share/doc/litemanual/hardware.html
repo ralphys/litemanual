@@ -104,7 +104,8 @@ i    {font-style: italic;}
             				<a href="#printer">Printer Setup</a><br />
             				<a href="#ressound">Resources for Audio Drivers</a><br />
             				<a href="#rescomprint">Resources for compatible Printers</a><br />
-            				<a href="#sound">Sound Configuration</a></p>
+            				<a href="#sound">Sound Configuration</a><br />
+            				<a href="#shareprinter">Share your Printer from Linux Lite</a></p>
 
                 			<h2><a name="hwdb">Hardware Database</a></h2>
 					<p>Wondering if your laptop or desktop will work on Linux Lite?<br />
@@ -378,6 +379,59 @@ NO support for ATI Catalyst drivers in Linux Lite 3.x Series -->
 					<p><img src="images/hardware/printing/printer8.png"></p>
 
 					<p><b>9.</b> Cups is a web interface for managing your printer. Once installed, click <a target="_blank" href="http://localhost:631">here</a> to manage your printer.</p>
+
+					<p><a href="#top">Top of page</a></p>
+
+               			<h2><a name="shareprinter">Share your Printer from Linux Lite</a></h2>
+
+					<p>The following tutorial gives an example of how to set up a shared printer connected to Linux Lite.
+
+					<p>Make sure the printer connected to Linux Lite and is fully operational, drivers installed and set up.</p>
+
+					<p>Temporarily disable the Linux Lite Firewall. <b>Menu, Settings, Firewall Configuration, Status OFF</b>. After you are able to print from Windows to a Linux Lite shared printer, we will enable it again and create the correct rule for it. 
+					Firewall blocking services is usually overlooked.</p>
+
+					<p>Click on <b>Menu, System, Printers</b>.</p>
+
+					<p>Select (highlight) your Printer and select from the menu <b>Printer, Shared</b>.</p>
+
+					<p><img src="images/hardware/printing/shared_printer1.png"></p>
+
+					<p>Then, considering this is a home network and that you want to make your life as easy as possible, let's allow quite a few options in <b>Server Settings</b>. Open <b>Server, Settings</b> and configure as shown below:</p>
+
+					<p><img src="images/hardware/printing/shared_printer2.png"></p>
+
+					<p>That's all there is on your Linux Lite side. Now let's go to your Windows 10 machine to connect to the shared printer.</p>
+
+					<p>Before going into Windows, make sure you know the correct name of your printer. For example, my printer name is <b>Samsung-ML-2550</b> (case sensitive). This is the name you define when adding the 
+					printer to Linux Lite. You do not want to have spaces in the name and also understand that lower case and UPPER case do make a difference in Linux. So, with that said, in Windows 10:</p>
+
+					<p><b>Devices and Printers -> Add a printer - The printer that I want isn't listed</b>.</p>
+
+					<p><img src="images/hardware/printing/shared_printer3.png"></p>
+
+					<p><b>Select a shared printer by name</b>.</p>
+
+					<p>The printer can the be added using the hostname or the IP address of your Linux Lite PC on port 631. To keep it simple, in case you do not have DNS resolution in your local network, 
+					you will use the IP address of your Linux Lite PC, as shown below:</p>
+
+					<p><i>http://[LINUX LITE PC IP]:631/printers/[YOUR PRINTER'S CASE SENSITIVE NAME]</i></p>	
+
+					<p><img src="images/hardware/printing/shared_printer4.png"></p>
+
+					<p>From there, just select the brand and model for your printer as you usually do in Windows... and you should be able to print thereafter.</p>
+
+					<p><img src="images/hardware/printing/shared_printer5.png"></p>
+
+					<p><img src="images/hardware/printing/shared_printer6.png"></p>
+
+					<p><img src="images/hardware/printing/shared_printer7.png"></p>
+
+					<p>Once you can print from Windows, you can re-enable your firewall and set the rule to allow port 631 IN as follows:</p>
+
+					<p><img src="images/hardware/printing/shared_printer8.png"></p>
+
+					<p><a href="#top">Top of page</a></p>
 
                 			<h2><a name="rescomprint">Resources for compatible Printers</a></h2>
 
