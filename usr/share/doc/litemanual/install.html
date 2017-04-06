@@ -91,7 +91,11 @@ i    {font-style: italic;}
             				<a href="#encrypthome">Encrypting your Home folder</a><br />
 					<a href="#installguide">Installation Guide</a><br />
             				<a href="#instllcomp">Installing Linux Lite</a><br />
-            				<a href="#mountpartdrives">Mounting Drives &amp; Partitions</a><br />
+            				<a href="#partdrives">Drives &amp; Partitions</a><br />
+										<a href="#mountpartdrives">&emsp;- Mounting Drives &amp; Partitions</a><br />
+										<a href="#automountpartdrives">&emsp;- Automount Drives &amp; Partitions for all users</a><br />
+										<a href="#automountwinpartdrives">&emsp;- Automount Windows Partitions for all users</a><br />
+										<a href="#mountcontrolaccess">&emsp;- Controlling Access to Mounted Drives - Advanced Users</a><br />
 					<a href="#plop">No USB Boot option in the Bios?</a><br />
             				<a href="#prepareinst">Preparing your Computer</a><br />
             				<a href="#userdel">Removing a User</a><br />
@@ -223,21 +227,21 @@ i    {font-style: italic;}
 					slow down the install process. Updating after a fresh install is recommended and will save you time in the long run. A typical install  on today's hardware will take
 					around 10-15 minutes. If you check these 2 boxes, the install could take over an hour or longer.</b></p>
 
-					<p><b>NOTE: 'Install third-party software for graphics and Wi-Fi hardware, Flash, MP3 and other media' 
-					Please verify the legal status of the use of the third party software in your country/territory before choosing this option. This option will install codecs for playing 
+					<p><b>NOTE: 'Install third-party software for graphics and Wi-Fi hardware, Flash, MP3 and other media'
+					Please verify the legal status of the use of the third party software in your country/territory before choosing this option. This option will install codecs for playing
 					media files, and proprietary drivers for some of your hardware. It is a legal requirement for us to inform you of this.</b></p>
 
           				<p><img src="images/install/installwizard/install-ll2.png"></p>
 
           				<p>Now it is time to choose the method of installing Linux Lite to  your hard disk. You will have several options during this phase of the installer.</p>
 
-          				<p><b>Install Linux alongside (Operating System)</b> - otherwise known as a dual boot. An option to boot from Windows, another Linux based operating system 
+          				<p><b>Install Linux alongside (Operating System)</b> - otherwise known as a dual boot. An option to boot from Windows, another Linux based operating system
 					or Linux Lite when your computer starts.</p>
 
 					<p><b>Note: If you want to encrypt your home folder, <b>do not</b> select the option '<b>Encrypt the new Linux installation for security</b>' instead, please follow these
 					instructions <a href="#encrypthome">here</a>.</b></p>
 
-          				<p>It is not recommended to choose <b>Encrypt the new Linux installation for security</b> unless you are well versed in this method. The same goes for 
+          				<p>It is not recommended to choose <b>Encrypt the new Linux installation for security</b> unless you are well versed in this method. The same goes for
 					<b>Use LVM with the new Linux installation</b>. For the purpose of this tutorial, we are keeping it simple.</p>
 
           				<p><img src="images/install/installwizard/install-ll3.png"></p>
@@ -293,8 +297,8 @@ i    {font-style: italic;}
 
 					<p><b>Keyboard layout</b></p>
           				<p>The next step is to select your keyboard language and layout. You may select the language that your keyboard corresponds to on the left
-		  			and any specialized layout on the right. This is the point where you may select to enable international keys on your keyboard. Though, these options may be changed later. 
-					<b>We recommend you leave the default English (US) options here, and adjust your language settings once Linux Lite has been installed and you have rebooted for the 
+		  			and any specialized layout on the right. This is the point where you may select to enable international keys on your keyboard. Though, these options may be changed later.
+					<b>We recommend you leave the default English (US) options here, and adjust your language settings once Linux Lite has been installed and you have rebooted for the
 					first time.</p>
           				<p><img src="images/install/installwizard/install-ll8.png"></p>
 
@@ -477,7 +481,7 @@ i    {font-style: italic;}
 					<p><b>Do not</b> enable Trim on the swap line.</p>
 					<p><b>Do not</b> place <b>noatime,</b> on partitions or drives that are not on the SSD, eg. IDE or regular hard drives.</p>
 					<p><img src="images/install/trim/trim2.png"></p>
-						
+
 					<p>Now save and close the file.</p>
 					<p>Now open a terminal and do:</p>
 						<div class="codeheader">Terminal Command:</div>
@@ -522,41 +526,164 @@ i    {font-style: italic;}
 
           				<p><a href="#top">Top of page</a></p>
 
+					<h2><a name="partdrives">Drives &amp; Partitions</a></h2>
+
+					<p>Let's familiarize with the terms drive, partitions and volumes. They are commonly used terms and understanding	what they are will help you in the process of mounting drives/partitions.</p>
+
+					<p>The term drive refers to a physical storage device such as a hard disk, solid-state disk, removable USB flash drive etc. In Linux, devices are represented by special file system objects called
+					<b>device nodes</b>, which are visible under the /dev directory.</p>
+
+					<p>Storage devices are labeled under /dev according to the type of device, followed by a letter signifying the order in which they were detected by the system. In Linux the prefix <b>sd</b> is used
+					for all PATA, SATA and SCSI devices. For instance, the device files /dev/sda, /dev/sdb and /dev/sdc correspond to the first, second and third device (drive) respectively.</p>
+
+					<p>A physical storage device (drive) can be divided into multiple logical storage units known as <b>partitions</b>. Each partition will show up under /dev as a separate device node. A number after the
+					device letter signifies the number of the partion. For example, the device node files /dev/sda1 and /dev/sda2 refer to the first and second partition of the first device (drive). Note that on PCs using
+					MBR partitioning, due to the limit of four primary paritions and the way extended partitions are handled the partition numbering can slightly differ from the actual partition count.</p>
+
+					<p>The term volume in Linux is related to the Logical Volume Manager (LVM), which can be used to manage mass storage devices. A physical volume is a storage device or partition. A logical volume created
+					by the LVM is a logical storage device which can span multiple physical volumes.</p>
+
+									<p><a href="#top">Top of page</a></p>
+
+
 					<h2><a name="mountpartdrives">Mounting Drives &amp; Partitions</a></h2>
 
-					<p>The instructions below gives an example of how you would mount an existing Windows partition in Linux Lite.</p>
+					<p>Mounting drives and partitions in Linux Lite is easy. While the following approach is generally acceptable, it imposes some limitations in the way a drive can be used in your system. For instance, the drive will remain mounted as long as the computer is not
+					restarted or the drive is not manually unmounted. You will need to mount the drive after each reboot. Also, as administrator, you can read and write to the drive but no other user will be able to
+					write to the drive or read any of its content. Read on <a href="#automountpartdrives">Automount Drives &amp; Partitions for all users</a> section for other options.</p>
+					<p>By default, all drives connected to your computer will show up on the Desktop as well as in Thunar File Manager, as long as the drive in question contains at least one partition.</p>
+									<p><img src="images/install/mount/unmounted-drives.jpg"></p>
+					<p>As you may have noticed in the screenshot above, the drive shown is grayed-out, meaning that it is not mounted by default. To mount a drive in Linux Lite, double click the desired drive and
+					type the administrator password when prompted to do so. Mounting drives requires administrative privileges.</p>
+									<p><img src="images/install/mount/mount-drive-authentication.jpg"></p>
+					<p>Once mounted, the drive icon reflects just that (not longer grayed-out)... you are now ready to use the drive.</p>
+					<p><img src="images/install/mount/mounted-drive-create-new-folder.jpg"></p>
 
-					<p>Click on <b>Menu, Settings, Disks</b>.</p>
+									<p><a href="#top">Top of page</a></p>
 
-					<p>Select the disk on the left you want to make available, then click on the cogs icon and select <b>Edit Mount Options</b> as shown in the image.</p>
+					<h2><a name="automountpartdrives">Automount Drives &amp; Partitions for all users</a></h2>
 
-          				<p><img src="images/install/mount/mount1.png"></p>
+					<p>A more user-friendly way to mount drives in Linux Lite is to have them automount at startup and allow all users to read and write to the drive.</p>
+					<p>The instructions below shows how to mount a drive in Linux Lite with automount options and read and write permissions for all users. You can follow these steps to mount as many partitions as
+					you may need.</p>
 
-					<p>Use the following options:</p>
+					<p>Start by creating a folder to assign a mount point path to the drive. Open Terminal and execute:</p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo mkdir /media/disk1</code></pre><br>
+					<p>... where <b>disk1</b> is the name of the folder we are creating and <b>/media</b> is the directory under which it will be created.</p>
 
-					<p>- Mount at startup <b>(2)</b></p>
-					<p>- defaults <b>(3)</b></p>
-					<p>- Mount Point /mnt/sdb  (yours may be sdb1, sdb2, or similar - select from the drop down menu) <b>(5)</b></p>
-					<p>- Identify As /dev/sdb (matches sdb or sdb1 or sdb2) <b>(4)</b></p>
-					<p>- Filesystem <b>auto</b> or <b>ntfs (Windows), ext4 (Linux)</b> if you want to be explicit <b>(6)</b>.</p>
+					<p>Then, open <b>Menu</b>, <b>Settings</b>, <b>Disks</b>. Select the disk you want to make available from the left column, then click on <b>Edit Mount Options</b> as shown below.</p>
+  								<p><img src="images/install/mount/mdp-edit-mount-options.png"></p>
+					<p>Set the following mount option:
+					<ul>
+						<li>1- Switch off Automatic Mount Options</li>
+						<li>2- Check Mount at startup</li>
+						<li>3- Mount options: users,noexec,nosuid</li>
+						<li>4- Mount Point: /media/disk1 (the path of the folder you created in the previous step)</li>
+						<li>5- Identify As: /dev/sdb1 (it may be sdb1, sdb2, sdc1 or similar - select from the drop down menu) </li>
+						<li>6- Filesystem: ' auto ' or ' ext4 ' (Linux) or ' ntfs ' (Windows) if you want to be explicit.</li>
+					</ul></p>
+									<p><img src="images/install/mount/automount-ext4-disk.png"></p>
 
-					<p>Reboot or manually mount the device so that you don't have to reboot. (It will mount automatically on every reboot after step #1 above). To manually mount the drive click the 
-					little triangle shown in the screenshot above after selecting the drive/partition.</p>
+					<p>Optionally, you could also set a <b>Display Name</b> for your drive, making it easier to identify. The nme you specify will be autocompleted in the mount options (3).</p>
+					 				<p><img src="images/install/mount/automount-ext4-disk2.png"></p>
+					<p>Click <b>OK</b> to apply your changes and enter your password when prompted to do so.</p>
+									<p><img src="images/install/mount/authenticate-to-set-automount-drive.png"></p>
 
-          				<p><img src="images/install/mount/mount2.png"></p>
+					<p>Finally, you can either reboot your computer or manually mount the device so that you don't have to reboot. The configured drive will mount automatically on every reboot from there on. All users
+					will be able to read and write on the drive and no prompt for administrative password will be required. To manually mount the drive, click on <b>Mount selected partition</b> (little triangle
+					in the Volumes actions buttons):</p>
+									<p><img src="images/install/mount/mount-selected-partition-button.png"></p>
+					<p>The selected drive will then be mounted.</p>
+									<p><img src="images/install/mount/mounted-drive-desktop.jpg"></p>
+					<p>Repeat these steps to automount other drives (or additional partitions within a drive) as needed.</p>
 
-					<p>Create a shortcut in your Home folder so that you can access the mounted partition from the Side Pane. Name the shortcut anything you want.</p>
+									<p><a href="#top">Top of page</a></p>
 
-          				<p><img src="images/install/mount/mount3.png"></p>
 
-					<p>You should be able to read and write to that drive by default after mounting it, else permission changes may be needed. You should not need to enter your password 
-					after each reboot to read or write to the drive.</p>
+					<h2><a name="automountwinpartdrives">Automount Windows Partitions for all users</a></h2>
 
-          				<p><img src="images/install/mount/mount4.png"></p>
+					<p>Linux Lite can read and write NTFS file systems on external drives by default. To mount a Windows partition, create a new folder to assign a mount point path for the Windows partition.
+					Open Terminal and execute:</p>
 
-          				<p><img src="images/install/mount/mount5.png"></p>
+					<div class="codeheader">Terminal Command:</div>
+					<pre style="margin: 0; padding: 0;">
+					<code style="overflow: scroll;" class="bbc_code">sudo mkdir /media/disk1</code></pre><br>
+					<p>... where <b>disk1</b> is the name of the folder we are creating and <b>/media</b> is the directory under which it will be created. Make sure to create a new folder for each drive you are mounting in
+					your system. For example, assume you are already using <b>/media/disk1</b> to automount a different drive or partition, you want to have a different folder to assign a mount point path for the Windows
+					partition then; it can be named anything you want: disk2, disk3, windowsdisk, etc. and make sure to adjust the <b>Mount Point</b> options accordingly in the steps below.</p>
+
+					<p>Next, open <b>Menu</b>, <b>Settings</b>, <b>Disks</b>, select the disk which contains the Windows partition from the left column, highlight (click) the Windows partition and finally click on <b>Edit
+					Mount Options</b>:</p>
+          				<p><img src="images/install/mount/mount-win-partition.png"></p>
+					<p>Set the following mount option:
+					<ul>
+						<li>1- Switch off Automatic Mount Options</li>
+						<li>2- Check Mount at startup</li>
+						<li>3- Mount options: defaults</li>
+						<li>4- Mount Point: /media/disk1 (the path of the folder you previously created)</li>
+						<li>5- Identify As: /dev/sdb3 (it may be sdb2, sdb3, sdc2 or similar - select it from the drop down menu) </li>
+						<li>6- Filesystem: ' auto ' or ' ntfs ' (Windows) if you want to be explicit.</li>
+					</ul></p>
+									<p><img src="images/install/mount/win-mount-options.png"></p>
+					<p>Click <b>OK</b> to apply your changes and enter your password when prompted to do so.</p>
+
+					<p><img src="images/install/mount/authenticate-to-set-automount-drive.png"></p>
+					<p>Finally, you can either reboot your computer or manually mount the device so that you don't have to reboot. The configured drive will mount automatically on every reboot from there on. All users
+					will be able to read and write on the drive and no prompt for administrative password will be required. To manually mount the drive, click on <b>Mount selected partition</b> (little triangle
+					in the Volumes actions buttons):</p>
+									<p><img src="images/install/mount/win-manual-mount-partition.png"></p>
+					<p>The selected drive will then be mounted.</p>
+									<p><img src="images/install/mount/win-mounted-drive-desktop.jpg"></p>
+					<p>Repeat these steps to automount other drives (or additional partitions within a drive) as needed.</p>
 
           				<p><a href="#top">Top of page</a></p>
+
+
+					<h2><a name="mountcontrolaccess">Controlling Access to Mounted Drives</a></h2>
+
+					<p>Usually, you want to mount drives in Linux Lite and make them available to all users. But there are times when controlling access to those drives becomes a necessity. For example, you may want to
+					automount a Windows drive at startup but prevent other users from modifying the contents in that drive; which is certainly important. Maybe you do not want them to see its content at all. There is a
+					simple (yet effective) way for accomplishing just that at the time of mounting drives and partitions; by using <b>uid</b>, <b>gid</b> and <b>umask</b>.</p>
+
+					<p>A user ID (uid) is a unique positive integer assigned by Linux operating system to each user. Each user is identified to the system by its uid, and user names are generally used only as an
+					interface for humans. The same is true for gid (group ID) but it references groups instead of users.</p>
+
+					<p>The user file-mode creation mask (umask) is use to determine the file permission for newly created files. It can be used to control the default file permission.</p>
+
+					<p>Let's put together some examples on how we could set some restrictions at the time of mounting drives.</p>
+					<p>First, we need to know the uid/gid of the administrative account we are using to mount the drive. In this example, our username is <b>liteuser</b>. Open Terminal and execute:</p>
+  					<div class="codeheader">Terminal Command:</div>
+  					<pre style="margin: 0; padding: 0;">
+  					<code style="overflow: scroll;" class="bbc_code">id -u username<br>id -g username</code></pre><br>
+					<p>... where <b>username</b> is your administrator account username; <b>liteuser</b> in our case.</p>
+									<p><img src="images/install/mount/id-uid-gid.png"></p>
+
+					<p>For umask, we are going to go with the most common options you'll usually need:</p>
+					<p><b>umask 222</b> - Assigns permissions so that everyone has read-only access for files and directories, including your account.</p>
+					<p><b>umask 077</b> - Assigns permissions so that only you have read/write access for files, and read/write/search for directories you own. All others have no access permissions to your files or
+					directories.</p>
+					<p><b>umask 022</b> - Assigns permissions so that only you have read/write access for files, and read/write/search for directories you own. All others have read access only to your files, and read/search
+					access to your directories.</p>
+					<p><b>umask 002</b> - Assigns permissions so that only you and members of your group have read/write access to files, and read/write/search access to directories you own. All others have read access only
+					to your files, and read/search to your directories.</p>
+
+					<p>Using <b>Menu</b>, <b>Settings</b>, <b>Disks</b>, mount a drive with some content in it using your uid, gid and umask=077:</p>
+									<p><img src="images/install/mount/mount-uid-gid-umask.png"></p>
+					<p>With the above mount options, this is what <b>liteuser</b> and <b>user1</b> accounts get to access.</p>
+									<div style="text-align: left;">
+									<div style="display: inline-block; margin-right: 5px;">
+									<p><img src="images/install/mount/permissions-liteuser.png" /></p>
+									</div>
+					 				<div style="display: inline-block;">
+									<p><img src="images/install/mount/permissions-user1.png" /></p>
+									</div>
+									</div>
+					<p>Feel free to experiment with umask options, different groups and users. For additional references, see <b>man mount</b> and <b>man umask</b>.</p>
+
+								<p><a href="#top">Top of page</a></p>
+								
 
 					<h2><a name="adduser">Adding another User</a></h2>
           				<p>To add another User to Linux Lite, click on <b>Menu, Settings, User Manager</b>. Then click on <b>New user</b> and enter a name, and the same password twice.</p>
