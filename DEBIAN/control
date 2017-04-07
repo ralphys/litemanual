@@ -1,9 +1,9 @@
 Package: lite-manual
-Version: 2.0-0170-linuxlite
+Version: 2.0-0180-linuxlite
 Essential: yes
 Section: base
 Priority: required
-Installed-Size: 10500
+Installed-Size: 10600
 Depends: xdg-utils
 Homepage: http://www.linuxliteos.com
 Maintainer: Jerry Bezencon<valtam@linuxliteos.com>
