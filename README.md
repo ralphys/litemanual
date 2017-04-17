@@ -10,7 +10,7 @@ online [here](https://www.linuxliteos.com/manual).
 
 This project is under the GPLv2 license. Unless otherwise stated in individual files.
 
-##Authors
+## Authors
 - [Adam Grubbs](https://github.com/argrubbs/)
 - [Bill Hahnen](https://github.com/gold-finger/)
 - [Jerry Bezencon](https://github.com/linuxlite/)
