@@ -1,6 +1,7 @@
 lite-manual (2.0-0200-linuxlite) citrine; urgency=medium
 
   * Update select images
+  * Update Install and Network page images and information
 
  -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 17 Apr 2017 14:56:20 +1200
 
