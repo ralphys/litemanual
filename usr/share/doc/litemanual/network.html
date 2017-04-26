@@ -123,8 +123,8 @@ i    {font-style: italic;}
 					(You will need to connect to the internet using a wired connection in order to download and install the wireless driver.)</p>
 					<p><img src="images/network/wireless/wireless-1.jpg"></p>
 
-					<p>A box will pop up asking for your wireless password. If you would like to view your password while you type it, tick the &#39;<b>Show
-					password</b>&#39; box to ensure that you have entered your wireless password correctly.</p>
+					<p>A box will pop up asking for your wireless password. If you would like to view your password while you type it, tick the '<b>Show
+					password</b>' box to ensure that you have entered your wireless password correctly.</p>
 					<p><img src="images/network/wireless/wireless-2.png"></p>
 
 					<p>You will then receive a notification in the top right hand corner of your screen once you are connected.</p>
@@ -191,7 +191,7 @@ i    {font-style: italic;}
 					<p>This section will guide you on how to create your first Linux Lite share making the process as simple as it really is once you understand the basics:</p>
 
 					<p>Create a new folder inside your home folder by right-clicking an empty section in your home folder and selecting <b>Create Folder</b> from the context menu pop-up. Give your new folder
-					a name; we will name it &#39;<b>share</b>&#39; in this example.</p>
+					a name; we will name it '<b>share</b>' in this example.</p>
 					<p><img src="images/network/nss/nss-create-folder-share.png" /><p>
 
 					<p>Next, we need to tell Samba (SMB) who we are going to login as to access our Linux Lite shares. Open up a terminal and type:</p>
@@ -200,7 +200,7 @@ i    {font-style: italic;}
 						<code style="overflow: scroll;" class="bbc_code">sudo smbpasswd -a name</code></pre><br>
 					<p>...where <b>name</b> is your Linux Lite username; in our case the username is <b>liteuser</b>. For easily remembering the SMB password, you can use the same password for SMB as that in your Linux Lite
 						user account if you wish.</p>
-						<p>You&#39;ll be asked to enter the new SMB password twice.</p>
+						<p>You'll be asked to enter the new SMB password twice.</p>
 						<p><img src="images/network/nss/nss-create-smb-password.png" /><p>
 						<p>Then, in the same terminal type:
 						<div class="codeheader">Terminal Command:</div>
@@ -208,8 +208,8 @@ i    {font-style: italic;}
 						<code style="overflow: scroll;" class="bbc_code">gksu leafpad /etc/samba/smbusers</code></pre><br>
 						<p><img src="images/network/nss/nss-smb-username-map-file.jpg" /><p>
 					<p>The above command opens /etc/samba/smbusers file in leafpad text editor. The smbusers file will contain a username map list (one per line) of your Linux Lite and SMB accounts.
-						We will replace the default <b>&lt;linux&gt; = "&lt;linux&gt;"</b> in that file with our Linux Lite username in each of the brackets:</p>
-						<p><b>&lt;username&gt; = "&lt;username&gt;"</b>... in our case: <b>&lt;liteuser&gt; = "&lt;liteuser&gt;"</b></p>
+						We will replace the default <b>linux = "linux"</b> in that file with our Linux Lite username in each of the brackets:</p>
+						<p><b>username = "username"</b>... in our case: <b>liteuser = "liteuser"</b></p>
 						<p><img src="images/network/nss/nss-username-mapped.png" /><p>
 					<p>You can now <b>Save</b> and <b>Close</b> the smbusers file, and close the terminal.</p>
 
@@ -220,8 +220,7 @@ i    {font-style: italic;}
 
 					<table width="800" id="table1" bgcolor="#FFFF55">
 					<tr>
-						<td>#======================= Global Settings
-						====================================<br>
+						<td><br>#======================= Global Settings ====================================<br>
 						[global]<br>
 						workgroup = <b>WORKGROUP</b><br>
 						server string = Linux Lite Shares<br>
@@ -232,9 +231,8 @@ i    {font-style: italic;}
 						map to guest = bad user<br>
 						guest account = nobody<br>
 						dns proxy = no<br>
-						#======================= Share Definitions
-						===================================<br>
-						[linuxliteshare]<br>
+						#======================= Share Definitions ===================================<br>
+						[liteshare]<br>
 						path = /home/%U/<b>share</b><br>
 						available = yes<br>
 						valid users = %U %G<br>
@@ -254,15 +252,15 @@ i    {font-style: italic;}
 
 					<table width="800" id="table3" bgcolor="#FFFF55">
 					<tr>
-						<td><b>WORKGROUP</b> - must be equal to the workgroup name in your network. "WORKGROUP" is usually the default.<br>
+						<td><br><b>WORKGROUP</b> - must be equal to the workgroup name in your network. "WORKGROUP" is usually the default.<br>
 						<br>
 						<b>netbios name</b> - must be equal to the computer name. E.g.: In a terminal window where you see,<br>
 						<br>
 						<b>jerry@lappy:~$</b><br>
 						<br>
-						<s><b>lappy</b></s> is the <b>netbios name</b> / <b>computer name</b>.<br>
+						<b>lappy</b> is the <b>netbios name</b> / <b>computer name</b>.<br>
 						<br>
-						<b>path =</b> the path to the folder in your home directory where shared files will be stored. <b>ONLY</b> change the	folder name part; e.g.: /home/%U/<s>share</s><br>
+						<b>path =</b> the path to the folder in your home directory where shared files will be stored. <b>ONLY</b> change the	folder name part; e.g.: /home/%U/share<br>
 						" <b>share</b> " is the folder name in Linux Lite you are sharing from your home folder.
 						" <b>%U</b> " is Samba's substitution for the username; meaning same as your username. Leave the %U as it is. Change <b>ONLY</b> the word " <b>share</b> " to the name of
 						the folder you created in the first step of this tutorial if you used a different folder name.</td>
@@ -276,8 +274,7 @@ i    {font-style: italic;}
 					<p>If at any stage you want to add more share folders, you can simply add more blocks like in the example below:</p>
 					<table width="800" id="table5" bgcolor="#FFFF55">
 					<tr>
-						<td>#======================= Global Settings
-						====================================<br>
+						<td><br>#======================= Global Settings ====================================<br>
 						[global]<br>
 						workgroup = WORKGROUP<br>
 						server string = Linux Lite Shares<br>
@@ -288,9 +285,8 @@ i    {font-style: italic;}
 						map to guest = bad user<br>
 						guest account = nobody<br>
 						dns proxy = no<br>
-						#======================= Share Definitions
-						===================================<br>
-						[liteshares]<br>
+						#======================= Share Definitions ===================================<br>
+						[liteshare]<br>
 						path = /home/jerry/share<br>
 						available = yes<br>
 						valid users = %U %G<br>
@@ -304,8 +300,8 @@ i    {font-style: italic;}
 						locking = no<br>
 						strict locking = no<br>
 						<br>
-						[liteshareVideos]<br>
-						path = /home/%U/Videos<br>
+						[videoshare]<br>
+						path = /home/jerry/Videos<br>
 						available = yes<br>
 						valid users = %U %G<br>
 						write list = %U<br>
@@ -318,8 +314,8 @@ i    {font-style: italic;}
 						locking = no<br>
 						strict locking = no<br>
 						<br>
-						[liteshareDownloads]<br>
-						path = /home/%U/Downloads<br>
+						[dloadshare]<br>
+						path = /home/jerry/Downloads<br>
 						available = yes<br>
 						valid users = %U %G<br>
 						write list = %U<br>

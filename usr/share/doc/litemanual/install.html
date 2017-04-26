@@ -96,7 +96,7 @@ i    {font-style: italic;}
 										<a href="#automountpartdrives">&emsp;- Automount Drives &amp; Partitions for all users</a><br />
 										<a href="#automountwinpartdrives">&emsp;- Automount Windows Partitions for all users</a><br />
 										<a href="#mountcontrolaccess">&emsp;- Controlling Access to Mounted Drives - Advanced Users</a><br />
-					<a href="#plop">No USB Boot option in the Bios?</a><br />
+					<a href="#plop">No USB Boot option in the BIOS?</a><br />
             				<a href="#prepareinst">Preparing your Computer</a><br />
             				<a href="#userdel">Removing a User</a><br />
             				<a href="#respassword">Resetting your Password</a><br />
@@ -129,11 +129,15 @@ i    {font-style: italic;}
 					<h2><a name="llusbwin">Writing the Linux Lite ISO to USB on Windows</a></h2>
 					<p><b>Win32DiskImager </b>allows you to create a bootable Live USB drive. Download it
 					from <a href="https://sourceforge.net/projects/win32diskimager/files/latest/download" target="_blank">here</a>.</p>
+					
+					<p>(Internet connection required to view video)</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/SdWr-aolCSA" frameborder="0" allowfullscreen></iframe><br>
 
 					<h2><a name="lldvdusbosx">Writing the Linux Lite ISO to USB in Linux and OSX</a></h2>
 					<p>To find out the letter of your USB stick, open a terminal and type: <b>df -h</b> It is usually listed as <b>media</b> or similar.
 					Be very careful to make sure you choose the right drive letter, as you can see in the Filesystem column, my device is sdb another
-					clue is the value in the Size column, here it is shown as 15G. In this example my device is a TDK 15gb USB stick.</p>
+					clue is the value in the Size column, here it is shown as 15G. In this example my device is listed as:</p>
+					<p><b>/media/jerry/9CB5-8A70</b></p>
 					<p><img src="images/install/df-h.png"></p>
 
 					<p>Open a folder and make sure you are in the directory that the iso file is in. Open a terminal in that directory and type the following:</p>
@@ -146,16 +150,22 @@ i    {font-style: italic;}
 						<pre style="margin: 0; padding: 0;">
 						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-3.4-64bit.iso of=/dev/sdx bs=4M</code></pre><br>
 
-					<p>Change the <b>x</b> in <b>sdx</b> to match the letter of your USB device.</p>
+					<p>Change the <b>x</b> in <b>sdx</b> to match the letter of your USB device. In the above example, my device is shown as <b>sdd1</b> (leave out the '1')</p>
+					
+					<p><b>Example</b></p>
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo dd if=linux-lite-3.4-32bit.iso of=/dev/sdd bs=4M</code></pre><br>
+						
 					<p>The Live DVD/USB image will boot into the desktop automatically, there is no need to login manually.</p>
 
-					<h2><a name="plop">No USB Boot option in the Bios? Use PloP</a></h2>
-					<p>For full instructions click <a href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-bios-wont-let-you/" target="_blank">here</a>.</p>
+					<h2><a name="plop">No USB Boot option in the BIOS? Use PloP</a></h2>
+					<p>For full instructions click <a href="http://www.howtogeek.com/howto/16822/boot-from-a-usb-drive-even-if-your-BIOS-wont-let-you/" target="_blank">here</a>.</p>
 
 					<h2><a name="prepareinst">Preparing your Computer for the Installation</a></h2>
 					<p>If you are planning to have Linux Lite as the sole operating system on your computer, there is nothing special you need to do in preparation for the
-					installation - even if another operating system is currently occupying the hard drive. Simply boot up your live installation disk, give Linux Lite a test run if you'd
-					like, then start the installation by double-clicking the <b>Install</b> icon on the desktop. When you get to the <b>Installation Type</b> screen, tell the installer to use the
+					installation, even if another operating system is currently occupying the hard drive. Simply boot up your live installation disk, give Linux Lite a test run if you'd
+					like, then start the installation by double-clicking the <b>Install Linux Lite</b> icon on the desktop. When you get to the <b>Installation Type</b> screen, tell the installer to use the
 					whole disk and it will go ahead and erase anything that is already there, create the partitions needed, format them and install the system automatically.</p>
 
 					<p>If you currently have one physical hard drive and want to dual-boot Windows and Linux Lite, then you should do a few things to prepare for the installation to insure the best results.</p>
@@ -169,9 +179,9 @@ i    {font-style: italic;}
 							<li><i>  </i>If you plan to have the shrinking done by the installer, it is still recommended that you defragment the Windows partition ahead of time.</li>
 						</ul><br>
 
-          				<p>If you have <b><u>more than one</u> physical hard drives</b> and want to dual-boot Windows and Linux Lite, with Linux on its own dedicated physical drive, then
+          				<p>If you have <b>more than one physical hard drive</b> and want to dual-boot Windows and Linux Lite, with Linux Lite on its own dedicated physical drive, then
 					we recommend you make a request for guidance in our <a href="https://www.linuxliteos.com/forums/" target="_blank">Forum</a> if you are unfamiliar with
-					Linux installations. Otherwise, general instructions for such an installation are listed below.</p>
+					Linux based installations. Otherwise, general instructions for such an installation are listed below.</p>
 
 					<ul class="feature-grid">
 							<li><i> </i>Choose "Something else" on the "Installation Type" screen during installation. (See instructions in following section for pictures of installation stages.)</li>
@@ -187,28 +197,27 @@ i    {font-style: italic;}
 					<p><a href="#top">Top of page</a></p>
 
 					<h2><a name="instllcomp">Installing Linux Lite to your computer</a></h2>
-              				<p>Start your computer, and go into your system Bios and check that the boot order is set so that DVD and USB devices are set to boot first.
-		  			This varies from bios to bios. Refer to your motherboard documentation for more information.</p>
+              				<p>Start your computer, and go into your system BIOS and check that the boot order is set so that DVD and USB devices are set to boot first.
+		  			This varies from BIOS to BIOS. Refer to your motherboard documentation for more information.</p>
 
-            				<p>Once you are happy with your bios set up, insert the DVD disc or USB stick into your computer and reboot your computer. You'll be greeted
+            				<p>Once you are happy with your BIOS set up, insert the DVD disc or USB stick into your computer and reboot your computer. You'll be greeted
 					with the following screen. Let the timer run down if you want to boot to the Live session.</p>
           				<p><img src="images/install/installwizard/boot2.png"></p>
 
           				<p>Make sure <b>Start Linux Lite</b> is highlighted, press the enter key to boot the Live session. This is also a good way to check that
 		  			all of your hardware is supported. If you are having trouble booting and you get just a black screen, try the second option, <b>Start Linux
-		  			Lite in safe graphics mode</b>.</p>
+		  			Lite in safe mode</b>.</p>
 
           				<p>The other options are:</p>
             				<p><b>Check Install Media</b> - run this to check that the Linux Lite image is free from errors.<br />
-		  			<b>Run memtest</b> - Test your computer memory for faults.<br />
+		  			<b>Run memtest (memory tester)</b> - Test your computer memory for faults.<br />
             				<b>Boot the first hard disk</b> - boot the existing operating system.<br />
             				<b>Restart</b> - reboot your computer.<br />
             				<!-- <b>Shutdown</b> - turn off your computer.</p> -->
           				<p><b>NOTE: If you are having any trouble booting Linux Lite after installation, please read through <a href="hardware.html#installissues">this trouble shooting guide</a></b>.</p>
 
             				<p>The computer will go through the boot up process, this may take anywhere from a few seconds to a couple of minutes depending on your
-		  			hardware. The login for the Live user is automatic, there is no need to login. An explanation of the various Menu's can be found by
-		  			clicking <a href="start.html#menus">here</a>.</p>
+		  			hardware. The login for the Live user is automatic, there is no need to login. If for some reason you need to login, simply type in <b>linux</b> beneath <b>Other</b> and click on <b>Log In</b> (no password required).</p>
 
           				<p>Before we proceed, make sure you have an internet connection first. Click <a href="network.html">here</a> if you need help to get online before you install Linux Lite.</p>
 
@@ -223,11 +232,11 @@ i    {font-style: italic;}
 		  			viewing a check mark beside them. You may also choose to download any available updates while installing or install third-party software
 		  			during the installation.</p>
 
-          				<p><b>NOTE: Generally we don't recommend ticking 'Download updates while installing Linux' as this will significantly
+          				<p><b>NOTE: Generally we don't recommend ticking '<i>Download updates while installing Linux</i>' as this will significantly
 					slow down the install process. Updating after a fresh install is recommended and will save you time in the long run. A typical install  on today's hardware will take
 					around 10-15 minutes. If you check these 2 boxes, the install could take over an hour or longer.</b></p>
 
-					<p><b>NOTE: 'Install third-party software for graphics and Wi-Fi hardware, Flash, MP3 and other media'
+					<p><b>NOTE: '<i>Install third-party software for graphics and Wi-Fi hardware, Flash, MP3 and other media</i>'
 					Please verify the legal status of the use of the third party software in your country/territory before choosing this option. This option will install codecs for playing
 					media files, and proprietary drivers for some of your hardware. It is a legal requirement for us to inform you of this.</b></p>
 
@@ -684,7 +693,7 @@ i    {font-style: italic;}
 
 
 					<h2><a name="adduser">Adding another User</a></h2>
-          				<p>To add another User to Linux Lite, click on <b>Menu, Settings, User Manager</b>. Then click on <b>New user</b> and enter a name, and the same password twice.</p>
+          				<p>To add another User to Linux Lite, click on <b>Menu, Settings, Lite User Manager</b>. Then click on <b>Add New User</b> and enter a name, and the same password twice.</p>
           				<p><b>NOTE: Choose a strong password, a mix of upper and lower case as well as a mix of numbers and characters. An example of this would be:</p>
 						<div class="codeheader"></div>
 						<pre style="margin: 0; padding: 0;">
@@ -710,8 +719,8 @@ i    {font-style: italic;}
           				<h2><a name="userdel">Removing a User</a></h2>
           				<p><b>NOTE: Before removing a user account make sure their files are backed up to a usb device or the cloud first. Removing an account
 		  			also removes all that persons documents, pictures, videos, files etc.</b></p>
-          				<p>This is as easy as selecting the user that you want to remove from the <b>Select user</b> drop down box, clicking on <b>Remove this user</b> and clicking on <b>Apply</b>.
-					If you are asked for <b>your</b> password, please enter it and then click <b>Ok</b>. Next a confirmation box will appear, read the message and if you want to proceed click on <b>Yes</b>.
+          				<p>This is as easy as selecting the user that you want to remove from the <b>Select user</b> drop down box, clicking on <b>Remove selected user</b> and clicking on <b>Apply</b>.
+					If you are asked for your password, please enter it and then click <b>Ok</b>. Next a confirmation box will appear, read the message and if you want to proceed click on <b>Yes</b>.
 		  			The user account and all their data has now been removed.</p>
           				<p><img src="images/install/user/liteuser4.png"></p>
 
