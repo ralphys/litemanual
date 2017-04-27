@@ -93,6 +93,7 @@ i    {font-style: italic;}
 										<a href="#lite-shares">&emsp;- Create Linux Lite Shares</a><br />
 										<a href="#wintolin">&emsp;- Access Linux Lite shares from Windows</a><br />
 										<a href="#lintowin">&emsp;- Access Windows shares from Linux Lite</a><br />
+					<a href="#vnc">Remote Access with VNC</a><br />
             				<a href="#date">Setting the Time &amp; Date</a><br />
 					<a href="#usbmodem">USB Broadband Modem</a><br /></p>
 
@@ -244,7 +245,9 @@ i    {font-style: italic;}
 						read only = no<br>
 						printable = no<br>
 						locking = no<br>
-						strict locking = no</td>
+						strict locking = no
+						<br>
+						<br></td>
 					</tr>
 					</table><br>
 
@@ -263,7 +266,9 @@ i    {font-style: italic;}
 						<b>path =</b> the path to the folder in your home directory where shared files will be stored. <b>ONLY</b> change the	folder name part; e.g.: /home/%U/share<br>
 						" <b>share</b> " is the folder name in Linux Lite you are sharing from your home folder.
 						" <b>%U</b> " is Samba's substitution for the username; meaning same as your username. Leave the %U as it is. Change <b>ONLY</b> the word " <b>share</b> " to the name of
-						the folder you created in the first step of this tutorial if you used a different folder name.</td>
+						the folder you created in the first step of this tutorial if you used a different folder name.
+						<br>
+						<br></td>
 					</tr>
 					</table><br>
 
@@ -326,7 +331,9 @@ i    {font-style: italic;}
 						read only = no<br>
 						printable = no<br>
 						locking = no<br>
-						strict locking = no</td>
+						strict locking = no
+						<br>
+						<br></td>
 					</tr>
 					</table><br>
 
@@ -374,6 +381,149 @@ i    {font-style: italic;}
 					NitroShare</a>, a cross-platform network sharing application for Windows, Mac and Linux. You can view a video tutorial on it
 					<a target="_blank" href="http://www.youtube.com/watch?v=0QduAP4CxXI">here</a>. Another method you could consider is setting up an FTP
 					server on your Windows computer and connecting to it with Filezilla, available from Menu, System, <a href="software.html#software">Install/Remove Software</a>.</b></p>
+
+					<p><a href="#top">Top of page</a></p>
+
+					<h2><a name="vnc">Remote Access with VNC</a></h2>
+					<p>Here is a quick tutorial on how to configure x11vnc (VNC Server) for remote access/control to your Linux Lite 3.x PC via VNC client.</p>
+					
+					<p>Start by installing x11vnc from Terminal with:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo apt install -y x11vnc</code></pre><br>
+						
+					<p><img src="images/network/vnc/vnc1.png" /></p>
+						
+					<p>Next, let’s create a directory to store a file that will contain the password used for VNC authentication:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo mkdir /etc/x11vnc</code></pre><br>
+						
+					<p>Now we'll create an encrypted password file and save it in <b>/etc/x11vnc/</b>. You will be prompted to type and verify the password:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo x11vnc --storepasswd /etc/x11vnc/vncpwd</code></pre><br>
+					
+					<p><img src="images/network/vnc/vnc2.png" /></p>
+					
+					<p>Now we will create the systemd service file for the x11vnc service:</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">gksu leafpad /lib/systemd/system/x11vnc.service</code></pre><br>
+						
+					<p>Copy & paste the code below into Leafpad:</p>
+						
+					<table width="1200" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br>[Unit]<br>
+						Description=VNC Server for X11<br>
+						Requires=display-manager.service<br>
+						After=display-manager.service<br>
+						[Service]<br>
+						Type=forking<br>
+						ExecStart=/usr/bin/x11vnc -dontdisconnect -auth guess -forever -shared -noxdamage -repeat -rfbauth /etc/x11vnc/vncpwd -rfbport 5900 -bg -o /var/log/x11vnc.log<br>
+						ExecStop=/usr/bin/killall x11vnc<br>
+						Restart=on-failure<br>
+						Restart-sec=5<br>
+						<br>
+						[Install]<br>
+						WantedBy=multi-user.target
+						<br>
+						<br>
+						</td>
+					</tr>
+					</table><br>
+					
+					<p><img src="images/network/vnc/vnc3.png" /></p>
+					
+					<p>Save changes and close leafpad. Then copy <b>/lib/systemd/system/x11vnc.service</b> to <b>/etc/systemd/system/</b></p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo cp /lib/systemd/system/x11vnc.service /etc/systemd/system/</code></pre><br>
+						
+					<p>Next, let’s edit /lib/systemd/system/graphical.target</p>
+					
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">gksu leafpad /lib/systemd/system/graphical.target</code></pre><br>
+						
+					<p>Update graphical.target file content as shown below:</p>
+					
+					<table width="800" id="table1" bgcolor="#FFFF55">
+					<tr>
+						<td><br># This file is part of systemd.<br>
+						#<br>
+						# systemd is free software; you can redistribute it and/or modify it<br>
+						# under the terms of the GNU Lesser General Public License as published by<br>
+						# the Free Software Foundation; either version 2.1 of the License, or<br>
+						# (at your option) any later version.<br>
+						[Unit]<br>
+						Description=Graphical Interface<br>
+						Documentation=man:systemd.special(7)<br>
+						Requires=multi-user.target<br>
+						Wants=display-manager.service x11vnc.service<br>
+						Conflicts=rescue.service rescue.target<br>
+						After=multi-user.target rescue.service rescue.target display-manager.service<br>
+						AllowIsolate=yes
+						<br>
+						<br>
+						</td>
+					</tr>
+					</table><br>
+					
+					<p><img src="images/network/vnc/vnc4.png" /></p>
+					
+					<p>Save changes and close Leafpad. Then copy <b>/lib/systemd/system/graphical.target</b> to <b>/etc/systemd/system/</b></p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo cp /lib/systemd/system/graphical.target /etc/systemd/system/</code></pre><br>
+
+					<p>Reload services and enable the x11vnc service at boot time:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl daemon-reload</code></pre><br>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl enable graphical.target</code></pre><br>
+
+					<p>Finally, either reboot Linux Lite or manually start x11vnc service:</p>
+
+					<p>Reboot:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo reboot now</code></pre><br>
+
+					<p>or start x11vnc without rebooting:</p>
+
+						<div class="codeheader">Terminal Command:</div>
+						<pre style="margin: 0; padding: 0;">
+						<code style="overflow: scroll;" class="bbc_code">sudo systemctl start x11vnc.service</code></pre><br>
+
+					<p><img src="images/network/vnc/vnc5.png" /></p>
+
+					<p><h2>Add a Firewall Rule to allow VNC traffic <b>IN</b>.</h2></p>
+
+					<p>Open <b>Menu, Settings, Firewall Configuration</b>, select the <b>Rules</b> tab and add a firewall rule as shown below:</p>
+
+					<p><img src="images/network/vnc/vnc6.png" /></p>
+
+					<p><h2>Remotely accessing/controlling Linux Lite 3.x</h2></p>
+
+					<p>From a client computer in your network, using a VNC client of your choice (Remmina, Ultra VNC, TightVNC, Chicken VNC, VNC Viewer, Screen Sharing, 
+					enter the IP address of your Linux Lite box or its hostname.</p>
+
+					<p><img src="images/network/vnc/vnc7.png" /></p>
+
+					<p><img src="images/network/vnc/vnc8.png" /></p>
 
 					<p><a href="#top">Top of page</a></p>
 

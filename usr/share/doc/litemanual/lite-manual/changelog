@@ -1,6 +1,7 @@
 lite-manual (2.0-0200-linuxlite) citrine; urgency=medium
 
   * Updated screenshots and wording for Install, Hardware and Network pages
+  * Added Remote Access with VNC to Network page
 
  -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 26 Apr 2017 00:20:59 +1200
 
