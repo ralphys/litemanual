@@ -162,14 +162,17 @@ ul.social-in li  i.facebook{
 ul.social-in li  i.twitter{
 	background-position: -30px 0px;
 }
-ul.social-in li  i.instagram{
-	background-position:-90px 0px;
-}
 ul.social-in li  i.googleplus{
 	background-position: -60px 0px;
 }
-ul.social-in li  i.behance{
-	background-position:-347px -9px;
+ul.social-in li  i.instagram{
+	background-position: -90px 0px;
+}
+ul.social-in li  i.youtube{
+	background-position: -120 0px;
+}
+ul.social-in li  i.linkedin{
+	background-position: -150 0px;
 }
 
 
@@ -190,8 +193,11 @@ ul.social-in li  i.googleplus:hover{
 ul.social-in li  i.instagram:hover{
 	background-position: -90px -30px;
 }
-ul.social-in li  i.behance:hover{
-	background-position: -379px -8px;
+ul.social-in li  i.youtube:hover{
+	background-position: -120 -30px;
+}
+ul.social-in li  i.linkedin:hover{
+	background-position: -150 -30px;
 }
 
 p.footer-class{
