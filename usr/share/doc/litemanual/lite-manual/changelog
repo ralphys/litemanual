@@ -4,7 +4,7 @@ lite-manual (2.0-0200-linuxlite) citrine; urgency=medium
   * Added Remote Access with VNC to Network page
   * Added Tour section to Start page
   * Added Instagram buttons to pages
-  * Re-write of Themes tutorial - TO BE DONE
+  * Updated Customize page
 
  -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 7 Jun 2017 16:29:33 +1200
 
