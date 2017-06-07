@@ -3,8 +3,8 @@ on:0 0
 hover:0 30
 
 twitter:
-on: 30
-hover: 0
+on: 30 0
+hover: 30 30
 
 googleplus:
 on: 60 0
