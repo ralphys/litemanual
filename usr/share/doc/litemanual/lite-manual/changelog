@@ -1,15 +1,18 @@
 lite-manual (2.0-0210-linuxlite) citrine; urgency=medium
 
-  * Added Tour section to Start page
+  * placeholder
 
- -- Jerry Bezencon <valtam@linuxliteos.com>  Mon, 08 May 2017 22:00:42 +1200
+ -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 7 Jun 2017 16:29:33 +1200
 
 lite-manual (2.0-0200-linuxlite) citrine; urgency=medium
 
   * Updated screenshots and wording for Install, Hardware and Network pages
   * Added Remote Access with VNC to Network page
+  * Added Tour section to Start page
+  * Added Instagram buttons to pages
+  * Updated Customize page
 
- -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 26 Apr 2017 00:20:59 +1200
+ -- Jerry Bezencon <valtam@linuxliteos.com>  Wed, 7 Jun 2017 16:29:33 +1200
 
 lite-manual (2.0-0190-linuxlite) citrine; urgency=medium
 

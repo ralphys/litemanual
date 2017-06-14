@@ -4,7 +4,7 @@ Lite Manual
 The Linux Lite Help and Support Manual. Available offline on Linux Lite, or viewable
 online [here](https://www.linuxliteos.com/manual).
 
-![](http://i.imgur.com/YqNlz2F.png)
+![](http://imgur.com/zt6x7at.png)
 
 ## License ![License](https://img.shields.io/badge/license-GPLv2-green.svg)
 
